@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import AboutSection from "@/components/AboutSection";
 
 export default function Home() {
   return (
@@ -164,6 +165,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Découvrez Laura Section */}
+      <AboutSection />
 
       {/* Pillars Section - Les 4 axes */}
       <section className="section-padding bg-gradient-soft">
@@ -355,7 +359,7 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* Card 2 - Haute Sensibilité */}
+            {/* Card 2 - Haute Sensibilité - DÉSACTIVÉ POUR LE MOMENT
             <Link href="/haute-sensibilite" className="card group">
               <div
                 className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110"
@@ -382,8 +386,9 @@ export default function Home() {
                 </svg>
               </div>
             </Link>
+            */}
 
-            {/* Card 3 - Consultation */}
+            {/* Card 2 - Consultation */}
             <Link href="/contact" className="card group">
               <div
                 className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110"

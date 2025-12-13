@@ -377,8 +377,8 @@ export default function GroupesTCAPage() {
             <Link href="/contact" className="btn-primary">
               Me contacter
             </Link>
-            <Link href="/haute-sensibilite" className="btn-secondary">
-              Groupe Haute Sensibilité
+            <Link href="/faq" className="btn-secondary">
+              Questions fréquentes
             </Link>
           </div>
         </div>

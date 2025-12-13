@@ -3,7 +3,7 @@ import Link from "next/link";
 const footerLinks = {
   services: [
     { href: "/groupes-paroles-tca", label: "Groupes de Paroles TCA" },
-    { href: "/haute-sensibilite", label: "Haute Sensibilité" },
+    // { href: "/haute-sensibilite", label: "Haute Sensibilité" }, // Désactivé pour le moment
     { href: "/formation", label: "Formation en ligne" },
     { href: "/contact", label: "Consultation individuelle" },
   ],
