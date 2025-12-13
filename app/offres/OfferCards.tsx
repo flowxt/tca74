@@ -3,7 +3,26 @@
 import { useState } from "react";
 import Link from "next/link";
 
-const offers = [
+interface Feature {
+  text: string;
+  included: boolean;
+  highlight?: boolean;
+}
+
+interface Offer {
+  id: string;
+  name: string;
+  price: number;
+  icon: string;
+  tagline: string;
+  description: string;
+  longDescription: string;
+  features: Feature[];
+  mailRules?: string[];
+  cta: string;
+}
+
+const offers: Offer[] = [
   {
     id: "standard",
     name: "Consultation Standard",
