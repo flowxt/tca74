@@ -5,6 +5,7 @@ const footerLinks = {
     { href: "/groupes-paroles-tca", label: "Groupes de Paroles TCA" },
     // { href: "/haute-sensibilite", label: "Haute Sensibilité" }, // Désactivé pour le moment
     { href: "/formation", label: "Formation en ligne" },
+    { href: "/offres", label: "Mes offres & tarifs" },
     { href: "/contact", label: "Consultation individuelle" },
   ],
   ressources: [

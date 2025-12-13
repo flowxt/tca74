@@ -13,6 +13,7 @@ const servicesItems = [
   { href: "/groupes-paroles-tca", label: "Groupes TCA", desc: "Hyperphagie & boulimie" },
   // { href: "/haute-sensibilite", label: "Haute Sensibilité", desc: "Accompagnement HSP & HPI" }, // Désactivé pour le moment
   { href: "/formation", label: "Formation", desc: "Ressources en ligne" },
+  { href: "/offres", label: "Mes offres", desc: "Tarifs & formules" },
 ];
 
 const ressourcesItems = [
