@@ -4,50 +4,6 @@ import { useState } from "react";
 
 const formations = [
   {
-    id: "stop-hyperphagie",
-    title: "Stop Hyperphagie",
-    subtitle: "Dites adieu à l'emprise de la nourriture",
-    price: 50,
-    originalPrice: 90,
-    duration: "Accès illimité",
-    format: "Vidéos + Exercices pratiques",
-    link: "https://psy-tca-annecy.teachizy.fr/formations/stop-hyperphagie",
-    guarantee: true,
-    emoji: "🍃",
-    description:
-      "Apprenez à surmonter vos pulsions alimentaires et retrouvez la sérénité. Un programme complet basé sur plus de 10 ans d'expérience.",
-    benefits: [
-      {
-        title: "Détectez les mécanismes",
-        desc: "Comprenez les rouages de l'hyperphagie pour développer une approche efficace",
-      },
-      {
-        title: "Identifiez vos émotions",
-        desc: "Trouvez des réponses adaptées plutôt que de vous tourner vers la nourriture",
-      },
-      {
-        title: "Repérez vos déclencheurs",
-        desc: "Identifiez vos facteurs de stress pour mieux gérer les situations difficiles",
-      },
-      {
-        title: "Retrouvez vos sensations",
-        desc: "Reconnectez-vous à vos signaux de faim et de satiété",
-      },
-      {
-        title: "Sortez des régimes",
-        desc: "Libérez-vous de la tyrannie des restrictions qui aggravent les crises",
-      },
-      {
-        title: "Outils concrets",
-        desc: "Techniques pratiques pour stopper les crises et retrouver l'équilibre",
-      },
-    ],
-    targetAudience: [
-      "Femmes souffrant d'hyperphagie sans comportements compensatoires",
-      "Femmes souffrant de grignotages compulsifs",
-    ],
-  },
-  {
     id: "dire-non",
     title: "Dire non sans peur",
     subtitle: "Les outils concrets pour s'affirmer",
@@ -57,6 +13,7 @@ const formations = [
     link: "https://psy-tca-annecy.teachizy.fr/formations/dire-non-sans-peur-les-outils-concrets-pour-saffirmer",
     guarantee: false,
     emoji: "✨",
+    hasVideo: false,
     description:
       "Apprenez à vous affirmer de manière efficace et assertive. Osez dire non tout en respectant les autres et en gardant de bonnes relations.",
     benefits: [
@@ -89,6 +46,52 @@ const formations = [
       "Personnes qui ont du mal à s'affirmer",
       "Celles qui disent oui par peur de déplaire",
       "Toute personne souhaitant poser des limites saines",
+    ],
+  },
+  {
+    id: "stop-hyperphagie",
+    title: "Stop Hyperphagie",
+    subtitle: "Dites adieu à l'emprise de la nourriture",
+    price: 50,
+    originalPrice: 90,
+    duration: "Accès illimité",
+    format: "Vidéos + Exercices pratiques",
+    link: "https://psy-tca-annecy.teachizy.fr/formations/stop-hyperphagie",
+    guarantee: true,
+    emoji: "🍃",
+    hasVideo: true,
+    videoUrl: "https://www.youtube.com/embed/wv4avw-_qwI?rel=0",
+    description:
+      "Apprenez à surmonter vos pulsions alimentaires et retrouvez la sérénité. Un programme complet basé sur plus de 10 ans d'expérience.",
+    benefits: [
+      {
+        title: "Détectez les mécanismes",
+        desc: "Comprenez les rouages de l'hyperphagie pour développer une approche efficace",
+      },
+      {
+        title: "Identifiez vos émotions",
+        desc: "Trouvez des réponses adaptées plutôt que de vous tourner vers la nourriture",
+      },
+      {
+        title: "Repérez vos déclencheurs",
+        desc: "Identifiez vos facteurs de stress pour mieux gérer les situations difficiles",
+      },
+      {
+        title: "Retrouvez vos sensations",
+        desc: "Reconnectez-vous à vos signaux de faim et de satiété",
+      },
+      {
+        title: "Sortez des régimes",
+        desc: "Libérez-vous de la tyrannie des restrictions qui aggravent les crises",
+      },
+      {
+        title: "Outils concrets",
+        desc: "Techniques pratiques pour stopper les crises et retrouver l'équilibre",
+      },
+    ],
+    targetAudience: [
+      "Femmes souffrant d'hyperphagie sans comportements compensatoires",
+      "Femmes souffrant de grignotages compulsifs",
     ],
   },
 ];
@@ -265,6 +268,33 @@ export default function FormationCards() {
             </div>
           </div>
 
+          {/* Vidéo de présentation pour Stop Hyperphagie */}
+          {formation.hasVideo && formation.videoUrl && (
+            <div className="mb-10">
+              <h4
+                className="text-center text-sm font-medium tracking-widest uppercase mb-4"
+                style={{ color: "var(--accent-sage)" }}
+              >
+                Présentation du programme
+              </h4>
+              <div
+                className="relative rounded-2xl overflow-hidden"
+                style={{
+                  aspectRatio: "16/9",
+                  boxShadow: "0 15px 40px rgba(154, 123, 111, 0.2)",
+                }}
+              >
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src={formation.videoUrl}
+                  title="Présentation du programme"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          )}
+
           {/* Garantie */}
           {formation.guarantee && (
             <div
@@ -307,7 +337,7 @@ export default function FormationCards() {
             rel="noopener noreferrer"
             className="block w-full text-center py-5 px-8 rounded-full font-semibold text-xl transition-all duration-300 formation-cta-primary"
           >
-            Accéder à la formation pour {formation.price}€ →
+            Accéder au programme pour {formation.price}€ →
           </a>
 
           {/* Public cible */}
@@ -316,7 +346,7 @@ export default function FormationCards() {
               className="text-xs font-medium tracking-widest uppercase mb-4"
               style={{ color: "var(--text-light)" }}
             >
-              Cette formation est pour vous si :
+              Ce programme est pour vous si :
             </h4>
             <div className="flex flex-wrap gap-3 justify-center">
               {formation.targetAudience.map((item, i) => (
@@ -353,7 +383,7 @@ export default function FormationCards() {
 
       {/* Indicateur de swipe sur mobile */}
       <p className="text-center mt-4 text-sm" style={{ color: "var(--text-light)" }}>
-        Cliquez sur les onglets pour découvrir les deux formations
+        Cliquez sur les onglets pour découvrir les deux programmes
       </p>
     </div>
   );

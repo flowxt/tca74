@@ -62,21 +62,18 @@ export default function AboutSection() {
               Votre thérapeute
             </span>
             <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-medium mb-4"
+              className="text-3xl md:text-4xl lg:text-5xl font-medium"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Découvrez Laura
             </h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: "var(--text-medium)" }}>
-              Thérapeute passionnée, spécialisée dans l'accompagnement de l'hyperphagie depuis plus de 10 ans
-            </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Photo + Quick intro */}
             <div className="relative">
-              {/* Photo container */}
-              <div className="relative max-w-md mx-auto lg:mx-0">
+              {/* Photo container - taille réduite */}
+              <div className="relative max-w-sm mx-auto lg:mx-0">
                 {/* Decorative elements */}
                 <div
                   className="absolute -top-6 -left-6 w-32 h-32 rounded-full opacity-60 blur-2xl"

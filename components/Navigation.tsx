@@ -10,15 +10,15 @@ const mainNavItems = [
 ];
 
 const servicesItems = [
-  { href: "/groupes-paroles-tca", label: "Groupes TCA", desc: "Hyperphagie & boulimie" },
-  // { href: "/haute-sensibilite", label: "Haute Sensibilité", desc: "Accompagnement HSP & HPI" }, // Désactivé pour le moment
-  { href: "/formation", label: "Formation", desc: "Ressources en ligne" },
+  { href: "/groupes-paroles-tca", label: "Groupes TCA", desc: "Psycho-éducation & paroles" },
+  { href: "/formation", label: "Programmes", desc: "En ligne & autonomie" },
   { href: "/offres", label: "Mes offres", desc: "Tarifs & formules" },
 ];
 
 const ressourcesItems = [
   { href: "/blog", label: "Blog", desc: "Articles & conseils" },
   { href: "/faq", label: "FAQ", desc: "Questions fréquentes" },
+  { href: "/actualites", label: "Actualités", desc: "Nouveautés & à venir" },
 ];
 
 export default function Navigation() {

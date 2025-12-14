@@ -3,14 +3,18 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
+type CardCategory = "alimentaire" | "emotionnel" | "exclusion" | "inclusion" | "filtre";
+
 type Card = {
   id: number;
   text: string;
-  category: "alimentaire" | "emotionnel" | "restriction";
+  category: CardCategory;
   icon: string;
+  excludes?: boolean; // Si true, cette carte exclut du suivi
 };
 
 const cards: Card[] = [
+  // Cartes d'inclusion (acceptées)
   {
     id: 1,
     text: "Je rumine continuellement à cause de la nourriture",
@@ -31,8 +35,8 @@ const cards: Card[] = [
   },
   {
     id: 4,
-    text: "J'ai des compulsions alimentaires, je mange pour me remplir",
-    category: "alimentaire",
+    text: "J'ai des compulsions alimentaires, j'ai besoin de me remplir",
+    category: "emotionnel", // Changé en émotionnel car besoin de se remplir = travail sur les émotions
     icon: "🫧",
   },
   {
@@ -73,51 +77,71 @@ const cards: Card[] = [
   },
   {
     id: 11,
-    text: "Je suis dans une anorexie restrictive ou un suivi centré uniquement sur la perte de poids",
-    category: "restriction",
+    text: "Je veux comprendre mes crises et apaiser ma relation avec mon corps",
+    category: "inclusion",
+    icon: "💜",
+  },
+  {
+    id: 12,
+    text: "Je souffre d'attaques de panique / Agoraphobie / Phobie (avion, etc.)",
+    category: "inclusion",
+    icon: "😰",
+  },
+  // Cartes d'exclusion
+  {
+    id: 13,
+    text: "Je souffre de restrictions alimentaires massives / On m'a diagnostiqué une anorexie restrictive",
+    category: "exclusion",
     icon: "⚠️",
+    excludes: true,
+  },
+  {
+    id: 14,
+    text: "Je veux uniquement perdre du poids",
+    category: "exclusion",
+    icon: "⚖️",
+    excludes: true,
+  },
+  // Carte filtre
+  {
+    id: 15,
+    text: "Je suis une femme majeure (18 ans ou plus)",
+    category: "filtre",
+    icon: "👩",
   },
 ];
 
-type Profile = "dietetique" | "emotionnel" | "mixte" | "tres_concerne" | "restriction" | null;
+type Profile = "accepte" | "tres_concerne" | "exclusion" | "non_majeure" | null;
 
 const profileMessages: Record<Exclude<Profile, null>, { title: string; message: string; color: string; cta: string; ctaLink: string }> = {
-  restriction: {
-    title: "Une orientation spécifique",
+  exclusion: {
+    title: "Une orientation différente",
     message:
-      "Votre situation nécessite un accompagnement spécialisé différent. Je vous recommande de vous tourner vers un professionnel de santé spécialisé dans les troubles restrictifs (psychiatre, équipe hospitalière TCA). Prenez soin de vous. 💜",
+      "Mon accompagnement n'est pas adapté à votre situation actuelle. Je vous recommande de vous tourner vers un professionnel de santé spécialisé (psychiatre, équipe hospitalière TCA, diététicien). Prenez soin de vous. 💜",
     color: "#A68B7C",
-    cta: "En savoir plus sur les TCA",
+    cta: "Découvrir les articles",
     ctaLink: "/blog",
   },
-  dietetique: {
-    title: "Un suivi nutritionnel",
+  non_majeure: {
+    title: "Accompagnement réservé aux adultes",
     message:
-      "Votre besoin semble davantage lié à un suivi nutritionnel. Une diététicienne pourra vous aider à travailler sur l'équilibre alimentaire et retrouver une relation sereine avec la nourriture. 🌿",
-    color: "#C9A99A",
-    cta: "Découvrir mes ressources",
+      "Mon accompagnement est réservé aux femmes majeures (18 ans et plus). Si vous êtes mineure, je vous invite à vous tourner vers un professionnel de santé adapté (pédopsychiatre, médecin traitant). 💜",
+    color: "#A68B7C",
+    cta: "Découvrir les articles",
     ctaLink: "/blog",
   },
-  emotionnel: {
+  accepte: {
     title: "Vous êtes au bon endroit ✨",
     message:
-      "Mon accompagnement est centré sur la gestion des émotions, les épreuves de vie et la relation globale au corps et à l'alimentation. Je serais heureuse de vous accompagner sur ce chemin. 🌸",
+      "Mon accompagnement est centré sur la gestion des émotions, les compulsions alimentaires et la relation au corps. Je serais heureuse de vous accompagner sur ce chemin. 🌸",
     color: "#B69588",
     cta: "Prendre rendez-vous",
     ctaLink: "/contact",
   },
-  mixte: {
-    title: "Mon accompagnement peut vous aider",
-    message:
-      "Je peux vous aider à sortir du cercle vicieux des compulsions et des crises, à mieux comprendre vos émotions et à retrouver une relation plus apaisée avec la nourriture. 🌷",
-    color: "#8B6F66",
-    cta: "Découvrir mon accompagnement",
-    ctaLink: "/groupes-paroles-tca",
-  },
   tres_concerne: {
     title: "Vous êtes exactement au bon endroit 💜",
     message:
-      "Vous êtes exactement dans le profil que j'accompagne : femmes sensibles, en difficulté avec la gestion émotionnelle, souffrant d'hyperphagie ou de boulimie sans restriction majeure, et traversant des épreuves de vie. Je suis là pour vous. 🤍",
+      "Vous êtes exactement dans le profil que j'accompagne : femmes sensibles, en difficulté avec la gestion émotionnelle, souffrant d'hyperphagie, et traversant des épreuves de vie. Je suis là pour vous. 🤍",
     color: "#7A5F54",
     cta: "Prendre rendez-vous",
     ctaLink: "/contact",
@@ -157,11 +181,20 @@ export default function QuizCards() {
   const calculateProfile = (): Profile => {
     const checkedList = Array.from(checkedCards);
     
-    // Check for restriction card
-    if (checkedCards.has(11)) {
-      return "restriction";
+    // Vérifier si femme majeure n'est pas cochée
+    if (!checkedCards.has(15)) {
+      return "non_majeure";
     }
 
+    // Vérifier les cartes d'exclusion
+    const exclusionCards = checkedList.filter((id) => 
+      cards.find((c) => c.id === id)?.excludes === true
+    );
+    if (exclusionCards.length > 0) {
+      return "exclusion";
+    }
+
+    // Compter les cartes positives
     const alimentaireCount = checkedList.filter((id) => 
       cards.find((c) => c.id === id)?.category === "alimentaire"
     ).length;
@@ -169,37 +202,21 @@ export default function QuizCards() {
     const emotionnelCount = checkedList.filter((id) => 
       cards.find((c) => c.id === id)?.category === "emotionnel"
     ).length;
-    
-    const total = alimentaireCount + emotionnelCount;
 
-    // Very concerned profile: 8-10 cards (excluding restriction card)
-    if (total >= 8) {
+    const inclusionCount = checkedList.filter((id) => 
+      cards.find((c) => c.id === id)?.category === "inclusion"
+    ).length;
+    
+    const total = alimentaireCount + emotionnelCount + inclusionCount;
+
+    // Très concerné : beaucoup de cartes cochées
+    if (total >= 6) {
       return "tres_concerne";
     }
 
-    // Mixed or high profile: 4-7 cards
-    if (total >= 4) {
-      return "mixte";
-    }
-
-    // Emotional profile: even 2-3 cards if they're emotional
-    if (emotionnelCount >= 2) {
-      return "emotionnel";
-    }
-
-    // Dietary profile: 0-3 cards, only food category
-    if (total <= 3 && emotionnelCount === 0 && alimentaireCount > 0) {
-      return "dietetique";
-    }
-
-    // Emotional profile as default if any emotional card is checked
-    if (emotionnelCount > 0) {
-      return "emotionnel";
-    }
-
-    // Default to mixed if some cards are checked
-    if (total > 0) {
-      return "mixte";
+    // Accepté : au moins quelques cartes pertinentes
+    if (total >= 1) {
+      return "accepte";
     }
 
     return null;
@@ -227,7 +244,15 @@ export default function QuizCards() {
     }
   }, [showResults]);
 
-  const getCardColors = (category: Card["category"]) => {
+  const getCardColors = (category: CardCategory, excludes?: boolean) => {
+    if (excludes) {
+      return {
+        bg: "linear-gradient(135deg, #F5F0ED 0%, #E8DED8 100%)",
+        bgBack: "linear-gradient(135deg, #9C8578 0%, #8B7365 100%)",
+        border: "#D4C8C0",
+        label: "⚠️ Important",
+      };
+    }
     switch (category) {
       case "alimentaire":
         return {
@@ -243,12 +268,33 @@ export default function QuizCards() {
           border: "#E8C8D0",
           label: "💜 Émotions",
         };
-      case "restriction":
+      case "inclusion":
+        return {
+          bg: "linear-gradient(135deg, #F0F5F2 0%, #E0EBE5 100%)",
+          bgBack: "linear-gradient(135deg, #8BA897 0%, #7A9987 100%)",
+          border: "#C8D8CE",
+          label: "✨ Je me reconnais",
+        };
+      case "exclusion":
         return {
           bg: "linear-gradient(135deg, #F5F0ED 0%, #E8DED8 100%)",
           bgBack: "linear-gradient(135deg, #9C8578 0%, #8B7365 100%)",
           border: "#D4C8C0",
           label: "⚠️ Important",
+        };
+      case "filtre":
+        return {
+          bg: "linear-gradient(135deg, #F5F0F8 0%, #EBE0F0 100%)",
+          bgBack: "linear-gradient(135deg, #A890B8 0%, #9880A8 100%)",
+          border: "#D8C8E0",
+          label: "👩 Profil",
+        };
+      default:
+        return {
+          bg: "linear-gradient(135deg, #FDF6F0 0%, #F5E6DC 100%)",
+          bgBack: "linear-gradient(135deg, #D4B5A0 0%, #C9A99A 100%)",
+          border: "#E8D4C6",
+          label: "",
         };
     }
   };
@@ -286,10 +332,10 @@ export default function QuizCards() {
 
       {/* Cards Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {cards.map((card, index) => {
+        {cards.map((card) => {
           const isFlipped = flippedCards.has(card.id);
           const isChecked = checkedCards.has(card.id);
-          const colors = getCardColors(card.category);
+          const colors = getCardColors(card.category, card.excludes);
 
           return (
             <div
@@ -379,7 +425,7 @@ export default function QuizCards() {
                   </button>
                   
                   <p className="mt-3 text-white/90 text-xs font-medium">
-                    {isChecked ? "✓ Je me reconnais" : "Je me reconnais"}
+                    {isChecked ? "✓ Sélectionné" : "Sélectionner"}
                   </p>
                 </div>
               </div>

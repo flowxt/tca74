@@ -3,17 +3,17 @@ import Link from "next/link";
 import FormationCards from "@/components/FormationCards";
 
 export const metadata: Metadata = {
-  title: "Formations en ligne | Sortir de l'hyperphagie & S'affirmer",
+  title: "Programmes en ligne | Sortir de l'hyperphagie & S'affirmer",
   description:
-    "Formations en ligne pour sortir de l'hyperphagie et apprendre à s'affirmer. Outils concrets, vidéos pratiques et accompagnement par une thérapeute spécialisée TCA.",
+    "Programmes en ligne pour sortir de l'hyperphagie et apprendre à s'affirmer. Outils concrets, vidéos pratiques et accompagnement par une thérapeute spécialisée TCA.",
   keywords: [
-    "formation hyperphagie",
+    "programme hyperphagie",
     "sortir de l'hyperphagie",
     "formation TCA",
     "apprendre à dire non",
     "affirmation de soi",
     "gestion émotions alimentaires",
-    "formation en ligne",
+    "programme en ligne",
   ],
 };
 
@@ -107,7 +107,7 @@ export default function FormationPage() {
               }}
             >
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-              Formations disponibles maintenant
+              Programmes disponibles maintenant
           </div>
           
           <h1
@@ -131,7 +131,7 @@ export default function FormationPage() {
               className="text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto mb-10 animate-fade-in"
               style={{ color: "var(--text-medium)", animationDelay: "0.2s" }}
             >
-              Des formations en ligne créées par une thérapeute spécialisée TCA
+              Des programmes en ligne créés par une thérapeute spécialisée TCA
               avec plus de <strong>10 ans d'expérience</strong>. Des outils concrets
               pour retrouver la sérénité.
             </p>
@@ -141,13 +141,7 @@ export default function FormationPage() {
               style={{ animationDelay: "0.3s" }}
             >
               <a href="#formations" className="btn-primary text-lg px-8 py-4">
-                Découvrir les formations
-              </a>
-              <a href="#video" className="btn-secondary text-lg px-8 py-4 flex items-center justify-center gap-2">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-                Voir le teaser
+                Découvrir les programmes
               </a>
             </div>
           </div>
@@ -178,54 +172,7 @@ export default function FormationPage() {
         </div>
       </section>
 
-      {/* Video Section */}
-      <section id="video" className="py-16 md:py-24" style={{ background: "var(--bg-white)" }}>
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <span
-              className="text-sm font-medium tracking-widest uppercase mb-4 block"
-              style={{ color: "var(--accent-sage)" }}
-            >
-              Découvrez mon approche
-            </span>
-            <h2
-              className="text-3xl md:text-4xl font-medium mb-4"
-              style={{ fontFamily: "var(--font-playfair)" }}
-            >
-              Un aperçu de ce qui vous attend
-            </h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: "var(--text-medium)" }}>
-              Regardez cette vidéo pour découvrir ma méthode et comprendre comment
-              je peux vous aider à retrouver la sérénité.
-            </p>
-          </div>
-
-          {/* Video embed */}
-          <div
-            className="relative rounded-3xl overflow-hidden shadow-2xl"
-            style={{
-              aspectRatio: "16/9",
-              boxShadow: "0 25px 80px rgba(154, 123, 111, 0.25)",
-            }}
-          >
-            <iframe
-              className="absolute inset-0 w-full h-full"
-              src="https://www.youtube.com/embed/wv4avw-_qwI?rel=0"
-              title="Teaser formation"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-
-          <div className="text-center mt-8">
-            <p className="text-sm" style={{ color: "var(--text-light)" }}>
-              Cette vidéo vous donne un aperçu de mon approche bienveillante et professionnelle
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Formations Section */}
+      {/* Programmes Section */}
       <section id="formations" className="section-padding bg-gradient-soft">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
@@ -233,7 +180,7 @@ export default function FormationPage() {
               className="text-sm font-medium tracking-widest uppercase mb-4 block"
               style={{ color: "var(--accent-sage)" }}
             >
-              Mes formations
+              Mes programmes
             </span>
             <h2
               className="text-3xl md:text-4xl lg:text-5xl font-medium mb-4"

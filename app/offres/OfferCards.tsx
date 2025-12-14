@@ -57,7 +57,7 @@ const offers: Offer[] = [
       { text: "Outils personnalisés", included: true },
       { text: "Flexibilité dans la fréquence", included: true },
       { text: "2 mails de suivi personnalisés", included: true, highlight: true },
-      { text: "Accompagnement continu (15 jours)", included: true, highlight: true },
+      { text: "Accompagnement continu", included: true, highlight: true },
     ],
     mailRules: [
       "1 page maximum par mail",

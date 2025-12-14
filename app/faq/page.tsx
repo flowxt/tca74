@@ -138,6 +138,7 @@ Je suis là pour vous accompagner avec douceur, sans jugement. 💛`,
 • 2 ans de licence en **psychologie** – Paris 8
 • Formations INFIPP (écriture, médiations, psychiatrie)
 • **Relation d'aide**, supervision régulière, auto-hypnose
+• **Formation à la haute sensibilité / HPE** de David Lefrançois
 • Formations complémentaires : incertitude, accompagnement thérapeutique, résilience, image de soi, auto-sabotage, intelligence émotionnelle…`,
       },
       {
@@ -151,6 +152,33 @@ Je suis là pour vous accompagner avec douceur, sans jugement. 💛`,
         answer: `**Non**, je ne suis pas psychologue. Mon expertise repose sur mes **17 années de pratique infirmière en psychiatrie** et mon expérience spécifique dans les TCA.
 
 Si nécessaire, je peux vous orienter vers un professionnel adapté (psychologue, psychiatre, etc.).`,
+      },
+    ],
+  },
+  {
+    title: "Modalités de remboursement",
+    icon: "💳",
+    questions: [
+      {
+        question: "Comment fonctionne le règlement des consultations individuelles ?",
+        answer: `• Les consultations doivent être **réglées au minimum 24h à l'avance**
+• Sans règlement au préalable, la séance n'a pas lieu afin de garantir mon organisation`,
+      },
+      {
+        question: "Quelles sont les conditions d'annulation ou de report ?",
+        answer: `• Toute séance annulée ou décalée **moins de 24h à l'avance** entraîne une indemnité de **40€**, quelle que soit la formule choisie (standard ou premium)
+• Cette règle **ne s'applique pas à la première séance**
+• En cas de problème personnel ou de santé important, la règle reste en vigueur, mais je me réserve le droit d'appliquer ou non l'indemnité selon la situation`,
+      },
+      {
+        question: "Comment sont gérés les retards ?",
+        answer: `• En cas de **retard de la participante**, la séance se termine à l'heure prévue initialement
+• Si le retard est **de mon fait**, la séance est prolongée afin de garantir la durée prévue`,
+      },
+      {
+        question: "Quelles sont les conditions pour les groupes ?",
+        answer: `• L'inscription au cycle est un **engagement ferme** : aucun remboursement n'est possible
+• Seule exception : en cas de **problème de santé grave** ou de **changement majeur de planning professionnel**, sur présentation d'un justificatif médical ou professionnel`,
       },
     ],
   },
@@ -240,7 +268,7 @@ export default function FAQPage() {
             className="text-3xl md:text-4xl font-medium mb-6"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
-            Une question non répondue ?
+            Une question sans réponse ?
           </h2>
           <p className="text-lg mb-8" style={{ color: "var(--text-medium)" }}>
             N'hésitez pas à me contacter directement. Je serai ravie de répondre à toutes vos interrogations.

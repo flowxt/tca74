@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import AboutSection from "@/components/AboutSection";
+import AnimatedWords from "@/components/AnimatedWords";
 
 export default function Home() {
   return (
@@ -23,38 +24,32 @@ export default function Home() {
           
           {/* Titre principal - Grande typographie */}
           <h1
-            className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium mb-8 animate-fade-in-up leading-tight"
+            className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium mb-4 animate-fade-in-up leading-tight"
             style={{ fontFamily: "var(--font-playfair)", color: "var(--text-dark)" }}
           >
             Thérapeute TCA
             <br />
-            <span style={{ color: "var(--brun-doux)" }}>centré sur les émotions</span>
+            <span style={{ color: "var(--brun-doux)" }}>centrée sur les émotions</span>
           </h1>
           
-          {/* Sous-titre */}
+          {/* Sous-titre - spécialité */}
           <p
-            className="text-xl md:text-2xl leading-relaxed mb-6 max-w-3xl mx-auto animate-fade-in-up delay-200"
-            style={{ color: "var(--text-medium)" }}
+            className="text-lg md:text-xl font-medium mb-4 animate-fade-in-up delay-100"
+            style={{ color: "var(--brun)" }}
           >
-            Spécialisée <strong style={{ color: "var(--brun)" }}>boulimie & hyperphagie</strong>.
-            <br className="hidden md:block" />
-            Le TCA est un symptôme — je travaille sur ce qui le nourrit.
+            Spécialisée dans l'hyperphagie boulimique
           </p>
           
-          {/* Les 4 piliers */}
-          <div
-            className="flex flex-wrap justify-center gap-3 mb-10 animate-fade-in-up delay-200"
+          {/* Phrase d'accroche */}
+          <p
+            className="text-xl md:text-2xl leading-relaxed mb-8 max-w-3xl mx-auto animate-fade-in-up delay-200"
+            style={{ color: "var(--text-medium)" }}
           >
-            {["Affirmation de soi", "Connaissance des besoins", "Poser ses limites", "Relations"].map((pillar, i) => (
-              <span
-                key={i}
-                className="px-4 py-2 rounded-full text-sm font-medium"
-                style={{ background: "var(--bg-white)", color: "var(--brun)", border: "1px solid var(--rose-medium)" }}
-              >
-                {pillar}
-              </span>
-            ))}
-          </div>
+            Comprenez ce qui se cache derrière vos compulsions et retrouvez votre liberté !
+          </p>
+          
+          {/* Les 4 mots animés */}
+          <AnimatedWords />
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-300 mb-16">
@@ -114,19 +109,16 @@ export default function Home() {
               </h2>
               <div className="space-y-4 text-lg" style={{ color: "var(--text-medium)" }}>
                 <p>
-                  Je ne travaille pas <em>sur</em> le trouble alimentaire — je travaille sur{" "}
-                  <strong>ce qui le nourrit</strong> : vos émotions, vos besoins non exprimés,
-                  vos difficultés relationnelles.
+                  Je ne vous dis pas quoi manger, je ne propose pas de restrictions. Mon approche ne se limite pas à la nutrition : <strong>je travaille sur ce qui nourrit vos crises en profondeur</strong> — vos émotions, vos besoins non exprimés, vos difficultés relationnelles.
                 </p>
                 <p>
-                  Ma spécialité : accompagner les femmes qui souffrent de{" "}
-                  <strong>boulimie ou d'hyperphagie</strong> à retrouver un rapport apaisé
-                  avec elles-mêmes. Pas de régimes, pas de comptage — mais un travail profond
-                  sur l'<strong>affirmation de soi</strong> et la <strong>gestion des émotions</strong>.
+                  L'hyperphagie est le reflet d'un déséquilibre intérieur. Ensemble, nous allons <strong>explorer ses racines</strong> pour construire un changement durable.
                 </p>
                 <p>
-                  Consultations <strong>100% en ligne</strong> : Annecy, Genève, Lausanne
-                  et toute la francophonie.
+                  Ma spécialité : accompagner les femmes qui souffrent d'hyperphagie à retrouver une relation apaisée avec elles-mêmes et avec la nourriture. <strong>Pas de régimes, pas de comptage</strong>, mais un chemin profond fondé sur l'affirmation de soi, la reconnaissance de ses besoins, la gestion des émotions et la capacité à poser ses limites.
+                </p>
+                <p>
+                  Consultations <strong>100% en ligne</strong> — depuis Annecy, Genève, Lausanne et partout dans la francophonie.
                 </p>
               </div>
             </div>
@@ -137,28 +129,39 @@ export default function Home() {
                 style={{ background: "var(--rose-pale)" }}
               />
               <div
-                className="relative rounded-3xl p-8"
+                className="relative rounded-3xl p-6"
                 style={{ background: "var(--bg-cream)" }}
               >
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-4">
                   {[
-                    { number: "17+", label: "Années en psychiatrie" },
+                    { number: "17 ans", label: "Expérience en psychiatrie dont public TCA" },
+                    { number: "6 ans", label: "En unité hospitalière spécialisée TCA" },
+                    { number: "2000+", label: "Consultations individuelles TCA" },
+                    { number: "250+", label: "Patientes accompagnées" },
+                    { number: "60+", label: "Avis positifs" },
                     { number: "100%", label: "En ligne" },
-                    { number: "6", label: "Participantes max par groupe" },
-                    { number: "∞", label: "Bienveillance" },
                   ].map((stat, i) => (
-                    <div key={i} className="text-center p-4">
+                    <div key={i} className="text-center p-3">
                       <div
-                        className="text-3xl md:text-4xl font-semibold mb-2"
+                        className="text-2xl md:text-3xl font-semibold mb-1"
                         style={{ color: "var(--brun-doux)", fontFamily: "var(--font-playfair)" }}
                       >
                         {stat.number}
                       </div>
-                      <div className="text-sm" style={{ color: "var(--text-light)" }}>
+                      <div className="text-xs" style={{ color: "var(--text-light)" }}>
                         {stat.label}
                       </div>
                     </div>
                   ))}
+                </div>
+                {/* Info supplémentaire */}
+                <div
+                  className="mt-4 pt-4 text-center text-sm"
+                  style={{ borderTop: "1px solid var(--rose-medium)", color: "var(--text-medium)" }}
+                >
+                  <strong>8 séances</strong> en moyenne pour voir une progression
+                  <br />
+                  <span style={{ color: "var(--text-light)" }}>soit 4 mois à raison d'une séance tous les 15 jours</span>
                 </div>
               </div>
             </div>
@@ -169,7 +172,7 @@ export default function Home() {
       {/* Découvrez Laura Section */}
       <AboutSection />
 
-      {/* Pillars Section - Les 4 axes */}
+      {/* Pillars Section - Les 5 axes */}
       <section className="section-padding bg-gradient-soft">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -183,14 +186,15 @@ export default function Home() {
               className="text-3xl md:text-4xl font-medium mb-4"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
-              Travailler la racine, pas le symptôme
+              5 piliers{" "}
+              <span style={{ color: "var(--brun-doux)" }}>fondamentaux</span>
             </h2>
             <p className="text-lg max-w-2xl mx-auto" style={{ color: "var(--text-medium)" }}>
-              Mes séances s'articulent autour de 4 axes fondamentaux
+              Mes séances s'articulent autour de 5 axes essentiels
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
             {[
               {
                 icon: "💪",
@@ -211,6 +215,11 @@ export default function Home() {
                 icon: "💬",
                 title: "Problématiques relationnelles",
                 desc: "Comprendre et transformer les schémas qui vous font souffrir.",
+              },
+              {
+                icon: "🧘",
+                title: "Techniques comportementales",
+                desc: "Des outils concrets de gestion des crises pour un soulagement immédiat.",
               },
             ].map((pillar, i) => (
               <div
@@ -309,7 +318,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section - 3 chemins */}
       <section className="section-padding bg-gradient-soft">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -326,20 +335,67 @@ export default function Home() {
               Plusieurs chemins pour avancer
             </h2>
             <p className="text-lg max-w-2xl mx-auto" style={{ color: "var(--text-medium)" }}>
-              Individuel ou en groupe, chaque accompagnement est centré sur les émotions
+              Choisissez le chemin qui vous correspond
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Card 1 - Groupes TCA */}
-            <Link href="/groupes-paroles-tca" className="card group">
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Card 1 - Formations en ligne (Autonomie) */}
+            <Link href="/formation" className="card group relative overflow-hidden">
+              <div
+                className="absolute top-0 right-0 w-24 h-24 rounded-bl-full opacity-20 transition-transform group-hover:scale-150"
+                style={{ background: "var(--peche)" }}
+              />
               <div
                 className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110"
-                style={{ background: "var(--rose-pale)" }}
+                style={{ background: "var(--peche)", opacity: 0.6 }}
+              >
+                <svg className="w-7 h-7" style={{ color: "var(--brun)" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <div
+                className="inline-block px-3 py-1 rounded-full text-xs font-medium mb-3"
+                style={{ background: "var(--peche)", color: "var(--brun)" }}
+              >
+                🚶‍♀️ Chemin en autonomie
+              </div>
+              <h3
+                className="text-xl font-semibold mb-3"
+                style={{ fontFamily: "var(--font-playfair)", color: "var(--text-dark)" }}
+              >
+                Programmes en ligne
+              </h3>
+              <p className="mb-4" style={{ color: "var(--text-medium)" }}>
+                Formations pour avancer à votre rythme, en totale autonomie.
+              </p>
+              <div className="flex items-center gap-2 text-sm font-medium" style={{ color: "var(--brun-doux)" }}>
+                <span>Découvrir</span>
+                <svg className="w-4 h-4 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </div>
+            </Link>
+
+            {/* Card 2 - Groupes TCA */}
+            <Link href="/groupes-paroles-tca" className="card group relative overflow-hidden">
+              <div
+                className="absolute top-0 right-0 w-24 h-24 rounded-bl-full opacity-20 transition-transform group-hover:scale-150"
+                style={{ background: "var(--accent-lavande)" }}
+              />
+              <div
+                className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110"
+                style={{ background: "var(--accent-lavande)", opacity: 0.5 }}
               >
                 <svg className="w-7 h-7" style={{ color: "var(--brun)" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
+              </div>
+              <div
+                className="inline-block px-3 py-1 rounded-full text-xs font-medium mb-3"
+                style={{ background: "var(--accent-lavande)", color: "var(--brun)" }}
+              >
+                👭 Chemin en groupe
               </div>
               <h3
                 className="text-xl font-semibold mb-3"
@@ -348,8 +404,7 @@ export default function Home() {
                 Groupes de Paroles TCA
               </h3>
               <p className="mb-4" style={{ color: "var(--text-medium)" }}>
-                Un espace collectif pour les femmes souffrant d'hyperphagie ou de boulimie.
-                Briser la solitude, faire circuler la parole.
+                Petits groupes (6 participantes max) pour partager, se sentir épaulée et progresser ensemble.
               </p>
               <div className="flex items-center gap-2 text-sm font-medium" style={{ color: "var(--brun-doux)" }}>
                 <span>En savoir plus</span>
@@ -359,57 +414,37 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* Card 2 - Haute Sensibilité - DÉSACTIVÉ POUR LE MOMENT
-            <Link href="/haute-sensibilite" className="card group">
+            {/* Card 3 - Consultation Individuelle */}
+            <Link href="/offres" className="card group relative overflow-hidden">
               <div
-                className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110"
-                style={{ background: "var(--accent-lavande)", opacity: 0.5 }}
-              >
-                <svg className="w-7 h-7" style={{ color: "var(--brun)" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </div>
-              <h3
-                className="text-xl font-semibold mb-3"
-                style={{ fontFamily: "var(--font-playfair)", color: "var(--text-dark)" }}
-              >
-                Haute Sensibilité
-              </h3>
-              <p className="mb-4" style={{ color: "var(--text-medium)" }}>
-                Accompagnement individuel et groupes pour les personnes hypersensibles ou HPI.
-                Apprivoiser sa sensibilité comme une force.
-              </p>
-              <div className="flex items-center gap-2 text-sm font-medium" style={{ color: "var(--brun-doux)" }}>
-                <span>En savoir plus</span>
-                <svg className="w-4 h-4 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </div>
-            </Link>
-            */}
-
-            {/* Card 2 - Consultation */}
-            <Link href="/contact" className="card group">
+                className="absolute top-0 right-0 w-24 h-24 rounded-bl-full opacity-20 transition-transform group-hover:scale-150"
+                style={{ background: "var(--accent-sage)" }}
+              />
               <div
                 className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110"
                 style={{ background: "var(--accent-sage)", opacity: 0.5 }}
               >
                 <svg className="w-7 h-7" style={{ color: "var(--brun)" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
+              </div>
+              <div
+                className="inline-block px-3 py-1 rounded-full text-xs font-medium mb-3"
+                style={{ background: "var(--accent-sage)", color: "var(--brun)" }}
+              >
+                🧭 Chemin individuel
               </div>
               <h3
                 className="text-xl font-semibold mb-3"
                 style={{ fontFamily: "var(--font-playfair)", color: "var(--text-dark)" }}
               >
-                Consultation Individuelle
+                Consultations personnalisées
               </h3>
               <p className="mb-4" style={{ color: "var(--text-medium)" }}>
-                Un accompagnement personnalisé, confidentiel et doux, pour vous déposer en tête-à-tête.
-                En ligne, à votre rythme.
+                Un accompagnement sur mesure, confidentiel et doux, pour vous déposer en tête-à-tête.
               </p>
               <div className="flex items-center gap-2 text-sm font-medium" style={{ color: "var(--brun-doux)" }}>
-                <span>Prendre RDV</span>
+                <span>Voir les offres</span>
                 <svg className="w-4 h-4 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
