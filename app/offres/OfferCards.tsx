@@ -75,17 +75,17 @@ export default function OfferCards() {
 
   return (
     <div className="max-w-2xl mx-auto">
-      {/* Tabs de sélection */}
-      <div className="flex justify-center mb-12">
+      {/* Tabs de sélection - Responsive : empilés sur mobile, côte à côte sur desktop */}
+      <div className="flex justify-center mb-8 md:mb-12 px-4">
         <div
-          className="inline-flex p-1.5 rounded-full gap-2"
+          className="flex flex-col sm:flex-row p-1.5 rounded-2xl sm:rounded-full gap-2 w-full max-w-sm sm:max-w-none sm:w-auto"
           style={{ background: "rgba(212, 181, 169, 0.2)" }}
         >
           {offers.map((o, i) => (
             <button
               key={o.id}
               onClick={() => setActiveIndex(i)}
-              className={`px-6 py-3.5 rounded-full font-medium transition-all duration-300 flex items-center gap-3 ${
+              className={`w-full sm:w-auto px-4 sm:px-6 py-3 sm:py-3.5 rounded-xl sm:rounded-full font-medium transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 ${
                 activeIndex === i ? "shadow-lg" : "hover:bg-white/50"
               }`}
               style={{
@@ -97,10 +97,10 @@ export default function OfferCards() {
                 color: activeIndex === i ? "white" : "var(--brun)",
               }}
             >
-              <span className="text-xl">{o.icon}</span>
-              <span>{o.name}</span>
+              <span className="text-lg sm:text-xl">{o.icon}</span>
+              <span className="text-sm sm:text-base">{i === 0 ? "Standard" : "Premium"}</span>
               <span
-                className="px-2.5 py-1 rounded-full text-sm font-bold"
+                className="px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm font-bold"
                 style={{
                   background: activeIndex === i ? "rgba(255,255,255,0.25)" : "rgba(154, 123, 111, 0.15)",
                   color: activeIndex === i ? "white" : "var(--brun)",
@@ -160,12 +160,12 @@ export default function OfferCards() {
           </>
         )}
 
-        <div className={`relative p-10 md:p-14 ${isPremium ? "pt-20" : ""}`}>
+        <div className={`relative p-6 md:p-10 lg:p-14 ${isPremium ? "pt-16 md:pt-20" : ""}`}>
           {/* Header */}
-          <div className="text-center mb-10">
-            <span className="text-6xl mb-6 block">{offer.icon}</span>
+          <div className="text-center mb-8 md:mb-10">
+            <span className="text-5xl md:text-6xl mb-4 md:mb-6 block">{offer.icon}</span>
             <h2
-              className="text-3xl md:text-4xl font-bold mb-2"
+              className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2"
               style={{
                 fontFamily: "var(--font-playfair)",
                 color: "var(--text-dark)",
@@ -174,19 +174,19 @@ export default function OfferCards() {
               {offer.name}
             </h2>
             <p
-              className="text-lg font-medium mb-4"
+              className="text-base md:text-lg font-medium mb-3 md:mb-4"
               style={{ color: isPremium ? "var(--accent-lavande)" : "var(--brun-doux)" }}
             >
               {offer.tagline}
             </p>
-            <p style={{ color: "var(--text-medium)" }}>
+            <p className="text-sm md:text-base" style={{ color: "var(--text-medium)" }}>
               {offer.description}
             </p>
           </div>
 
           {/* Prix */}
           <div
-            className="text-center py-8 mb-10 rounded-2xl"
+            className="text-center py-6 md:py-8 mb-8 md:mb-10 rounded-2xl"
             style={{
               background: isPremium
                 ? "linear-gradient(135deg, rgba(197, 184, 200, 0.2) 0%, rgba(212, 181, 169, 0.15) 100%)"
@@ -196,7 +196,7 @@ export default function OfferCards() {
           >
             <div className="flex items-baseline justify-center gap-2">
               <span
-                className="text-7xl font-bold"
+                className="text-5xl md:text-7xl font-bold"
                 style={{
                   fontFamily: "var(--font-playfair)",
                   color: "var(--brun)",
@@ -205,39 +205,39 @@ export default function OfferCards() {
                 {offer.price}
               </span>
               <span
-                className="text-2xl"
+                className="text-xl md:text-2xl"
                 style={{ color: "var(--text-light)" }}
               >
                 €
               </span>
             </div>
-            <span style={{ color: "var(--text-light)" }}>
+            <span className="text-sm md:text-base" style={{ color: "var(--text-light)" }}>
               par séance
             </span>
           </div>
 
           {/* Description longue */}
           <p
-            className="mb-10 text-lg leading-relaxed text-center"
+            className="mb-8 md:mb-10 text-base md:text-lg leading-relaxed text-center"
             style={{ color: "var(--text-medium)" }}
           >
             {offer.longDescription}
           </p>
 
           {/* Features */}
-          <div className="mb-10">
+          <div className="mb-8 md:mb-10">
             <h3
-              className="text-sm font-bold tracking-widest uppercase mb-6 text-center"
+              className="text-xs md:text-sm font-bold tracking-widest uppercase mb-4 md:mb-6 text-center"
               style={{ color: isPremium ? "var(--accent-lavande)" : "var(--accent-sage)" }}
             >
               Ce qui est inclus
             </h3>
-            <div className="space-y-4">
+            <div className="space-y-3 md:space-y-4">
               {offer.features.map((feature, i) => (
                 <div
                   key={i}
-                  className={`flex items-center gap-4 p-4 rounded-xl transition-all ${
-                    feature.highlight ? "scale-[1.02]" : ""
+                  className={`flex items-start md:items-center gap-3 md:gap-4 p-3 md:p-4 rounded-xl transition-all ${
+                    feature.highlight ? "scale-[1.01] md:scale-[1.02]" : ""
                   }`}
                   style={{
                     background: feature.highlight
@@ -249,7 +249,7 @@ export default function OfferCards() {
                   }}
                 >
                   <div
-                    className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0"
+                    className="w-6 h-6 md:w-7 md:h-7 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 md:mt-0"
                     style={{
                       background: feature.included
                         ? feature.highlight
@@ -262,7 +262,7 @@ export default function OfferCards() {
                   >
                     {feature.included ? (
                       <svg
-                        className="w-4 h-4"
+                        className="w-3.5 h-3.5 md:w-4 md:h-4"
                         style={{ color: feature.highlight ? "white" : "var(--brun)" }}
                         fill="none"
                         stroke="currentColor"
@@ -272,7 +272,7 @@ export default function OfferCards() {
                       </svg>
                     ) : (
                       <svg
-                        className="w-4 h-4"
+                        className="w-3.5 h-3.5 md:w-4 md:h-4"
                         style={{ color: "rgba(150, 150, 150, 0.5)" }}
                         fill="none"
                         stroke="currentColor"
@@ -283,7 +283,7 @@ export default function OfferCards() {
                     )}
                   </div>
                   <span
-                    className={`text-lg ${feature.highlight ? "font-semibold" : ""}`}
+                    className={`text-sm md:text-base lg:text-lg flex-1 ${feature.highlight ? "font-semibold" : ""}`}
                     style={{
                       color: feature.included
                         ? "var(--text-dark)"
@@ -295,7 +295,7 @@ export default function OfferCards() {
                   </span>
                   {feature.highlight && (
                     <span
-                      className="ml-auto px-3 py-1 rounded-full text-xs font-bold"
+                      className="px-2 md:px-3 py-0.5 md:py-1 rounded-full text-[10px] md:text-xs font-bold flex-shrink-0"
                       style={{
                         background: "linear-gradient(135deg, var(--accent-lavande) 0%, var(--brun-doux) 100%)",
                         color: "white",
@@ -312,18 +312,18 @@ export default function OfferCards() {
           {/* Règles mails pour Premium */}
           {isPremium && offer.mailRules && (
             <div
-              className="p-6 rounded-2xl mb-10"
+              className="p-4 md:p-6 rounded-2xl mb-8 md:mb-10"
               style={{
                 background: "rgba(197, 184, 200, 0.1)",
                 border: "1px solid rgba(197, 184, 200, 0.3)",
               }}
             >
-              <h4 className="font-bold mb-4 flex items-center gap-2" style={{ color: "var(--brun)" }}>
+              <h4 className="font-bold mb-3 md:mb-4 flex items-center gap-2 text-sm md:text-base" style={{ color: "var(--brun)" }}>
                 <span>📩</span> Comment fonctionnent les mails ?
               </h4>
               <ul className="space-y-2">
                 {offer.mailRules.map((rule, i) => (
-                  <li key={i} className="flex items-center gap-3" style={{ color: "var(--text-medium)" }}>
+                  <li key={i} className="flex items-center gap-3 text-sm md:text-base" style={{ color: "var(--text-medium)" }}>
                     <span style={{ color: "var(--accent-lavande)" }}>•</span>
                     {rule}
                   </li>
@@ -335,7 +335,7 @@ export default function OfferCards() {
           {/* CTA */}
           <Link
             href="/contact"
-            className="block w-full text-center py-5 px-8 rounded-full font-bold text-xl transition-all duration-300 hover:scale-[1.02]"
+            className="block w-full text-center py-4 md:py-5 px-6 md:px-8 rounded-full font-bold text-base md:text-xl transition-all duration-300 hover:scale-[1.02]"
             style={{
               background: isPremium
                 ? "linear-gradient(135deg, var(--accent-lavande) 0%, var(--brun-doux) 100%)"
@@ -352,7 +352,7 @@ export default function OfferCards() {
       </div>
 
       {/* Navigation dots */}
-      <div className="flex justify-center gap-3 mt-10">
+      <div className="flex justify-center gap-3 mt-8 md:mt-10">
         {offers.map((_, i) => (
           <button
             key={i}
@@ -372,7 +372,7 @@ export default function OfferCards() {
       </div>
 
       {/* Hint */}
-      <p className="text-center mt-6 text-sm" style={{ color: "var(--text-light)" }}>
+      <p className="text-center mt-4 md:mt-6 text-xs md:text-sm" style={{ color: "var(--text-light)" }}>
         Cliquez sur les onglets pour comparer les offres
       </p>
     </div>
