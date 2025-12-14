@@ -159,9 +159,9 @@ export default function Home() {
                   className="mt-4 pt-4 text-center text-sm"
                   style={{ borderTop: "1px solid var(--rose-medium)", color: "var(--text-medium)" }}
                 >
-                  <strong>8 séances</strong> en moyenne pour voir une progression
+                  <strong>Les patientes observent en moyenne une véritable progression au bout de 8 séances</strong>
                   <br />
-                  <span style={{ color: "var(--text-light)" }}>soit 4 mois à raison d'une séance tous les 15 jours</span>
+                  <span style={{ color: "var(--text-light)" }}>à raison d'une séance tous les 15 jours</span>
                 </div>
               </div>
             </div>
@@ -242,12 +242,66 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Outils Section - Supports symboliques */}
+      {/* Outils Section - Liste complète */}
       <section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Images des cartes */}
-            <div className="relative order-2 lg:order-1">
+          <div className="text-center mb-12">
+            <span
+              className="text-sm font-medium tracking-widest uppercase mb-4 block"
+              style={{ color: "var(--rose-accent)" }}
+            >
+              Mes outils
+            </span>
+            <h2
+              className="text-3xl md:text-4xl font-medium mb-4"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              Ce que j'utilise{" "}
+              <span style={{ color: "var(--brun-doux)" }}>en séance</span>
+            </h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: "var(--text-medium)" }}>
+              Une boîte à outils variée, adaptée à vos besoins
+            </p>
+          </div>
+
+          {/* Grille des outils */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+            {[
+              { icon: "👂", title: "Écoute active", desc: "Écoute inconditionnelle et présence authentique" },
+              { icon: "🧠", title: "TCC", desc: "Thérapies cognitives et comportementales" },
+              { icon: "✍️", title: "Écriture thérapeutique", desc: "Journaling et lectures ciblées" },
+              { icon: "🌀", title: "Hypnose douce", desc: "Visualisations guidées et relaxation" },
+              { icon: "🎨", title: "Exercices créatifs", desc: "Approches ludiques et expressives" },
+              { icon: "🃏", title: "Médiations par cartes", desc: "Oracles, Dixit, cartes Bartoli" },
+              { icon: "💜", title: "Reparentage", desc: "Techniques de sécurité émotionnelle" },
+              { icon: "🛠️", title: "Gestion de crises", desc: "Exercices comportementaux concrets" },
+            ].map((outil, i) => (
+              <div
+                key={i}
+                className="p-5 rounded-2xl text-center hover:scale-[1.02] transition-transform"
+                style={{ background: "var(--bg-cream)", border: "1px solid var(--rose-medium)" }}
+              >
+                <span className="text-3xl mb-3 block">{outil.icon}</span>
+                <h3
+                  className="font-semibold mb-1"
+                  style={{ fontFamily: "var(--font-playfair)", color: "var(--text-dark)" }}
+                >
+                  {outil.title}
+                </h3>
+                <p className="text-sm" style={{ color: "var(--text-medium)" }}>
+                  {outil.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Section supports symboliques avec photos */}
+          <div
+            className="p-8 rounded-3xl"
+            style={{ background: "linear-gradient(135deg, var(--rose-pale) 0%, var(--peche) 50%, var(--nude) 100%)" }}
+          >
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
+              {/* Images des cartes */}
               <div className="grid grid-cols-3 gap-4">
                 <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg transform -rotate-3 hover:rotate-0 transition-transform duration-300">
                   <Image
@@ -274,44 +328,23 @@ export default function Home() {
                   />
                 </div>
               </div>
-            </div>
 
-            {/* Texte */}
-            <div className="order-1 lg:order-2">
-              <span
-                className="text-sm font-medium tracking-widest uppercase mb-4 block"
-                style={{ color: "var(--rose-accent)" }}
-              >
-                Mes outils
-              </span>
-              <h2
-                className="text-3xl md:text-4xl font-medium mb-6"
-                style={{ fontFamily: "var(--font-playfair)" }}
-              >
-                Des supports{" "}
-                <span style={{ color: "var(--brun-doux)" }}>symboliques</span>
-                <br />pour libérer la parole
-              </h2>
-              <div className="space-y-4 text-lg" style={{ color: "var(--text-medium)" }}>
-                <p>
-                  J'utilise des <strong>supports symboliques</strong> (Oracle de l'enfant intérieur,
-                  cartes Bartoli, Dixit) pour faciliter l'<strong>expression des émotions</strong>{" "}
-                  et révéler les besoins profonds.
+              {/* Texte */}
+              <div>
+                <h3
+                  className="text-2xl font-semibold mb-4"
+                  style={{ fontFamily: "var(--font-playfair)", color: "var(--brun-fonce)" }}
+                >
+                  🃏 Les supports symboliques
+                </h3>
+                <p className="mb-4" style={{ color: "var(--text-dark)" }}>
+                  Parmi mes outils, les <strong>cartes thérapeutiques</strong> occupent une place particulière.
+                  Oracle de l'enfant intérieur, cartes Bartoli, Dixit... Elles sont des médiateurs puissants
+                  pour <strong>libérer la parole</strong> et explorer les émotions.
                 </p>
-                <p>
-                  Ces cartes sont des <strong>médiateurs</strong> : elles ouvrent un espace créatif,
-                  permettent d'explorer les problématiques relationnelles et aident à{" "}
-                  <strong>poser des mots là où il est parfois difficile de parler</strong>.
+                <p className="text-sm" style={{ color: "var(--text-medium)" }}>
+                  Une approche ludique et profonde qui distingue mon accompagnement.
                 </p>
-                <p className="text-base" style={{ color: "var(--text-light)" }}>
-                  Une approche qui me distingue et qui apporte une dimension ludique et profonde
-                  à nos séances.
-                </p>
-              </div>
-              <div className="mt-8">
-                <Link href="/contact" className="btn-primary">
-                  Découvrir cette approche
-                </Link>
               </div>
             </div>
           </div>
@@ -450,6 +483,18 @@ export default function Home() {
                 </svg>
               </div>
             </Link>
+          </div>
+
+          {/* Photo Laura */}
+          <div className="flex justify-center mt-12">
+            <div className="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden shadow-xl border-4 border-white">
+              <Image
+                src="/image/laura.jpg"
+                alt="Laura Baud - Thérapeute TCA"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>

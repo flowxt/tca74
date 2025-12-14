@@ -49,22 +49,22 @@ const contactInfo = [
 
 const services = [
   {
-    title: "Consultation individuelle",
+    title: "Consultation Standard",
     price: "90€",
     duration: "1h",
-    desc: "Accompagnement personnalisé TCA ou haute sensibilité",
+    desc: "Accompagnement personnalisé TCA",
+  },
+  {
+    title: "Accompagnement Premium",
+    price: "130€",
+    duration: "1h + suivi",
+    desc: "Séance + 2 mails de suivi personnalisés",
   },
   {
     title: "Groupe de paroles TCA",
-    price: "30€",
-    duration: "1h30",
+    price: "110€ / 200€",
+    duration: "Cycle 4 ou 8 séances",
     desc: "Tous les 15 jours, 6 participantes maximum",
-  },
-  {
-    title: "Groupe Haute Sensibilité",
-    price: "30€",
-    duration: "1h30",
-    desc: "2 séances par mois, 6 participantes maximum",
   },
 ];
 

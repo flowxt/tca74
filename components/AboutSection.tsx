@@ -65,7 +65,7 @@ export default function AboutSection() {
               className="text-3xl md:text-4xl lg:text-5xl font-medium"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
-              Découvrez Laura
+              Laura Baud
             </h2>
           </div>
 

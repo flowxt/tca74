@@ -412,7 +412,7 @@ export default function FormationPage() {
               },
               {
                 q: "Puis-je suivre les deux formations ?",
-                a: "Absolument ! Les deux formations sont complémentaires. 'Stop Hyperphagie' cible la relation à la nourriture, tandis que 'Dire non sans peur' travaille sur l'affirmation de soi.",
+                a: "Deux chemins possibles, selon votre rythme et vos priorités : La formation STOP Hyperphagie est la plus complète — elle aborde en profondeur les mécanismes de l'hyperphagie, avec un bloc entier consacré à l'affirmation de soi. Mais si vous préférez commencer en douceur, ou concentrer vos efforts sur l'affirmation de soi dans un premier temps, la mini formation « Apprendre à dire non » est idéale. Elle vous permet d'ancrer des changements concrets et positifs, qui auront un impact direct sur votre relation à l'alimentation. À vous de choisir le chemin qui vous parle le plus aujourd'hui.",
               },
             ].map((faq, i) => (
               <details

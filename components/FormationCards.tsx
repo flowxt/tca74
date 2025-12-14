@@ -55,14 +55,14 @@ const formations = [
     price: 50,
     originalPrice: 90,
     duration: "Accès illimité",
-    format: "Vidéos + Exercices pratiques",
+    format: "49 leçons • 4h de vidéos • PDF imprimables",
     link: "https://psy-tca-annecy.teachizy.fr/formations/stop-hyperphagie",
     guarantee: true,
     emoji: "🍃",
     hasVideo: true,
     videoUrl: "https://www.youtube.com/embed/wv4avw-_qwI?rel=0",
     description:
-      "Apprenez à surmonter vos pulsions alimentaires et retrouvez la sérénité. Un programme complet basé sur plus de 10 ans d'expérience.",
+      "Apprenez à surmonter vos pulsions alimentaires et retrouvez la sérénité. Un programme complet basé sur plus de 10 ans d'expérience. 49 leçons disponibles avec exercices pratiques.",
     benefits: [
       {
         title: "Détectez les mécanismes",

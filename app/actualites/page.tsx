@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 const actualites = [
   {
-    date: "Décembre 2024",
+    date: "Décembre 2025",
     type: "Nouveau",
     title: "Lancement de l'offre Premium",
     description: "Une nouvelle formule d'accompagnement avec suivi personnalisé entre les séances. Idéale pour celles qui souhaitent un soutien continu.",
@@ -25,12 +25,20 @@ const actualites = [
     linkText: "Découvrir l'offre",
   },
   {
-    date: "Décembre 2024",
+    date: "Décembre 2025",
     type: "À venir",
     title: "Nouveau cycle de groupe TCA",
     description: "Un nouveau groupe de psycho-éducation & paroles démarre dès que 5 participantes seront inscrites. Inscrivez-vous sur la liste d'attente !",
     link: "/groupes-paroles-tca",
     linkText: "En savoir plus",
+  },
+  {
+    date: "Décembre 2025",
+    type: "À venir",
+    title: "Réflexion autour d'une offre sur la haute sensibilité",
+    description: "Je travaille actuellement sur une offre dédiée à l'accompagnement de la haute sensibilité (HPE). Restez connectées pour plus d'informations !",
+    link: "/contact",
+    linkText: "Me contacter",
   },
 ];
 
@@ -171,4 +179,5 @@ export default function ActualitesPage() {
     </>
   );
 }
+
 

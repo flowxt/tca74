@@ -87,6 +87,12 @@ const cards: Card[] = [
     category: "inclusion",
     icon: "😰",
   },
+  {
+    id: 16,
+    text: "Je ne supporte plus mon corps / Je veux retrouver mon poids de forme",
+    category: "inclusion",
+    icon: "🪞",
+  },
   // Cartes d'exclusion
   {
     id: 13,
@@ -123,9 +129,9 @@ const profileMessages: Record<Exclude<Profile, null>, { title: string; message: 
     ctaLink: "/blog",
   },
   non_majeure: {
-    title: "Accompagnement réservé aux adultes",
+    title: "Accompagnement réservé aux femmes majeures",
     message:
-      "Mon accompagnement est réservé aux femmes majeures (18 ans et plus). Si vous êtes mineure, je vous invite à vous tourner vers un professionnel de santé adapté (pédopsychiatre, médecin traitant). 💜",
+      "Si vous êtes une femme majeure de 18 ans, je peux vous accompagner. Si vous êtes un homme ou mineur(e), je vous invite à vous tourner vers un autre professionnel adapté (psychologues, psychiatres, pédopsychiatres). 💜",
     color: "#A68B7C",
     cta: "Découvrir les articles",
     ctaLink: "/blog",
@@ -362,18 +368,15 @@ export default function QuizCards() {
                 >
                   <div className="text-4xl mb-3">{card.icon}</div>
                   <p
-                    className="text-sm font-medium leading-snug mb-3"
+                    className="text-sm font-medium leading-snug mb-4"
                     style={{ color: "var(--text-dark)" }}
                   >
                     {card.text}
                   </p>
-                  <span
-                    className="text-xs font-medium px-3 py-1 rounded-full bg-white/70"
-                    style={{ color: "var(--text-medium)" }}
-                  >
-                    {colors.label}
-                  </span>
-                  <p className="mt-3 text-xs" style={{ color: "var(--text-light)" }}>
+                  <p className="text-xs font-medium" style={{ color: "var(--rose-accent)" }}>
+                    Je me reconnais
+                  </p>
+                  <p className="mt-2 text-xs" style={{ color: "var(--text-light)" }}>
                     👆 Cliquez pour retourner
                   </p>
                 </div>

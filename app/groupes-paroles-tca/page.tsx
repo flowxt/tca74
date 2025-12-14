@@ -31,7 +31,7 @@ const cyclesComplets = [
   "Affirmation de soi",
   "Confiance en soi",
   "Les peurs",
-  "TCA et famille",
+  "TCA et Entourage (vie amicale, familiale, amoureuse)",
   "Clôture & intégration",
 ];
 
@@ -256,70 +256,45 @@ export default function GroupesTCAPage() {
         </div>
       </section>
 
-      {/* Horaires et format */}
+      {/* Horaires et Engagement - Format compact */}
       <section className="section-padding bg-white">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {/* Horaires */}
             <div
-              className="p-8 rounded-3xl"
+              className="p-6 rounded-2xl"
               style={{ background: "var(--bg-cream)", border: "1px solid var(--rose-medium)" }}
             >
               <h3
-                className="text-2xl font-semibold mb-6"
+                className="text-xl font-semibold mb-4 flex items-center gap-2"
                 style={{ fontFamily: "var(--font-playfair)", color: "var(--brun-fonce)" }}
               >
-                📅 Horaires
+                📅 HORAIRES
               </h3>
-              <ul className="space-y-4" style={{ color: "var(--text-medium)" }}>
-                <li className="flex items-start gap-3">
-                  <span style={{ color: "var(--rose-accent)" }}>•</span>
-                  Les séances ont lieu le <strong>jeudi soir</strong>, tous les 15 jours
-                </li>
-                <li className="flex items-start gap-3">
-                  <span style={{ color: "var(--rose-accent)" }}>•</span>
-                  De <strong>19h30 à 21h00</strong>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span style={{ color: "var(--rose-accent)" }}>•</span>
-                  Le groupe est <strong>100% en ligne</strong>, accessible depuis partout dans la francophonie
-                </li>
-                <li className="flex items-start gap-3">
-                  <span style={{ color: "var(--rose-accent)" }}>•</span>
-                  Le rythme régulier permet d'intégrer les apprentissages entre chaque rencontre
-                </li>
-              </ul>
+              <div className="space-y-2" style={{ color: "var(--text-dark)" }}>
+                <p><strong>Séance tous les 15 jours</strong></p>
+                <p>Le jeudi soir de <strong>19h30 à 21h00</strong></p>
+                <p><strong>100% en ligne</strong></p>
+              </div>
             </div>
 
             {/* Engagement */}
             <div
-              className="p-8 rounded-3xl"
+              className="p-6 rounded-2xl"
               style={{ background: "var(--bg-cream)", border: "1px solid var(--rose-medium)" }}
             >
               <h3
-                className="text-2xl font-semibold mb-6"
+                className="text-xl font-semibold mb-4 flex items-center gap-2"
                 style={{ fontFamily: "var(--font-playfair)", color: "var(--brun-fonce)" }}
               >
-                ✋ Engagement
+                ✋ ENGAGEMENT
               </h3>
-              <ul className="space-y-4" style={{ color: "var(--text-medium)" }}>
-                <li className="flex items-start gap-3">
-                  <span style={{ color: "var(--rose-accent)" }}>•</span>
-                  <strong>Groupes fermés</strong> : les mêmes participantes se retrouvent à chaque séance
-                </li>
-                <li className="flex items-start gap-3">
-                  <span style={{ color: "var(--rose-accent)" }}>•</span>
-                  Démarrage dès que <strong>5 participantes</strong> sont inscrites (maximum 6)
-                </li>
-                <li className="flex items-start gap-3">
-                  <span style={{ color: "var(--rose-accent)" }}>•</span>
-                  Inscription au <strong>cycle entier</strong> (pas de séance isolée)
-                </li>
-                <li className="flex items-start gap-3">
-                  <span style={{ color: "var(--rose-accent)" }}>•</span>
-                  Les nouvelles demandes sont placées sur liste d'attente si le groupe est complet
-                </li>
-              </ul>
+              <div className="space-y-2" style={{ color: "var(--text-dark)" }}>
+                <p><strong>Engagement sur 4 séances minimum</strong></p>
+                <p><strong>Groupe fermé</strong></p>
+                <p>Petit groupe sécurisant et constant : démarrage dès <strong>5 patientes</strong> (max 6)</p>
+                <p>Nouvelles demandes sur <strong>liste d'attente</strong></p>
+              </div>
             </div>
           </div>
         </div>
@@ -398,29 +373,20 @@ export default function GroupesTCAPage() {
       <section className="section-padding bg-gradient-soft">
         <div className="max-w-4xl mx-auto px-6">
           <div
-            className="p-8 rounded-3xl"
+            className="p-6 rounded-2xl"
             style={{ background: "var(--bg-white)", border: "2px solid var(--peche)" }}
           >
             <h3
-              className="text-xl font-semibold mb-6"
+              className="text-xl font-semibold mb-4"
               style={{ fontFamily: "var(--font-playfair)", color: "var(--brun-fonce)" }}
             >
               ⚠️ Conditions importantes
             </h3>
-            <ul className="space-y-4" style={{ color: "var(--text-medium)" }}>
-              <li className="flex items-start gap-3">
-                <span style={{ color: "var(--rose-accent)" }}>•</span>
-                <strong>Aucun remboursement</strong> ne sera effectué, sauf en cas de problème de santé grave, sur présentation d'un justificatif médical
-              </li>
-              <li className="flex items-start gap-3">
-                <span style={{ color: "var(--rose-accent)" }}>•</span>
-                Si une participante ne peut pas assister à une séance, celle-ci est <strong>considérée comme perdue</strong>
-              </li>
-              <li className="flex items-start gap-3">
-                <span style={{ color: "var(--rose-accent)" }}>•</span>
-                L'inscription au cycle est un <strong>engagement ferme</strong>
-              </li>
-            </ul>
+            <div className="space-y-3" style={{ color: "var(--text-dark)" }}>
+              <p><strong>Aucun remboursement ne sera effectué</strong>, sauf en cas de problème de santé grave (sur justificatif médical).</p>
+              <p>Si une participante ne peut pas assister à une séance, celle-ci est <strong>considérée comme perdue</strong>.</p>
+              <p>L'inscription au cycle est un <strong>engagement ferme</strong>.</p>
+            </div>
           </div>
         </div>
       </section>
