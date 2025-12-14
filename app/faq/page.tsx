@@ -101,9 +101,7 @@ Je suis là pour vous accompagner avec douceur, sans jugement. 💛`,
         question: "Comment fonctionnent les groupes de parole ?",
         answer: `• Les groupes de parole ont des **modalités de paiement et d'organisation différentes** des suivis individuels
 • Les participants sont informés en détail des conditions lors de leur inscription
-• Les modalités varient selon le type de groupe :
-  - **Groupes TCA** (troubles du comportement alimentaire)
-  - **Groupes pour femmes hautement sensibles**`,
+• Actuellement, je propose des **groupes TCA** (troubles du comportement alimentaire)`,
       },
       {
         question: "Le suivi en ligne est-il accessible partout ?",
@@ -111,7 +109,7 @@ Je suis là pour vous accompagner avec douceur, sans jugement. 💛`,
       },
       {
         question: "Comment suis-je informée de mes rendez-vous ?",
-        answer: `Vous recevez un **rappel automatique par mail** avant chaque séance. Vous pouvez gérer vos rendez-vous directement via l'**espace patient**.`,
+        answer: `Vous recevez un **rappel automatique par mail** avant chaque séance.`,
       },
       {
         question: "Les échanges sont-ils confidentiels ?",

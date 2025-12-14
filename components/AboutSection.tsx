@@ -126,12 +126,6 @@ export default function AboutSection() {
             <div>
               {/* Quick intro */}
               <div className="mb-8">
-                <h3
-                  className="text-2xl font-semibold mb-4"
-                  style={{ fontFamily: "var(--font-playfair)", color: "var(--text-dark)" }}
-                >
-                  Laura Baud
-                </h3>
                 <p className="text-lg leading-relaxed mb-4" style={{ color: "var(--text-medium)" }}>
                   Je suis thérapeute libérale depuis 2019, passionnée par l'accompagnement des personnes 
                   en quête de mieux-être. Avant cela, j'ai consacré <strong>17 années à la psychiatrie</strong> en 
