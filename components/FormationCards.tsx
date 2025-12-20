@@ -50,6 +50,51 @@ const formations = [
     ],
   },
   {
+    id: "emotions",
+    title: "Les émotions",
+    subtitle: "Comprendre, exprimer, transformer",
+    price: 30,
+    duration: "1h de vidéo",
+    format: "Vidéo + PDF + 2 audios",
+    link: "https://psy-tca-annecy.teachizy.fr/formations/les-emotions-comprendre-exprimer-transformer",
+    guarantee: false,
+    image: "/image/formation-emotions.jpg",
+    hasVideo: false,
+    description:
+      "Apprenez à reconnaître, accueillir et transformer vos émotions. Un programme complet pour mieux comprendre ce que vous ressentez et développer votre intelligence émotionnelle.",
+    benefits: [
+      {
+        title: "Comprendre vos émotions",
+        desc: "Identifiez ce que vous ressentez et pourquoi",
+      },
+      {
+        title: "Accueillir sans juger",
+        desc: "Apprenez à accepter vos émotions sans les refouler",
+      },
+      {
+        title: "Exprimer sainement",
+        desc: "Trouvez les mots et les moyens pour vous exprimer",
+      },
+      {
+        title: "Transformer l'énergie",
+        desc: "Utilisez vos émotions comme moteur de changement",
+      },
+      {
+        title: "Outils concrets",
+        desc: "Techniques pratiques applicables au quotidien",
+      },
+      {
+        title: "2 audios inclus",
+        desc: "Exercices guidés pour pratiquer en autonomie",
+      },
+    ],
+    targetAudience: [
+      "Personnes submergées par leurs émotions",
+      "Celles qui ont du mal à identifier ce qu'elles ressentent",
+      "Toute personne souhaitant développer son intelligence émotionnelle",
+    ],
+  },
+  {
     id: "stop-hyperphagie",
     title: "Stop Hyperphagie",
     subtitle: "Dites adieu à l'emprise de la nourriture",
@@ -392,7 +437,7 @@ export default function FormationCards() {
 
       {/* Indicateur de swipe sur mobile */}
       <p className="text-center mt-4 text-sm" style={{ color: "var(--text-light)" }}>
-        Cliquez sur les onglets pour découvrir les deux programmes
+        Cliquez sur les onglets pour découvrir les programmes
       </p>
     </div>
   );

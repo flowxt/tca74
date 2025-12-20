@@ -12,6 +12,7 @@ const footerLinks = {
     { href: "/faq", label: "Questions fréquentes" },
     { href: "/actualites", label: "Actualités & À venir" },
     { href: "/questionnaire", label: "Quiz : Suis-je au bon endroit ?" },
+    { href: "https://l-baud.systeme.io/cadeau", label: "Outils gratuits", external: true },
   ],
   legal: [
     { href: "/mentions-legales", label: "Mentions légales" },
@@ -132,13 +133,28 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.ressources.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-base transition-colors hover:translate-x-1 inline-block"
-                    style={{ color: "var(--text-medium)" }}
-                  >
-                    {link.label}
-                  </Link>
+                  {link.external ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-base transition-colors hover:translate-x-1 inline-flex items-center gap-1"
+                      style={{ color: "var(--rose-accent)" }}
+                    >
+                      {link.label}
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-base transition-colors hover:translate-x-1 inline-block"
+                      style={{ color: "var(--text-medium)" }}
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

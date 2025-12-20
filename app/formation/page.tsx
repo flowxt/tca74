@@ -189,7 +189,7 @@ export default function FormationPage() {
               Choisissez votre transformation
             </h2>
             <p className="text-lg max-w-2xl mx-auto" style={{ color: "var(--text-medium)" }}>
-              Deux programmes complets pour vous accompagner vers une vie plus sereine et équilibrée
+              Trois programmes complets pour vous accompagner vers une vie plus sereine et équilibrée
             </p>
           </div>
 
@@ -472,7 +472,7 @@ export default function FormationPage() {
             Investissez en vous et retrouvez la sérénité que vous méritez.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center mb-8">
             <a
               href="https://psy-tca-annecy.teachizy.fr/formations/stop-hyperphagie"
               target="_blank"
@@ -488,6 +488,19 @@ export default function FormationPage() {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
+            </a>
+            <a
+              href="https://psy-tca-annecy.teachizy.fr/formations/les-emotions-comprendre-exprimer-transformer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105"
+              style={{
+                background: "transparent",
+                color: "white",
+                border: "2px solid rgba(255,255,255,0.5)",
+              }}
+            >
+              Les émotions — 30€
             </a>
             <a
               href="https://psy-tca-annecy.teachizy.fr/formations/dire-non-sans-peur-les-outils-concrets-pour-saffirmer"
@@ -510,8 +523,55 @@ export default function FormationPage() {
         </div>
       </section>
 
-      {/* Contact CTA */}
+      {/* Outils Gratuits */}
       <section className="py-16" style={{ background: "var(--bg-cream)" }}>
+        <div className="max-w-4xl mx-auto px-6">
+          <div
+            className="relative rounded-3xl p-8 md:p-12 text-center overflow-hidden"
+            style={{
+              background: "linear-gradient(135deg, var(--rose-pale) 0%, var(--peche) 50%, var(--nude) 100%)",
+              border: "2px solid var(--rose-medium)",
+            }}
+          >
+            <div className="relative z-10">
+              <span
+                className="inline-block px-4 py-2 rounded-full text-sm font-medium mb-6"
+                style={{ background: "var(--bg-white)", color: "var(--brun)" }}
+              >
+                Cadeau pour vous
+              </span>
+              <h2
+                className="text-2xl md:text-3xl font-medium mb-4"
+                style={{ fontFamily: "var(--font-playfair)", color: "var(--brun-fonce)" }}
+              >
+                Mes outils gratuits
+              </h2>
+              <p className="text-lg mb-8 max-w-xl mx-auto" style={{ color: "var(--text-medium)" }}>
+                Recevez gratuitement des ressources pour commencer votre chemin vers une relation apaisée avec vous-même et la nourriture.
+              </p>
+              <a
+                href="https://l-baud.systeme.io/cadeau"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105"
+                style={{
+                  background: "var(--brun)",
+                  color: "white",
+                  boxShadow: "0 10px 30px rgba(154, 123, 111, 0.3)",
+                }}
+              >
+                Recevoir mes outils gratuits
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-16" style={{ background: "var(--bg-white)" }}>
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-lg mb-6" style={{ color: "var(--text-medium)" }}>
             Vous avez des questions sur les formations ou vous préférez un accompagnement personnalisé ?
