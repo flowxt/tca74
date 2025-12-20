@@ -34,7 +34,7 @@ const contactInfo = [
       </svg>
     ),
     title: "Disponibilités",
-    desc: "Du lundi au vendredi, sur rendez-vous uniquement.",
+    desc: "Du mardi au samedi matin, sur rendez-vous uniquement.",
   },
   {
     icon: (

@@ -21,6 +21,7 @@ const faqCategories = [
   {
     title: "Mon approche",
     icon: "💜",
+    color: "var(--accent-lavande)",
     questions: [
       {
         question: "Quelle est votre approche des TCA ?",
@@ -82,6 +83,7 @@ Je suis là pour vous accompagner avec douceur, sans jugement. 💛`,
   {
     title: "Modalités pratiques",
     icon: "📋",
+    color: "var(--accent-sage)",
     questions: [
       {
         question: "Qu'est-ce que l'espace patient sécurisé ?",
@@ -120,6 +122,7 @@ Je suis là pour vous accompagner avec douceur, sans jugement. 💛`,
   {
     title: "Mon parcours",
     icon: "🎓",
+    color: "var(--peche)",
     questions: [
       {
         question: "Quelle est votre expérience professionnelle ?",
@@ -156,6 +159,7 @@ Si nécessaire, je peux vous orienter vers un professionnel adapté (psychologue
   {
     title: "Modalités de remboursement",
     icon: "💳",
+    color: "var(--rose-accent)",
     questions: [
       {
         question: "Comment fonctionne le règlement des consultations individuelles ?",
@@ -240,11 +244,10 @@ export default function FAQPage() {
               id={category.title.toLowerCase().replace(/\s/g, "-")}
               className="mb-16 scroll-mt-32"
             >
-              <div className="flex items-center gap-3 mb-8">
-                <span className="text-3xl">{category.icon}</span>
+              <div className="mb-8">
                 <h2
                   className="text-2xl md:text-3xl font-medium"
-                  style={{ fontFamily: "var(--font-playfair)", color: "var(--brun-fonce)" }}
+                  style={{ fontFamily: "var(--font-playfair)", color: category.color }}
                 >
                   {category.title}
                 </h2>

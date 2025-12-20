@@ -36,11 +36,11 @@ const cyclesComplets = [
 ];
 
 const supports = [
-  { icon: "✍️", name: "Écriture" },
-  { icon: "🎨", name: "Dessins" },
-  { icon: "💬", name: "Parole" },
-  { icon: "🃏", name: "Cartes" },
-  { icon: "📷", name: "Photolangage" },
+  { name: "Écriture", color: "var(--accent-lavande)" },
+  { name: "Dessins", color: "var(--peche)" },
+  { name: "Parole", color: "var(--accent-sage)" },
+  { name: "Cartes", color: "var(--rose-accent)" },
+  { name: "Photolangage", color: "var(--brun-doux)" },
 ];
 
 const benefices = [
@@ -107,17 +107,16 @@ export default function GroupesTCAPage() {
 
           <div className="grid sm:grid-cols-2 gap-6">
             {[
-              { icon: "🧠", text: "Comprendre les mécanismes des troubles alimentaires" },
-              { icon: "💜", text: "Explorer ses émotions et ses besoins" },
-              { icon: "🛠️", text: "Découvrir des outils concrets pour apaiser les crises" },
-              { icon: "🤝", text: "Partager son vécu et se sentir soutenue par le groupe" },
+              { text: "Comprendre les mécanismes des troubles alimentaires", color: "var(--accent-lavande)" },
+              { text: "Explorer ses émotions et ses besoins", color: "var(--peche)" },
+              { text: "Découvrir des outils concrets pour apaiser les crises", color: "var(--accent-sage)" },
+              { text: "Partager son vécu et se sentir soutenue par le groupe", color: "var(--rose-accent)" },
             ].map((item, i) => (
               <div
                 key={i}
                 className="flex items-start gap-4 p-6 rounded-2xl"
-                style={{ background: "var(--bg-cream)", border: "1px solid var(--rose-pale)" }}
+                style={{ background: "var(--bg-cream)", borderLeft: `4px solid ${item.color}` }}
               >
-                <span className="text-3xl">{item.icon}</span>
                 <p className="text-lg" style={{ color: "var(--text-dark)" }}>{item.text}</p>
               </div>
             ))}
@@ -266,10 +265,10 @@ export default function GroupesTCAPage() {
               style={{ background: "var(--bg-cream)", border: "1px solid var(--rose-medium)" }}
             >
               <h3
-                className="text-xl font-semibold mb-4 flex items-center gap-2"
-                style={{ fontFamily: "var(--font-playfair)", color: "var(--brun-fonce)" }}
+                className="text-xl font-semibold mb-4"
+                style={{ fontFamily: "var(--font-playfair)", color: "var(--accent-lavande)" }}
               >
-                📅 HORAIRES
+                HORAIRES
               </h3>
               <div className="space-y-2" style={{ color: "var(--text-dark)" }}>
                 <p><strong>Séance tous les 15 jours</strong></p>
@@ -284,10 +283,10 @@ export default function GroupesTCAPage() {
               style={{ background: "var(--bg-cream)", border: "1px solid var(--rose-medium)" }}
             >
               <h3
-                className="text-xl font-semibold mb-4 flex items-center gap-2"
-                style={{ fontFamily: "var(--font-playfair)", color: "var(--brun-fonce)" }}
+                className="text-xl font-semibold mb-4"
+                style={{ fontFamily: "var(--font-playfair)", color: "var(--accent-sage)" }}
               >
-                ✋ ENGAGEMENT
+                ENGAGEMENT
               </h3>
               <div className="space-y-2" style={{ color: "var(--text-dark)" }}>
                 <p><strong>Engagement sur 4 séances minimum</strong></p>
@@ -318,11 +317,14 @@ export default function GroupesTCAPage() {
             {supports.map((support, i) => (
               <div
                 key={i}
-                className="flex items-center gap-3 px-6 py-3 rounded-full"
-                style={{ background: "var(--bg-white)", border: "1px solid var(--rose-medium)" }}
+                className="px-6 py-3 rounded-full font-medium"
+                style={{ 
+                  background: "var(--bg-white)", 
+                  borderLeft: `4px solid ${support.color}`,
+                  color: support.color,
+                }}
               >
-                <span className="text-2xl">{support.icon}</span>
-                <span style={{ color: "var(--brun)" }}>{support.name}</span>
+                {support.name}
               </div>
             ))}
           </div>
@@ -380,7 +382,7 @@ export default function GroupesTCAPage() {
               className="text-xl font-semibold mb-4"
               style={{ fontFamily: "var(--font-playfair)", color: "var(--brun-fonce)" }}
             >
-              ⚠️ Conditions importantes
+              Conditions importantes
             </h3>
             <div className="space-y-3" style={{ color: "var(--text-dark)" }}>
               <p><strong>Aucun remboursement ne sera effectué</strong>, sauf en cas de problème de santé grave (sur justificatif médical).</p>

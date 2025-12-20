@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const words = ["S'affirmer.", "Se connaître.", "Se respecter.", "Se relier."];
+const words = ["Se connaître.", "Se respecter.", "Se relier.", "S'affirmer."];
 
 export default function AnimatedWords() {
   const [visibleCount, setVisibleCount] = useState(0);
@@ -41,6 +41,7 @@ export default function AnimatedWords() {
     </div>
   );
 }
+
 
 
 

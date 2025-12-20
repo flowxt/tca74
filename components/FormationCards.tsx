@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const formations = [
   {
@@ -12,7 +13,7 @@ const formations = [
     format: "Vidéo + PDF complet (40 pages)",
     link: "https://psy-tca-annecy.teachizy.fr/formations/dire-non-sans-peur-les-outils-concrets-pour-saffirmer",
     guarantee: false,
-    emoji: "✨",
+    image: "/image/formation-dire-non.jpg",
     hasVideo: false,
     description:
       "Apprenez à vous affirmer de manière efficace et assertive. Osez dire non tout en respectant les autres et en gardant de bonnes relations.",
@@ -58,7 +59,7 @@ const formations = [
     format: "49 leçons • 4h de vidéos • PDF imprimables",
     link: "https://psy-tca-annecy.teachizy.fr/formations/stop-hyperphagie",
     guarantee: true,
-    emoji: "🍃",
+    image: "/image/formation-stop-hyperphagie.jpg",
     hasVideo: true,
     videoUrl: "https://www.youtube.com/embed/wv4avw-_qwI?rel=0",
     description:
@@ -124,7 +125,6 @@ export default function FormationCards() {
                 color: activeIndex === i ? "white" : "var(--brun)",
               }}
             >
-              <span>{f.emoji}</span>
               <span className="hidden sm:inline">{f.title}</span>
               <span className="sm:hidden">{f.title.split(" ")[0]}</span>
               <span
@@ -167,7 +167,16 @@ export default function FormationCards() {
         <div className="p-8 md:p-12">
           {/* Header */}
           <div className="text-center mb-10">
-            <div className="text-5xl mb-4">{formation.emoji}</div>
+            {formation.image && (
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src={formation.image}
+                  alt={formation.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            )}
             <h3
               className="text-3xl md:text-4xl font-semibold mb-3"
               style={{ fontFamily: "var(--font-playfair)", color: "var(--text-dark)" }}

@@ -5,34 +5,34 @@ import Image from "next/image";
 
 const sixQuestions = [
   {
-    icon: "💬",
     question: "Ma citation préférée",
     answer: "« Il vaut mieux prendre le mauvais chemin en boitant que le mauvais d'un pas ferme. »",
+    color: "var(--accent-lavande)",
   },
   {
-    icon: "✨",
     question: "Le personnage inspirant qui me ressemble",
     answer: "Maryam Gadery – auto-entrepreneuse, femme hautement sensible.",
+    color: "var(--peche)",
   },
   {
-    icon: "🌿",
     question: "Ma façon de me ressourcer",
     answer: "Me balader avec mon chien, écouter des podcasts inspirants, savourer le silence ou la pluie sous un plaid.",
+    color: "var(--accent-sage)",
   },
   {
-    icon: "🎬",
-    question: "Mon film préféré",
-    answer: "2 jours à tuer – un film qui me touche par sa profondeur et son intensité.",
+    question: "Le pays qui m'a le plus marqué",
+    answer: "L'Indonésie – pour la chaleur et l'authenticité de ses habitants.",
+    color: "var(--rose-accent)",
   },
   {
-    icon: "📖",
     question: "Mon livre préféré",
     answer: "Le monde en stop – une ode au voyage, à la découverte et à l'ouverture aux autres.",
+    color: "var(--brun-doux)",
   },
   {
-    icon: "🍜",
     question: "Ma nourriture préférée",
     answer: "La cuisine thaïe – pour ses saveurs épicées, parfumées et pleines de vitalité.",
+    color: "var(--nude)",
   },
 ];
 
@@ -198,22 +198,19 @@ export default function AboutSection() {
                   className="group p-5 rounded-2xl transition-all duration-300 hover:scale-[1.02] cursor-default"
                   style={{ 
                     background: "var(--bg-white)", 
-                    border: "1px solid rgba(212, 181, 169, 0.2)",
-                    boxShadow: "0 4px 15px rgba(154, 123, 111, 0.05)",
+                    borderLeft: `4px solid ${item.color}`,
+                    boxShadow: "0 4px 15px rgba(154, 123, 111, 0.08)",
                   }}
                 >
-                  <div className="flex items-start gap-4">
-                    <span className="text-2xl">{item.icon}</span>
-                    <div>
-                      <div
-                        className="text-sm font-medium mb-1"
-                        style={{ color: "var(--rose-accent)" }}
-                      >
-                        {item.question}
-                      </div>
-                      <div style={{ color: "var(--text-dark)" }}>
-                        {item.answer}
-                      </div>
+                  <div>
+                    <div
+                      className="text-sm font-semibold mb-2"
+                      style={{ color: item.color }}
+                    >
+                      {item.question}
+                    </div>
+                    <div style={{ color: "var(--text-dark)" }}>
+                      {item.answer}
                     </div>
                   </div>
                 </div>

@@ -19,12 +19,12 @@ export default function Home() {
             className="inline-block px-4 py-2 rounded-full text-sm font-medium mb-8 animate-fade-in"
             style={{ background: "var(--rose-pale)", color: "var(--brun)" }}
           >
-            ✨ Laura Baud — Annecy • Genève • Lausanne
+            Laura Baud — Annecy • Genève • Lausanne
           </div>
           
           {/* Titre principal - Grande typographie */}
           <h1
-            className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium mb-4 animate-fade-in-up leading-tight"
+            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium mb-4 animate-fade-in-up leading-tight"
             style={{ fontFamily: "var(--font-playfair)", color: "var(--text-dark)" }}
           >
             Thérapeute TCA
@@ -89,6 +89,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Découvrez Laura Section - Avant Mon approche */}
+      <AboutSection />
+
       {/* About Section - Approche centrée émotions */}
       <section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -112,7 +115,7 @@ export default function Home() {
                   Je ne vous dis pas quoi manger, je ne propose pas de restrictions. Mon approche ne se limite pas à la nutrition : <strong>je travaille sur ce qui nourrit vos crises en profondeur</strong> — vos émotions, vos besoins non exprimés, vos difficultés relationnelles.
                 </p>
                 <p>
-                  L'hyperphagie est le reflet d'un déséquilibre intérieur. Ensemble, nous allons <strong>explorer ses racines</strong> pour construire un changement durable.
+                  L'hyperphagie n'est pas une fatalité, mais un <strong>signal fort</strong> que votre corps vous envoie pour vous rappeler l'importance de vous retrouver. Ensemble, nous allons <strong>explorer ses racines</strong> pour construire un changement durable.
                 </p>
                 <p>
                   Ma spécialité : accompagner les femmes qui souffrent d'hyperphagie à retrouver une relation apaisée avec elles-mêmes et avec la nourriture. <strong>Pas de régimes, pas de comptage</strong>, mais un chemin profond fondé sur l'affirmation de soi, la reconnaissance de ses besoins, la gestion des émotions et la capacité à poser ses limites.
@@ -168,9 +171,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Découvrez Laura Section */}
-      <AboutSection />
 
       {/* Pillars Section - Les 5 axes */}
       <section className="section-padding bg-gradient-soft">

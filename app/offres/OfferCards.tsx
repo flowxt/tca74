@@ -27,7 +27,7 @@ const offers: Offer[] = [
     id: "standard",
     name: "Consultation Standard",
     price: 90,
-    icon: "🌿",
+    icon: "",
     tagline: "L'essentiel pour commencer",
     description: "Pour travailler sur une problématique ciblée ou répondre à un besoin ponctuel",
     longDescription:
@@ -46,7 +46,7 @@ const offers: Offer[] = [
     id: "premium",
     name: "Accompagnement Premium",
     price: 130,
-    icon: "✨",
+    icon: "",
     tagline: "L'expérience complète",
     description: "Un suivi renforcé pour celles et ceux qui souhaitent aller plus loin",
     longDescription:
@@ -97,8 +97,7 @@ export default function OfferCards() {
                 color: activeIndex === i ? "white" : "var(--brun)",
               }}
             >
-              <span className="text-lg sm:text-xl">{o.icon}</span>
-              <span className="text-sm sm:text-base">{i === 0 ? "Standard" : "Premium"}</span>
+              <span className="text-sm sm:text-base font-semibold">{i === 0 ? "Standard" : "Premium"}</span>
               <span
                 className="px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm font-bold"
                 style={{
@@ -154,7 +153,7 @@ export default function OfferCards() {
               }}
             >
               <span className="text-sm font-bold tracking-wide text-white">
-                ✨ RECOMMANDÉ
+                RECOMMANDÉ
               </span>
             </div>
           </>
@@ -163,7 +162,6 @@ export default function OfferCards() {
         <div className={`relative p-6 md:p-10 lg:p-14 ${isPremium ? "pt-16 md:pt-20" : ""}`}>
           {/* Header */}
           <div className="text-center mb-8 md:mb-10">
-            <span className="text-5xl md:text-6xl mb-4 md:mb-6 block">{offer.icon}</span>
             <h2
               className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2"
               style={{
@@ -301,7 +299,7 @@ export default function OfferCards() {
                         color: "white",
                       }}
                     >
-                      BONUS
+                      +
                     </span>
                   )}
                 </div>
@@ -318,8 +316,8 @@ export default function OfferCards() {
                 border: "1px solid rgba(197, 184, 200, 0.3)",
               }}
             >
-              <h4 className="font-bold mb-3 md:mb-4 flex items-center gap-2 text-sm md:text-base" style={{ color: "var(--brun)" }}>
-                <span>📩</span> Comment fonctionnent les mails ?
+              <h4 className="font-bold mb-3 md:mb-4 text-sm md:text-base" style={{ color: "var(--brun)" }}>
+                Comment fonctionnent les mails ?
               </h4>
               <ul className="space-y-2">
                 {offer.mailRules.map((rule, i) => (
