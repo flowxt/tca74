@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import IntroLoader from "@/components/IntroLoader";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -108,6 +109,7 @@ export default function RootLayout({
       <body
         className={`${cormorant.variable} ${playfair.variable} antialiased`}
       >
+        <IntroLoader />
         <Navigation />
         <main>{children}</main>
         <Footer />
