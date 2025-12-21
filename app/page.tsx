@@ -175,23 +175,42 @@ export default function Home() {
       {/* Pillars Section - Les 5 axes */}
       <section className="section-padding bg-gradient-soft">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <span
-              className="text-sm font-medium tracking-widest uppercase mb-4 block"
-              style={{ color: "var(--rose-accent)" }}
-            >
-              Les piliers de mon accompagnement
-            </span>
-            <h2
-              className="text-3xl md:text-4xl font-medium mb-4"
-              style={{ fontFamily: "var(--font-playfair)" }}
-            >
-              5 piliers{" "}
-              <span style={{ color: "var(--brun-doux)" }}>fondamentaux</span>
-            </h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: "var(--text-medium)" }}>
-              Mes séances s'articulent autour de 5 axes essentiels
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            {/* Texte */}
+            <div>
+              <span
+                className="text-sm font-medium tracking-widest uppercase mb-4 block"
+                style={{ color: "var(--rose-accent)" }}
+              >
+                Les piliers de mon accompagnement
+              </span>
+              <h2
+                className="text-3xl md:text-4xl font-medium mb-4"
+                style={{ fontFamily: "var(--font-playfair)" }}
+              >
+                5 piliers{" "}
+                <span style={{ color: "var(--brun-doux)" }}>fondamentaux</span>
+              </h2>
+              <p className="text-lg" style={{ color: "var(--text-medium)" }}>
+                Mes séances s'articulent autour de 5 axes essentiels
+              </p>
+            </div>
+
+            {/* Image Alignement */}
+            <div className="relative">
+              <div
+                className="absolute -inset-4 rounded-3xl transform rotate-3"
+                style={{ background: "var(--rose-pale)" }}
+              />
+              <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-xl">
+                <Image
+                  src="/image/Alignement.jpg"
+                  alt="Retrouver son alignement intérieur"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
@@ -264,35 +283,48 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Grille des outils */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-            {[
-              { icon: "👂", title: "Écoute active", desc: "Écoute inconditionnelle et présence authentique" },
-              { icon: "🧠", title: "TCC", desc: "Thérapies cognitives et comportementales" },
-              { icon: "✍️", title: "Écriture thérapeutique", desc: "Journaling et lectures ciblées" },
-              { icon: "🌀", title: "Hypnose douce", desc: "Visualisations guidées et relaxation" },
-              { icon: "🎨", title: "Exercices créatifs", desc: "Approches ludiques et expressives" },
-              { icon: "🃏", title: "Médiations par cartes", desc: "Oracles, Dixit, cartes Bartoli" },
-              { icon: "💜", title: "Reparentage", desc: "Techniques de sécurité émotionnelle" },
-              { icon: "🛠️", title: "Gestion de crises", desc: "Exercices comportementaux concrets" },
-            ].map((outil, i) => (
-              <div
-                key={i}
-                className="p-5 rounded-2xl text-center hover:scale-[1.02] transition-transform"
-                style={{ background: "var(--bg-cream)", border: "1px solid var(--rose-medium)" }}
-              >
-                <span className="text-3xl mb-3 block">{outil.icon}</span>
-                <h3
-                  className="font-semibold mb-1"
-                  style={{ fontFamily: "var(--font-playfair)", color: "var(--text-dark)" }}
+          {/* Grille des outils avec image carnet */}
+          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+            {/* Image carnet */}
+            <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-lg order-2 lg:order-1">
+              <Image
+                src="/image/carnet.jpg"
+                alt="Écriture thérapeutique - carnet et stylo"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            {/* Grille des outils */}
+            <div className="grid grid-cols-2 gap-4 order-1 lg:order-2">
+              {[
+                { icon: "👂", title: "Écoute active", desc: "Écoute inconditionnelle" },
+                { icon: "🧠", title: "TCC", desc: "Thérapies cognitives" },
+                { icon: "✍️", title: "Écriture thérapeutique", desc: "Journaling et lectures" },
+                { icon: "🌀", title: "Hypnose douce", desc: "Visualisations guidées" },
+                { icon: "🎨", title: "Exercices créatifs", desc: "Approches ludiques" },
+                { icon: "🃏", title: "Médiations par cartes", desc: "Oracles et Dixit" },
+                { icon: "💜", title: "Reparentage", desc: "Sécurité émotionnelle" },
+                { icon: "🛠️", title: "Gestion de crises", desc: "Exercices concrets" },
+              ].map((outil, i) => (
+                <div
+                  key={i}
+                  className="p-4 rounded-2xl text-center hover:scale-[1.02] transition-transform"
+                  style={{ background: "var(--bg-cream)", border: "1px solid var(--rose-medium)" }}
                 >
-                  {outil.title}
-                </h3>
-                <p className="text-sm" style={{ color: "var(--text-medium)" }}>
-                  {outil.desc}
-                </p>
-              </div>
-            ))}
+                  <span className="text-2xl mb-2 block">{outil.icon}</span>
+                  <h3
+                    className="font-semibold text-sm mb-1"
+                    style={{ fontFamily: "var(--font-playfair)", color: "var(--text-dark)" }}
+                  >
+                    {outil.title}
+                  </h3>
+                  <p className="text-xs" style={{ color: "var(--text-medium)" }}>
+                    {outil.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Section supports symboliques avec photos */}
@@ -499,71 +531,101 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonial / Values Section */}
+      {/* Testimonial / Values Section avec images */}
       <section className="section-padding bg-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <span
-            className="text-sm font-medium tracking-widest uppercase mb-4 block"
-            style={{ color: "var(--rose-accent)" }}
-          >
-            Valeurs
-          </span>
-          <h2
-            className="text-3xl md:text-4xl font-medium mb-12"
-            style={{ fontFamily: "var(--font-playfair)" }}
-          >
-            Un cadre fondé sur la{" "}
-            <span style={{ color: "var(--brun-doux)" }}>confiance</span>
-          </h2>
-          
-          <div className="grid sm:grid-cols-3 gap-8">
-            {[
-              {
-                icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
-                ),
-                title: "Confidentialité",
-                desc: "Tout ce qui est partagé reste entre nous, dans un espace sécurisé.",
-              },
-              {
-                icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
-                ),
-                title: "Bienveillance",
-                desc: "Accueil inconditionnel, sans jugement, avec douceur et présence.",
-              },
-              {
-                icon: (
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                ),
-                title: "Non-jugement",
-                desc: "Votre histoire est unique. Je vous accompagne là où vous en êtes.",
-              },
-            ].map((value, i) => (
-              <div key={i} className="p-6">
-                <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-                  style={{ background: "var(--rose-pale)", color: "var(--brun)" }}
-                >
-                  {value.icon}
-                </div>
-                <h3
-                  className="text-lg font-semibold mb-2"
-                  style={{ fontFamily: "var(--font-playfair)" }}
-                >
-                  {value.title}
-                </h3>
-                <p className="text-sm" style={{ color: "var(--text-medium)" }}>
-                  {value.desc}
-                </p>
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <span
+              className="text-sm font-medium tracking-widest uppercase mb-4 block"
+              style={{ color: "var(--rose-accent)" }}
+            >
+              Valeurs
+            </span>
+            <h2
+              className="text-3xl md:text-4xl font-medium"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              Un cadre fondé sur la{" "}
+              <span style={{ color: "var(--brun-doux)" }}>confiance</span>
+            </h2>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+            {/* Image bien-dans-sa-peau */}
+            <div className="relative">
+              <div
+                className="absolute -inset-4 rounded-3xl transform -rotate-2"
+                style={{ background: "var(--peche)" }}
+              />
+              <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-xl">
+                <Image
+                  src="/image/bien-dans-sa-peau.jpg"
+                  alt="Se sentir bien dans sa peau"
+                  fill
+                  className="object-cover"
+                />
               </div>
-            ))}
+            </div>
+
+            {/* Valeurs */}
+            <div className="space-y-6">
+              {[
+                {
+                  icon: (
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                  ),
+                  title: "Confidentialité",
+                  desc: "Tout ce qui est partagé reste entre nous, dans un espace sécurisé.",
+                  color: "var(--accent-lavande)",
+                },
+                {
+                  icon: (
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  ),
+                  title: "Bienveillance",
+                  desc: "Accueil inconditionnel, sans jugement, avec douceur et présence.",
+                  color: "var(--rose-accent)",
+                },
+                {
+                  icon: (
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  ),
+                  title: "Non-jugement",
+                  desc: "Votre histoire est unique. Je vous accompagne là où vous en êtes.",
+                  color: "var(--accent-sage)",
+                },
+              ].map((value, i) => (
+                <div 
+                  key={i} 
+                  className="flex items-start gap-4 p-5 rounded-2xl"
+                  style={{ background: "var(--bg-cream)", borderLeft: `4px solid ${value.color}` }}
+                >
+                  <div
+                    className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0"
+                    style={{ background: value.color, color: "white" }}
+                  >
+                    {value.icon}
+                  </div>
+                  <div>
+                    <h3
+                      className="text-lg font-semibold mb-1"
+                      style={{ fontFamily: "var(--font-playfair)" }}
+                    >
+                      {value.title}
+                    </h3>
+                    <p className="text-sm" style={{ color: "var(--text-medium)" }}>
+                      {value.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -628,7 +690,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section avec image "tendre la main" */}
       <section
         className="section-padding relative overflow-hidden"
         style={{ background: "linear-gradient(135deg, var(--rose-pale) 0%, var(--peche) 50%, var(--nude) 100%)" }}
@@ -636,24 +698,41 @@ export default function Home() {
         <div className="circle-decoration -top-20 -left-20 opacity-40" />
         <div className="circle-decoration -bottom-40 -right-40 opacity-30" />
         
-        <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
-          <h2
-            className="text-3xl md:text-4xl font-medium mb-6"
-            style={{ fontFamily: "var(--font-playfair)", color: "var(--text-dark)" }}
-          >
-            Prête à commencer ce chemin ?
-          </h2>
-          <p className="text-lg mb-8" style={{ color: "var(--text-medium)" }}>
-            Le premier pas est souvent le plus difficile. Je suis là pour vous accompagner,
-            à votre rythme, vers un mieux-être durable.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary">
-              Prendre rendez-vous
-            </Link>
-            <Link href="/faq" className="btn-secondary">
-              Consulter la FAQ
-            </Link>
+        <div className="relative z-10 max-w-5xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Image tendre la main */}
+            <div className="relative">
+              <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-2xl">
+                <Image
+                  src="/image/tendre-la-main.jpg"
+                  alt="Tendre la main - accompagnement bienveillant"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Texte CTA */}
+            <div className="text-center md:text-left">
+              <h2
+                className="text-3xl md:text-4xl font-medium mb-6"
+                style={{ fontFamily: "var(--font-playfair)", color: "var(--text-dark)" }}
+              >
+                Prête à commencer ce chemin ?
+              </h2>
+              <p className="text-lg mb-8" style={{ color: "var(--text-medium)" }}>
+                Le premier pas est souvent le plus difficile. Je suis là pour vous accompagner,
+                à votre rythme, vers un mieux-être durable.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <Link href="/contact" className="btn-primary">
+                  Prendre rendez-vous
+                </Link>
+                <Link href="/faq" className="btn-secondary">
+                  Consulter la FAQ
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

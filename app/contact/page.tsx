@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
@@ -71,23 +72,44 @@ const services = [
 export default function ContactPage() {
   return (
     <>
-      {/* Hero Section */}
+      {/* Hero Section avec image */}
       <section className="relative pt-32 pb-20 bg-gradient-hero overflow-hidden">
         <div className="circle-decoration top-10 -right-20 opacity-40" />
         
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <h1
-            className="text-4xl md:text-5xl lg:text-6xl font-medium mb-6"
-            style={{ fontFamily: "var(--font-playfair)" }}
-          >
-            Prenons{" "}
-            <span style={{ color: "var(--brun-doux)" }}>contact</span>
-          </h1>
-          
-          <p className="text-xl leading-relaxed max-w-2xl mx-auto" style={{ color: "var(--text-medium)" }}>
-            Une question, une demande de rendez-vous ou simplement besoin d'échanger ?
-            Je suis là pour vous écouter.
-          </p>
+        <div className="relative z-10 max-w-6xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Texte */}
+            <div className="text-center lg:text-left">
+              <h1
+                className="text-4xl md:text-5xl lg:text-6xl font-medium mb-6"
+                style={{ fontFamily: "var(--font-playfair)" }}
+              >
+                Prenons{" "}
+                <span style={{ color: "var(--brun-doux)" }}>contact</span>
+              </h1>
+              
+              <p className="text-xl leading-relaxed" style={{ color: "var(--text-medium)" }}>
+                Une question, une demande de rendez-vous ou simplement besoin d'échanger ?
+                Je suis là pour vous écouter.
+              </p>
+            </div>
+
+            {/* Image estime-de-soi */}
+            <div className="relative hidden lg:block">
+              <div
+                className="absolute -inset-4 rounded-3xl transform -rotate-3"
+                style={{ background: "var(--peche)", opacity: 0.5 }}
+              />
+              <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-xl">
+                <Image
+                  src="/image/estime-de-soi.jpg"
+                  alt="Accueil chaleureux - estime de soi"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

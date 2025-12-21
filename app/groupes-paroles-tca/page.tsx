@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -87,39 +88,58 @@ export default function GroupesTCAPage() {
         </div>
       </section>
 
-      {/* Objectifs */}
+      {/* Objectifs avec image groupe */}
       <section className="section-padding bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <span
-              className="text-sm font-medium tracking-widest uppercase mb-4 block"
-              style={{ color: "var(--rose-accent)" }}
-            >
-              Objectifs
-            </span>
-            <h2
-              className="text-3xl md:text-4xl font-medium mb-4"
-              style={{ fontFamily: "var(--font-playfair)" }}
-            >
-              Un espace bienveillant et structuré
-            </h2>
-          </div>
-
-          <div className="grid sm:grid-cols-2 gap-6">
-            {[
-              { text: "Comprendre les mécanismes des troubles alimentaires", color: "var(--accent-lavande)" },
-              { text: "Explorer ses émotions et ses besoins", color: "var(--peche)" },
-              { text: "Découvrir des outils concrets pour apaiser les crises", color: "var(--accent-sage)" },
-              { text: "Partager son vécu et se sentir soutenue par le groupe", color: "var(--rose-accent)" },
-            ].map((item, i) => (
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Image groupe de parole */}
+            <div className="relative">
               <div
-                key={i}
-                className="flex items-start gap-4 p-6 rounded-2xl"
-                style={{ background: "var(--bg-cream)", borderLeft: `4px solid ${item.color}` }}
-              >
-                <p className="text-lg" style={{ color: "var(--text-dark)" }}>{item.text}</p>
+                className="absolute -inset-4 rounded-3xl transform rotate-2"
+                style={{ background: "var(--accent-lavande)", opacity: 0.3 }}
+              />
+              <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-xl">
+                <Image
+                  src="/image/groupe-parole.jpeg"
+                  alt="Groupe de paroles - femmes qui échangent"
+                  fill
+                  className="object-cover"
+                />
               </div>
-            ))}
+            </div>
+
+            {/* Objectifs */}
+            <div>
+              <span
+                className="text-sm font-medium tracking-widest uppercase mb-4 block"
+                style={{ color: "var(--rose-accent)" }}
+              >
+                Objectifs
+              </span>
+              <h2
+                className="text-3xl md:text-4xl font-medium mb-8"
+                style={{ fontFamily: "var(--font-playfair)" }}
+              >
+                Un espace bienveillant et structuré
+              </h2>
+
+              <div className="space-y-4">
+                {[
+                  { text: "Comprendre les mécanismes des troubles alimentaires", color: "var(--accent-lavande)" },
+                  { text: "Explorer ses émotions et ses besoins", color: "var(--peche)" },
+                  { text: "Découvrir des outils concrets pour apaiser les crises", color: "var(--accent-sage)" },
+                  { text: "Partager son vécu et se sentir soutenue par le groupe", color: "var(--rose-accent)" },
+                ].map((item, i) => (
+                  <div
+                    key={i}
+                    className="flex items-start gap-4 p-5 rounded-2xl"
+                    style={{ background: "var(--bg-cream)", borderLeft: `4px solid ${item.color}` }}
+                  >
+                    <p className="text-lg" style={{ color: "var(--text-dark)" }}>{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
