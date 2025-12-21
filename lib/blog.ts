@@ -26,19 +26,14 @@ export const categories: Category[] = [
     description: "Articles sur les troubles du comportement alimentaire : hyperphagie, boulimie, anorexie.",
   },
   {
-    name: "Haute Sensibilité",
-    slug: "sensibilite",
-    description: "Comprendre et apprivoiser sa haute sensibilité au quotidien.",
+    name: "Anxiété",
+    slug: "anxiete",
+    description: "Phobies, attaques de panique, agoraphobie : comprendre et surmonter ses peurs.",
   },
   {
-    name: "Bien-être",
-    slug: "bien-etre",
-    description: "Conseils et ressources pour prendre soin de soi.",
-  },
-  {
-    name: "Témoignages",
-    slug: "temoignages",
-    description: "Parcours et témoignages inspirants.",
+    name: "Ressources",
+    slug: "ressources",
+    description: "Livres, lectures et ressources recommandées pour accompagner votre parcours.",
   },
 ];
 
@@ -46,114 +41,1128 @@ export const categories: Category[] = [
 // Pour ajouter un article, il suffit d'ajouter un objet dans ce tableau
 // La cliente peut facilement modifier ce fichier pour ajouter ses articles
 export const blogPosts: BlogPost[] = [
+  // ========== NOUVEAUX ARTICLES ==========
   {
-    slug: "comprendre-hyperphagie",
-    title: "Comprendre l'hyperphagie : quand manger devient une souffrance",
+    slug: "lectures-recommandees-tca",
+    title: "Lectures recommandées sur les troubles alimentaires (TCA)",
     excerpt:
-      "L'hyperphagie boulimique est un trouble du comportement alimentaire caractérisé par des épisodes de prise alimentaire excessive. Comprendre ce trouble est le premier pas vers la guérison.",
+      "Une sélection de livres pour mieux comprendre les troubles alimentaires et retrouver une relation apaisée avec la nourriture et son corps.",
     content: `
-# Comprendre l'hyperphagie : quand manger devient une souffrance
+# Lectures recommandées sur les troubles alimentaires (TCA)
 
-L'hyperphagie boulimique est un trouble du comportement alimentaire souvent méconnu, pourtant il touche de nombreuses personnes. Contrairement à ce que l'on pourrait penser, ce n'est pas simplement "manger trop" – c'est une véritable souffrance psychologique.
+Voici une sélection de livres que je recommande régulièrement à mes patientes. Ces ouvrages offrent des perspectives variées et complémentaires pour accompagner votre chemin de guérison.
 
-## Qu'est-ce que l'hyperphagie ?
+---
 
-L'hyperphagie se caractérise par des épisodes récurrents de consommation alimentaire excessive, accompagnés d'un sentiment de perte de contrôle. Ces crises sont généralement suivies de sentiments de honte, de culpabilité et de détresse.
+## Maigrir sans régime – Dr Jean-Philippe Zermati
 
-## Les signes à reconnaître
+Une approche basée sur les sensations alimentaires, pour sortir du cycle des régimes et retrouver une relation naturelle à la nourriture.
 
-- Manger beaucoup plus rapidement que la normale
-- Manger jusqu'à se sentir inconfortablement plein
-- Manger de grandes quantités sans avoir faim
-- Manger seul(e) par honte de la quantité consommée
-- Se sentir dégoûté(e), déprimé(e) ou coupable après
+---
 
-## Vers un accompagnement adapté
+## Je fais la paix avec mon poids – Florian Saffer
 
-La bonne nouvelle, c'est que l'hyperphagie se soigne. Un accompagnement thérapeutique adapté permet de comprendre les mécanismes sous-jacents et de retrouver un rapport apaisé avec la nourriture.
+Un parcours en 8 étapes pour se libérer du conflit intérieur lié au poids et retrouver une image corporelle plus apaisée.
 
-Les groupes de paroles offrent également un espace précieux pour briser l'isolement et partager avec d'autres personnes qui vivent la même chose.
+---
+
+## Soyons libres, bordel ! – Harmony Albertini
+
+Un manifeste vibrant pour se libérer des injonctions sociales et retrouver une relation libre, joyeuse et incarnée à soi-même.
+
+---
+
+## Pour que mon corps soit – Marie-Michèle Ricard
+
+Un recueil de 50 activités concrètes pour développer une relation plus positive avec son corps, au-delà du poids : visualisations, écriture, introspection, rituels corporels…
+
+---
+
+## Faire face aux troubles alimentaires – Angélique Gimenez, Alain Perroud, Daniel Rigaud
+
+Un ouvrage complet et accessible qui explore les TCA sous l'angle médical, psychologique et émotionnel, avec des repères clairs pour mieux comprendre et accompagner.
     `,
-    date: "15 novembre 2024",
+    date: "20 décembre 2025",
+    category: "Ressources",
+    categorySlug: "ressources",
+    image: "/image/blog/lectures.jpg",
+    tags: ["lectures", "livres", "TCA", "ressources", "hyperphagie"],
+  },
+  {
+    slug: "choisir-bon-psy-hyperphagie",
+    title: "Hyperphagie : comment choisir le bon psy pour se faire accompagner ?",
+    excerpt:
+      "\"Je mange sans faim.\" \"Je perds le contrôle.\" Ces phrases ne parlent pas seulement de nourriture. Elles parlent de souffrance. Pour y répondre, il faut un accompagnement psychologique adapté.",
+    content: `
+# Hyperphagie : comment choisir le bon psy pour se faire accompagner ?
+
+"Je mange sans faim." "Je perds le contrôle." "Je me sens vide, alors je mange."
+
+Ces phrases ne parlent pas seulement de nourriture. Elles parlent de souffrance, de déséquilibre émotionnel, de besoin de réconfort. Et pour y répondre, il ne suffit pas d'un régime. Il faut un accompagnement psychologique adapté.
+
+---
+
+## Grignotage ou hyperphagie : deux réalités différentes
+
+**Le grignotage** peut être lié à :
+- Une mauvaise organisation des repas
+- Un manque de satiété
+- Une habitude ponctuelle ou un réflexe de compensation
+
+Dans ce cas, un **diététicien ou nutritionniste** peut être d'une grande aide pour :
+- Structurer les repas
+- Comprendre les signaux de faim et de satiété
+- Revoir les apports alimentaires
+
+Mais quand les crises deviennent :
+- **Fréquentes**
+- **Compulsives**
+- **Émotionnellement chargées**
+- **Accompagnées de culpabilité, honte, isolement**
+
+Alors on parle d'**hyperphagie boulimique**. Et là, le soutien psychologique devient essentiel.
+
+---
+
+## Pourquoi consulter un psy spécialisé en TCA ?
+
+Tous les psychologues ne sont pas formés aux troubles du comportement alimentaire (TCA). En choisissant un thérapeute spécialisé, vous trouvez une personne qui a fait des TCA son champ d'expertise. Il connaît donc très bien les mécanismes en jeu.
+
+C'est un peu comme consulter un endocrinologue pour un souci de thyroïde, plutôt qu'un médecin généraliste.
+
+**Un psy spécialisé en TCA :**
+- Connaît les mécanismes émotionnels et corporels liés aux troubles alimentaires
+- Sait travailler sur la honte, la culpabilité, l'image de soi
+- Comprend que le symptôme alimentaire est souvent un signal, pas le problème en soi
+- Est formé à des approches spécifiques comme la TCC, l'EMDR, ou la thérapie intégrative et/ou a une expérience de terrain en institution
+
+---
+
+## Ce que doit proposer un bon accompagnement
+
+L'hyperphagie est souvent un langage émotionnel. Un bon thérapeute doit donc :
+- Maîtriser la régulation émotionnelle
+- Faire des liens entre la vie de l'individu et son comportement alimentaire
+- Accueillir sans jugement
+- Proposer une approche globale : corps, émotions, pensées, histoire
+- Ne pas imposer de programme alimentaire rigide
+
+---
+
+## Et la diététique dans tout ça ?
+
+C'est un complément utile, mais ce n'est pas le cœur du travail. Un thérapeute avec des notions en diététique peut :
+- Aider à reconstruire une relation apaisée à la nourriture
+- Soutenir l'écoute des sensations corporelles
+- Accompagner la sortie des régimes restrictifs
+
+Mais l'objectif n'est pas de dire quoi manger. **L'objectif est de comprendre pourquoi on mange**, et comment retrouver sa liberté intérieure.
+
+Le diététicien ou le médecin nutritionniste peut aussi être le premier interlocuteur et évaluer si votre situation requiert un suivi psychologique. Votre médecin généraliste peut également avoir dans son réseau un praticien à recommander.
+
+---
+
+## Ce que vous pouvez attendre d'un thérapeute compétent
+
+- Un espace sécurisé pour parler de vos émotions
+- Un rythme respecté, sans pression
+- Des outils concrets pour identifier vos déclencheurs
+- Une écoute profonde de ce que votre corps et votre histoire essaient de dire
+
+---
+
+## En résumé
+
+Choisir son psy pour l'hyperphagie, c'est choisir quelqu'un qui comprend que manger trop, ce n'est pas juste une question de volonté. C'est souvent le cri d'un corps qui n'a pas trouvé d'autre moyen d'exister.
+
+Et vous méritez d'être accompagné(e) par quelqu'un qui sait écouter ce cri, le traduire, et vous aider à retrouver votre voix.
+
+---
+
+Je vous invite également à consulter ce site qui référence les professionnels formés en TCA de la région : [anorexie-et-boulimie.fr](https://www.anorexie-et-boulimie.fr)
+    `,
+    date: "18 décembre 2025",
     category: "TCA",
     categorySlug: "tca",
-    image: "/blog/hyperphagie.jpg",
-    tags: ["hyperphagie", "TCA", "troubles alimentaires", "accompagnement"],
+    image: "/image/blog/bon-psy.jpg",
+    tags: ["hyperphagie", "psy", "thérapeute", "accompagnement", "TCA"],
   },
   {
-    slug: "haute-sensibilite-force",
-    title: "La haute sensibilité : une force à apprivoiser",
+    slug: "conseils-proches-tca",
+    title: "Conseils aux proches des personnes souffrant de TCA",
     excerpt:
-      "Longtemps perçue comme une faiblesse, la haute sensibilité est en réalité une richesse. Découvrez comment transformer ce trait de personnalité en véritable atout.",
+      "\"Perds un peu, ça te fera du bien.\" Ces phrases, souvent prononcées avec de bonnes intentions, sont en réalité des micro-agressions. Voici comment vraiment aider.",
     content: `
-# La haute sensibilité : une force à apprivoiser
+# Conseils aux proches des personnes souffrant de TCA
 
-Vous vous êtes toujours sentie "trop" ? Trop sensible, trop émotive, trop intense ? Bonne nouvelle : la haute sensibilité n'est pas un défaut, c'est un trait de personnalité qui concerne 20 à 30% de la population.
+## Ces phrases qui blessent quand on souffre d'hyperphagie
 
-## Reconnaître la haute sensibilité
+"Perds un peu, ça te fera du bien." "Il suffit de faire attention." "Tu devrais pas manger ça." "Arrête le sucre et ça se passera bien."
 
-Les personnes hautement sensibles perçoivent le monde avec plus d'intensité. Elles captent les subtilités, ressentent profondément les émotions (les leurs et celles des autres), et peuvent être facilement submergées par les stimuli externes.
+Ces phrases, souvent prononcées par l'entourage avec de "bonnes intentions", sont en réalité des **micro-agressions**. Elles traduisent une incompréhension du trouble, et renforcent la honte, la culpabilité, et le sentiment d'être jugé.
 
-## Ce n'est pas de la fragilité
+---
 
-Contrairement aux idées reçues, la haute sensibilité n'est pas synonyme de fragilité. C'est une manière différente de traiter l'information, avec une profondeur et une richesse uniques.
+## Quand l'entourage veut aider… mais fait mal
 
-## Transformer sa sensibilité en force
+L'hyperphagie est un trouble du comportement alimentaire, **pas un manque de volonté**. Pourtant, beaucoup de proches pensent bien faire en "motivant" ou en "recadrant" — sans réaliser que ces remarques peuvent aggraver la souffrance.
 
-Pour faire de votre sensibilité une alliée :
+Ce type de discours :
+- **Renforce le sentiment d'échec** : "Je n'y arrive pas, donc je suis nul·le."
+- **Crée de la peur** : peur de manger en public, peur d'être observé.
+- **Favorise l'isolement** : "Je ne peux pas être moi-même avec eux."
 
-- **Apprenez à vous connaître** : identifiez ce qui vous ressource et ce qui vous épuise
-- **Posez vos limites** : c'est un acte d'amour envers vous-même
-- **Créez des espaces de récupération** : votre système nerveux a besoin de calme
-- **Entourez-vous de personnes bienveillantes** : qui comprennent et respectent votre sensibilité
+---
 
-## Un accompagnement pour avancer
+## Choisir une personne de confiance : un vrai appui
 
-Les groupes de paroles pour personnes hautement sensibles offrent un espace unique où vous pouvez vous sentir comprise, sans avoir à vous justifier.
+Quand on souffre d'un TCA, se confier est un acte vulnérable. Choisir une **personne de confiance** peut devenir un point d'ancrage dans le chaos émotionnel.
+
+**Une personne de confiance, c'est :**
+- Quelqu'un qui écoute sans juger
+- Qui valide les émotions sans chercher à les corriger
+- Qui respecte la confidentialité
+- Qui ne minimise pas la souffrance
+- Qui reste disponible, même dans les silences
+
+Ce lien peut être un levier de guérison : il permet de se sentir soutenu, compris, et légitime dans sa démarche thérapeutique.
+
+---
+
+## Conseils à l'entourage pour soutenir sans blesser
+
+Voici des gestes simples mais puissants pour créer un espace sécurisant :
+
+### ❌ À éviter :
+- Les remarques sur le corps : "Tu as grossi", "Tu devrais perdre un peu"
+- Les remarques sur l'assiette : "Tu manges encore ?", "Tu vas finir tout ça ?"
+- Les conseils non sollicités : "Fais du sport", "Arrête le sucre"
+
+### ✅ À privilégier :
+- **Demander comment la personne se sent** : pas ce qu'elle mange, mais ce qu'elle vit
+- **Demander ce dont elle a besoin** : écoute, présence, espace
+- **Soutenir la thérapie** : proposer d'accompagner, de s'informer, de rencontrer le thérapeute si elle le souhaite
+- **Valoriser les progrès** : même les plus petits ("Tu as osé en parler, c'est énorme.")
+- **Revoir ses propres croyances alimentaires** : si on a soi-même des fragilités, des obsessions, des jugements — les déconstruire est un acte d'amour
+
+---
+
+## Conclusion : Aider, c'est apprendre à aimer autrement
+
+Soutenir une personne souffrant d'hyperphagie, ce n'est pas la "guérir". C'est lui offrir un espace où elle peut exister sans honte. C'est apprendre à aimer sans condition, sans contrôle, sans commentaire.
+
+Et parfois, c'est aussi se remettre en question soi-même — pour devenir un appui, pas un poids.
     `,
-    date: "8 novembre 2024",
-    category: "Haute Sensibilité",
-    categorySlug: "sensibilite",
-    image: "/blog/sensibilite.jpg",
-    tags: ["haute sensibilité", "hypersensible", "HPI", "émotions"],
+    date: "15 décembre 2025",
+    category: "TCA",
+    categorySlug: "tca",
+    image: "/image/blog/conseil-entourage.jpg",
+    tags: ["entourage", "proches", "famille", "TCA", "soutien", "hyperphagie"],
   },
   {
-    slug: "poser-ses-limites",
-    title: "Apprendre à dire non sans culpabiliser",
+    slug: "traitement-hyperphagie",
+    title: "Quel traitement pour soigner l'hyperphagie ?",
     excerpt:
-      "Poser ses limites est essentiel pour préserver son bien-être, pourtant c'est souvent un exercice difficile. Voici quelques clés pour y parvenir.",
+      "Les crises d'hyperphagie ne sont que la partie émergée de l'iceberg. En dessous se cachent des émotions non reconnues, des besoins ignorés. Découvrez mon approche de traitement.",
     content: `
-# Apprendre à dire non sans culpabiliser
+# Quel traitement pour soigner l'hyperphagie ?
 
-"Je devrais pouvoir dire non, mais je n'y arrive pas." Cette phrase, combien de fois l'avez-vous pensée ? Poser ses limites est un apprentissage, et comme tout apprentissage, il demande de la pratique et de la bienveillance envers soi-même.
+Les crises d'hyperphagie sont souvent perçues comme le problème principal. Pourtant, elles ne sont que **la partie émergée de l'iceberg**. En dessous se cachent des dynamiques plus subtiles : des émotions non reconnues, des besoins ignorés, des valeurs bafouées, et une perte de contact avec les sensations alimentaires.
 
-## Pourquoi est-ce si difficile ?
+---
 
-Dire non peut réveiller des peurs profondes : peur de décevoir, peur d'être rejetée, peur de ne plus être aimée. Ces peurs sont souvent ancrées depuis l'enfance et demandent un travail en douceur pour être dépassées.
+## Un accompagnement qui reconnecte
 
-## Les bienfaits de poser ses limites
+Mon approche vise à reconstruire une relation consciente et bienveillante avec soi-même et la nourriture, en travaillant sur plusieurs plans :
 
-- Préserver son énergie et éviter l'épuisement
-- Se respecter et se faire respecter
-- Construire des relations plus authentiques
-- Gagner en estime de soi
+- **Les émotions** : comprendre leur rôle, les accueillir, les différencier, les exprimer.
+- **Les limites** : apprendre à dire non, à se respecter, à poser des cadres sains.
+- **Les besoins et les valeurs** : identifier ce qui est essentiel pour soi, ce qui nourrit vraiment.
 
-## Quelques pistes pour commencer
+---
 
-1. **Commencez petit** : entraînez-vous sur des situations à faible enjeu
-2. **Prenez le temps** : "Je te réponds demain" est une réponse valide
-3. **Soyez claire et simple** : pas besoin de vous justifier longuement
-4. **Acceptez l'inconfort** : la culpabilité diminuera avec la pratique
+## Analyse des mécanismes des crises
 
-## Un travail en thérapie
+Les crises sont souvent le résultat de **schémas automatiques** :
 
-Apprendre à poser ses limites est souvent un thème central en thérapie. C'est un chemin qui demande du temps, mais les bénéfices sont immenses.
+- Règles alimentaires rigides et culpabilisantes
+- Anticipation des besoins : manger sans faim "au cas où"
+- Choix d'aliments "sains" au détriment de l'écoute du corps
+- Non-respect de la faim et des signaux corporels
+- Difficulté à repérer la satiété
+- Confusion entre faim et envie de manger
+- Mode "tout ou rien" : je me restreins, je lutte, je craque
+- Déconnexion des sensations alimentaires
+- Culpabilité post-crise qui alimente le cycle
+
+---
+
+## Le travail corporel : renouer le dialogue avec le corps
+
+Un pilier fondamental de mon accompagnement est de **réapprendre à habiter son corps** — traiter le corps comme un co-équipier plutôt qu'un ennemi.
+
+- **Écouter les messages corporels** : tensions, fatigue, faim, plaisir
+- **Prendre soin de son corps** : gestes doux, auto-massage, mouvement libre
+- **Pratiques somatiques** : respiration, relaxation, ancrage, pleine conscience
+- **Explorer les sensations** : par le mouvement, la danse, le toucher, le souffle
+- **Travailler l'image corporelle** : sortir du rejet, retrouver une relation apaisée
+
+Ce travail permet de désactiver les automatismes mentaux et de revenir à une présence incarnée, où le corps devient un allié plutôt qu'un ennemi.
+
+---
+
+## Dans certains cas : traitement médicamenteux et collaboration
+
+Pour certaines personnes, un **traitement médicamenteux** peut être envisagé en complément :
+- Des antidépresseurs (comme la fluoxétine) pour réguler l'humeur et réduire les crises
+
+Mon approche inclut aussi une **collaboration avec d'autres praticiens** :
+- Médecins généralistes ou psychiatres pour le suivi médical
+- Diététiciens pour un accompagnement nutritionnel non restrictif
+- Travail en réseau pour une prise en charge globale et cohérente
+
+---
+
+## Vers une guérison incarnée
+
+Guérir de l'hyperphagie, c'est **revenir à soi**, dans son corps, ses émotions, ses besoins. C'est sortir du pilotage automatique, retrouver la liberté de choisir, et se réconcilier avec son humanité imparfaite mais précieuse.
     `,
-    date: "1 novembre 2024",
-    category: "Bien-être",
-    categorySlug: "bien-etre",
-    image: "/blog/limites.jpg",
-    tags: ["limites", "bien-être", "assertivité", "développement personnel"],
+    date: "12 décembre 2025",
+    category: "TCA",
+    categorySlug: "tca",
+    image: "/image/blog/etape-suivi.jpg",
+    tags: ["traitement", "hyperphagie", "TCA", "thérapie", "guérison"],
+  },
+  // ========== NOUVEAUX ARTICLES (SUITE) ==========
+  {
+    slug: "compter-calories-ou-ecouter-corps",
+    title: "Compter les calories ou écouter son corps ?",
+    excerpt:
+      "Entre illusion du contrôle et sécurité corporelle retrouvée. Et si le vrai travail commençait par réapprendre à écouter ses sensations ?",
+    content: `
+# Compter les calories ou écouter son corps ?
+
+## Entre illusion du contrôle et sécurité corporelle retrouvée
+
+Elles sont nombreuses, ces femmes en quête de mieux-être, qui hésitent constamment entre deux approches :
+
+👉 Celle du coaching alimentaire, du comptage de calories, des régimes restrictifs.
+👉 Et celle de l'écoute corporelle, des sensations alimentaires, de la souplesse retrouvée.
+
+Et elles doutent. Parce qu'elles veulent perdre du poids. Parce qu'on leur a fait croire que maîtriser son assiette, c'est maîtriser sa vie. Les réseaux sociaux, les représentations sociétales, les pressions de l'entourage, appuient sur cette quête du corps parfait.
+
+---
+
+## Les régimes restrictifs : des résultats… au prix fort
+
+Oui, les régimes "stricts" fonctionnent — pour un temps. Mais ce que l'on oublie trop souvent :
+
+- La frustration qu'ils génèrent
+- L'obsession des chiffres : calories, poids, grammes…
+- La perte du lien aux sensations alimentaires : faim, satiété, satisfaction
+- Le retour des crises alimentaires, parfois plus violentes qu'avant
+- Et souvent : la reprise de poids, supérieure à la perte initiale
+
+---
+
+## Quand le corps devient un tableau Excel
+
+Compter les calories, jeûner, calculer les déficits... Cela peut séduire par son apparente rigueur. Mais pour les personnes qui souffrent de troubles du comportement alimentaire, c'est souvent un mirage toxique :
+
+- Cela nourrit un rapport obsessionnel aux chiffres, aux règles, aux seuils à ne pas franchir
+- Cela met à distance le corps réel, celui qui invite à manger en fonction du stress, du plaisir, de la météo…
+- Cela rend difficile la souplesse sociale : un resto, un pique-nique, une invitation deviennent menaçants
+
+Sur un corps fragilisé par des années de restrictions ou de crises, cette approche peut exploser en plein vol. **Le déficit calorique n'est pas durable quand le corps a peur de manquer.**
+
+---
+
+## Retrouver la sécurité intérieure
+
+Et si le vrai travail commençait là :
+
+- Apprendre à reconnaître la faim
+- Réapprendre la satiété sensorielle : le goût, la texture, le plaisir qui signale "c'est suffisant"
+- Être à l'écoute de son rythme corporel, sans violenter l'organisme par des règles extérieures
+- Se libérer de la peur de "mal manger" pour se reconnecter à ses propres repères
+
+**Le corps sait.** Ce sont les crises et non le respect de vos sensations qui font monter le poids.
+
+Par contre, le corps peut vous amener à vous alimenter car vous cherchez à vous apaiser, vous calmer dans un contexte qui vous déstabilise : Manger pour apaiser une émotion douloureuse, manger pour s'anesthésier, manger pour se réconforter, manger pour se punir, manger pour arrêter de penser.
+
+Manger pour arrêter ce flux intérieur qu'on arrive plus à faire taire. Et là, tous les régimes restrictifs ne feront pas ce travail. Ils vont aggraver votre découragement. Vous allez non seulement replonger dans les crises et en plus vous allez vous en vouloir avec une estime de vous-même à ras les chaussettes.
+
+---
+
+## Le travail psychologique autour des TCA
+
+Le travail psychologique passe aussi par la création de repères stables :
+
+- Identifier ses besoins et y répondre
+- Identifier ses limites et les respecter
+- Se nourrir au sens large
+- Éliminer les stresseurs ou en tout cas les réduire
+
+Et ça... Ça demande un vrai travail de fond. Plus long qu'un régime restrictif. Mais plus solide.
+
+---
+
+## Ne vous trompez pas d'ennemi
+
+Ce n'est pas votre satiété qui vous éloigne du mieux-être. Ce sont les injonctions, les règles à foison, les verdicts du lendemain sur la balance.
+
+**Revenir aux sensations, c'est choisir la coopération plutôt que la guerre.** C'est faire confiance au corps pour vous guider vers un équilibre durable.
+    `,
+    date: "10 décembre 2025",
+    category: "TCA",
+    categorySlug: "tca",
+    image: "/image/blog/comptez-ecouter-corps.jpg",
+    tags: ["calories", "écoute corporelle", "régimes", "TCA", "sensations"],
+  },
+  {
+    slug: "comment-arreter-les-crises",
+    title: "Comment arrêter les crises ?",
+    excerpt:
+      "Vous voulez arrêter les crises. Mais la réalité, c'est qu'arrêter les crises n'est pas une question de volonté. C'est un chemin fait de compréhension, de douceur et de petits pas concrets.",
+    content: `
+# Comment arrêter les crises ?
+
+Vous voulez arrêter les crises. Retrouver une relation plus sereine à la nourriture, à votre corps, à vous-même.
+
+Et peut-être qu'au fond, vous espérez encore qu'il existe une méthode magique, un déclic radical. Mais la réalité, c'est qu'arrêter les crises n'est pas une question de volonté. **C'est un chemin.** Un chemin fait de compréhension, de douceur et de petits pas concrets. Et ce chemin peut réellement vous transformer.
+
+---
+
+## 1. Sortir des signaux externes, se reconnecter à soi
+
+Lorsque les crises s'installent, c'est souvent parce que vous ne savez plus à quoi vous fier pour manger. Alors vous vous référez à des repères extérieurs :
+- le chiffre sur la balance,
+- les calories affichées par une application,
+- les portions minutieusement pesées.
+
+Ces indicateurs donnent l'illusion du contrôle, mais vous éloignent de vos véritables repères internes.
+
+**Votre meilleur guide, ce n'est pas un algorithme. C'est votre corps.**
+
+Apprendre à reconnaître :
+- la faim physique, différente de l'ennui ou du stress,
+- la satiété, parfois subtile mais bien présente,
+- le plaisir sensoriel, qui nourrit autant que les nutriments…
+
+…c'est rétablir une connexion paisible et intuitive à votre alimentation.
+
+---
+
+## 2. Apprivoiser vos émotions sans passer par la nourriture
+
+La nourriture devient souvent un refuge émotionnel. Elle apaise, elle distrait, elle comble des vides.
+
+Mais les émotions ne sont pas des problèmes à supprimer : elles méritent d'être entendues. Vous pouvez apprendre à les traverser autrement :
+- par la respiration,
+- par l'écriture,
+- en partageant avec une personne de confiance,
+- ou simplement en vous accordant le droit de ressentir.
+- En apprenant de nouveaux outils pour accueillir ce qu'il se passe à l'intérieur
+
+**Ce n'est pas en luttant contre une émotion qu'on en guérit, mais en lui ouvrant un espace d'accueil sans jugement.**
+
+---
+
+## 3. Cesser la restriction
+
+Ce n'est pas vous qui manquez de volonté. C'est votre corps qui réagit à la privation. À chaque restriction, votre cerveau déclenche un état d'urgence pour vous protéger… ce qui amplifie les compulsions.
+
+Plus vous bannissez certains aliments, plus ils deviennent obsédants. **Sortir du cycle, c'est apprendre à faire la paix avec ce que vous vous interdisez.** Progressivement.
+
+---
+
+## 4. Vous exposer progressivement aux aliments qui font peur
+
+Certains aliments deviennent de véritables déclencheurs de panique. Mais les éviter ne fait que renforcer leur pouvoir.
+
+L'exposition progressive consiste à :
+- les réintroduire en petite quantité,
+- les manger sans rituel de compensation,
+- observer les pensées, sensations et émotions associées.
+
+C'est comme réapprivoiser un espace abandonné. À chaque passage, il devient un peu plus sûr, un peu plus habité.
+
+---
+
+## 5. Accepter d'avancer pas à pas
+
+Arrêter les crises n'est pas un parcours linéaire. Il y aura des avancées, des doutes, parfois des rechutes. Mais chaque détour contient une leçon.
+
+**Ce n'est pas la perfection qui vous guérit. Ce sont les gestes répétés, imparfaits, mais faits avec douceur.**
+
+---
+
+## 6. Identifier les facteurs d'entretien invisibles
+
+Même avec les bonnes intentions, les crises peuvent persister si votre environnement vous bouscule constamment :
+- un stress chronique,
+- des relations toxiques,
+- une faible estime de vous-même.
+
+Guérir, c'est aussi mettre en lumière ce qui entretient la douleur, pour oser construire un quotidien plus soutenant.
+
+**Votre relation à la nourriture est souvent le miroir de votre relation au monde.**
+
+---
+
+## 7. Apprendre à connaître et respecter vos besoins
+
+Il ne suffit pas de manger à votre faim. Il s'agit aussi de vous écouter dans votre globalité :
+- Ai-je besoin de repos ?
+- Ai-je besoin de réconfort ?
+- Ai-je dépassé mes limites émotionnelles ?
+
+Ne pas respecter vos besoins, c'est comme ignorer les clignotants d'alerte. Et les crises deviennent alors le dernier recours de votre corps pour vous alerter.
+
+---
+
+## 8. Cesser de tout miser sur le poids
+
+Vous méritez mieux qu'un chiffre sur une balance pour évaluer votre bien-être. Posez-vous plutôt ces questions :
+- Est-ce que je dors mieux ?
+- Est-ce que j'ai plus d'énergie ?
+- Est-ce que je retrouve de la joie ?
+- Est-ce que mes cycles deviennent plus réguliers ?
+- Est-ce que je me sens sereine ?
+- Est-ce que je vis des expériences corporelles agréables ?
+
+**Votre corps n'est pas un ennemi. Il est votre allié. Et votre santé ne se résume pas à votre silhouette.**
+
+---
+
+## 9. Déconstruire les représentations sociales et familiales
+
+"Un bon aliment" / "un mauvais aliment". "Il faut finir son assiette." "Seules les personnes minces sont en bonne santé."
+
+Ces idées, vous les avez souvent intégrées très jeune. Mais il est temps de les interroger. De décider : est-ce encore juste pour moi ? Est-ce que cela me nourrit, ou me contraint ?
+
+**Guérir, c'est parfois désapprendre avant de réapprendre.**
+
+---
+
+## Conclusion
+
+Arrêter les crises n'est pas une affaire de force mentale. C'est un processus de reconnexion à soi, de réconciliation avec son corps, de déconstruction et de reconstruction.
+
+Et surtout : **vous n'avez pas à le faire seule.** Le soutien thérapeutique existe. Et il peut faire toute la différence.
+    `,
+    date: "8 décembre 2025",
+    category: "TCA",
+    categorySlug: "tca",
+    image: "/image/blog/arret-crise.jpg",
+    tags: ["crises", "compulsions", "TCA", "guérison", "hyperphagie"],
+  },
+  {
+    slug: "piege-foutu-pour-foutu",
+    title: "Le piège du \"foutu pour foutu\" : quand le cadre alimentaire devient une prison invisible",
+    excerpt:
+      "Imagine un barrage immense, construit pour contenir un fleuve puissant. Et puis un jour, une goutte passe. Et le barrage cède. C'est ça, le foutu pour foutu.",
+    content: `
+# Le piège du "foutu pour foutu" : quand le cadre alimentaire devient une prison invisible
+
+Imagine un barrage immense, construit pour contenir un fleuve puissant. Jour après jour, on accumule la pression derrière ses parois : on interdit le sucre, on bannit les féculents, on supprime les plaisirs "non autorisés".
+
+Et puis un jour, une goutte passe. Une bouchée de chocolat. Un dîner imprévu. Et le barrage cède.
+
+**C'est ça, le foutu pour foutu.** Pas un manque de volonté, mais la conséquence naturelle d'une pression trop forte, trop longtemps contenue.
+
+---
+
+## Un cadre trop rigide
+
+Pour se "reprendre en main", on construit un système de règles strictes :
+- Pas d'aliments "interdits".
+- Horaires fixes, quantités contrôlées.
+- Rien ne doit dévier du plan.
+
+Mais plus ce cadre est rigide, plus il devient vulnérable à la moindre secousse de la vie réelle.
+
+---
+
+## Face à l'aliment excitant : la panique
+
+Plus on se prive d'un aliment, plus il devient chargé émotionnellement.
+
+Un carré de chocolat ne reste plus un simple carré de chocolat : il devient un symbole d'échec potentiel, un danger, une "tentation interdite".
+
+👉 **Résultat** : on panique face à lui. On essaie de résister… puis on craque… et le barrage cède à nouveau. En force.
+
+Et après l'orage, on retombe dans cette boucle :
+*« J'ai tout gâché. Je repars de zéro. »*
+
+---
+
+## Isolement et rigidité sociale
+
+Ce mode de fonctionnement ne laisse aucune place à l'humain :
+- Pas de place pour une invitation.
+- Pas de spontanéité.
+- On décline les apéros, on craint les restos, on s'enferme.
+
+Et on s'épuise. Car ce cadre, au lieu de nous protéger, nous éloigne du monde et de nous-mêmes.
+
+---
+
+## Une voie plus douce est possible
+
+Imagine plutôt une rivière… libre, souple, capable d'épouser les reliefs, de contourner les rochers. Elle s'adapte. Elle avance.
+
+**La liberté alimentaire, c'est un peu ça :**
+- Laisser de la place à l'imprévu sans culpabilité.
+- Retrouver un rapport plus neutre aux aliments.
+- Apprendre que la perfection n'existe pas, et ce n'est pas grave.
+
+C'est ce que j'accompagne chaque jour dans mes consultations : apaiser le rapport au cadre, et retrouver une relation plus libre, plus fluide avec la nourriture… et avec soi-même.
+    `,
+    date: "6 décembre 2025",
+    category: "TCA",
+    categorySlug: "tca",
+    image: "/image/blog/foutu.jpg",
+    tags: ["foutu pour foutu", "restriction", "TCA", "liberté alimentaire", "hyperphagie"],
+  },
+  {
+    slug: "crise-sans-cause",
+    title: "Une crise sans cause ? Et si c'était plus profond…",
+    excerpt:
+      "\"Je fais des crises alimentaires… mais souvent, je ne comprends même pas pourquoi.\" Si vous vous reconnaissez, sachez que ce \"je ne sais pas\" n'est pas un vide. C'est souvent une histoire émotionnelle qui s'est tue.",
+    content: `
+# Une crise sans cause ? Et si c'était plus profond…
+
+"Je fais des crises alimentaires… mais souvent, je ne comprends même pas pourquoi."
+"Je ne ressens rien de particulier. Et pourtant, c'est plus fort que moi."
+"Mon corps agit avant que j'aie le temps de penser."
+
+Si vous vous reconnaissez dans ces phrases, sachez que vous n'êtes pas seul(e). Et que ce "je ne sais pas" n'est pas un vide. **C'est souvent une histoire émotionnelle qui s'est tue.**
+
+---
+
+## On ne nous a pas appris à ressentir
+
+Certaines personnes n'ont simplement pas appris à écouter leurs émotions. Pas parce qu'elles sont faibles. Pas parce qu'elles refusent. Mais parce qu'elles ont grandi dans des contextes où les émotions n'étaient pas les bienvenues.
+
+- Parce qu'à la maison, on ne disait jamais rien. On faisait semblant. On serrait les dents.
+- Parce qu'exprimer une peur ou une tristesse, c'était "faire des histoires".
+- Parce qu'un parent, dysfonctionnel ou instable, aspirait toute l'attention — et il fallait se faire tout petit.
+- Parce qu'on vous a dit que "ressentir, c'est être faible". Que montrer sa peine, c'était perdre la face.
+- Parce que quand vous avez tenté de vous confier, on vous a répondu que c'était de votre faute.
+
+Petit à petit, vous avez appris à tout taire. Mais taire ne veut pas dire faire disparaître. **Le corps, lui, n'oublie pas. Et un jour, il crie. Il explose.**
+
+---
+
+## La crise comme langage d'un corps en détresse
+
+Faire une crise, ce n'est pas juste "craquer". C'est souvent la seule façon que le corps a trouvé pour dire : **"ça ne va pas."**
+
+- Parce qu'il y a une colère rentrée depuis des semaines.
+- Parce qu'il y a une fatigue émotionnelle invisible.
+- Parce qu'il y a un besoin ignoré, étouffé, banalisé.
+- Parce qu'il n'y a pas d'autre endroit où déposer tout ça.
+
+Alors le corps se charge. Et parfois, il déborde.
+
+---
+
+## Et si vous n'étiez pas "déconnecté(e)", mais simplement non-entendu(e) ?
+
+Ce n'est pas que vous ne ressentez rien. C'est que vous avez appris à ne pas écouter. À faire taire l'intuition, le ventre noué, la boule dans la gorge. À fonctionner sans questionner.
+
+Mais petit à petit, dans l'espace thérapeutique, on réapprend.
+- À observer un tiraillement, sans le fuir
+- À sentir une tension, un agacement, un vide
+- À se demander : "qu'est-ce que je suis en train de vivre, là, vraiment ?"
+- Et surtout, à ne plus avoir peur de ce qu'on ressent.
+
+---
+
+## Revenir à soi, sans se brusquer
+
+Dans mon accompagnement, on ne vous pousse pas à plonger dans l'émotion brute. On y va doucement. À votre rythme.
+
+- On peut juste observer une émotion apparaître et repartir, sans chercher à la comprendre tout de suite
+- On peut faire une pause, laisser infuser, revenir plus tard
+- On peut créer un espace sûr, loin du jugement, où même les silences sont précieux
+
+**Parce que ressentir, ce n'est pas s'effondrer. C'est se reconnecter à ce qui demande à être entendu depuis longtemps.**
+
+---
+
+## Un dernier mot
+
+Si vous faites des crises "sans raison", ce n'est pas que vous êtes instable. C'est que vous êtes humaine, et qu'il y a en vous des émotions longtemps mises de côté qui frappent à la porte.
+
+Je ne suis pas là pour vous forcer à ouvrir cette porte. **Je suis là pour vous accompagner si un jour, vous sentez qu'il est temps.**
+    `,
+    date: "4 décembre 2025",
+    category: "TCA",
+    categorySlug: "tca",
+    image: "/image/blog/crise-sans-cause.jpg",
+    tags: ["émotions", "crises", "TCA", "reconnexion", "thérapie"],
+  },
+  {
+    slug: "tca-detruisent-rassurent",
+    title: "Les TCA me détruisent… et pourtant, ils me rassurent",
+    excerpt:
+      "Cette ambivalence que personne ne voit. Même les comportements destructeurs ont une fonction. Ils apaisent, ils protègent, ils donnent une illusion de contrôle.",
+    content: `
+# Les TCA me détruisent… et pourtant, ils me rassurent
+
+## ⚖ Cette ambivalence que personne ne voit
+
+Quand on vit avec un trouble du comportement alimentaire (TCA), on peut ressentir deux élans contraires :
+
+- L'envie sincère de guérir, de ne plus souffrir, de retrouver une vie apaisée
+- Et l'envie de rester là, dans ce qu'on connaît, même si ça fait mal
+
+Pourquoi ? Parce que même les comportements destructeurs ont une fonction. Ils apaisent, ils protègent, ils donnent une illusion de contrôle. Ils deviennent parfois une identité, un repère, un refuge.
+
+---
+
+## Le trouble alimentaire comme stratégie de survie
+
+Votre trouble n'est pas "vous". Mais il a peut-être été votre façon de tenir debout pendant des années.
+
+- Il vous a permis de canaliser des émotions trop fortes
+- Il vous a donné une structure quand tout semblait flou
+- Il vous a offert une forme de contrôle dans un monde imprévisible
+
+Alors le lâcher, même si vous le souhaitez, peut faire peur. Parce que derrière, il y a des blessures à regarder, des émotions à ressentir, des vides à apprivoiser.
+
+---
+
+## Et si je ne savais plus qui je suis sans mon trouble ?
+
+C'est une question que beaucoup se posent. Quand le trouble est là depuis longtemps, il devient un filtre à travers lequel on se définit.
+
+**Changer, c'est aussi perdre une partie de cette identité.** Et ça peut être vertigineux.
+
+Mais c'est aussi l'opportunité de se redécouvrir, sans masque, sans carapace.
+
+---
+
+## Regarder ce qu'on a fui : un acte de courage immense
+
+Changer, ce n'est pas juste "arrêter de faire des crises". C'est oser regarder ce qui se cache derrière : les peurs, les manques, les douleurs anciennes.
+
+Et parfois, cela implique des choix de vie puissants :
+- Quitter un emploi qui vous épuise
+- Mettre fin à une relation toxique
+- Dire non à ce qui vous détruit, même si cela vous a longtemps tenu debout
+
+**Rien que de regarder cela, c'est déjà du courage.** Et vous n'avez pas à le faire seul(e).
+
+---
+
+## Une thérapie à votre rythme, sans pression
+
+Dans mon accompagnement, je ne force pas la main. On observe, on écoute, on accueille. On avance à votre rythme, avec vos résistances, vos hésitations, vos pauses.
+
+Vous pouvez :
+- Suspendre le suivi si vous avez besoin de digérer
+- Revenir quand vous vous sentez prête
+- Explorer vos peurs sans devoir les affronter tout de suite
+
+**Parce que la thérapie, ce n'est pas une course. C'est un chemin.** Et vous êtes libre de le tracer à votre façon.
+
+---
+
+## Et si vous n'aviez pas à choisir entre tout lâcher ou tout garder ?
+
+Et si vous pouviez avancer pas à pas, sans renier ce que vous avez été, mais en vous ouvrant à ce que vous pouvez devenir ?
+
+👉 Je suis là pour vous accompagner, même dans vos hésitations.
+👉 Même si vous avez peur, vous n'êtes pas seule.
+
+**Changer, ce n'est pas devenir quelqu'un d'autre. C'est enfin devenir vous-même.**
+    `,
+    date: "2 décembre 2025",
+    category: "TCA",
+    categorySlug: "tca",
+    image: "/image/blog/detruire.png",
+    tags: ["ambivalence", "identité", "TCA", "guérison", "peur du changement"],
+  },
+  {
+    slug: "sortir-tout-ou-rien-zone-grise",
+    title: "Hyperphagie : sortir du tout ou rien pour avancer dans la zone grise",
+    excerpt:
+      "\"Aujourd'hui, je vais bien faire.\" Puis la crise arrive. \"C'est foutu.\" Ce cycle du noir ou blanc est épuisant. Et si vous acceptiez d'avancer dans la zone grise ?",
+    content: `
+# Hyperphagie : sortir du tout ou rien pour avancer dans la zone grise
+
+Vous vous réveillez peut-être certains matins avec une promesse intérieure : *"Aujourd'hui, je vais bien faire. Je reprends tout. Je respecte mes règles. Je me reprends en main."*
+
+Puis il suffit parfois d'un imprévu, d'une émotion, d'un moment de vide... et la crise arrive. Et aussitôt, la phrase inverse surgit :
+
+*"C'est foutu. J'ai tout raté."*
+
+Ce mécanisme est épuisant. C'est le cycle du noir ou blanc, typique de l'hyperphagie. Et vous n'êtes pas seul(e) à le vivre.
+
+---
+
+## Un combat intérieur permanent
+
+Vous alternez entre :
+- Des périodes de contrôle rigide, où tout est "sous maîtrise"
+- Et des moments de craquage, où vous vous sentez dépassé(e), envahi(e), honteux(se)
+
+Chaque "écart" semble effacer tous les efforts précédents. Vous recommencez alors une nouvelle page blanche, chaque jour, avec l'espoir de "tout refaire bien"… Jusqu'au prochain effondrement.
+
+**Ce rythme vous vide. Physiquement. Émotionnellement. Moralement.**
+
+---
+
+## L'épuisement invisible de ceux qui tiennent "trop bien"
+
+Il y a tant de fatigue dans ce fonctionnement :
+- Fatigue de se battre contre soi-même
+- Fatigue de vouloir tout maîtriser
+- Fatigue de recommencer, encore et encore
+- Fatigue de se juger sans relâche
+
+Et cette honte, sourde, persistante, qui vous chuchote que vous n'y arriverez jamais.
+
+**Mais cette voix… elle ment.**
+
+---
+
+## Mon approche : avancer dans la zone grise
+
+Je ne vous demanderai jamais d'être parfaite. Je ne vous imposerai jamais de repartir à zéro.
+
+Parce que mon accompagnement repose sur **la zone grise** — cet espace entre le contrôle absolu et le chaos total. C'est en acceptant de faire imparfaitement que vous avancez réellement.
+
+Au lieu de reprendre l'autoroute vers la crise — celle que vous connaissez par cœur — vous apprenez à emprunter les chemins de traverse. Moins rapides. Moins clairs. Mais profondément humains.
+
+Vous ferez encore des crises. Mais elles seront moins nombreuses, moins violentes, moins chargées de honte.
+
+Et un jour, sans même y penser, vous vous retournerez et vous direz :
+*"J'en ai fait, du chemin... simplement en acceptant mon rythme."*
+
+---
+
+## Un suivi spécialisé pour retrouver votre souffle
+
+Je vous propose un suivi spécialisé en TCA, et particulièrement dans les troubles liés à l'hyperphagie, à l'épuisement émotionnel, à la culpabilité alimentaire.
+
+Ici, vous trouverez :
+- Une écoute sincère, sans jugement
+- Une compréhension fine de vos mécanismes
+- Un accompagnement respectueux de votre sensibilité
+- Des outils concrets pour déconstruire le cycle noir/blanc
+
+---
+
+## Vous êtes bien plus que vos crises
+
+Vous n'avez pas besoin d'être parfait(e) pour commencer un travail sur vous. Vous n'avez pas besoin de tout contrôler pour mériter d'être aidé(e). Vous avez seulement besoin d'être accueilli(e), là où vous en êtes.
+
+👉 Et si, cette fois, vous n'effaciez pas la page ?
+👉 Et si, pour une fois, vous acceptiez d'écrire en nuances ?
+
+**Je suis là pour vous accompagner — pas vers la perfection, mais vers la paix.**
+    `,
+    date: "30 novembre 2025",
+    category: "TCA",
+    categorySlug: "tca",
+    image: "/image/blog/tout-rien.jpg",
+    tags: ["tout ou rien", "zone grise", "hyperphagie", "TCA", "perfectionnisme"],
+  },
+  {
+    slug: "tca-honte-souffrance-silencieuse",
+    title: "TCA et honte : quand manger devient une souffrance silencieuse",
+    excerpt:
+      "Manger devrait être simple. Naturel. Apaisant. Mais lorsqu'on traverse un TCA, manger devient une épreuve. Un moment de conflit, de solitude… et souvent de honte.",
+    content: `
+# TCA et honte : quand manger devient une souffrance silencieuse
+
+Manger devrait être simple. Naturel. Apaisant. Mais lorsqu'on traverse un trouble du comportement alimentaire (TCA), manger devient une épreuve. Une tension quotidienne. Un moment de conflit, de solitude… et souvent de honte.
+
+---
+
+## Crises d'hyperphagie : quand vous cachez ce que vous vivez
+
+Peut-être vivez-vous ces instants où vous mangez vite, en quantité, sans pouvoir vous arrêter. Peut-être que vous vous levez la nuit, que vous cachez les emballages, que vous planifiez vos crises en espérant que personne ne vous voie.
+
+Et une fois la crise passée… le dégoût de soi, la honte, la fatigue émotionnelle.
+
+*"Je ne comprends pas pourquoi je fais ça. Je voudrais juste arrêter. Mais je n'y arrive pas."*
+
+---
+
+## La peur d'en parler… même à vos proches
+
+Le plus douloureux dans les TCA, c'est souvent **le silence**. Car parler à votre entourage peut sembler impossible. Peur d'être jugé(e), peur d'être incompris(e), peur qu'on vous dise "il suffit de faire un effort".
+
+Alors vous vous taisez. Vous faites semblant. Et chaque jour, vous portez cette douleur seul(e). Avec la honte comme poids invisible, mais omniprésent.
+
+---
+
+## Un cercle vicieux dont vous n'êtes pas responsable
+
+Les TCA ne sont pas un caprice. Ni une faiblesse. Ce sont des troubles complexes, souvent ancrés dans des émotions profondes, dans des vécus sensibles, dans une hypersensibilité que vous avez peut-être toujours portée en vous.
+
+Et ce que vous vivez n'est ni anormal, ni honteux. **C'est un appel de votre corps et de votre psychisme à être compris, entendu, apaisé.**
+
+---
+
+## Un suivi spécialisé pour ne plus être seul(e) face à ça
+
+Je vous propose un suivi spécialisé dans les TCA, et plus particulièrement dans l'hyperphagie, les compulsions, la souffrance émotionnelle liée à l'alimentation.
+
+Ici, vous trouverez :
+- Un espace pour vous exprimer sans être jugé(e)
+- Une écoute sincère, avec bienveillance et respect
+- Des outils pour vous aider à comprendre, à vous apaiser, à retrouver votre liberté intérieure
+
+**Vous n'avez pas besoin d'aller mal "au point de craquer" pour demander de l'aide.** Vous avez juste besoin d'être accueillie telle que vous êtes.
+
+---
+
+## Retrouver votre liberté, à votre rythme
+
+Vous avez le droit de manger sans culpabilité. Vous avez le droit de parler de vos crises sans rougir. Vous avez le droit d'être accompagné(e) avec douceur et professionnalisme.
+
+👉 Et si, malgré la honte, vous osiez m'écrire ?
+👉 Même si vous hésitez, je suis là pour vous accueillir avec humanité.
+
+*"Même si vous n'osez pas, sachez que je suis déjà là, prête à vous écouter telle que vous êtes."*
+    `,
+    date: "28 novembre 2025",
+    category: "TCA",
+    categorySlug: "tca",
+    image: "/image/blog/honte-tca.png",
+    tags: ["honte", "TCA", "hyperphagie", "silence", "accompagnement"],
+  },
+  {
+    slug: "hyperphagie-cest-quoi",
+    title: "L'hyperphagie, c'est quoi exactement ?",
+    excerpt:
+      "L'hyperphagie est un trouble du comportement alimentaire souvent sous-estimé. Des crises, une perte de contrôle, de la honte... Comprendre ce trouble est le premier pas vers la guérison.",
+    content: `
+# L'hyperphagie, c'est quoi exactement ?
+
+## L'hyperphagie : un trouble alimentaire sous-estimé
+
+L'hyperphagie est un trouble du comportement alimentaire qui se manifeste par des crises où la personne consomme une grande quantité de nourriture en un laps de temps réduit, souvent sans réelle faim et avec un sentiment de perte de contrôle. Contrairement à la boulimie, ces épisodes ne s'accompagnent pas de comportements compensatoires comme les vomissements ou l'exercice excessif.
+
+Ce trouble peut avoir plusieurs origines et résulte souvent d'un ensemble de facteurs qui s'entremêlent.
+
+---
+
+## Une structure alimentaire déséquilibrée
+
+Le manque de repères dans l'organisation des repas peut favoriser les épisodes d'hyperphagie. Des horaires irréguliers, des sauts de repas ou une alimentation chaotique rendent difficile la régulation naturelle de la faim et augmentent les risques de compulsions alimentaires. Lorsque le corps ne reçoit pas de repères clairs sur les moments où il sera nourri, il peut chercher à compenser par des prises alimentaires excessives.
+
+---
+
+## Un historique de régimes restrictifs
+
+Les personnes ayant suivi de nombreux régimes restrictifs sont particulièrement vulnérables à l'hyperphagie. Les régimes stricts entraînent souvent des privations importantes, des interdictions alimentaires et une obsession pour la nourriture. Ces restrictions créent un effet de frustration et de compensation : après une période de contrôle excessif, le corps et l'esprit lâchent prise, donnant lieu à des crises alimentaires où les aliments interdits sont consommés en grande quantité.
+
+---
+
+## Une mauvaise gestion des émotions
+
+L'hyperphagie est fréquemment liée à des émotions difficiles à gérer. Stress, tristesse, colère, anxiété ou même ennui peuvent déclencher une crise alimentaire. Pour certaines personnes, manger devient une réponse automatique à ces émotions, une manière de les apaiser temporairement. Cette association entre émotions et alimentation renforce le cycle des compulsions et complique la prise de conscience du problème.
+
+---
+
+## Des restrictions sous-jacentes
+
+Même en dehors des régimes formels, des restrictions alimentaires inconscientes peuvent exister. Se priver de certains aliments en pensant qu'ils sont « mauvais », limiter les quantités par peur de prendre du poids, ou s'imposer des règles strictes sur ce qui peut être consommé renforce le sentiment de privation. Ces restrictions insidieuses sont souvent à l'origine de l'hyperphagie, car le corps finit par réagir en cherchant à récupérer ce qu'il pense avoir perdu.
+
+**L'hyperphagie n'est pas simplement une affaire de gourmandise ou de manque de volonté.** Il s'agit d'un trouble complexe qui prend racine dans des schémas alimentaires, psychologiques et émotionnels.
+
+---
+
+# Comment reconnaître l'hyperphagie ?
+
+L'hyperphagie se distingue par plusieurs signes qui, lorsqu'ils se répètent, peuvent indiquer un trouble du comportement alimentaire :
+
+### 1. Des crises alimentaires incontrôlées
+Les épisodes d'hyperphagie sont marqués par une consommation excessive de nourriture sur une courte période, souvent accompagnée d'un sentiment de perte de contrôle.
+
+### 2. Absence de faim réelle
+Contrairement à une faim physiologique, les crises surviennent même en l'absence de besoin nutritionnel. Elles sont souvent déclenchées par des émotions ou des pensées obsédantes autour de la nourriture.
+
+### 3. Une forte détresse après les crises
+Les personnes qui souffrent d'hyperphagie ressentent souvent de la culpabilité, de la honte ou du dégoût après avoir mangé. Ces émotions renforcent le cycle des compulsions.
+
+### 4. Un historique de régimes restrictifs
+Une grande majorité des personnes hyperphages ont suivi des régimes sévères. Les restrictions alimentaires répétées créent un besoin de compensation, favorisant l'apparition des crises.
+
+### 5. Un grignotage compulsif et non-plaisant
+Si grignoter occasionnellement peut être une simple habitude, chez les personnes hyperphages, cela devient un acte impulsif, souvent réalisé sans plaisir et avec une sensation de vide.
+
+### 6. Des règles alimentaires rigides
+Se fixer des interdictions strictes sur certains aliments ou imposer des règles excessives (heure de repas, quantité autorisée) peut provoquer des épisodes d'hyperphagie en réaction à ces contraintes.
+
+### 7. Une alimentation liée aux émotions
+Beaucoup de personnes souffrant d'hyperphagie utilisent la nourriture comme un moyen de gérer le stress, l'ennui, l'anxiété ou d'autres émotions difficiles. Cette association renforce le cycle des compulsions.
+
+**Si plusieurs de ces critères vous concernent, il peut être utile d'observer vos habitudes alimentaires et votre relation avec la nourriture.**
+
+---
+
+# Faut-il vraiment consulter ?
+
+La question revient souvent : est-ce nécessaire de consulter pour des crises alimentaires ? Beaucoup de personnes hésitent, ressentent une profonde honte à l'idée de parler de leur alimentation à un professionnel. C'est une souffrance silencieuse, dont l'entourage n'a souvent aucune idée.
+
+J'ai accompagné de nombreuses personnes qui ont attendu des années avant de franchir le pas. Pendant longtemps, elles ont souffert seules, persuadées que leur problème n'était « pas assez grave » ou qu'elles devraient pouvoir s'en sortir sans aide extérieure. Pourtant, les crises alimentaires peuvent engendrer une détresse immense :
+
+- Un sentiment de perte de contrôle face à la nourriture, qui devient envahissant.
+- Une honte profonde après chaque épisode, nourrissant un cercle vicieux.
+- Une baisse de l'estime de soi, parfois jusqu'à la sensation de « se laisser tomber ».
+- Un déni du besoin d'aide, de peur d'être jugé pour une difficulté perçue comme « anodine ».
+
+**Consulter un professionnel ne signifie pas être faible ou incapable de gérer seul.** Au contraire, cela démontre une volonté de comprendre et d'apaiser ces mécanismes qui rendent le rapport à l'alimentation si douloureux. Personne ne mérite de vivre dans la souffrance, et il n'y a pas de « petit problème » lorsqu'il affecte votre quotidien et votre bien-être.
+
+---
+
+# Quand est-ce le bon moment pour consulter ?
+
+### 1. Vous avez tout essayé sans succès
+Vous avez tenté de vous contrôler, de changer vos habitudes, de suivre des conseils trouvés sur internet… mais rien ne fonctionne sur le long terme. Les crises reviennent encore et encore, et vous avez l'impression d'être coincé dans un cercle sans issue.
+
+### 2. Vous vous cachez et endurez cela seul
+L'hyperphagie est souvent accompagnée d'un profond sentiment de honte. Beaucoup de personnes ne parlent jamais de leurs crises, même à leurs proches. Elles mangent en cachette, évitent les repas en groupe et développent des stratégies pour dissimuler leur souffrance.
+
+### 3. Vous êtes obsédé(e) par la nourriture
+Votre quotidien est rythmé par des pensées constantes autour de l'alimentation : ce que vous allez manger, ce que vous devriez éviter, comment compenser une crise. Ces préoccupations prennent une place excessive et empêchent de vivre sereinement.
+
+### 4. Cela impacte votre vie pro et perso
+Les crises alimentaires et les émotions qui les accompagnent (culpabilité, honte, épuisement) affectent vos relations, votre confiance en vous et même votre performance au travail.
+
+### 5. Vous ressentez une immense fatigue mentale
+Lutter en permanence contre ses propres comportements alimentaires est épuisant. Vous passez d'une restriction à une perte de contrôle, vous vous promettez de « faire mieux demain », et pourtant, le cycle recommence.
+
+**Il n'y a pas de « bon » ou de « mauvais » moment pour consulter, mais si vous vous retrouvez dans plusieurs de ces points, sachez qu'une aide professionnelle peut réellement transformer votre quotidien.**
+
+---
+
+# Le cercle vicieux des restrictions alimentaires 😩
+
+**Focus unique sur le poids** → Insatisfaction du chiffre
+↓
+**Envie de restriction** → Sentiment de contrôle temporaire
+↓
+**Frustration** → Augmentation de l'obsession alimentaire
+↓
+**Lutte** → Résistance intense, tension mentale
+↓
+**Craquage** → Perte de contrôle sur l'alimentation
+↓
+**"Foutu pour foutu"** → Compensation excessive, sentiment d'abandon
+↓
+**Sentiment d'échec** → Culpabilité et honte
+↓
+**Impasse** → Retour aux envies de restrictions
+
+---
+
+# Le cercle vertueux de l'alimentation apaisée 😊
+
+**Écoute des besoins et sensations** → Reconnaître sa faim et sa satiété
+↓
+**Plaisir et liberté alimentaire** → Se donner le droit de manger ce qui fait envie sans culpabilité
+↓
+**Moins d'obsessions alimentaires** → Apaisement des pensées et diminution des compulsions
+↓
+**Satisfaction et bien-être corporel** → Meilleure connexion à son corps et à ses envies naturelles
+↓
+**Confiance et sérénité** → Plus de plaisir et moins de frustration
+↓
+**Stabilité et équilibre à long terme** → Relation apaisée à l'alimentation et au corps
+    `,
+    date: "25 novembre 2025",
+    category: "TCA",
+    categorySlug: "tca",
+    image: "/image/blog/hyperphagie.jpg",
+    tags: ["hyperphagie", "TCA", "définition", "symptômes", "cercle vicieux", "guérison"],
+  },
+  {
+    slug: "trouble-panique-agoraphobie-phobie-avion",
+    title: "Trouble panique, agoraphobie, phobie de l'avion : se libérer de ses peurs",
+    excerpt:
+      "Vous n'êtes pas seule face à vos peurs. Découvrez comment surmonter les attaques de panique, l'agoraphobie et la phobie de l'avion grâce à un accompagnement bienveillant.",
+    content: `
+# Trouble panique – Agoraphobie – Phobie de l'avion
+
+> *"Ce qui compte, c'est se libérer soi-même, découvrir ses propres dimensions, refuser les entraves."* — Virginia Woolf
+
+---
+
+## Pourquoi me choisir pour vous aider ?
+
+Vous n'êtes pas seule face à vos peurs, et je suis la preuve vivante que l'on peut les surmonter.
+
+Pendant des années, j'ai vécu avec la peur de prendre l'avion et d'être dans des lieux où je ne pouvais pas facilement m'échapper. Cela limitait mes déplacements, mes opportunités, et, en un sens, ma liberté.
+
+**Mais aujourd'hui, je voyage à travers le monde sans aucune difficulté.**
+
+Ce chemin de transformation n'a pas été magique. Il a été fait d'étapes, d'un travail progressif et bienveillant envers moi-même, et surtout d'un apprentissage profond sur comment se libérer de ses angoisses.
+
+Je comprends donc intimement ce que signifient les blocages, les phobies et la frustration qu'ils peuvent générer.
+
+---
+
+## Mon expérience professionnelle
+
+J'ai été **infirmière durant 17 ans en psychiatrie**, dont **6 ans en hôpital de jour** où j'ai accompagné des personnes phobiques au sein d'un groupe thérapeutique à l'aide de la **thérapie d'exposition avec prévention de la réponse**, avec le Dr Odile Jamet, médecin généraliste et psychothérapeute.
+
+Ce travail incluait :
+- La gestion des attaques de panique
+- Les sorties progressives à l'extérieur
+- L'apprentissage de techniques de régulation émotionnelle
+
+J'ai également eu l'occasion d'accompagner des **sessions de coaching en avion** avec la compagnie Swiss, qui propose des stages de désensibilisation d'une grande qualité avec de véritables vols en avion à la clé.
+
+👉 [Découvrir le programme Voler Sans Peur](https://www.volersanspeur.com)
+
+---
+
+## Ensemble, ouvrons les portes à une vie plus sereine
+
+Nous travaillerons à :
+- **Déconstruire vos peurs** : comprendre leurs mécanismes et leurs origines
+- **Apaiser votre esprit** : apprendre des techniques concrètes pour réguler l'anxiété
+- **Retrouver votre liberté** : oser à nouveau ce que vous vous interdisiez
+
+Je suis ici pour vous prouver qu'un nouveau départ est possible, quelles que soient les peurs qui vous retiennent aujourd'hui.
+
+---
+
+## Vous reconnaissez-vous ?
+
+- Vous évitez certains lieux par peur de faire une crise de panique ?
+- Vous anticipez constamment les situations "à risque" ?
+- Vous avez renoncé à des voyages, des opportunités, des moments de vie ?
+- Vous vous sentez prisonnière de vos angoisses ?
+
+**Ces peurs ne définissent pas qui vous êtes.** Elles sont des signaux, des protections que votre esprit a mises en place. Et avec le bon accompagnement, vous pouvez apprendre à les traverser.
+
+---
+
+## Un accompagnement adapté
+
+Mon approche combine :
+- **Thérapie d'exposition progressive** : avancer pas à pas, à votre rythme
+- **Techniques de gestion de l'anxiété** : respiration, ancrage, relaxation
+- **Travail sur les pensées** : identifier et transformer les croyances limitantes
+- **Soutien bienveillant** : un espace sans jugement pour exprimer vos peurs
+
+*Parce que se libérer de ses peurs, c'est se donner la permission de vivre pleinement.*
+    `,
+    date: "22 novembre 2025",
+    category: "Anxiété",
+    categorySlug: "anxiete",
+    image: "/image/blog/trouble-anxieu.jpg",
+    tags: ["phobie", "agoraphobie", "attaque de panique", "peur de l'avion", "anxiété", "thérapie d'exposition"],
   },
 ];
 

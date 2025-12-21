@@ -124,13 +124,13 @@ export default async function CategoryPage({ params }: Props) {
                   className="card group"
                 >
                   {post.image && (
-                    <div
-                      className="h-48 rounded-xl mb-6 bg-cover bg-center"
-                      style={{ 
-                        backgroundImage: `url(${post.image})`,
-                        background: `linear-gradient(135deg, var(--rose-pale) 0%, var(--peche) 100%)`
-                      }}
-                    />
+                    <div className="relative aspect-[16/10] rounded-xl mb-6 overflow-hidden">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="absolute inset-0 w-full h-full object-cover transition-transform group-hover:scale-105"
+                      />
+                    </div>
                   )}
                   
                   <div className="flex items-center gap-3 mb-3">

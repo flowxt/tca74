@@ -745,48 +745,77 @@ export default function Home() {
               className="text-sm font-medium tracking-widest uppercase mb-4 block"
               style={{ color: "var(--rose-accent)" }}
             >
-              Zones d'intervention
+              100% en ligne
             </span>
             <h2
               className="text-3xl md:text-4xl font-medium mb-4"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
-              Consultations en ligne depuis
+              Je vous accompagne où que vous soyez
             </h2>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: "var(--text-medium)" }}>
+              Consultations en visio disponibles dans toute la francophonie
+            </p>
           </div>
           
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Zones principales */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {[
-              { city: "Annecy", region: "Haute-Savoie, France" },
-              { city: "Genève", region: "Suisse" },
-              { city: "Lausanne", region: "Vaud, Suisse" },
-              { city: "Partout", region: "En ligne" },
+              { city: "Annecy", region: "Haute-Savoie", country: "France", icon: "🇫🇷" },
+              { city: "Genève", region: "Canton de Genève", country: "Suisse", icon: "🇨🇭" },
+              { city: "Lausanne", region: "Canton de Vaud", country: "Suisse", icon: "🇨🇭" },
             ].map((loc, i) => (
               <div
                 key={i}
                 className="card text-center hover:border-[var(--rose-accent)]"
               >
-                <svg
-                  className="w-8 h-8 mx-auto mb-3"
-                  style={{ color: "var(--rose-accent)" }}
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                </svg>
+                <div className="text-3xl mb-3">{loc.icon}</div>
                 <h3
-                  className="text-lg font-semibold mb-1"
+                  className="text-xl font-semibold mb-1"
                   style={{ fontFamily: "var(--font-playfair)" }}
                 >
                   {loc.city}
                 </h3>
-                <p className="text-sm" style={{ color: "var(--text-light)" }}>
+                <p className="text-sm" style={{ color: "var(--text-medium)" }}>
                   {loc.region}
+                </p>
+                <p className="text-xs font-medium mt-1" style={{ color: "var(--brun-doux)" }}>
+                  {loc.country}
                 </p>
               </div>
             ))}
           </div>
-    </div>
+
+          {/* Autres régions francophones */}
+          <div 
+            className="card text-center p-8"
+            style={{ background: "linear-gradient(135deg, var(--rose-pale) 0%, var(--peche) 50%, var(--lavande-pale) 100%)" }}
+          >
+            <h3
+              className="text-xl font-semibold mb-4"
+              style={{ fontFamily: "var(--font-playfair)" }}
+            >
+              Et dans toute la francophonie
+            </h3>
+            <div className="flex flex-wrap justify-center gap-3 mb-4">
+              {[
+                "Paris", "Lyon", "Marseille", "Bordeaux", "Toulouse", "Nantes",
+                "Bruxelles", "Luxembourg", "Monaco", "Montréal", "Québec"
+              ].map((city, i) => (
+                <span 
+                  key={i}
+                  className="px-3 py-1 rounded-full text-sm"
+                  style={{ background: "rgba(255,255,255,0.7)", color: "var(--brun)" }}
+                >
+                  {city}
+                </span>
+              ))}
+            </div>
+            <p className="text-sm" style={{ color: "var(--text-medium)" }}>
+              France métropolitaine • Suisse romande • Belgique francophone • Luxembourg • Canada francophone • DOM-TOM
+            </p>
+          </div>
+        </div>
       </section>
     </>
   );

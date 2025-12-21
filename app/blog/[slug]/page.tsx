@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPostBySlug, getAllSlugs, categories } from "@/lib/blog";
@@ -184,13 +185,15 @@ export default async function BlogPostPage({ params }: Props) {
       {post.image && (
         <section className="bg-white">
           <div className="max-w-4xl mx-auto px-6">
-            <div
-              className="h-64 md:h-96 rounded-2xl bg-cover bg-center -mt-8 shadow-lg"
-              style={{ 
-                backgroundImage: `url(${post.image})`,
-                background: `linear-gradient(135deg, var(--rose-pale) 0%, var(--peche) 100%)`
-              }}
-            />
+            <div className="relative aspect-[16/9] rounded-2xl overflow-hidden -mt-8 shadow-lg">
+              <Image
+                src={post.image}
+                alt={post.title}
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
           </div>
         </section>
       )}

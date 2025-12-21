@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { getAllPosts, categories } from "@/lib/blog";
 
@@ -97,10 +98,14 @@ export default function BlogPage() {
                   className="card group"
                 >
                   {post.image && (
-                    <div
-                      className="h-48 rounded-xl mb-6 bg-cover bg-center"
-                      style={{ backgroundImage: `url(${post.image})` }}
-                    />
+                    <div className="relative aspect-[16/10] rounded-xl mb-6 overflow-hidden">
+                      <Image
+                        src={post.image}
+                        alt={post.title}
+                        fill
+                        className="object-cover transition-transform group-hover:scale-105"
+                      />
+                    </div>
                   )}
                   
                   <div className="flex items-center gap-3 mb-3">

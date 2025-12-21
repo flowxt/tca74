@@ -20,6 +20,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.tca-annecy.fr"),
   title: {
     default: "Laura Baud | Thérapeute TCA centré sur les émotions | Annecy, Genève, Lausanne",
     template: "%s | Laura Baud - Thérapeute TCA",
