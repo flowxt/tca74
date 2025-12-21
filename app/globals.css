@@ -80,6 +80,19 @@ h1, h2, h3, h4, h5, h6 {
   50% { opacity: 0.7; }
 }
 
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll 60s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
 }

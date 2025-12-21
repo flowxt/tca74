@@ -1164,6 +1164,176 @@ Mon approche combine :
     image: "/image/blog/trouble-anxieu.jpg",
     tags: ["phobie", "agoraphobie", "attaque de panique", "peur de l'avion", "anxiété", "thérapie d'exposition"],
   },
+  {
+    slug: "suivi-en-ligne-specialise-tca",
+    title: "Suivi en ligne spécialisé TCA : pourquoi ça fonctionne",
+    excerpt:
+      "Il peut y avoir de nombreux freins à consulter en ligne. Découvrez les avantages d'un accompagnement en visioconférence pour les troubles alimentaires.",
+    content: `
+# Suivi en ligne spécialisé TCA
+
+Il peut y avoir de nombreux freins à consulter en ligne ou en visioconférence. Je vous propose d'explorer en détail les avantages de ce procédé.
+
+---
+
+## Les avantages de la thérapie en ligne
+
+### 🏠 Le confort de votre environnement
+
+Vous bénéficiez du **cadre rassurant de votre logement**. Vous pouvez consulter de chez vous sans avoir à vous déplacer. Pas de trajet, pas de stress lié aux transports, pas besoin de prévoir du temps supplémentaire.
+
+### 🎯 Une expertise accessible partout
+
+Vous bénéficiez d'une **expertise spécialisée à domicile**, même si vous n'avez pas de praticien formé aux TCA dans votre région. La distance géographique n'est plus un obstacle à un accompagnement de qualité.
+
+### 💻 Un espace de consultation dédié
+
+Je vous donne un lien à l'avance où vous pouvez vous connecter sur **"une salle de consultation virtuelle"**, qui sera la même pour tous nos rendez-vous. Un repère stable et sécurisant.
+
+### 📧 Un suivi entre les séances
+
+Je vous donne régulièrement des **exercices applicables chez vous entre les séances**, par mail. Le travail thérapeutique se poursuit au quotidien, à votre rythme.
+
+### 🧘 Des outils thérapeutiques adaptés
+
+De nombreux exercices thérapeutiques sont applicables à distance pendant les séances, y compris :
+- La relaxation
+- L'hypnose douce
+- Les visualisations guidées
+- Les exercices d'écriture
+- Le travail sur les émotions
+
+---
+
+## La première séance : un essai sans engagement
+
+Je vous invite à voir la première séance comme **"une séance test"** qui vous permettra de vérifier votre aisance avec la thérapie en ligne.
+
+Vous serez libre de poursuivre le suivi selon votre appréciation. Aucune pression, aucun engagement.
+
+---
+
+## Les émotions passent aussi par l'écran
+
+Il est tout à fait possible, pour le praticien, d'**appréhender vos émotions à travers l'écran**. C'est simplement un canal différent.
+
+Les expressions du visage, le ton de la voix, les silences, les regards... tout cela se perçoit aussi en visio. Et parfois, le fait d'être chez soi permet même de se sentir plus en confiance pour exprimer des choses difficiles.
+
+---
+
+## Encore des appréhensions ?
+
+Si vous avez encore des appréhensions, vous pouvez me poser toutes les questions qui vous traversent **avant de débuter le suivi en ligne**, afin que vous vous sentiez rassurée.
+
+Je suis disponible pour cela. N'hésitez pas à m'écrire.
+
+---
+
+## En résumé
+
+La thérapie en ligne, c'est :
+- ✅ Le confort de chez soi
+- ✅ L'accès à un spécialiste des TCA
+- ✅ Un cadre stable et sécurisant
+- ✅ Des outils thérapeutiques efficaces
+- ✅ Un suivi personnalisé entre les séances
+- ✅ La possibilité de tester avant de s'engager
+
+*Parce que prendre soin de soi ne devrait pas être compliqué.*
+    `,
+    date: "20 novembre 2025",
+    category: "Ressources",
+    categorySlug: "ressources",
+    image: "/image/blog/psy-ligne.jpg",
+    tags: ["thérapie en ligne", "visio", "TCA", "accompagnement", "suivi à distance"],
+  },
+  {
+    slug: "mieux-comprendre-trouble-alimentaire",
+    title: "Mieux comprendre mon trouble du comportement alimentaire",
+    excerpt:
+      "Le TCA est le visage que porte votre souffrance. En explorant ce qui se cache dessous, on peut diminuer la problématique alimentaire et retrouver un équilibre.",
+    content: `
+# Mieux comprendre mon trouble du comportement alimentaire
+
+## Les origines des TCA
+
+J'ai l'habitude de dire, par expérience, que **le TCA est le visage que porte votre souffrance**. Il convient d'aller regarder ce qui, un jour, a conduit à un comportement alimentaire désorganisé.
+
+Le TCA est souvent le résultat de difficultés intériorisées, contenues, qui n'ont pas été apaisées.
+
+En allant voir **le dessous de l'iceberg**, cela permet d'explorer les blocages et ainsi diminuer la problématique alimentaire.
+
+Je peux vous accompagner sur ce chemin, à votre rythme, dans le non-jugement et la bienveillance.
+
+---
+
+## Pourquoi se faire accompagner quand on souffre d'un trouble alimentaire ?
+
+Un trouble alimentaire conduit souvent à un **isolement majeur**. Je reçois régulièrement en consultation des patientes qui n'ont jamais parlé de leurs difficultés avant d'arriver dans mon cabinet.
+
+### Un profil qui se reconnaît
+
+Dans les profils que je reçois, les personnes ont des **exigences élevées avec elles-mêmes** et parler de ce sujet avec leurs proches provoque un sentiment de honte.
+
+Il leur faut du courage pour pousser la porte d'un cabinet et enfin mettre des mots sur leurs souffrances.
+
+### L'escalade silencieuse
+
+Au départ, les personnes tentent de s'en sortir sans aide, mais elles s'aperçoivent rapidement que le trouble s'insinue dans leur vie et prend toute la place.
+
+Les crises, les compulsions, envahissent le mental et le quotidien. Si bien que parfois :
+- Les personnes se cachent afin de faire leurs crises
+- Ou ont hâte de rentrer à la maison pour enfin se réconforter
+
+Car la crise (comportement problème) apparaît au premier plan comme **une stratégie de gestion émotionnelle**. Elle soulage à court terme mais garde un potentiel d'auto-destruction à long terme.
+
+### Les conséquences visibles
+
+- L'estime de soi, déjà fragile, est dégradée
+- La fatigue est de plus en plus présente
+- Les conséquences professionnelles et relationnelles apparaissent
+
+En général, les personnes sont obsédées par l'idée de perdre du poids, ce qui conduit à une **alternance de restrictions-crises**.
+
+---
+
+## Ce que le thérapeute peut vous offrir
+
+Le thérapeute offre un **espace d'écoute**, fait preuve de neutralité et de non-jugement afin de libérer la parole.
+
+En parler, c'est se confronter à la réalité. Et lorsqu'un problème est sur la table, il est plus facile d'en faire quelque chose que lorsqu'il est uniquement à l'intérieur de soi.
+
+---
+
+## Le premier travail : la motivation
+
+**Pourquoi souhaitez-vous changer ?**
+
+Lorsque l'on démarre un travail de transformation de soi, on traverse différentes étapes.
+
+On peut avoir très envie de changer, mais en même temps on peut avoir très peur de perdre certains avantages :
+- Sentiment de contrôle qui me rassure
+- Avoir une solution familière "clé en main" pour apaiser mon stress
+- Une identité construite autour du trouble
+
+C'est ce qu'on appelle : **l'ambivalence**.
+
+Cette ambivalence est normale, humaine, et fait partie du processus. Elle mérite d'être explorée avec douceur, sans jugement.
+
+---
+
+## Un chemin possible
+
+Comprendre son trouble, c'est déjà un premier pas. Et vous n'avez pas à faire ce chemin seul(e).
+
+*Je suis là pour vous accompagner, à votre rythme, vers une relation plus apaisée avec vous-même et avec la nourriture.*
+    `,
+    date: "18 novembre 2025",
+    category: "TCA",
+    categorySlug: "tca",
+    image: "/image/blog/mieux-comprendre-trouble-alim.jpg",
+    tags: ["TCA", "origines", "accompagnement", "ambivalence", "comprendre"],
+  },
 ];
 
 // Fonctions utilitaires pour récupérer les articles

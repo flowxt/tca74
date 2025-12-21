@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import AboutSection from "@/components/AboutSection";
 import AnimatedWords from "@/components/AnimatedWords";
+import GoogleReviews from "@/components/GoogleReviews";
 
 export default function Home() {
   return (
@@ -629,6 +630,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Google Reviews Section */}
+      <GoogleReviews />
 
       {/* Mini FAQ Section */}
       <section className="section-padding bg-gradient-soft">
