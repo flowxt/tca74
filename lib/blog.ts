@@ -43,6 +43,107 @@ export const categories: Category[] = [
 export const blogPosts: BlogPost[] = [
   // ========== NOUVEAUX ARTICLES ==========
   {
+    slug: "etapes-suivi-psychologique",
+    title: "Les grandes étapes du suivi psychologique",
+    excerpt:
+      "De la première séance à la séance de clôture, découvrez comment se déroule un accompagnement thérapeutique. Un chemin progressif, à votre rythme, dans la confiance.",
+    content: `
+# Les grandes étapes du suivi psychologique
+
+## Première séance
+
+La première séance est destinée à mieux vous connaître. C'est durant cette rencontre que vous déciderez ou non de poursuivre votre chemin avec moi.
+
+Je vous proposerai d'évoquer **l'historique de votre trouble alimentaire** et les grandes étapes de votre vie.
+
+Il peut y avoir une appréhension à évoquer certains traumatismes, sachez qu'il n'y a **aucune obligation à exposer des éléments difficiles dès la première rencontre**. C'est votre sentiment de confiance qui permettra, seulement si vous le souhaitez, d'aborder certains aspects de votre histoire.
+
+**Pousser la porte d'un thérapeute est déjà un grand pas, il est important de se laisser du temps.**
+
+Dans un second temps, nous pourrons évoquer ensemble vos objectifs, vos attentes. Je vous exposerai également ma manière de travailler et vous pourrez me poser les questions que vous souhaitez.
+
+> *Il est important de vous sentir avant tout en confiance.*
+
+---
+
+### Quelques précisions importantes
+
+- **Vous pouvez stopper votre suivi à tout moment.** Il est cependant préférable d'envisager une séance de clôture.
+
+- **Mon travail est une guidance.** Si au cours de notre accompagnement, un suivi avec un autre professionnel s'avère plus approprié, je vous en ferai part. (Exemple : psychologue pour pratiquer l'EMDR pour la gestion des traumatismes, un psychiatre pour un éventuel traitement médicamenteux.)
+
+---
+
+## Au cours du suivi
+
+Durant la première séance, nous aurons établi des objectifs. Ainsi, cela permettra d'échanger précisément autour de ce qui vous pose problème et je pourrai vous amener des pistes de travail.
+
+### Une approche active
+
+J'ai une approche active, basée essentiellement sur les **thérapies cognitives et comportementales**. Je propose des exercices entre les séances pour que vous puissiez continuer à explorer vos difficultés.
+
+Pour autant, **nous avançons à votre rythme**. Il est possible que certains exercices soient trop difficiles. J'invite toujours les personnes à me dire ouvertement quels sont leurs ressentis, afin de progresser dans la confiance et de prendre le temps de s'arrêter sur vos émotions.
+
+**Les blocages sur les exercices ne sont jamais anodins**, ils sont l'occasion de travailler un point sensible.
+
+### L'importance de l'authenticité
+
+Une des grandes problématiques des personnes souffrant de TCA (anorexie, boulimie) concerne **l'identité et la difficulté à être authentique**, par peur de ce que les autres vont penser.
+
+En thérapie, je tente d'amener les patientes à dire ce qui fait blocage pour que l'on puisse travailler sur les peurs ensemble, et ainsi se trouver ou se retrouver soi.
+
+**Les émotions sont toujours de précieux messages** qui nous indiquent ce qui est bon ou mauvais pour soi, où sont nos valeurs et nos essentiels.
+
+### Des exercices variés
+
+Les exercices proposés sont centrés sur le trouble alimentaire mais aussi sur les différentes difficultés que vous pouvez rencontrer :
+- Gestion des émotions
+- Affirmation de soi
+- Comment vivre avec un traumatisme
+
+Dans certains cas, il est possible de collaborer avec des psychiatres et des psychologues pour mettre en place une technique spéciale, comme **l'EMDR** par exemple :
+
+> *Le sigle EMDR vient de l'anglais Eye Movement Desensitization and Reprocessing, qui signifie en français "Désensibilisation et Retraitement par les Mouvements Oculaires". C'est une technique actuelle et très efficace pour gérer les traumatismes.*
+
+**Les séances peuvent avoir lieu toutes les semaines ou tous les 15 jours** à votre convenance.
+
+---
+
+## Séance d'urgence
+
+Il arrive que l'on soit tellement en difficulté qu'il est difficile d'attendre le prochain rendez-vous, ou que l'on soit confronté à des idées noires.
+
+Il est possible d'envisager dans ce cas un **rendez-vous d'urgence** pour :
+- Faire une évaluation des ressources
+- Si nécessaire, mettre en place un suivi beaucoup plus rapproché
+
+**Pour cela, il suffit de me contacter.**
+
+---
+
+## Séance de clôture et séances de soutien ponctuels
+
+Il n'est pas toujours aisé d'identifier la fin d'une thérapie pour une personne. Le patient peut avoir des appréhensions sur la fin d'un suivi.
+
+### Options possibles
+
+- **Une séance de bilan** peut être envisagée
+- Vous pouvez sentir que vous allez mieux et ressentir le besoin d'espacer les séances
+- Il est toujours possible d'en parler ensemble
+
+### Je reste disponible
+
+Il est important de savoir que **je me tiens disponible au besoin**. En effet, certains de mes patients sont stabilisés et me sollicitent en cas de besoin, selon les événements de leur vie.
+
+*La porte reste toujours ouverte.*
+    `,
+    date: "22 décembre 2025",
+    category: "Ressources",
+    categorySlug: "ressources",
+    image: "/image/blog/etape-suivi.jpg",
+    tags: ["suivi", "thérapie", "accompagnement", "première séance", "processus"],
+  },
+  {
     slug: "lectures-recommandees-tca",
     title: "Lectures recommandées sur les troubles alimentaires (TCA)",
     excerpt:
@@ -184,7 +285,7 @@ Je vous invite également à consulter ce site qui référence les professionnel
     date: "18 décembre 2025",
     category: "TCA",
     categorySlug: "tca",
-    image: "/image/blog/bon-psy.jpg",
+    image: "/image/blog/bon-psy.png",
     tags: ["hyperphagie", "psy", "thérapeute", "accompagnement", "TCA"],
   },
   {
@@ -256,7 +357,7 @@ Et parfois, c'est aussi se remettre en question soi-même — pour devenir un ap
     date: "15 décembre 2025",
     category: "TCA",
     categorySlug: "tca",
-    image: "/image/blog/conseil-entourage.jpg",
+    image: "/image/blog/conseils-entourage.jpg",
     tags: ["entourage", "proches", "famille", "TCA", "soutien", "hyperphagie"],
   },
   {
@@ -330,7 +431,7 @@ Guérir de l'hyperphagie, c'est **revenir à soi**, dans son corps, ses émotion
     date: "12 décembre 2025",
     category: "TCA",
     categorySlug: "tca",
-    image: "/image/blog/etape-suivi.jpg",
+    image: "/image/blog/quel-traitement-pour-lhyperphagie.jpg",
     tags: ["traitement", "hyperphagie", "TCA", "thérapie", "guérison"],
   },
   // ========== NOUVEAUX ARTICLES (SUITE) ==========
@@ -554,7 +655,7 @@ Et surtout : **vous n'avez pas à le faire seule.** Le soutien thérapeutique ex
     date: "8 décembre 2025",
     category: "TCA",
     categorySlug: "tca",
-    image: "/image/blog/arret-crise.jpg",
+    image: "/image/blog/comment-arreter-les-crises.jpg",
     tags: ["crises", "compulsions", "TCA", "guérison", "hyperphagie"],
   },
   {
@@ -869,7 +970,7 @@ Vous n'avez pas besoin d'être parfait(e) pour commencer un travail sur vous. Vo
     date: "30 novembre 2025",
     category: "TCA",
     categorySlug: "tca",
-    image: "/image/blog/tout-rien.jpg",
+    image: "/image/blog/tout-ou-rien.jpg",
     tags: ["tout ou rien", "zone grise", "hyperphagie", "TCA", "perfectionnisme"],
   },
   {
@@ -1082,7 +1183,7 @@ Lutter en permanence contre ses propres comportements alimentaires est épuisant
     date: "25 novembre 2025",
     category: "TCA",
     categorySlug: "tca",
-    image: "/image/blog/hyperphagie.jpg",
+    image: "/image/blog/lhyperphagie-cest-quoi-exatcment.jpg",
     tags: ["hyperphagie", "TCA", "définition", "symptômes", "cercle vicieux", "guérison"],
   },
   {
@@ -1331,7 +1432,7 @@ Comprendre son trouble, c'est déjà un premier pas. Et vous n'avez pas à faire
     date: "18 novembre 2025",
     category: "TCA",
     categorySlug: "tca",
-    image: "/image/blog/mieux-comprendre-trouble-alim.jpg",
+    image: "/image/blog/mieux-comprendre-mon-trouble-alimentaire.png",
     tags: ["TCA", "origines", "accompagnement", "ambivalence", "comprendre"],
   },
 ];
