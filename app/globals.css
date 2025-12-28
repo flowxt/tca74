@@ -93,6 +93,15 @@ h1, h2, h3, h4, h5, h6 {
   animation-play-state: paused;
 }
 
+/* Masquer la scrollbar sur mobile tout en permettant le scroll */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
 }

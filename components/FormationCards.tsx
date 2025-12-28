@@ -13,7 +13,7 @@ const formations = [
     format: "Vidéo + PDF complet (40 pages)",
     link: "https://psy-tca-annecy.teachizy.fr/formations/dire-non-sans-peur-les-outils-concrets-pour-saffirmer",
     guarantee: false,
-    image: "/image/formation-dire-non.jpg",
+    image: "/image/savoir-dire-non.png",
     hasVideo: false,
     description:
       "Apprenez à vous affirmer de manière efficace et assertive. Osez dire non tout en respectant les autres et en gardant de bonnes relations.",
@@ -58,7 +58,7 @@ const formations = [
     format: "Vidéo + PDF + 2 audios",
     link: "https://psy-tca-annecy.teachizy.fr/formations/les-emotions-comprendre-exprimer-transformer",
     guarantee: false,
-    image: "/image/formation-emotions.jpg",
+    image: "/image/gestion-des-emotions.jpg",
     hasVideo: false,
     description:
       "Apprenez à reconnaître, accueillir et transformer vos émotions. Un programme complet pour mieux comprendre ce que vous ressentez et développer votre intelligence émotionnelle.",
@@ -104,7 +104,7 @@ const formations = [
     format: "49 leçons • 4h de vidéos • PDF imprimables",
     link: "https://psy-tca-annecy.teachizy.fr/formations/stop-hyperphagie",
     guarantee: true,
-    image: "/image/formation-stop-hyperphagie.jpg",
+    image: "/image/stop-hyperphagie.jpg",
     hasVideo: true,
     videoUrl: "https://www.youtube.com/embed/wv4avw-_qwI?rel=0",
     description:
@@ -148,17 +148,17 @@ export default function FormationCards() {
 
   return (
     <div className="max-w-4xl mx-auto">
-      {/* Tabs de sélection */}
-      <div className="flex justify-center mb-10">
+      {/* Tabs de sélection - Empilés sur mobile, en ligne sur desktop */}
+      <div className="flex justify-center mb-8 md:mb-10 px-4">
         <div
-          className="inline-flex p-1.5 rounded-full gap-2"
+          className="flex flex-col sm:flex-row p-1.5 rounded-2xl sm:rounded-full gap-2 w-full max-w-sm sm:max-w-none sm:w-auto"
           style={{ background: "rgba(212, 181, 169, 0.2)" }}
         >
           {formations.map((f, i) => (
             <button
               key={f.id}
               onClick={() => setActiveIndex(i)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
+              className={`w-full sm:w-auto px-4 sm:px-6 py-3 sm:py-3.5 rounded-xl sm:rounded-full font-medium transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 ${
                 activeIndex === i
                   ? "shadow-lg"
                   : "hover:bg-white/50"
@@ -170,12 +170,11 @@ export default function FormationCards() {
                 color: activeIndex === i ? "white" : "var(--brun)",
               }}
             >
-              <span className="hidden sm:inline">{f.title}</span>
-              <span className="sm:hidden">{f.title.split(" ")[0]}</span>
+              <span className="text-sm sm:text-base font-semibold">{f.title}</span>
               <span
-                className="px-2 py-0.5 rounded-full text-xs font-bold"
+                className="px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm font-bold"
                 style={{
-                  background: activeIndex === i ? "rgba(255,255,255,0.2)" : "rgba(154, 123, 111, 0.15)",
+                  background: activeIndex === i ? "rgba(255,255,255,0.25)" : "rgba(154, 123, 111, 0.15)",
                   color: activeIndex === i ? "white" : "var(--brun)",
                 }}
               >

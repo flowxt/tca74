@@ -158,16 +158,23 @@ export default function GoogleReviews() {
           </div>
         </div>
 
-        {/* Carrousel infini avec CSS */}
-        <div className="overflow-hidden">
-          <div className="flex gap-6 animate-scroll">
+        {/* Carrousel - swipe tactile sur mobile, défilement auto sur desktop */}
+        <div 
+          className="overflow-x-auto md:overflow-hidden scrollbar-hide touch-pan-x"
+          style={{ 
+            WebkitOverflowScrolling: "touch",
+            scrollSnapType: "x mandatory",
+          }}
+        >
+          <div className="flex gap-4 md:gap-6 md:animate-scroll pb-4 md:pb-0">
           {duplicatedReviews.map((review, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-[350px] md:w-[400px] p-6 rounded-2xl transition-all hover:shadow-lg"
+              className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[400px] p-5 md:p-6 rounded-2xl transition-all hover:shadow-lg"
               style={{ 
                 background: "white",
                 boxShadow: "0 4px 20px rgba(0,0,0,0.05)",
+                scrollSnapAlign: "start",
               }}
             >
               {/* Header de l'avis */}
@@ -227,8 +234,13 @@ export default function GoogleReviews() {
           </div>
         </div>
 
+        {/* Indicateur swipe sur mobile */}
+        <p className="text-center mt-4 text-xs md:hidden" style={{ color: "var(--text-light)" }}>
+          ← Glissez pour voir plus d'avis →
+        </p>
+
         {/* Lien vers Google */}
-        <div className="text-center mt-8">
+        <div className="text-center mt-6 md:mt-8">
           <a
             href="https://share.google/Tk6xkL2U3V9ItJF3c"
             target="_blank"
