@@ -1432,7 +1432,7 @@ Comprendre son trouble, c'est déjà un premier pas. Et vous n'avez pas à faire
     date: "18 novembre 2025",
     category: "TCA",
     categorySlug: "tca",
-    image: "/image/blog/mieux-comprendre-mon-trouble-alimentaire.png",
+    image: "/image/blog/iceberg-tca-blog-card-paysage.png",
     tags: ["TCA", "origines", "accompagnement", "ambivalence", "comprendre"],
   },
 ];
