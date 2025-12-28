@@ -336,28 +336,28 @@ export default function Home() {
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               {/* Images des cartes */}
               <div className="grid grid-cols-3 gap-4">
-                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg transform -rotate-3 hover:rotate-0 transition-transform duration-300">
+                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden transform -rotate-3 hover:rotate-0 transition-transform duration-300 flex items-center justify-center">
                   <Image
-                    src="/image/card-lumiere.jpeg"
+                    src="/image/card-lumiere-removebg-preview.png"
                     alt="Les Cartes Lumière de Lise Bartoli"
                     fill
-                    className="object-cover"
+                    className="object-contain drop-shadow-lg"
                   />
                 </div>
-                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg transform rotate-2 hover:rotate-0 transition-transform duration-300">
+                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden transform rotate-2 hover:rotate-0 transition-transform duration-300 flex items-center justify-center">
                   <Image
-                    src="/image/oracle.jpeg"
+                    src="/image/oracle-removebg-preview.png"
                     alt="L'Oracle de l'enfant intérieur"
                     fill
-                    className="object-cover"
+                    className="object-contain drop-shadow-lg"
                   />
                 </div>
-                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden transform -rotate-1 hover:rotate-0 transition-transform duration-300 flex items-center justify-center">
                   <Image
-                    src="/image/jeu.jpeg"
+                    src="/image/jeu-removebg-preview.png"
                     alt="Jeu Dixit"
                     fill
-                    className="object-cover"
+                    className="object-contain drop-shadow-lg"
                   />
                 </div>
               </div>
