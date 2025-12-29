@@ -25,19 +25,19 @@ export default function MentionsLegalesPage() {
             Éditeur du site
           </h2>
           <p>
-            Ce site est édité par [Nom de la thérapeute]<br />
-            Profession : Thérapeute / Psychologue<br />
-            Adresse : [À compléter]<br />
-            Email : [À compléter]<br />
-            SIRET : [À compléter]
+            Ce site est édité par <strong>Laura Baud</strong><br />
+            Profession : Thérapeute spécialisée TCA<br />
+            Email : l.baud@protonmail.com<br />
+            Site mis en ligne : Décembre 2025
           </p>
 
           <h2 style={{ fontFamily: "var(--font-playfair)", color: "var(--text-dark)" }}>
             Hébergement
           </h2>
           <p>
-            Ce site est hébergé par [À compléter]<br />
-            Adresse : [À compléter]
+            Ce site est hébergé par <strong>Vercel Inc.</strong><br />
+            Adresse : 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis<br />
+            Site web : <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" style={{ color: "var(--brun-doux)" }}>vercel.com</a>
           </p>
 
           <h2 style={{ fontFamily: "var(--font-playfair)", color: "var(--text-dark)" }}>
@@ -45,7 +45,7 @@ export default function MentionsLegalesPage() {
           </h2>
           <p>
             L'ensemble du contenu de ce site (textes, images, logo) est la propriété exclusive 
-            de l'éditeur du site. Toute reproduction, même partielle, est interdite sans 
+            de Laura Baud. Toute reproduction, même partielle, est interdite sans 
             autorisation préalable.
           </p>
 
