@@ -317,7 +317,7 @@ export default function AboutSection() {
                     <p style={{ color: "var(--text-medium)" }}>
                       Ma vocation s'est affirmée dès mes débuts à la <strong>Clinique des Vallées</strong>, 
                       dans l'unité dédiée aux troubles du comportement alimentaire (TCA), aux côtés 
-                      du Dr Alain Perroud puis du Dr Filsnoël : j'y ai accompagné des personnes 
+                      du Dr Alain Perroud puis du Dr Filsnoël : J'ai accompagné des personnes 
                       confrontées à l'anorexie, la boulimie et l'hyperphagie, avec une approche 
                       profondément humaine.
                     </p>

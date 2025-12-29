@@ -60,7 +60,7 @@ export default function FormationPage() {
           <div
             className="p-8 md:p-12 rounded-3xl"
             style={{ background: "linear-gradient(135deg, var(--accent-sage) 0%, var(--peche) 100%)" }}
-          >
+            >
             <h2
               className="text-3xl md:text-4xl font-medium mb-4 text-white"
               style={{ fontFamily: "var(--font-playfair)" }}
@@ -80,7 +80,7 @@ export default function FormationPage() {
                 color: "var(--brun-fonce)",
                 boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
               }}
-            >
+                      >
               Accéder aux outils gratuits
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />

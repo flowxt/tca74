@@ -159,13 +159,13 @@ export default function Footer() {
                       </svg>
                     </a>
                   ) : (
-                    <Link
-                      href={link.href}
-                      className="text-base transition-colors hover:translate-x-1 inline-block"
-                      style={{ color: "var(--text-medium)" }}
-                    >
-                      {link.label}
-                    </Link>
+                  <Link
+                    href={link.href}
+                    className="text-base transition-colors hover:translate-x-1 inline-block"
+                    style={{ color: "var(--text-medium)" }}
+                  >
+                    {link.label}
+                  </Link>
                   )}
                 </li>
               ))}

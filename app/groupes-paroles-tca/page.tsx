@@ -107,7 +107,7 @@ export default function GroupesTCAPage() {
                 />
               </div>
             </div>
-
+            
             {/* Objectifs */}
             <div>
               <span
@@ -122,7 +122,7 @@ export default function GroupesTCAPage() {
               >
                 Un espace bienveillant et structuré
               </h2>
-
+              
               <div className="space-y-4">
                 {[
                   { text: "Comprendre les mécanismes des troubles alimentaires", color: "var(--accent-lavande)" },
@@ -161,17 +161,17 @@ export default function GroupesTCAPage() {
               Choisissez votre parcours
             </h2>
           </div>
-
+          
           <div className="grid md:grid-cols-2 gap-8">
             {/* Cycle court */}
             <div
               className="rounded-3xl overflow-hidden"
               style={{ background: "var(--bg-white)", border: "2px solid var(--rose-medium)" }}
             >
-              <div
+                <div
                 className="p-6 text-center"
                 style={{ background: "linear-gradient(135deg, var(--rose-pale) 0%, var(--peche) 100%)" }}
-              >
+                >
                 <h3
                   className="text-2xl font-semibold mb-2"
                   style={{ fontFamily: "var(--font-playfair)", color: "var(--brun-fonce)" }}
@@ -368,7 +368,7 @@ export default function GroupesTCAPage() {
               Les bénéfices du groupe
             </h2>
           </div>
-
+          
           <div className="space-y-4">
             {benefices.map((benefice, i) => (
               <div
@@ -383,9 +383,9 @@ export default function GroupesTCAPage() {
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
-                </div>
+            </div>
                 <p className="text-lg" style={{ color: "var(--text-dark)" }}>{benefice}</p>
-              </div>
+            </div>
             ))}
           </div>
         </div>

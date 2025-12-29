@@ -209,7 +209,7 @@ export default function QuizCards() {
     const emotionnelCount = checkedList.filter((id) => 
       cards.find((c) => c.id === id)?.category === "emotionnel"
     ).length;
-
+    
     const inclusionCount = checkedList.filter((id) => 
       cards.find((c) => c.id === id)?.category === "inclusion"
     ).length;
