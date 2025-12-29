@@ -58,10 +58,19 @@ export default function ContactForm() {
     e.preventDefault();
     setStatus("submitting");
 
-    // Simuler l'envoi du formulaire
-    // Dans la vraie implémentation, vous connecterez ceci à un backend ou service email
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Erreur lors de l'envoi");
+      }
+
       setStatus("success");
       setFormData({
         name: "",

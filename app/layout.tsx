@@ -20,7 +20,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.tca-annecy.fr"),
+  metadataBase: new URL("https://www.psy-tca-annecy.com"),
   title: {
     default: "Laura Baud | Thérapeute TCA centré sur les émotions | Annecy, Genève, Lausanne",
     template: "%s | Laura Baud - Thérapeute TCA",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "https://www.tca-annecy.fr",
+    url: "https://www.psy-tca-annecy.com",
     siteName: "Laura Baud - Thérapeute TCA",
     title: "Laura Baud | Thérapeute TCA centré sur les émotions",
     description:
@@ -85,10 +85,10 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.tca-annecy.fr",
+    canonical: "https://www.psy-tca-annecy.com",
     languages: {
-      "fr-FR": "https://www.tca-annecy.fr",
-      "fr-CH": "https://www.tca-annecy.fr",
+      "fr-FR": "https://www.psy-tca-annecy.com",
+      "fr-CH": "https://www.psy-tca-annecy.com",
     },
   },
 };
