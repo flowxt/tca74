@@ -236,31 +236,45 @@ export default function Home() {
               {
                 title: "Affirmation de soi",
                 desc: "Apprendre à exprimer ses besoins, ses envies et ses limites sans culpabilité.",
+                gradient: "linear-gradient(135deg, #F5E6E0 0%, #E8D5C4 100%)",
+                borderColor: "var(--rose-medium)",
               },
               {
                 title: "Connaissance de ses besoins",
                 desc: "Identifier ce dont vous avez vraiment besoin au-delà de la nourriture.",
+                gradient: "linear-gradient(135deg, #E8D5C4 0%, #D4C4B0 100%)",
+                borderColor: "var(--peche)",
               },
               {
                 title: "Poser ses limites",
                 desc: "Dire non, se protéger, ne plus se laisser envahir par les autres.",
+                gradient: "linear-gradient(135deg, #E8EDE5 0%, #D4DFD0 100%)",
+                borderColor: "var(--accent-sage)",
               },
               {
                 title: "Problématiques relationnelles",
                 desc: "Comprendre et transformer les schémas qui vous font souffrir.",
+                gradient: "linear-gradient(135deg, #EDE8F0 0%, #DDD5E5 100%)",
+                borderColor: "var(--accent-lavande)",
               },
               {
                 title: "Techniques comportementales",
                 desc: "Des outils concrets de gestion des crises pour un soulagement immédiat.",
+                gradient: "linear-gradient(135deg, #F0EDE8 0%, #E5DFD4 100%)",
+                borderColor: "var(--brun-doux)",
               },
             ].map((pillar, i) => (
               <div
                 key={i}
-                className="card text-center hover:border-[var(--rose-accent)]"
+                className="p-6 rounded-2xl text-center transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
+                style={{ 
+                  background: pillar.gradient,
+                  border: `2px solid ${pillar.borderColor}`,
+                }}
               >
                 <h3
                   className="text-lg font-semibold mb-2"
-                  style={{ fontFamily: "var(--font-playfair)", color: "var(--text-dark)" }}
+                  style={{ fontFamily: "var(--font-playfair)", color: "var(--brun-fonce)" }}
                 >
                   {pillar.title}
                 </h3>
