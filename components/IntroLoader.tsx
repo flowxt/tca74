@@ -1,63 +1,58 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 
 export default function IntroLoader() {
-  const [isVisible, setIsVisible] = useState(true);
+  // État "null" signifie qu'on ne sait pas encore si on doit afficher le loader
+  const [showLoader, setShowLoader] = useState<boolean | null>(null);
   const [isFading, setIsFading] = useState(false);
-  const [shouldRender, setShouldRender] = useState(true);
+
+  // useLayoutEffect s'exécute de manière synchrone avant le paint du navigateur
+  useLayoutEffect(() => {
+    const hasSeenIntro = sessionStorage.getItem("hasSeenIntro");
+    if (hasSeenIntro) {
+      setShowLoader(false);
+    } else {
+      setShowLoader(true);
+      sessionStorage.setItem("hasSeenIntro", "true");
+    }
+  }, []);
 
   useEffect(() => {
-    // Vérifier si le loader a déjà été affiché dans cette session
-    const hasSeenIntro = sessionStorage.getItem("hasSeenIntro");
-    
-    if (hasSeenIntro) {
-      setIsVisible(false);
-      setShouldRender(false);
-      return;
-    }
-
-    // Marquer comme vu
-    sessionStorage.setItem("hasSeenIntro", "true");
+    if (showLoader !== true) return;
 
     // Timer pour commencer le fade out après 3.5 secondes
     const fadeTimer = setTimeout(() => {
       setIsFading(true);
     }, 3500);
 
-    // Timer pour cacher complètement après l'animation de fade (4.5 secondes total)
-    const hideTimer = setTimeout(() => {
-      setIsVisible(false);
-    }, 4500);
-
-    // Timer pour retirer du DOM
+    // Timer pour retirer du DOM après le fade
     const removeTimer = setTimeout(() => {
-      setShouldRender(false);
-    }, 5000);
+      setShowLoader(false);
+    }, 4500);
 
     return () => {
       clearTimeout(fadeTimer);
-      clearTimeout(hideTimer);
       clearTimeout(removeTimer);
     };
-  }, []);
+  }, [showLoader]);
 
   // Permettre de skip en cliquant
   const handleSkip = () => {
     setIsFading(true);
-    setTimeout(() => setIsVisible(false), 500);
-    setTimeout(() => setShouldRender(false), 1000);
+    setTimeout(() => setShowLoader(false), 500);
   };
 
-  if (!shouldRender) return null;
+  // Ne rien afficher tant qu'on ne sait pas, ou si le loader ne doit pas être affiché
+  if (showLoader !== true) return null;
 
   return (
     <div
       className={`fixed inset-0 z-[9999] flex items-center justify-center transition-opacity duration-1000 ${
-        isFading ? "opacity-0" : "opacity-100"
-      } ${!isVisible ? "pointer-events-none" : ""}`}
+        isFading ? "opacity-0 pointer-events-none" : "opacity-100"
+      }`}
       onClick={handleSkip}
-      style={{ cursor: "pointer" }}
+      style={{ cursor: "pointer", backgroundColor: "#1a3a4a" }}
     >
       {/* Vidéo de fond */}
       <video
@@ -65,6 +60,7 @@ export default function IntroLoader() {
         muted
         loop
         playsInline
+        preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src="/video/mer.mp4" type="video/mp4" />
