@@ -60,9 +60,11 @@ const offers: Offer[] = [
       { text: "Accompagnement continu", included: true, highlight: true },
     ],
     mailRules: [
-      "1 page maximum par mail",
-      "2 questions précises par mail",
-      "Réponse adaptée à votre contexte",
+      "2 mails de clarification après la séance",
+      "À utiliser dans les 15 jours",
+      "1 question ciblée par mail",
+      "Réponses personnalisées, apportant un éclairage précis et posé",
+      "Un cadre clair pour vous offrir une réponse de qualité",
     ],
     cta: "Choisir le Premium",
   },
@@ -317,7 +319,7 @@ export default function OfferCards() {
               }}
             >
               <h4 className="font-bold mb-3 md:mb-4 text-sm md:text-base" style={{ color: "var(--brun)" }}>
-                Comment fonctionnent les mails ?
+                Les mails de suivi
               </h4>
               <ul className="space-y-2">
                 {offer.mailRules.map((rule, i) => (

@@ -53,13 +53,30 @@ export default function Home() {
           <AnimatedWords />
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-300 mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-300 mb-6">
             <Link href="/contact" className="btn-primary text-lg px-8 py-4">
               Prendre rendez-vous
             </Link>
             <Link href="/questionnaire" className="btn-secondary text-lg px-8 py-4">
               Suis-je au bon endroit ?
             </Link>
+          </div>
+          
+          {/* Lien outils gratuits */}
+          <div className="text-center animate-fade-in-up delay-400 mb-16">
+            <a
+              href="https://l-baud.systeme.io/cadeau"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-medium transition-all hover:scale-105"
+              style={{ color: "var(--brun-doux)" }}
+            >
+              <span>🎁</span>
+              <span className="underline underline-offset-4">Accéder à mes outils gratuits</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
           </div>
           
           {/* Logo en dessous */}
@@ -113,7 +130,7 @@ export default function Home() {
               </h2>
               <div className="space-y-4 text-lg" style={{ color: "var(--text-medium)" }}>
                 <p>
-                  Je ne vous dis pas quoi manger, je ne propose pas de restrictions. Mon approche ne se limite pas à la nutrition : <strong>je travaille sur ce qui nourrit vos crises en profondeur</strong> — vos émotions, vos besoins non exprimés, vos difficultés relationnelles.
+                  Mon approche ne se limite pas à la nutrition : <strong>je travaille sur ce qui nourrit vos crises en profondeur</strong> — vos émotions, vos besoins non exprimés, vos difficultés relationnelles.
                 </p>
                 <p>
                   L'hyperphagie n'est pas une fatalité, mais un <strong>signal fort</strong> que votre corps vous envoie pour vous rappeler l'importance de vous retrouver. Ensemble, nous allons <strong>explorer ses racines</strong> pour construire un changement durable.
@@ -217,27 +234,22 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
             {[
               {
-                icon: "💪",
                 title: "Affirmation de soi",
                 desc: "Apprendre à exprimer ses besoins, ses envies et ses limites sans culpabilité.",
               },
               {
-                icon: "🎯",
                 title: "Connaissance de ses besoins",
                 desc: "Identifier ce dont vous avez vraiment besoin au-delà de la nourriture.",
               },
               {
-                icon: "🚧",
                 title: "Poser ses limites",
                 desc: "Dire non, se protéger, ne plus se laisser envahir par les autres.",
               },
               {
-                icon: "💬",
                 title: "Problématiques relationnelles",
                 desc: "Comprendre et transformer les schémas qui vous font souffrir.",
               },
               {
-                icon: "🧘",
                 title: "Techniques comportementales",
                 desc: "Des outils concrets de gestion des crises pour un soulagement immédiat.",
               },
@@ -246,7 +258,6 @@ export default function Home() {
                 key={i}
                 className="card text-center hover:border-[var(--rose-accent)]"
               >
-                <div className="text-4xl mb-4">{pillar.icon}</div>
                 <h3
                   className="text-lg font-semibold mb-2"
                   style={{ fontFamily: "var(--font-playfair)", color: "var(--text-dark)" }}
