@@ -187,17 +187,18 @@ export default function QuizCards() {
   const calculateProfile = (): Profile => {
     const checkedList = Array.from(checkedCards);
     
-    // Vérifier si femme majeure n'est pas cochée
-    if (!checkedCards.has(15)) {
-      return "non_majeure";
-    }
-
-    // Vérifier les cartes d'exclusion
+    // PRIORITÉ 1 : Vérifier les cartes d'exclusion (anorexie, restriction massive, perte de poids)
+    // Ces cas ne sont JAMAIS accompagnés, que ce soit femme majeure ou non
     const exclusionCards = checkedList.filter((id) => 
       cards.find((c) => c.id === id)?.excludes === true
     );
     if (exclusionCards.length > 0) {
       return "exclusion";
+    }
+
+    // PRIORITÉ 2 : Vérifier si femme majeure n'est pas cochée
+    if (!checkedCards.has(15)) {
+      return "non_majeure";
     }
 
     // Compter les cartes positives
