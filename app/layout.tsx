@@ -91,6 +91,9 @@ export const metadata: Metadata = {
       "fr-CH": "https://www.psy-tca-annecy.com",
     },
   },
+  verification: {
+    google: "fR00AbR-jJA_SjvOH1BQ_m_AOeYwy4wSxJh_zx_thPc",
+  },
 };
 
 export default function RootLayout({
