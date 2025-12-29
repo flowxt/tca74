@@ -113,6 +113,25 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Bandeau d'annonce congé */}
+      <section className="py-4 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <div
+            className="p-4 rounded-2xl flex items-center gap-4 justify-center text-center"
+            style={{
+              background: "linear-gradient(135deg, var(--accent-sage) 0%, var(--brun-doux) 100%)",
+              color: "white",
+            }}
+          >
+            <span className="text-2xl">🌿</span>
+            <p className="text-sm md:text-base">
+              <strong>Reprise des consultations le 16 février</strong>
+              <span className="hidden sm:inline"> — Je suis actuellement en congé. Vos demandes seront traitées dès mon retour.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Info Cards */}
       <section className="py-12 bg-white">
         <div className="max-w-5xl mx-auto px-6">
