@@ -58,7 +58,7 @@ export default function Home() {
               Prendre rendez-vous
             </Link>
             <Link href="/questionnaire" className="btn-secondary text-lg px-8 py-4">
-              Suis-je au bon endroit ?
+              Suis-je la bonne personne pour vous ?
             </Link>
           </div>
           
@@ -79,16 +79,16 @@ export default function Home() {
             </a>
           </div>
           
-          {/* Logo en dessous */}
+          {/* Logo */}
           <div className="relative flex justify-center animate-fade-in delay-400">
             <div className="relative w-48 h-48 md:w-64 md:h-64 animate-float">
-        <Image
+              <Image
                 src="/logo.png"
                 alt="Laura Baud - Thérapeute TCA"
                 fill
                 className="object-contain drop-shadow-xl"
-          priority
-        />
+                priority
+              />
             </div>
           </div>
         </div>
