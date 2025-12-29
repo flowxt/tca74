@@ -163,7 +163,7 @@ export default function ActualitesPage() {
               Me contacter
             </Link>
             <a
-              href="https://www.tiktok.com/@laurabaud_tca"
+              href="https://www.tiktok.com/@laurapsy0"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary inline-flex items-center gap-2"
