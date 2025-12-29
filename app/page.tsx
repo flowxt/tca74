@@ -15,9 +15,22 @@ export default function Home() {
         <div className="circle-decoration top-1/3 right-20 w-32 h-32 animate-float" style={{ animationDelay: "1s" }} />
         
         <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-16 text-center">
+          {/* Logo en fond */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none" style={{ top: '-5%' }}>
+            <div className="relative w-[500px] h-[500px] md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] opacity-50">
+              <Image
+                src="/logo.png"
+                alt=""
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+          </div>
+          
           {/* Badge */}
           <div
-            className="inline-block px-4 py-2 rounded-full text-sm font-medium mb-8 animate-fade-in"
+            className="relative inline-block px-4 py-2 rounded-full text-sm font-medium mb-8 animate-fade-in"
             style={{ background: "var(--rose-pale)", color: "var(--brun)" }}
           >
             Laura Baud — Annecy • Genève • Lausanne
@@ -25,7 +38,7 @@ export default function Home() {
           
           {/* Titre principal - Grande typographie */}
           <h1
-            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium mb-4 animate-fade-in-up leading-tight"
+            className="relative text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium mb-4 animate-fade-in-up leading-tight"
             style={{ fontFamily: "var(--font-playfair)", color: "var(--text-dark)" }}
           >
             Thérapeute TCA
@@ -63,7 +76,7 @@ export default function Home() {
           </div>
           
           {/* Lien outils gratuits */}
-          <div className="text-center animate-fade-in-up delay-400 mb-16">
+          <div className="relative text-center animate-fade-in-up delay-400">
             <a
               href="https://l-baud.systeme.io/cadeau"
               target="_blank"
@@ -77,19 +90,6 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>
-          </div>
-          
-          {/* Logo */}
-          <div className="relative flex justify-center animate-fade-in delay-400">
-            <div className="relative w-48 h-48 md:w-64 md:h-64 animate-float">
-              <Image
-                src="/logo.png"
-                alt="Laura Baud - Thérapeute TCA"
-                fill
-                className="object-contain drop-shadow-xl"
-                priority
-              />
-            </div>
           </div>
         </div>
         
