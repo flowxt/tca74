@@ -13,7 +13,7 @@ const fadeInUp = {
   visible: { 
     opacity: 1, 
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
+    transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }
   }
 };
 
@@ -22,7 +22,7 @@ const fadeInLeft = {
   visible: { 
     opacity: 1, 
     x: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
+    transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }
   }
 };
 
@@ -31,7 +31,7 @@ const fadeInRight = {
   visible: { 
     opacity: 1, 
     x: 0,
-    transition: { duration: 0.6, ease: "easeOut" }
+    transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }
   }
 };
 
@@ -40,7 +40,7 @@ const scaleIn = {
   visible: { 
     opacity: 1, 
     scale: 1,
-    transition: { duration: 0.5, ease: "easeOut" }
+    transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }
   }
 };
 
@@ -60,7 +60,7 @@ const staggerItem = {
   visible: { 
     opacity: 1, 
     y: 0,
-    transition: { duration: 0.4, ease: "easeOut" }
+    transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }
   }
 };
 
