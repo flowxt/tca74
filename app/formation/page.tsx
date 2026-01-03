@@ -3,18 +3,32 @@ import Link from "next/link";
 import FormationCards from "@/components/FormationCards";
 
 export const metadata: Metadata = {
-  title: "Programmes en ligne | Stop Hyperphagie, Dire non, Émotions",
+  title: "Formations en ligne TCA | Hyperphagie, Affirmation de soi, Gestion des émotions",
   description:
-    "Découvrez mes programmes en ligne pour surmonter l'hyperphagie, apprendre à s'affirmer et gérer ses émotions. Vidéos, PDF et outils pratiques.",
+    "Formations et cours en ligne pour surmonter l'hyperphagie et les troubles alimentaires (TCA). Apprenez à gérer vos émotions, vous affirmer et dire non. Vidéos, PDF, exercices pratiques. Accès illimité.",
   keywords: [
     "formation TCA",
     "formation hyperphagie",
+    "formation troubles alimentaires",
+    "cours hyperphagie en ligne",
+    "e-learning TCA",
+    "formation boulimie",
+    "cours affirmation de soi",
+    "formation gestion émotions",
+    "programme compulsions alimentaires",
+    "cours en ligne TCA",
+    "formation alimentation émotionnelle",
     "stop hyperphagie",
     "dire non sans peur",
-    "gestion émotions",
-    "cours en ligne",
-    "outils thérapeutiques",
+    "apprendre à s'affirmer",
+    "gestion des émotions formation",
+    "cours stopper crises alimentaires",
   ],
+  openGraph: {
+    title: "Formations en ligne TCA | Hyperphagie, Affirmation de soi, Émotions",
+    description:
+      "Formations pour surmonter l'hyperphagie et les TCA. Gérer vos émotions, vous affirmer, dire non. Vidéos, PDF, exercices. Accès illimité.",
+  },
 };
 
 export default function FormationPage() {
@@ -36,13 +50,13 @@ export default function FormationPage() {
             className="text-4xl md:text-5xl lg:text-6xl font-medium mb-6"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
-            Avancez à{" "}
-            <span style={{ color: "var(--brun-doux)" }}>votre rythme</span>
+            Formations en ligne :{" "}
+            <span style={{ color: "var(--brun-doux)" }}>TCA, Émotions & Affirmation de soi</span>
           </h1>
           
           <p className="text-xl leading-relaxed max-w-2xl mx-auto" style={{ color: "var(--text-medium)" }}>
-            Des formations concrètes pour vous accompagner dans votre cheminement. 
-            Vidéos, PDF et outils pratiques accessibles immédiatement.
+            Des cours et formations pour surmonter l'hyperphagie, apprendre à vous affirmer 
+            et mieux gérer vos émotions. Vidéos, PDF et exercices pratiques en accès illimité.
           </p>
         </div>
       </section>

@@ -42,6 +42,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -49,6 +50,7 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), Georgia, serif;
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
 /* Typographie */
