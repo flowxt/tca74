@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
+import AbsenceModal from "@/components/AbsenceModal";
 
 export const metadata: Metadata = {
   title: "Contact | Prendre rendez-vous",
@@ -72,8 +73,11 @@ const services = [
 export default function ContactPage() {
   return (
     <>
+      {/* Modal d'absence */}
+      <AbsenceModal />
+
       {/* Hero Section avec image */}
-      <section className="relative pt-32 pb-20 bg-gradient-hero overflow-hidden">
+      <section className="relative pt-44 pb-20 bg-gradient-hero overflow-hidden">
         <div className="circle-decoration top-10 -right-20 opacity-40" />
         
         <div className="relative z-10 max-w-6xl mx-auto px-6">
@@ -109,24 +113,6 @@ export default function ContactPage() {
                 />
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Bandeau d'annonce congé */}
-      <section className="py-4 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <div
-            className="p-4 rounded-2xl flex items-center justify-center text-center"
-            style={{
-              background: "linear-gradient(135deg, var(--accent-sage) 0%, var(--brun-doux) 100%)",
-              color: "white",
-            }}
-          >
-            <p className="text-sm md:text-base">
-              <strong>Reprise des consultations le 16 février</strong>
-              <span className="hidden sm:inline"> — Je suis actuellement en congé. Vos demandes seront traitées dès mon retour.</span>
-            </p>
           </div>
         </div>
       </section>

@@ -20,7 +20,7 @@ export default function OffresPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-44 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-hero" />
         <div
           className="absolute top-20 -right-32 w-96 h-96 rounded-full opacity-30 blur-3xl"

@@ -56,7 +56,7 @@ export default function GroupesTCAPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-hero overflow-hidden">
+      <section className="relative pt-44 pb-20 bg-gradient-hero overflow-hidden">
         <div className="circle-decoration top-10 -right-20 opacity-40" />
         <div className="circle-decoration bottom-20 -left-20 opacity-30" />
         

@@ -50,13 +50,31 @@ export default function Navigation() {
   };
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm py-2"
-          : "bg-transparent py-4"
-      }`}
-    >
+    <>
+      {/* Bandeau d'annonce congé - visible sur toutes les pages */}
+      <div
+        className="fixed top-0 left-0 right-0 z-[60] text-center py-2.5 px-4"
+        style={{ 
+          background: "linear-gradient(135deg, var(--brun-doux) 0%, var(--rose-accent) 100%)",
+          color: "white"
+        }}
+      >
+        <p className="text-sm md:text-base font-medium">
+          <span className="inline-block mr-2">📅</span>
+          <strong>Reprise des consultations le 16 février</strong>
+          <span className="hidden md:inline"> — Je suis actuellement en congé. Vos demandes seront traitées dès mon retour.</span>
+          <span className="md:hidden"> — En congé, retour bientôt !</span>
+        </p>
+      </div>
+
+      <header
+        className={`fixed left-0 right-0 z-50 transition-all duration-500 ${
+          isScrolled
+            ? "bg-white/95 backdrop-blur-md shadow-sm py-2"
+            : "bg-transparent py-4"
+        }`}
+        style={{ top: "42px" }}
+      >
       <nav className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
@@ -314,5 +332,6 @@ export default function Navigation() {
         </div>
       </div>
     </header>
+    </>
   );
 }

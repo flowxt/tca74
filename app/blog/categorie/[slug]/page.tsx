@@ -40,7 +40,7 @@ export default async function CategoryPage({ params }: Props) {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-hero overflow-hidden">
+      <section className="relative pt-44 pb-20 bg-gradient-hero overflow-hidden">
         <div className="circle-decoration top-10 -left-20 opacity-40" />
         
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">

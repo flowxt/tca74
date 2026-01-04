@@ -74,7 +74,7 @@ export default function AnimatedHome() {
         <div className="circle-decoration bottom-40 -right-20 animate-float" style={{ animationDelay: "2s" }} />
         <div className="circle-decoration top-1/3 right-20 w-32 h-32 animate-float" style={{ animationDelay: "1s" }} />
         
-        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-16 text-center">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-44 pb-16 text-center">
           {/* Logo en fond */}
           <motion.div 
             className="absolute inset-0 flex items-center justify-center pointer-events-none" 

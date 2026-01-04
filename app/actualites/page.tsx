@@ -46,7 +46,7 @@ export default function ActualitesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 bg-gradient-hero overflow-hidden">
+      <section className="relative pt-44 pb-16 bg-gradient-hero overflow-hidden">
         <div className="circle-decoration top-10 -right-20 opacity-30" />
         <div className="circle-decoration bottom-0 -left-20 opacity-20" style={{ background: "var(--accent-sage)" }} />
         

@@ -140,7 +140,7 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-16 bg-gradient-hero overflow-hidden">
+      <section className="relative pt-44 pb-16 bg-gradient-hero overflow-hidden">
         <div className="circle-decoration top-10 -right-20 opacity-30" />
         
         <div className="relative z-10 max-w-4xl mx-auto px-6">
