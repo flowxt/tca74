@@ -218,6 +218,23 @@ export default function Footer() {
             ))}
           </div>
         </div>
+
+        {/* Crédit développeur */}
+        <div className="text-center mt-6 pt-4 border-t border-[var(--rose-pale)]">
+          <p className="text-xs" style={{ color: "var(--text-light)" }}>
+            Site créé par{" "}
+            <a
+              href="https://www.atypikcode.fr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium transition-colors hover:underline"
+              style={{ color: "var(--rose-accent)" }}
+            >
+              Atypik Code
+            </a>
+            {" "}— Développeur web freelance en Haute-Savoie
+          </p>
+        </div>
       </div>
     </footer>
   );
