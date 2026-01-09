@@ -97,7 +97,7 @@ export default function ContactForm() {
 
   // Générer le lien WhatsApp avec les infos pré-remplies
   const generateWhatsAppLink = () => {
-    const phoneNumber = "33612345678"; // À remplacer par le vrai numéro
+    const phoneNumber = "33767317266";
     const message = encodeURIComponent(
       `Bonjour Laura,\n\nJe m'appelle ${formData.name || "[Votre nom]"} et je vous contacte pour : ${formData.subject || "[Objet]"}.\n\nMa difficulté principale : ${formData.difficulty || "[À préciser]"}\n\n${formData.hasCompletedQuiz ? "✅ J'ai fait le quiz et votre accompagnement me correspond.\n\n" : ""}${formData.message || "[Votre message]"}`
     );
