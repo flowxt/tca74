@@ -52,7 +52,7 @@ const contactInfo = [
 const services = [
   {
     title: "Consultation Standard",
-    price: "90€",
+    price: "110€",
     duration: "1h",
     desc: "Accompagnement personnalisé TCA",
   },

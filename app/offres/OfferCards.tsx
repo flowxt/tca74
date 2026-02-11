@@ -26,7 +26,7 @@ const offers: Offer[] = [
   {
     id: "standard",
     name: "Consultation Standard",
-    price: 90,
+    price: 110,
     icon: "",
     tagline: "L'essentiel pour commencer",
     description: "Pour travailler sur une problématique ciblée ou répondre à un besoin ponctuel",
