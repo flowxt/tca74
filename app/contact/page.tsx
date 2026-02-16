@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
-import AbsenceModal from "@/components/AbsenceModal";
-
 export const metadata: Metadata = {
   title: "Contact | Prendre rendez-vous",
   description:
@@ -73,9 +71,6 @@ const services = [
 export default function ContactPage() {
   return (
     <>
-      {/* Modal d'absence */}
-      <AbsenceModal />
-
       {/* Hero Section avec image */}
       <section className="relative pt-44 pb-20 bg-gradient-hero overflow-hidden">
         <div className="circle-decoration top-10 -right-20 opacity-40" />
