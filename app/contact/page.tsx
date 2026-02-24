@@ -50,7 +50,7 @@ const contactInfo = [
 const services = [
   {
     title: "Consultation Standard",
-    price: "110€",
+    price: "90€",
     duration: "1h",
     desc: "Accompagnement personnalisé TCA",
   },

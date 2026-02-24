@@ -5,7 +5,7 @@ import OfferCards from "./OfferCards";
 export const metadata: Metadata = {
   title: "Mes offres d'accompagnement | Tarifs consultations",
   description:
-    "Découvrez mes offres d'accompagnement : consultation standard à 110€ et accompagnement premium à 130€ avec suivi personnalisé. Séances en cabinet ou en visio.",
+    "Découvrez mes offres d'accompagnement : consultation standard à 90€ et accompagnement premium à 130€ avec suivi personnalisé. Séances en cabinet ou en visio.",
   keywords: [
     "tarifs thérapie",
     "consultation TCA",
