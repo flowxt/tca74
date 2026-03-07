@@ -108,6 +108,13 @@ const cards: Card[] = [
     icon: "⚖️",
     excludes: true,
   },
+  {
+    id: 17,
+    text: "Je me fais vomir après les repas ou les crises",
+    category: "exclusion",
+    icon: "⚠️",
+    excludes: true,
+  },
   // Carte filtre
   {
     id: 15,

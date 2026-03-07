@@ -65,6 +65,7 @@ const offers: Offer[] = [
       "1 question ciblée par mail",
       "Réponses personnalisées, apportant un éclairage précis et posé",
       "Un cadre clair pour vous offrir une réponse de qualité",
+      "Les mails non utilisés dans les 15 jours ne sont ni reportables ni déductibles",
     ],
     cta: "Choisir le Premium",
   },
