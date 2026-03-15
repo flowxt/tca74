@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getAllPosts, categories } from "@/lib/blog";
+import NewsletterForm from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
   title: "Blog | Articles sur les TCA et la Haute Sensibilité",
@@ -159,9 +160,7 @@ export default function BlogPage() {
           <p className="text-lg mb-8" style={{ color: "var(--text-medium)" }}>
             Recevez les nouveaux articles et ressources directement dans votre boîte mail.
           </p>
-          <Link href="/contact" className="btn-primary">
-            S'inscrire à la newsletter
-          </Link>
+          <NewsletterForm />
         </div>
       </section>
     </>
