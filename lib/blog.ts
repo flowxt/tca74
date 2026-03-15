@@ -1435,6 +1435,178 @@ Comprendre son trouble, c'est déjà un premier pas. Et vous n'avez pas à faire
     image: "/image/blog/iceberg-tca-blog-card-paysage.png",
     tags: ["TCA", "origines", "accompagnement", "ambivalence", "comprendre"],
   },
+  {
+    slug: "manger-en-cachette-compulsions-alimentaires",
+    title: "Est-ce normal de manger en cachette ? Comprendre ses compulsions alimentaires",
+    excerpt:
+      "De nombreuses personnes vivent des compulsions alimentaires et se surprennent à manger en cachette. Ce comportement n'est pas un signe de faiblesse. Comprendre ses mécanismes, c'est le premier pas vers un rapport plus apaisé à la nourriture.",
+    content: `
+# Est-ce normal de manger en cachette ? Comprendre ses compulsions alimentaires
+
+De nombreuses personnes vivent des compulsions alimentaires ou de l'hyperphagie, et se surprennent parfois à manger en cachette. Si c'est votre expérience, sachez que vous n'êtes pas seule, et que ce comportement n'est pas un signe de faiblesse ni d'échec moral. Il résulte souvent de plusieurs facteurs qui se combinent au cours de la journée.
+
+## La difficulté à se connecter à soi-même
+
+Tout au long de la journée, il peut être difficile de rester connecté·e à ses besoins corporels et émotionnels. Entre le travail, les obligations familiales, les courses et les tâches domestiques, on est souvent en pilote automatique. On ne ressent plus ses émotions ni sa faim, et pourtant celles-ci continuent de s'accumuler.
+
+Cette accumulation peut prendre plusieurs formes : stress, fatigue, irritabilité, frustration ou tristesse. On finit parfois par ignorer ou réprimer ces sensations, ce qui crée une tension intérieure. À la fin de la journée, quand le corps et l'esprit trouvent enfin un moment de calme, cette tension peut se libérer à travers un épisode de grignotage ou de compulsions.
+
+## La restriction alimentaire et le fonctionnement "tout ou rien"
+
+Beaucoup de personnes commencent la journée avec de bonnes intentions : manger sain, suivre un plan alimentaire ou ne pas grignoter. Mais au fur et à mesure que la journée avance, les contraintes, les émotions et la fatigue s'accumulent. La restriction peut devenir difficile à maintenir.
+
+Certaines personnes fonctionnent en mode "tout ou rien" : si elles ont cédé un peu dans la journée, elles ont l'impression que tout est perdu et que la journée alimentaire est un échec. Ce fonctionnement ON/OFF génère souvent de la culpabilité et un sentiment d'échec, même si le grignotage n'est en réalité pas une faute.
+
+Il est aussi fréquent de confondre la vraie faim et une compulsion alimentaire. Beaucoup de personnes croient qu'il ne faut jamais manger entre les repas, ce qui renforce le cycle de frustration. Mais si le corps a réellement faim, y répondre est normal et nécessaire, et cela n'est pas une erreur. Les compulsions apparaissent souvent quand la restriction devient trop rigide ou que l'on tente de résister à tout prix.
+
+## La dimension familiale et le besoin de réconfort
+
+Le contexte familial joue un rôle majeur dans les compulsions alimentaires. Le simple fait d'être à l'abri des regards — une fois les enfants couchés ou occupés — peut créer un moment où le corps et l'esprit se relâchent. Ce moment devient souvent le premier véritable temps à soi de la journée, un instant pour se détendre après avoir été en permanence en alerte pour gérer les tâches, les enfants et la charge mentale.
+
+Ces épisodes s'accompagnent parfois de rituels réconfortants, comme manger un encas tout en regardant une série, écoutant de la musique ou simplement en prenant un moment calme pour soi. Ce moment n'est pas un "écart" à punir, mais un besoin légitime de réconfort et de détente.
+
+## Pourquoi manger en cachette n'est pas un échec
+
+Manger en cachette peut servir plusieurs fonctions :
+
+- Apaiser temporairement des émotions difficiles ou accumulées
+- Retrouver un sentiment de contrôle dans un environnement exigeant
+- Profiter d'un moment à soi, notamment dans un quotidien où l'on a été au service des autres toute la journée
+
+Ce comportement n'est donc pas un manque de volonté. Il est souvent le reflet de mécanismes automatiques qui existent depuis longtemps, mais que l'on peut progressivement observer et comprendre.
+
+## Observer plutôt que juger
+
+En séance, je ne porte aucun jugement sur ce que vous faites ou ressentez. Nous commençons par observer vos comportements et fonctionnements de manière concrète : quand surviennent les compulsions, quelles émotions ou situations précèdent ces moments, comment vous réagissez.
+
+Le simple fait de repérer ces difficultés de manière concrète permet de se confronter à des comportements automatiques et de prendre conscience de ce qui se passe réellement depuis longtemps. Cette observation devient le premier pas vers une relation plus apaisée avec la nourriture, car elle permet de comprendre, sans culpabilité, comment et pourquoi certains comportements se répètent.
+
+## Comment retrouver un rapport plus apaisé à la nourriture
+
+Avec un accompagnement adapté, il est possible de :
+
+- Se reconnecter à ses sensations de faim et de satiété
+- Identifier les déclencheurs émotionnels et environnementaux
+- Comprendre la dynamique "tout ou rien" et accepter les écarts
+- Retrouver des moments de réconfort sans culpabilité
+
+Cette démarche ne consiste pas à supprimer les compulsions du jour au lendemain, mais à prendre conscience de ses comportements automatiques, et à créer progressivement des choix plus libres et plus doux envers soi-même.
+
+Si vous vivez des compulsions alimentaires, de l'hyperphagie ou un rapport compliqué à la nourriture, il est possible d'être accompagnée de manière bienveillante et sécurisée. Vous pouvez faire une demande de rendez-vous via le site, et commencer à observer vos fonctionnements pour avancer à votre rythme, sans jugement.
+    `,
+    date: "11 février 2026",
+    category: "TCA",
+    categorySlug: "tca",
+    tags: ["compulsions alimentaires", "manger en cachette", "hyperphagie", "émotions", "culpabilité", "tout ou rien"],
+  },
+  {
+    slug: "troubles-alimentaires-securite-interieure-enfance",
+    title: "Troubles alimentaires et sécurité intérieure : comprendre le lien avec l'enfance",
+    excerpt:
+      "Le lien entre sécurité intérieure, privations infantiles et troubles alimentaires est souvent méconnu. Comprendre que les comportements compulsifs sont des réponses adaptatives permet de se libérer de la culpabilité.",
+    content: `
+# Troubles alimentaires et sécurité intérieure : comprendre le lien avec l'enfance
+
+De nombreuses personnes souffrant de troubles alimentaires, qu'il s'agisse de compulsions, d'hyperphagie ou de restriction, vivent un manque de sécurité intérieure qui remonte à leur enfance. Ce manque peut résulter de traumatismes, d'absences parentales, de carences affectives, de parents toxiques ou de situations où les besoins fondamentaux n'ont pas été suffisamment satisfaits.
+
+Ces expériences n'indiquent ni faiblesse ni faute. Elles expliquent pourquoi certaines personnes développent des mécanismes de régulation émotionnelle par la nourriture, apparaissant souvent sous forme de comportements compulsifs, d'hyperphagie ou de restriction.
+
+## Qu'est-ce que la sécurité intérieure ?
+
+La sécurité intérieure correspond à un sentiment de stabilité, de protection et de confiance en soi. Elle se construit principalement dans l'enfance, lorsque les besoins affectifs, émotionnels et physiques sont satisfaits de manière fiable et cohérente.
+
+Lorsque ce sentiment de sécurité n'a pas pu se développer, l'enfant peut ressentir :
+
+- Un vide émotionnel ou affectif chronique
+- Une difficulté à identifier et réguler ses émotions
+- Une fragilité face au monde extérieur
+- Une difficulté à identifier ses limites et besoins personnels
+
+Dans certains contextes familiaux, dire non ou affirmer ses besoins pouvait être perçu comme menaçant. Par exemple, certaines patientes racontent qu'à chaque fois qu'elles exprimaient un refus ou se positionnaient, elles étaient réprimandées. Ces expériences enseignent que poser des limites peut être dangereux, et à l'âge adulte, cette compétence reste souvent fragile.
+
+## L'impact des privations alimentaires dans l'enfance
+
+Certaines personnes ont vécu des restrictions alimentaires sévères ou des privations de nourriture dans leur enfance, que ce soit par manque de ressources, règles parentales rigides ou environnements instables. Ces expériences influencent profondément le rapport à la nourriture à l'âge adulte :
+
+- Lorsqu'un enfant manque de nourriture ou subit des restrictions, il n'apprend jamais à se réguler de façon naturelle.
+- À l'âge adulte, lorsqu'il se retrouve face à l'abondance, il peut avoir du mal à identifier la faim réelle ou la satiété, et développer des comportements compulsifs ou d'hyperphagie.
+
+Ce mécanisme est adaptatif : il permet à l'enfant de survivre et de sécuriser la nourriture, mais devient dysfonctionnel dans un environnement où la nourriture est disponible, car le corps et le cerveau n'ont pas appris à réguler l'apport alimentaire.
+
+Ainsi, certaines compulsions alimentaires peuvent être une réponse directe à une mémoire corporelle et émotionnelle de privation, qui persiste même dans un environnement sûr et abondant.
+
+## Comment l'absence de sécurité intérieure influence les comportements alimentaires
+
+### Difficulté à réguler les émotions
+
+Les personnes ayant manqué de sécurité intérieure ont souvent du mal à identifier et contenir leurs émotions. La colère, la tristesse ou la peur peuvent être ressenties de manière intense et immédiate. Pour beaucoup, la nourriture devient un outil de régulation automatique, calmant temporairement ces émotions difficiles.
+
+### Sentiment chronique de vide
+
+Le manque de sécurité intérieure peut créer une sensation profonde de vide ou d'insatisfaction, que les expériences extérieures ne comblent pas. Les compulsions alimentaires apparaissent comme un moyen de remplir ce vide, même si le soulagement est temporaire.
+
+### Difficulté à identifier ses limites et besoins
+
+L'enfant qui n'a jamais appris à reconnaître ses besoins ou poser ses limites développe souvent, à l'âge adulte, une incapacité à s'affirmer et à se protéger. Les comportements alimentaires défaillants deviennent alors un mécanisme adaptatif, permettant de gérer des situations où les limites ne sont pas respectées ou où le sentiment de sécurité est menacé.
+
+### Manque d'ancrage et identité fragile
+
+Une enfance où les repères sont insuffisants peut conduire à une identité fragile. La nourriture devient un outil concret pour se réguler et se stabiliser, en réponse à une instabilité émotionnelle ou identitaire.
+
+### Parents insuffisants, toxiques ou carencés
+
+Les enfants ayant grandi avec des parents défaillants, absents ou toxiques développent souvent un terrain où la sécurité intérieure ne peut pas se construire. Ces expériences renforcent l'idée que le monde est imprévisible et que seul le contrôle de certains comportements — comme la nourriture — peut apporter un soulagement.
+
+## Les troubles alimentaires comme mécanismes adaptatifs
+
+Les comportements alimentaires compulsifs ou restrictifs sont souvent des réponses adaptatives à un manque de sécurité intérieure ou à des expériences de privation. Ils permettent de :
+
+- Gérer des émotions intenses
+- Se sentir temporairement en sécurité ou en contrôle
+- Compenser un vide intérieur ou un manque de repères
+
+Ces comportements ne sont pas des échecs personnels, mais des stratégies de survie développées dès l'enfance.
+
+## Observer plutôt que juger
+
+En séance, l'accompagnement repose sur l'observation des comportements, sans jugement. Nous identifions :
+
+- Les déclencheurs émotionnels et situationnels
+- Les schémas automatiques qui se répètent depuis longtemps
+- Les comportements alimentaires comme stratégies adaptatives
+
+Le but est de prendre conscience de ses mécanismes, de comprendre leurs origines et leur fonction, et de commencer à déjouer ces cycles automatiques progressivement.
+
+## Comment un accompagnement peut aider
+
+Un suivi adapté permet de :
+
+- Se reconnecter à ses émotions et besoins
+- Identifier et poser ses limites personnelles
+- Développer un ancrage intérieur stable
+- Réguler ses émotions sans passer par la nourriture
+- Reprendre confiance dans sa capacité à se nourrir et à gérer l'abondance
+
+Le travail se fait pas à pas, dans un cadre sécurisant et bienveillant, en respectant le rythme de la personne.
+
+## Conclusion
+
+Le lien entre sécurité intérieure, privations infantiles et troubles alimentaires est souvent méconnu. Comprendre que les comportements compulsifs ou restrictifs sont des réponses adaptatives à des manques vécus dans l'enfance permet de se libérer de la culpabilité et de la honte.
+
+Avec un accompagnement bienveillant et concret, il est possible de :
+
+- Reconstruire progressivement la sécurité intérieure
+- Apprendre à identifier et respecter ses limites et besoins
+- Gérer l'abondance alimentaire avec plus de sérénité
+- Développer une relation plus apaisée avec la nourriture
+
+Si vous vous reconnaissez dans ces expériences et souhaitez être accompagnée, vous pouvez prendre rendez-vous via le site, pour commencer à observer vos fonctionnements à votre rythme, dans un cadre sécurisant et sans jugement.
+    `,
+    date: "11 février 2026",
+    category: "TCA",
+    categorySlug: "tca",
+    tags: ["sécurité intérieure", "enfance", "traumatisme", "compulsions", "hyperphagie", "carences affectives", "mécanismes adaptatifs"],
+  },
 ];
 
 // Fonctions utilitaires pour récupérer les articles
