@@ -49,6 +49,12 @@ const contactInfo = [
 
 const services = [
   {
+    title: "Tarif Solidaire",
+    price: "70€",
+    duration: "1h",
+    desc: "Pour les personnes en difficulté financière (sur justificatif)",
+  },
+  {
     title: "Consultation Standard",
     price: "90€",
     duration: "1h",

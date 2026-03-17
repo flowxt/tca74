@@ -17,6 +17,14 @@ export const metadata: Metadata = {
 
 const actualites = [
   {
+    date: "Mars 2026",
+    type: "Nouveau",
+    title: "Lancement du Tarif Solidaire — 70€",
+    description: "Parce que l'accompagnement thérapeutique devrait être accessible à toutes, je propose désormais un tarif adapté à 70€ pour les personnes en situation de difficulté financière : demandeurs d'emploi, étudiants, bénéficiaires du RSA ou toute situation financière fragile. Même cadre, même qualité d'accompagnement.",
+    link: "/offres",
+    linkText: "Découvrir l'offre solidaire",
+  },
+  {
     date: "Décembre 2025",
     type: "Nouveau",
     title: "Lancement de l'offre Premium",
