@@ -1,234 +1,95 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 
-interface Feature {
-  text: string;
-  included: boolean;
-  highlight?: boolean;
-}
+/*
+ * ============================================================
+ * OFFRE PREMIUM — À RÉACTIVER APRÈS LE 15 MAI 2026
+ * ============================================================
+ * Pour remettre la page initiale avec Standard (90€) + Premium (130€) :
+ * 1. Décommenter le bloc PREMIUM_OFFER ci-dessous
+ * 2. Remplacer le composant OfferCards par la version multi-onglets
+ *    (voir le fichier OfferCards.backup.tsx ou l'historique git)
+ * 3. Retirer le prix barré et la mention "offre de lancement"
+ *
+ * PREMIUM_OFFER:
+ * {
+ *   id: "premium",
+ *   tabLabel: "Premium",
+ *   name: "Accompagnement Premium",
+ *   price: 130,
+ *   tagline: "L'expérience complète",
+ *   description: "Un suivi renforcé pour celles et ceux qui souhaitent aller plus loin",
+ *   longDescription:
+ *     "L'accompagnement premium est conçu pour vous offrir un soutien continu entre les séances. Grâce aux mails de suivi, vous restez connectée à votre travail thérapeutique et pouvez avancer plus efficacement vers vos objectifs.",
+ *   features: [
+ *     { text: "Séance d'1h en cabinet ou en visio", included: true },
+ *     { text: "Travail sur une problématique ciblée", included: true },
+ *     { text: "Outils personnalisés", included: true },
+ *     { text: "Flexibilité dans la fréquence", included: true },
+ *     { text: "2 mails de suivi personnalisés", included: true, highlight: true },
+ *     { text: "Accompagnement continu", included: true, highlight: true },
+ *   ],
+ *   mailRules: [
+ *     "2 mails de clarification après la séance",
+ *     "À utiliser dans les 15 jours",
+ *     "1 question ciblée par mail",
+ *     "Réponses personnalisées, apportant un éclairage précis et posé",
+ *     "Un cadre clair pour vous offrir une réponse de qualité",
+ *     "Les mails non utilisés dans les 15 jours ne sont ni reportables ni déductibles",
+ *   ],
+ *   cta: "Choisir le Premium",
+ *   gradient: "linear-gradient(135deg, var(--accent-lavande) 0%, var(--brun-doux) 100%)",
+ *   accentColor: "var(--accent-lavande)",
+ *   featureBg: "rgba(197, 184, 200, 0.08)",
+ * }
+ * ============================================================
+ */
 
-interface Offer {
-  id: string;
-  name: string;
-  tabLabel: string;
-  price: number;
-  tagline: string;
-  description: string;
-  longDescription: string;
-  features: Feature[];
-  mailRules?: string[];
-  eligibility?: string[];
-  note?: string;
-  cta: string;
-  gradient: string;
-  accentColor: string;
-  featureBg: string;
-}
-
-const offers: Offer[] = [
-  {
-    id: "solidaire",
-    tabLabel: "Solidaire",
-    name: "Tarif Solidaire",
-    price: 70,
-    tagline: "Un accompagnement accessible",
-    description: "Pour les personnes en situation ponctuelle de difficulté financière",
-    longDescription:
-      "Parce que l'accompagnement thérapeutique devrait être accessible à toutes, je propose un tarif adapté pour les personnes traversant une période financièrement difficile. Vous bénéficiez du même cadre et de la même qualité d'accompagnement qu'en consultation standard.",
-    features: [
-      { text: "Séance d'1h en cabinet ou en visio", included: true },
-      { text: "Travail sur une problématique ciblée", included: true },
-      { text: "Outils personnalisés", included: true },
-      { text: "Flexibilité dans la fréquence", included: true },
-      { text: "Mails de suivi personnalisés", included: false },
-      { text: "Accompagnement entre les séances", included: false },
-    ],
-    eligibility: [
-      "Demandeurs d'emploi",
-      "Étudiants",
-      "Bénéficiaires du RSA",
-      "Situation financière fragile",
-    ],
-    note: "Un justificatif pourra vous être demandé. Si vous ne correspondez pas exactement aux critères ci-dessus mais que votre situation financière est fragile, parlez-moi de votre situation pour bénéficier des séances à tarif solidaire.",
-    cta: "Demander le tarif solidaire",
-    gradient: "linear-gradient(135deg, var(--peche) 0%, var(--brun-doux) 100%)",
-    accentColor: "var(--peche)",
-    featureBg: "rgba(232, 213, 196, 0.15)",
-  },
-  {
-    id: "standard",
-    tabLabel: "Standard",
-    name: "Consultation Standard",
-    price: 90,
-    tagline: "L'essentiel pour commencer",
-    description: "Pour travailler sur une problématique ciblée ou répondre à un besoin ponctuel",
-    longDescription:
-      "La consultation standard est idéale pour découvrir mon accompagnement, travailler sur une problématique précise ou avancer pas à pas à votre rythme. Chaque séance est un espace de parole et de travail adapté à vos besoins du moment.",
-    features: [
-      { text: "Séance d'1h en cabinet ou en visio", included: true },
-      { text: "Travail sur une problématique ciblée", included: true },
-      { text: "Outils personnalisés", included: true },
-      { text: "Flexibilité dans la fréquence", included: true },
-      { text: "Mails de suivi personnalisés", included: false },
-      { text: "Accompagnement entre les séances", included: false },
-    ],
-    cta: "Réserver une consultation",
-    gradient: "linear-gradient(135deg, var(--accent-sage) 0%, var(--brun-doux) 100%)",
-    accentColor: "var(--accent-sage)",
-    featureBg: "rgba(168, 181, 160, 0.1)",
-  },
-  {
-    id: "premium",
-    tabLabel: "Premium",
-    name: "Accompagnement Premium",
-    price: 130,
-    tagline: "L'expérience complète",
-    description: "Un suivi renforcé pour celles et ceux qui souhaitent aller plus loin",
-    longDescription:
-      "L'accompagnement premium est conçu pour vous offrir un soutien continu entre les séances. Grâce aux mails de suivi, vous restez connectée à votre travail thérapeutique et pouvez avancer plus efficacement vers vos objectifs.",
-    features: [
-      { text: "Séance d'1h en cabinet ou en visio", included: true },
-      { text: "Travail sur une problématique ciblée", included: true },
-      { text: "Outils personnalisés", included: true },
-      { text: "Flexibilité dans la fréquence", included: true },
-      { text: "2 mails de suivi personnalisés", included: true, highlight: true },
-      { text: "Accompagnement continu", included: true, highlight: true },
-    ],
-    mailRules: [
-      "2 mails de clarification après la séance",
-      "À utiliser dans les 15 jours",
-      "1 question ciblée par mail",
-      "Réponses personnalisées, apportant un éclairage précis et posé",
-      "Un cadre clair pour vous offrir une réponse de qualité",
-      "Les mails non utilisés dans les 15 jours ne sont ni reportables ni déductibles",
-    ],
-    cta: "Choisir le Premium",
-    gradient: "linear-gradient(135deg, var(--accent-lavande) 0%, var(--brun-doux) 100%)",
-    accentColor: "var(--accent-lavande)",
-    featureBg: "rgba(197, 184, 200, 0.08)",
-  },
+const features = [
+  { text: "Séance d'1h en cabinet ou en visio", included: true },
+  { text: "Travail sur une problématique ciblée", included: true },
+  { text: "Outils personnalisés", included: true },
+  { text: "Flexibilité dans la fréquence", included: true },
 ];
 
 export default function OfferCards() {
-  const [activeIndex, setActiveIndex] = useState(2); // Premium par défaut
-  const offer = offers[activeIndex];
-  const isPremium = offer.id === "premium";
-  const isSolidaire = offer.id === "solidaire";
-
   return (
     <div className="max-w-2xl mx-auto">
-      {/* Tabs de sélection */}
-      <div className="flex justify-center mb-8 md:mb-12 px-4">
-        <div
-          className="flex flex-col sm:flex-row p-1.5 rounded-2xl sm:rounded-full gap-2 w-full max-w-md sm:max-w-none sm:w-auto"
-          style={{ background: "rgba(212, 181, 169, 0.2)" }}
-        >
-          {offers.map((o, i) => (
-            <button
-              key={o.id}
-              onClick={() => setActiveIndex(i)}
-              className={`w-full sm:w-auto px-4 sm:px-5 py-3 sm:py-3.5 rounded-xl sm:rounded-full font-medium transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 ${
-                activeIndex === i ? "shadow-lg" : "hover:bg-white/50"
-              }`}
-              style={{
-                background: activeIndex === i ? o.gradient : "transparent",
-                color: activeIndex === i ? "white" : "var(--brun)",
-              }}
-            >
-              <span className="text-sm sm:text-base font-semibold">{o.tabLabel}</span>
-              <span
-                className="px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm font-bold"
-                style={{
-                  background: activeIndex === i ? "rgba(255,255,255,0.25)" : "rgba(154, 123, 111, 0.15)",
-                  color: activeIndex === i ? "white" : "var(--brun)",
-                }}
-              >
-                {o.price}€
-              </span>
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Carte */}
+      {/* Carte unique — Offre de lancement */}
       <div
-        key={offer.id}
-        className="relative rounded-[2rem] overflow-hidden animate-fade-in"
+        className="relative rounded-[2rem] overflow-hidden"
         style={{
-          background: isPremium
-            ? "linear-gradient(145deg, rgba(197, 184, 200, 0.15) 0%, rgba(255, 255, 255, 1) 50%, rgba(212, 181, 169, 0.1) 100%)"
-            : "var(--bg-cream)",
-          border: isPremium
-            ? "2px solid var(--accent-lavande)"
-            : isSolidaire
-            ? "2px solid var(--peche)"
-            : "1px solid rgba(212, 181, 169, 0.3)",
-          boxShadow: isPremium
-            ? "0 25px 80px rgba(197, 184, 200, 0.4), 0 0 0 4px rgba(197, 184, 200, 0.1)"
-            : isSolidaire
-            ? "0 25px 80px rgba(232, 213, 196, 0.4), 0 0 0 4px rgba(232, 213, 196, 0.1)"
-            : "0 20px 60px rgba(154, 123, 111, 0.15)",
+          background: "var(--bg-cream)",
+          border: "2px solid var(--accent-sage)",
+          boxShadow: "0 25px 80px rgba(168, 181, 160, 0.3), 0 0 0 4px rgba(168, 181, 160, 0.1)",
         }}
       >
-        {/* Effets Premium */}
-        {isPremium && (
-          <>
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-              <div
-                className="absolute -top-20 -right-20 w-64 h-64 rounded-full opacity-20"
-                style={{ background: "var(--accent-lavande)" }}
-              />
-              <div
-                className="absolute -bottom-16 -left-16 w-48 h-48 rounded-full opacity-15"
-                style={{ background: "var(--peche)" }}
-              />
-            </div>
-            <div
-              className="absolute top-0 left-1/2 -translate-x-1/2 px-6 py-2.5"
-              style={{
-                background: "linear-gradient(135deg, var(--accent-lavande) 0%, var(--brun-doux) 100%)",
-                borderRadius: "0 0 16px 16px",
-                boxShadow: "0 4px 15px rgba(197, 184, 200, 0.4)",
-              }}
-            >
-              <span className="text-sm font-bold tracking-wide text-white">
-                RECOMMANDÉ
-              </span>
-            </div>
-          </>
-        )}
+        {/* Badge offre de lancement */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div
+            className="absolute -top-20 -right-20 w-64 h-64 rounded-full opacity-15"
+            style={{ background: "var(--accent-sage)" }}
+          />
+          <div
+            className="absolute -bottom-16 -left-16 w-48 h-48 rounded-full opacity-10"
+            style={{ background: "var(--peche)" }}
+          />
+        </div>
+        <div
+          className="absolute top-0 left-1/2 -translate-x-1/2 px-6 py-2.5"
+          style={{
+            background: "linear-gradient(135deg, var(--accent-sage) 0%, var(--brun-doux) 100%)",
+            borderRadius: "0 0 16px 16px",
+            boxShadow: "0 4px 15px rgba(168, 181, 160, 0.4)",
+          }}
+        >
+          <span className="text-sm font-bold tracking-wide text-white">
+            OFFRE DE LANCEMENT
+          </span>
+        </div>
 
-        {/* Effets Solidaire */}
-        {isSolidaire && (
-          <>
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-              <div
-                className="absolute -top-20 -right-20 w-64 h-64 rounded-full opacity-15"
-                style={{ background: "var(--peche)" }}
-              />
-              <div
-                className="absolute -bottom-16 -left-16 w-48 h-48 rounded-full opacity-10"
-                style={{ background: "var(--rose-accent)" }}
-              />
-            </div>
-            <div
-              className="absolute top-0 left-1/2 -translate-x-1/2 px-6 py-2.5"
-              style={{
-                background: "linear-gradient(135deg, var(--peche) 0%, var(--brun-doux) 100%)",
-                borderRadius: "0 0 16px 16px",
-                boxShadow: "0 4px 15px rgba(232, 213, 196, 0.4)",
-              }}
-            >
-              <span className="text-sm font-bold tracking-wide text-white">
-                TARIF ADAPTÉ
-              </span>
-            </div>
-          </>
-        )}
-
-        <div className={`relative p-6 md:p-10 lg:p-14 ${isPremium || isSolidaire ? "pt-16 md:pt-20" : ""}`}>
+        <div className="relative p-6 md:p-10 lg:p-14 pt-16 md:pt-20">
           {/* Header */}
           <div className="text-center mb-8 md:mb-10">
             <h2
@@ -238,36 +99,34 @@ export default function OfferCards() {
                 color: "var(--text-dark)",
               }}
             >
-              {offer.name}
+              Consultation Standard
             </h2>
             <p
               className="text-base md:text-lg font-medium mb-3 md:mb-4"
-              style={{ color: offer.accentColor }}
+              style={{ color: "var(--accent-sage)" }}
             >
-              {offer.tagline}
+              L'essentiel pour commencer
             </p>
             <p className="text-sm md:text-base" style={{ color: "var(--text-medium)" }}>
-              {offer.description}
+              Pour travailler sur une problématique ciblée ou répondre à un besoin ponctuel
             </p>
           </div>
 
-          {/* Prix */}
+          {/* Prix avec ancien prix barré */}
           <div
             className="text-center py-6 md:py-8 mb-8 md:mb-10 rounded-2xl"
-            style={{
-              background: isPremium
-                ? "linear-gradient(135deg, rgba(197, 184, 200, 0.2) 0%, rgba(212, 181, 169, 0.15) 100%)"
-                : isSolidaire
-                ? "linear-gradient(135deg, rgba(232, 213, 196, 0.25) 0%, rgba(212, 181, 169, 0.15) 100%)"
-                : "rgba(168, 181, 160, 0.15)",
-              border: isPremium
-                ? "1px solid rgba(197, 184, 200, 0.3)"
-                : isSolidaire
-                ? "1px solid rgba(232, 213, 196, 0.3)"
-                : "none",
-            }}
+            style={{ background: "rgba(168, 181, 160, 0.15)" }}
           >
-            <div className="flex items-baseline justify-center gap-2">
+            <div className="flex items-baseline justify-center gap-3 md:gap-4">
+              <span
+                className="text-2xl md:text-4xl font-bold line-through opacity-40"
+                style={{
+                  fontFamily: "var(--font-playfair)",
+                  color: "var(--text-light)",
+                }}
+              >
+                90€
+              </span>
               <span
                 className="text-5xl md:text-7xl font-bold"
                 style={{
@@ -275,7 +134,7 @@ export default function OfferCards() {
                   color: "var(--brun)",
                 }}
               >
-                {offer.price}
+                70
               </span>
               <span
                 className="text-xl md:text-2xl"
@@ -287,6 +146,12 @@ export default function OfferCards() {
             <span className="text-sm md:text-base" style={{ color: "var(--text-light)" }}>
               par séance
             </span>
+            <div
+              className="mt-3 inline-block px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold"
+              style={{ background: "rgba(168, 181, 160, 0.25)", color: "var(--brun)" }}
+            >
+              Tarif de lancement jusqu'au 15 mai 2026
+            </div>
           </div>
 
           {/* Description longue */}
@@ -294,77 +159,38 @@ export default function OfferCards() {
             className="mb-8 md:mb-10 text-base md:text-lg leading-relaxed text-center"
             style={{ color: "var(--text-medium)" }}
           >
-            {offer.longDescription}
+            La consultation standard est idéale pour découvrir mon accompagnement,
+            travailler sur une problématique précise ou avancer pas à pas à votre rythme.
+            Chaque séance est un espace de parole et de travail adapté à vos besoins du moment.
           </p>
-
-          {/* Éligibilité pour Solidaire */}
-          {isSolidaire && offer.eligibility && (
-            <div
-              className="p-4 md:p-6 rounded-2xl mb-8 md:mb-10"
-              style={{
-                background: "rgba(232, 213, 196, 0.15)",
-                border: "1px solid rgba(232, 213, 196, 0.4)",
-              }}
-            >
-              <h4 className="font-bold mb-3 md:mb-4 text-sm md:text-base" style={{ color: "var(--brun)" }}>
-                Qui peut en bénéficier ?
-              </h4>
-              <ul className="space-y-2 mb-4">
-                {offer.eligibility.map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-sm md:text-base" style={{ color: "var(--text-medium)" }}>
-                    <span style={{ color: "var(--peche)" }}>•</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              {offer.note && (
-                <p className="text-xs md:text-sm leading-relaxed" style={{ color: "var(--text-light)" }}>
-                  {offer.note}
-                </p>
-              )}
-            </div>
-          )}
 
           {/* Features */}
           <div className="mb-8 md:mb-10">
             <h3
               className="text-xs md:text-sm font-bold tracking-widest uppercase mb-4 md:mb-6 text-center"
-              style={{ color: offer.accentColor }}
+              style={{ color: "var(--accent-sage)" }}
             >
               Ce qui est inclus
             </h3>
             <div className="space-y-3 md:space-y-4">
-              {offer.features.map((feature, i) => (
+              {features.map((feature, i) => (
                 <div
                   key={i}
-                  className={`flex items-start md:items-center gap-3 md:gap-4 p-3 md:p-4 rounded-xl transition-all ${
-                    feature.highlight ? "scale-[1.01] md:scale-[1.02]" : ""
-                  }`}
-                  style={{
-                    background: feature.highlight
-                      ? "linear-gradient(135deg, rgba(197, 184, 200, 0.25) 0%, rgba(212, 181, 169, 0.15) 100%)"
-                      : offer.featureBg,
-                    border: feature.highlight ? "1px solid var(--accent-lavande)" : "none",
-                  }}
+                  className="flex items-start md:items-center gap-3 md:gap-4 p-3 md:p-4 rounded-xl"
+                  style={{ background: "rgba(168, 181, 160, 0.1)" }}
                 >
                   <div
-                    className="w-6 h-6 md:w-7 md:h-7 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 md:mt-0"
+                    className="w-6 h-6 md:w-7 md:h-7 rounded-full flex items-center justify-center shrink-0 mt-0.5 md:mt-0"
                     style={{
                       background: feature.included
-                        ? feature.highlight
-                          ? "linear-gradient(135deg, var(--accent-lavande) 0%, var(--brun-doux) 100%)"
-                          : isPremium
-                          ? "rgba(197, 184, 200, 0.4)"
-                          : isSolidaire
-                          ? "rgba(232, 213, 196, 0.5)"
-                          : "rgba(168, 181, 160, 0.4)"
+                        ? "rgba(168, 181, 160, 0.4)"
                         : "rgba(200, 200, 200, 0.2)",
                     }}
                   >
                     {feature.included ? (
                       <svg
                         className="w-3.5 h-3.5 md:w-4 md:h-4"
-                        style={{ color: feature.highlight ? "white" : "var(--brun)" }}
+                        style={{ color: "var(--brun)" }}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -384,95 +210,33 @@ export default function OfferCards() {
                     )}
                   </div>
                   <span
-                    className={`text-sm md:text-base lg:text-lg flex-1 ${feature.highlight ? "font-semibold" : ""}`}
+                    className="text-sm md:text-base lg:text-lg flex-1"
                     style={{
-                      color: feature.included
-                        ? "var(--text-dark)"
-                        : "rgba(150, 150, 150, 0.5)",
+                      color: feature.included ? "var(--text-dark)" : "rgba(150, 150, 150, 0.5)",
                       textDecoration: feature.included ? "none" : "line-through",
                     }}
                   >
                     {feature.text}
                   </span>
-                  {feature.highlight && (
-                    <span
-                      className="px-2 md:px-3 py-0.5 md:py-1 rounded-full text-[10px] md:text-xs font-bold flex-shrink-0"
-                      style={{
-                        background: "linear-gradient(135deg, var(--accent-lavande) 0%, var(--brun-doux) 100%)",
-                        color: "white",
-                      }}
-                    >
-                      +
-                    </span>
-                  )}
                 </div>
               ))}
             </div>
           </div>
-
-          {/* Règles mails pour Premium */}
-          {isPremium && offer.mailRules && (
-            <div
-              className="p-4 md:p-6 rounded-2xl mb-8 md:mb-10"
-              style={{
-                background: "rgba(197, 184, 200, 0.1)",
-                border: "1px solid rgba(197, 184, 200, 0.3)",
-              }}
-            >
-              <h4 className="font-bold mb-3 md:mb-4 text-sm md:text-base" style={{ color: "var(--brun)" }}>
-                Les mails de suivi
-              </h4>
-              <ul className="space-y-2">
-                {offer.mailRules.map((rule, i) => (
-                  <li key={i} className="flex items-center gap-3 text-sm md:text-base" style={{ color: "var(--text-medium)" }}>
-                    <span style={{ color: "var(--accent-lavande)" }}>•</span>
-                    {rule}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
 
           {/* CTA */}
           <Link
             href="/contact"
             className="block w-full text-center py-4 md:py-5 px-6 md:px-8 rounded-full font-bold text-base md:text-xl transition-all duration-300 hover:scale-[1.02]"
             style={{
-              background: offer.gradient,
+              background: "linear-gradient(135deg, var(--accent-sage) 0%, var(--brun-doux) 100%)",
               color: "white",
-              boxShadow: isPremium
-                ? "0 10px 40px rgba(197, 184, 200, 0.5)"
-                : isSolidaire
-                ? "0 10px 40px rgba(232, 213, 196, 0.5)"
-                : "0 8px 30px rgba(168, 181, 160, 0.4)",
+              boxShadow: "0 8px 30px rgba(168, 181, 160, 0.4)",
             }}
           >
-            {offer.cta}
+            Réserver une consultation
           </Link>
         </div>
       </div>
-
-      {/* Navigation dots */}
-      <div className="flex justify-center gap-3 mt-8 md:mt-10">
-        {offers.map((o, i) => (
-          <button
-            key={i}
-            onClick={() => setActiveIndex(i)}
-            className="w-3 h-3 rounded-full transition-all duration-300"
-            style={{
-              background: activeIndex === i ? o.accentColor : "var(--rose-medium)",
-              transform: activeIndex === i ? "scale(1.4)" : "scale(1)",
-            }}
-            aria-label={`Offre ${o.tabLabel}`}
-          />
-        ))}
-      </div>
-
-      {/* Hint */}
-      <p className="text-center mt-4 md:mt-6 text-xs md:text-sm" style={{ color: "var(--text-light)" }}>
-        Cliquez sur les onglets pour comparer les offres
-      </p>
     </div>
   );
 }
-

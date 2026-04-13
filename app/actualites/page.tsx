@@ -19,10 +19,10 @@ const actualites = [
   {
     date: "Mars 2026",
     type: "Nouveau",
-    title: "Lancement du Tarif Solidaire — 70€",
-    description: "Parce que l'accompagnement thérapeutique devrait être accessible à toutes, je propose désormais un tarif adapté à 70€ pour les personnes en situation de difficulté financière : demandeurs d'emploi, étudiants, bénéficiaires du RSA ou toute situation financière fragile. Même cadre, même qualité d'accompagnement.",
+    title: "Offre de lancement — Consultation à 70€",
+    description: "Profitez d'un tarif de lancement exceptionnel : la consultation standard est proposée à 70€ au lieu de 90€ jusqu'au 15 mai 2026. Le même accompagnement, la même qualité, à un tarif réduit pour bien démarrer ensemble.",
     link: "/offres",
-    linkText: "Découvrir l'offre solidaire",
+    linkText: "Découvrir l'offre",
   },
   {
     date: "Décembre 2025",

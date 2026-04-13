@@ -49,22 +49,10 @@ const contactInfo = [
 
 const services = [
   {
-    title: "Tarif Solidaire",
+    title: "Consultation Standard",
     price: "70€",
     duration: "1h",
-    desc: "Pour les personnes en difficulté financière (sur justificatif)",
-  },
-  {
-    title: "Consultation Standard",
-    price: "90€",
-    duration: "1h",
-    desc: "Accompagnement personnalisé TCA",
-  },
-  {
-    title: "Accompagnement Premium",
-    price: "130€",
-    duration: "1h + suivi",
-    desc: "Séance + 2 mails de suivi personnalisés",
+    desc: "Offre de lancement (au lieu de 90€) — jusqu'au 15 mai",
   },
   {
     title: "Groupe de paroles TCA",

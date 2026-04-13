@@ -5,7 +5,7 @@ import OfferCards from "./OfferCards";
 export const metadata: Metadata = {
   title: "Mes offres d'accompagnement | Tarifs consultations",
   description:
-    "Découvrez mes offres d'accompagnement : tarif solidaire à 70€, consultation standard à 90€ et accompagnement premium à 130€ avec suivi personnalisé. Séances en cabinet ou en visio.",
+    "Découvrez mon offre d'accompagnement : consultation standard à 70€ (au lieu de 90€) — tarif de lancement jusqu'au 15 mai 2026. Séances en cabinet ou en visio.",
   keywords: [
     "tarifs thérapie",
     "consultation TCA",
@@ -41,7 +41,7 @@ export default function OffresPage() {
             }}
           >
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            Nouvelle offre Premium disponible
+            Bientôt, nouvelle offre Premium disponible
           </div>
 
           <h1
