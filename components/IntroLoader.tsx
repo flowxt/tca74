@@ -98,7 +98,7 @@ export default function IntroLoader() {
             animationFillMode: "both",
           }}
         >
-          Thérapeute TCA • Centrée sur les émotions
+          Thérapeute TCA • Boulimie • Hyperphagie • Crises alimentaires
         </p>
 
         {/* Ligne décorative animée */}

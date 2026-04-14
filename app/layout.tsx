@@ -23,11 +23,11 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.psy-tca-annecy.com"),
   title: {
-    default: "Laura Baud | Thérapeute TCA centré sur les émotions | Annecy, Genève, Lausanne",
+    default: "Laura Baud | Thérapeute TCA — Boulimie, Hyperphagie, Crises alimentaires | Annecy, Genève, Lausanne",
     template: "%s | Laura Baud - Thérapeute TCA",
   },
   description:
-    "Laura Baud, thérapeute spécialisée TCA (boulimie, hyperphagie) centré sur les émotions. Affirmation de soi, gestion des limites, problématiques relationnelles. Consultations en ligne et groupes de paroles. Annecy, Genève, Lausanne.",
+    "Laura Baud, thérapeute spécialisée TCA : boulimie, hyperphagie, crises alimentaires. Gestion des émotions, affirmation de soi, gestion des limites. Consultations en ligne et groupes de paroles. Annecy, Genève, Lausanne.",
   keywords: [
     "Laura Baud",
     "TCA",
@@ -56,23 +56,23 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: "https://www.psy-tca-annecy.com",
     siteName: "Laura Baud - Thérapeute TCA",
-    title: "Laura Baud | Thérapeute TCA centré sur les émotions",
+    title: "Laura Baud | Thérapeute TCA — Boulimie, Hyperphagie, Crises alimentaires",
     description:
-      "Accompagnement spécialisé boulimie & hyperphagie. Le TCA est un symptôme — je travaille sur ce qui le nourrit : vos émotions.",
+      "Accompagnement spécialisé boulimie, hyperphagie et crises alimentaires. Le TCA est un symptôme — je travaille sur ce qui le nourrit : vos émotions.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Laura Baud - Thérapeute TCA centré sur les émotions",
+        alt: "Laura Baud - Thérapeute TCA — Boulimie, Hyperphagie, Crises alimentaires",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Laura Baud | Thérapeute TCA centré sur les émotions",
+    title: "Laura Baud | Thérapeute TCA — Boulimie, Hyperphagie, Crises alimentaires",
     description:
-      "Accompagnement spécialisé boulimie & hyperphagie. Le TCA est un symptôme — je travaille sur ce qui le nourrit : vos émotions.",
+      "Accompagnement spécialisé boulimie, hyperphagie et crises alimentaires. Le TCA est un symptôme — je travaille sur ce qui le nourrit : vos émotions.",
   },
   robots: {
     index: true,

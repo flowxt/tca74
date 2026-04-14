@@ -40,7 +40,7 @@ const supports = [
   { name: "Écriture", color: "var(--accent-lavande)" },
   { name: "Dessins", color: "var(--peche)" },
   { name: "Parole", color: "var(--accent-sage)" },
-  { name: "Cartes", color: "var(--rose-accent)" },
+  { name: "Exercices pratiques", color: "var(--rose-accent)" },
   { name: "Photolangage", color: "var(--brun-doux)" },
 ];
 

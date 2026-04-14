@@ -43,7 +43,7 @@ Le focus ne sera jamais mis uniquement sur le poids. Vous ne trouverez pas dans 
 • **Écriture thérapeutique** et lectures ciblées
 • **Hypnose douce** et visualisations guidées
 • **Exercices ludiques et créatifs**
-• **Médiations par cartes thérapeutiques** et dessin
+• **Exercices de mise en situation** et jeux de rôle
 • **Techniques de reparentage** et sécurité émotionnelle
 • **Exercices comportementaux** autour de la gestion des crises et de la nutrition`,
       },

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import AboutSection from "@/components/AboutSection";
-import AnimatedWords from "@/components/AnimatedWords";
+
 import GoogleReviews from "@/components/GoogleReviews";
 
 // Animation variants
@@ -115,7 +115,7 @@ export default function AnimatedHome() {
           >
             Thérapeute TCA
             <br />
-            <span style={{ color: "var(--brun-doux)" }}>centrée sur les émotions</span>
+            <span style={{ color: "var(--brun-doux)" }}>Boulimie • Hyperphagie • Crises alimentaires</span>
           </motion.h1>
           
           {/* Sous-titre - spécialité */}
@@ -126,7 +126,7 @@ export default function AnimatedHome() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            Spécialisée dans l'hyperphagie boulimique
+            Accompagnement spécialisé des troubles alimentaires
           </motion.p>
           
           {/* Phrase d'accroche */}
@@ -139,9 +139,6 @@ export default function AnimatedHome() {
           >
             Comprenez ce qui se cache derrière vos compulsions et retrouvez votre liberté !
           </motion.p>
-          
-          {/* Les 4 mots animés */}
-          <AnimatedWords />
           
           {/* CTA Buttons */}
           <motion.div 
@@ -205,6 +202,9 @@ export default function AnimatedHome() {
 
       {/* Découvrez Laura Section - Avant Mon approche */}
       <AboutSection />
+
+      {/* Google Reviews Section - juste après la présentation */}
+      <GoogleReviews />
 
       {/* About Section - Approche centrée émotions */}
       <section className="section-padding bg-white overflow-hidden">
@@ -506,7 +506,6 @@ export default function AnimatedHome() {
                 { icon: "✍️", title: "Écriture thérapeutique", desc: "Journaling et lectures" },
                 { icon: "🌀", title: "Hypnose douce", desc: "Visualisations guidées" },
                 { icon: "🎨", title: "Exercices créatifs", desc: "Approches ludiques" },
-                { icon: "🃏", title: "Médiations par cartes", desc: "Oracles et Dixit" },
                 { icon: "💜", title: "Reparentage", desc: "Sécurité émotionnelle" },
                 { icon: "🛠️", title: "Gestion de crises", desc: "Exercices concrets" },
               ].map((outil, i) => (
@@ -532,59 +531,6 @@ export default function AnimatedHome() {
             </motion.div>
           </div>
 
-          {/* Section supports symboliques avec photos */}
-          <motion.div
-            className="p-8 rounded-3xl"
-            style={{ background: "linear-gradient(135deg, var(--rose-pale) 0%, var(--peche) 50%, var(--nude) 100%)" }}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            variants={fadeInUp}
-          >
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              {/* Images des cartes */}
-              <div className="grid grid-cols-3 gap-4">
-                {[
-                  { src: "/image/card-lumiere-removebg-preview.png", alt: "Les Cartes Lumière de Lise Bartoli", rotate: -3 },
-                  { src: "/image/oracle-removebg-preview.png", alt: "L'Oracle de l'enfant intérieur", rotate: 2 },
-                  { src: "/image/jeu-removebg-preview.png", alt: "Jeu Dixit", rotate: -1 },
-                ].map((card, i) => (
-                  <motion.div 
-                    key={i}
-                    className="relative aspect-[3/4] rounded-2xl overflow-hidden flex items-center justify-center"
-                    style={{ transform: `rotate(${card.rotate}deg)` }}
-                    whileHover={{ rotate: 0, scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <Image
-                      src={card.src}
-                      alt={card.alt}
-                      fill
-                      className="object-contain drop-shadow-lg"
-                    />
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Texte */}
-              <div>
-                <h3
-                  className="text-2xl font-semibold mb-4"
-                  style={{ fontFamily: "var(--font-playfair)", color: "var(--brun-fonce)" }}
-                >
-                  🃏 Les supports symboliques
-                </h3>
-                <p className="mb-4" style={{ color: "var(--text-dark)" }}>
-                  Parmi mes outils, les <strong>cartes thérapeutiques</strong> occupent une place particulière.
-                  Oracle de l'enfant intérieur, cartes Bartoli, Dixit... Elles sont des médiateurs puissants
-                  pour <strong>libérer la parole</strong> et explorer les émotions.
-                </p>
-                <p className="text-sm" style={{ color: "var(--text-medium)" }}>
-                  Une approche ludique et profonde qui distingue mon accompagnement.
-                </p>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 
@@ -878,9 +824,6 @@ export default function AnimatedHome() {
           </div>
         </div>
       </section>
-
-      {/* Google Reviews Section */}
-      <GoogleReviews />
 
       {/* Mini FAQ Section */}
       <section className="section-padding bg-gradient-soft overflow-hidden">

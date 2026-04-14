@@ -113,7 +113,6 @@ const cards: Card[] = [
     text: "Je me fais vomir après les repas ou les crises",
     category: "exclusion",
     icon: "⚠️",
-    excludes: true,
   },
   // Carte filtre
   {
@@ -124,7 +123,7 @@ const cards: Card[] = [
   },
 ];
 
-type Profile = "accepte" | "tres_concerne" | "exclusion" | "non_majeure" | null;
+type Profile = "accepte" | "tres_concerne" | "exclusion" | "non_majeure" | "vomissements" | null;
 
 const profileMessages: Record<Exclude<Profile, null>, { title: string; message: string; color: string; cta: string; ctaLink: string }> = {
   exclusion: {
@@ -142,6 +141,14 @@ const profileMessages: Record<Exclude<Profile, null>, { title: string; message: 
     color: "#A68B7C",
     cta: "Découvrir les articles",
     ctaLink: "/blog",
+  },
+  vomissements: {
+    title: "La prise en charge est possible, sous certaines conditions",
+    message:
+      "La prise en charge est possible, mais sous certaines conditions comme avoir un médecin traitant au courant des comportements compensatoires tels que les vomissements avec, dans l'idéal, une personne de confiance. Le suivi doit être pluridisciplinaire.",
+    color: "#B69588",
+    cta: "Me contacter pour en discuter",
+    ctaLink: "/contact",
   },
   accepte: {
     title: "Vous êtes au bon endroit ✨",
@@ -194,8 +201,7 @@ export default function QuizCards() {
   const calculateProfile = (): Profile => {
     const checkedList = Array.from(checkedCards);
     
-    // PRIORITÉ 1 : Vérifier les cartes d'exclusion (anorexie, restriction massive, perte de poids)
-    // Ces cas ne sont JAMAIS accompagnés, que ce soit femme majeure ou non
+    // PRIORITÉ 1 : Vérifier les cartes d'exclusion stricte (anorexie, restriction massive, perte de poids)
     const exclusionCards = checkedList.filter((id) => 
       cards.find((c) => c.id === id)?.excludes === true
     );
@@ -203,7 +209,12 @@ export default function QuizCards() {
       return "exclusion";
     }
 
-    // PRIORITÉ 2 : Vérifier si femme majeure n'est pas cochée
+    // PRIORITÉ 2 : Vomissements → prise en charge conditionnelle (pluridisciplinaire)
+    if (checkedCards.has(17)) {
+      return "vomissements";
+    }
+
+    // PRIORITÉ 3 : Vérifier si femme majeure n'est pas cochée
     if (!checkedCards.has(15)) {
       return "non_majeure";
     }
@@ -223,12 +234,10 @@ export default function QuizCards() {
     
     const total = alimentaireCount + emotionnelCount + inclusionCount;
 
-    // Très concerné : beaucoup de cartes cochées
     if (total >= 6) {
       return "tres_concerne";
     }
 
-    // Accepté : au moins quelques cartes pertinentes
     if (total >= 1) {
       return "accepte";
     }

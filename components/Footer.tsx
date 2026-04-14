@@ -49,7 +49,7 @@ export default function Footer() {
                 Laura BAUD
               </h3>
               <p className="text-sm" style={{ color: "var(--rose-accent)" }}>
-                Thérapeute TCA • Centrée sur les émotions
+                Thérapeute TCA • Boulimie • Hyperphagie • Crises alimentaires
               </p>
             </div>
             <div className="flex items-center gap-2 text-sm mb-6" style={{ color: "var(--text-light)" }}>
