@@ -148,7 +148,7 @@ const profileMessages: Record<Exclude<Profile, null>, { title: string; message: 
       "La prise en charge est possible, mais sous certaines conditions comme avoir un médecin traitant au courant des comportements compensatoires tels que les vomissements avec, dans l'idéal, une personne de confiance. Le suivi doit être pluridisciplinaire.",
     color: "#B69588",
     cta: "Me contacter pour en discuter",
-    ctaLink: "/contact",
+    ctaLink: "https://ibookthedate.fr/therapeute/74000-annecy/laura-baud",
   },
   accepte: {
     title: "Vous êtes au bon endroit ✨",
@@ -156,7 +156,7 @@ const profileMessages: Record<Exclude<Profile, null>, { title: string; message: 
       "Mon accompagnement est centré sur la gestion des émotions, les compulsions alimentaires et la relation au corps. Je serais heureuse de vous accompagner sur ce chemin. 🌸",
     color: "#B69588",
     cta: "Prendre rendez-vous",
-    ctaLink: "/contact",
+    ctaLink: "https://ibookthedate.fr/therapeute/74000-annecy/laura-baud",
   },
   tres_concerne: {
     title: "Vous êtes exactement au bon endroit 💜",
@@ -164,7 +164,7 @@ const profileMessages: Record<Exclude<Profile, null>, { title: string; message: 
       "Vous êtes exactement dans le profil que j'accompagne : femmes sensibles, en difficulté avec la gestion émotionnelle, souffrant d'hyperphagie, et traversant des épreuves de vie. Je suis là pour vous. 🤍",
     color: "#7A5F54",
     cta: "Prendre rendez-vous",
-    ctaLink: "/contact",
+    ctaLink: "https://ibookthedate.fr/therapeute/74000-annecy/laura-baud",
   },
 };
 
@@ -513,12 +513,23 @@ export default function QuizCards() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href={profileMessages[profile].ctaLink}
-                className="btn-primary"
-              >
-                {profileMessages[profile].cta}
-              </Link>
+              {profileMessages[profile].ctaLink.startsWith("http") ? (
+                <a
+                  href={profileMessages[profile].ctaLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  {profileMessages[profile].cta}
+                </a>
+              ) : (
+                <Link
+                  href={profileMessages[profile].ctaLink}
+                  className="btn-primary"
+                >
+                  {profileMessages[profile].cta}
+                </Link>
+              )}
               <button
                 onClick={handleReset}
                 className="btn-secondary"

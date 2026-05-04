@@ -147,9 +147,9 @@ export default function AnimatedHome() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
           >
-            <Link href="/contact" className="btn-primary text-lg px-8 py-4">
+            <a href="https://ibookthedate.fr/therapeute/74000-annecy/laura-baud" target="_blank" rel="noopener noreferrer" className="btn-primary text-lg px-8 py-4">
               Prendre rendez-vous
-            </Link>
+            </a>
             <Link href="/questionnaire" className="btn-secondary text-lg px-8 py-4">
               Suis-je la bonne personne pour vous ?
             </Link>
@@ -950,9 +950,9 @@ export default function AnimatedHome() {
                 à votre rythme, vers un mieux-être durable.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <Link href="/contact" className="btn-primary">
+                <a href="https://ibookthedate.fr/therapeute/74000-annecy/laura-baud" target="_blank" rel="noopener noreferrer" className="btn-primary">
                   Prendre rendez-vous
-                </Link>
+                </a>
                 <Link href="/faq" className="btn-secondary">
                   Consulter la FAQ
                 </Link>

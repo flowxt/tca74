@@ -184,12 +184,14 @@ export default function Footer() {
               <p className="text-base" style={{ color: "var(--text-medium)" }}>
                 Consultations en ligne uniquement
               </p>
-              <Link
-                href="/contact"
+              <a
+                href="https://ibookthedate.fr/therapeute/74000-annecy/laura-baud"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary inline-block text-sm"
               >
                 Prendre rendez-vous
-              </Link>
+              </a>
             </div>
           </div>
         </div>

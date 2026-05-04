@@ -243,9 +243,9 @@ export default async function BlogPostPage({ params }: Props) {
             Je suis là pour vous accompagner dans votre cheminement personnel.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary">
+            <a href="https://ibookthedate.fr/therapeute/74000-annecy/laura-baud" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Prendre rendez-vous
-            </Link>
+            </a>
             <Link href="/blog" className="btn-secondary">
               Voir tous les articles
             </Link>

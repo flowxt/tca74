@@ -100,8 +100,10 @@ export default function OffresPage() {
             Contactez-moi pour échanger sur votre situation et choisir la formule qui vous convient.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
+            <a
+              href="https://ibookthedate.fr/therapeute/74000-annecy/laura-baud"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105"
               style={{
                 background: "white",
@@ -113,7 +115,7 @@ export default function OffresPage() {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
-            </Link>
+            </a>
           </div>
         </div>
       </section>

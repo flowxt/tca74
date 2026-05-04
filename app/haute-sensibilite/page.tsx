@@ -82,9 +82,9 @@ export default function HauteSensibilitePage() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary">
+            <a href="https://ibookthedate.fr/therapeute/74000-annecy/laura-baud" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Prendre rendez-vous
-            </Link>
+            </a>
             <Link href="#groupe" className="btn-secondary">
               Découvrir le groupe
             </Link>
@@ -353,9 +353,9 @@ export default function HauteSensibilitePage() {
                 </p>
               </div>
               
-              <Link href="/contact" className="btn-primary mt-8 inline-block">
+              <a href="https://ibookthedate.fr/therapeute/74000-annecy/laura-baud" target="_blank" rel="noopener noreferrer" className="btn-primary mt-8 inline-block">
                 Prendre rendez-vous
-              </Link>
+              </a>
             </div>
           </div>
         </div>

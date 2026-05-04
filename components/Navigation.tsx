@@ -191,12 +191,14 @@ export default function Navigation() {
           </Link>
 
           {/* CTA Button */}
-          <Link
-            href="/contact"
+          <a
+            href="https://ibookthedate.fr/therapeute/74000-annecy/laura-baud"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-primary text-sm ml-2 !py-2 !px-4"
           >
             Prendre RDV
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -306,13 +308,15 @@ export default function Navigation() {
           </Link>
           
           {/* CTA */}
-          <Link
-            href="/contact"
+          <a
+            href="https://ibookthedate.fr/therapeute/74000-annecy/laura-baud"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setIsMobileMenuOpen(false)}
             className="btn-primary text-center mt-4"
           >
             Prendre RDV
-          </Link>
+          </a>
         </div>
       </div>
     </header>
