@@ -17,20 +17,12 @@ export const metadata: Metadata = {
 
 const actualites = [
   {
-    date: "Mars 2026",
+    date: "Mai 2026",
     type: "Nouveau",
-    title: "Offre de lancement — Consultation à 70€",
-    description: "Profitez d'un tarif de lancement exceptionnel : la consultation standard est proposée à 70€ au lieu de 90€ jusqu'au 15 mai 2026. Le même accompagnement, la même qualité, à un tarif réduit pour bien démarrer ensemble.",
+    title: "Nouveaux tarifs — Séance Standard 95€ & Tarif réduit 75€",
+    description: "La séance standard passe à 95€ (1h), un tarif unique, simple et stable. Un tarif réduit à 75€ est également proposé (1 à 2 places maximum), réservé aux femmes engagées traversant une situation financière particulière — attribution selon disponibilité, sans justificatif demandé.",
     link: "/offres",
-    linkText: "Découvrir l'offre",
-  },
-  {
-    date: "Décembre 2025",
-    type: "Nouveau",
-    title: "Lancement de l'offre Premium",
-    description: "Une nouvelle formule d'accompagnement avec suivi personnalisé entre les séances. Idéale pour celles qui souhaitent un soutien continu.",
-    link: "/offres",
-    linkText: "Découvrir l'offre",
+    linkText: "Voir les tarifs",
   },
   {
     date: "Décembre 2025",

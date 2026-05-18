@@ -168,7 +168,7 @@ Si nécessaire, je peux vous orienter vers un professionnel adapté (psychologue
       },
       {
         question: "Quelles sont les conditions d'annulation ou de report ?",
-        answer: `• Toute séance annulée ou décalée **moins de 24h à l'avance** entraîne une indemnité de **40€**, quelle que soit la formule choisie (standard ou premium)
+        answer: `• Toute séance annulée ou décalée **moins de 24h à l'avance** entraîne une indemnité de **40€**, quelle que soit la formule choisie
 • Cette règle **ne s'applique pas à la première séance**
 • En cas de problème personnel ou de santé important, la règle reste en vigueur, mais je me réserve le droit d'appliquer ou non l'indemnité selon la situation`,
       },

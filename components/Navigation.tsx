@@ -76,13 +76,13 @@ export default function Navigation() {
               className="block text-base md:text-lg font-medium leading-tight"
               style={{ color: "var(--brun-fonce)", fontFamily: "var(--font-playfair)" }}
             >
-              Laura Baud
+              Laura BAUD
             </span>
             <span
-              className="block text-xs leading-tight"
+              className="block text-xs leading-tight max-w-[280px] md:max-w-[340px]"
               style={{ color: "var(--text-light)" }}
             >
-              Thérapeute TCA • Émotions
+              Accompagnement centré sur les émotions et l'affirmation de soi — TCA
             </span>
           </div>
         </Link>

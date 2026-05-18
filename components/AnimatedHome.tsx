@@ -107,37 +107,37 @@ export default function AnimatedHome() {
           
           {/* Titre principal - Grande typographie */}
           <motion.h1
-            className="relative text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium mb-4 leading-tight"
+            className="relative text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium mb-6 leading-tight"
             style={{ fontFamily: "var(--font-playfair)", color: "var(--text-dark)" }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            Thérapeute TCA
+            Accompagnement centré sur les émotions
             <br />
-            <span style={{ color: "var(--brun-doux)" }}>Boulimie • Hyperphagie • Crises alimentaires</span>
+            <span style={{ color: "var(--brun-doux)" }}>et l'affirmation de soi</span>
           </motion.h1>
           
           {/* Sous-titre - spécialité */}
           <motion.p
-            className="text-lg md:text-xl font-medium mb-4"
+            className="text-lg md:text-xl font-medium mb-6 max-w-3xl mx-auto"
             style={{ color: "var(--brun)" }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            Accompagnement spécialisé des troubles alimentaires
+            Spécialisée en comportements alimentaires émotionnels (TCA, compulsions, hyperphagie).
           </motion.p>
           
           {/* Phrase d'accroche */}
           <motion.p
-            className="text-xl md:text-2xl leading-relaxed mb-8 max-w-3xl mx-auto"
+            className="text-lg md:text-xl leading-relaxed mb-8 max-w-3xl mx-auto"
             style={{ color: "var(--text-medium)" }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            Comprenez ce qui se cache derrière vos compulsions et retrouvez votre liberté !
+            Je vous accompagne à vous (re)trouver en comprenant la racine de vos comportements alimentaires, émotionnels ou relationnels.
           </motion.p>
           
           {/* CTA Buttons */}

@@ -49,10 +49,16 @@ const contactInfo = [
 
 const services = [
   {
-    title: "Consultation Standard",
-    price: "70€",
+    title: "Séance Standard",
+    price: "95€",
     duration: "1h",
-    desc: "Offre de lancement (au lieu de 90€) — jusqu'au 15 mai",
+    desc: "Tarif unique, simple et stable.",
+  },
+  {
+    title: "Séance Tarif réduit",
+    price: "75€",
+    duration: "1 à 2 places maximum",
+    desc: "Réservée aux femmes engagées traversant une situation financière particulière. Attribution selon disponibilité, pas de justificatif demandé.",
   },
   {
     title: "Groupe de paroles TCA",

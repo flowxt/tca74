@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import OfferCards from "./OfferCards";
 
 export const metadata: Metadata = {
-  title: "Mes offres d'accompagnement | Tarifs consultations",
+  title: "Tarifs & accompagnement | Laura Baud",
   description:
-    "Découvrez mon offre d'accompagnement : consultation standard à 70€ (au lieu de 90€) — tarif de lancement jusqu'au 15 mai 2026. Séances en cabinet ou en visio.",
+    "Mes tarifs : séance standard à 95€ (1h) et séance à tarif réduit à 75€ — réservée aux femmes engagées traversant une situation financière particulière. Consultations en cabinet ou en visio.",
   keywords: [
     "tarifs thérapie",
     "consultation TCA",
-    "accompagnement premium",
     "prix séance",
     "thérapie hyperphagie",
+    "tarif réduit",
     "suivi personnalisé",
   ],
 };
@@ -41,14 +40,14 @@ export default function OffresPage() {
             }}
           >
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            Bientôt, nouvelle offre Premium disponible
+            Consultations en cabinet ou en visio
           </div>
 
           <h1
             className="text-4xl md:text-5xl lg:text-6xl font-medium mb-6"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
-            Mes offres{" "}
+            Mes{" "}
             <span
               style={{
                 background: "linear-gradient(135deg, var(--accent-lavande) 0%, var(--brun-doux) 100%)",
@@ -56,7 +55,7 @@ export default function OffresPage() {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              d'accompagnement
+              tarifs
             </span>
           </h1>
 
@@ -64,8 +63,8 @@ export default function OffresPage() {
             className="text-xl leading-relaxed max-w-2xl mx-auto"
             style={{ color: "var(--text-medium)" }}
           >
-            Choisissez la formule qui correspond à vos besoins. 
-            Chaque accompagnement est personnalisé et centré sur vos émotions.
+            Un tarif unique, simple et stable, ainsi qu'un tarif réduit pensé pour
+            les femmes engagées traversant une situation financière particulière.
           </p>
         </div>
       </section>
