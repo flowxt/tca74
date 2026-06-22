@@ -91,14 +91,16 @@ export default function IntroLoader() {
 
         {/* Sous-titre */}
         <p
-          className="text-lg md:text-xl text-white/90 mb-8 animate-fade-in-up"
+          className="text-base md:text-lg text-white/90 mb-8 animate-fade-in-up max-w-xl mx-auto leading-relaxed"
           style={{
             textShadow: "0 2px 10px rgba(0,0,0,0.3)",
             animationDelay: "1s",
             animationFillMode: "both",
           }}
         >
-          Thérapeute TCA • Boulimie • Hyperphagie • Crises alimentaires
+          Accompagnement centré sur les émotions
+          <br />
+          et l&apos;affirmation de soi — Spécialisée en hyperphagie émotionnelle (TCA)
         </p>
 
         {/* Ligne décorative animée */}

@@ -1607,6 +1607,268 @@ Si vous vous reconnaissez dans ces expériences et souhaitez être accompagnée,
     categorySlug: "tca",
     tags: ["sécurité intérieure", "enfance", "traumatisme", "compulsions", "hyperphagie", "carences affectives", "mécanismes adaptatifs"],
   },
+
+  // ========== ARTICLE 1 — Juin 2026 ==========
+  {
+    slug: "hyperphagie-emotionnelle-pourquoi-je-mange-quand-tout-deborde",
+    title: "L'hyperphagie émotionnelle : Pourquoi je mange quand tout déborde",
+    excerpt:
+      "Vous vous surprenez à manger sans faim, comme si quelque chose en vous prenait le relais. Ce n'est pas un manque de volonté — c'est un mécanisme profondément humain. Comprendre ce qui se joue derrière la crise, c'est le premier pas pour s'en libérer.",
+    image: "/image/blog/article1.png",
+    content: `
+# L'hyperphagie émotionnelle : Pourquoi je mange quand tout déborde
+
+Il y a des moments où vous vous surprenez à manger sans faim, comme si quelque chose en vous prenait le relais. Vous savez que vous n'avez pas besoin de nourriture, mais vous sentez que quelque chose déborde.
+
+Ce n'est pas un manque de volonté.
+Ce n'est pas un problème de discipline.
+Ce n'est pas "être faible".
+
+C'est un mécanisme profondément humain : **l'hyperphagie émotionnelle**.
+
+Lorsque vos émotions deviennent trop intenses, trop nombreuses ou trop comprimées, votre corps cherche un moyen de vous protéger. Et parfois, ce moyen passe par la nourriture.
+
+## Quand vos émotions débordent, votre corps réagit avant vous
+
+Votre système nerveux est conçu pour vous maintenir en sécurité.
+Mais lorsque vous vivez depuis longtemps dans un état de tension, de vigilance ou de pression, il peut fonctionner comme un radar permanent.
+
+Vous êtes attentive à tout.
+Vous anticipez.
+Vous surveillez.
+Vous interprétez les signaux autour de vous.
+
+C'est ce qu'on appelle l'**hypervigilance**.
+
+Un ton sec.
+Un silence.
+Un imprévu.
+Une remarque.
+
+Votre corps réagit comme si une menace pouvait surgir à tout moment.
+Et cette tension interne, même si elle ne se voit pas, use votre énergie, votre stabilité, votre capacité à vous écouter.
+
+## La suradaptation : un terrain fertile pour l'hyperphagie émotionnelle
+
+Beaucoup de femmes qui vivent de l'hyperphagie émotionnelle sont aussi en suradaptation.
+Elles s'ajustent, s'ajustent encore, et finissent par ne plus savoir où sont leurs limites.
+
+Vous faites ce qu'il faut.
+Vous tenez.
+Vous gérez.
+Vous absorbez.
+
+Mais à force de vous adapter aux autres, vous vous éloignez de vous‑même.
+Votre corps, lui, continue d'encaisser.
+
+Et lorsque la charge devient trop lourde, il cherche un moyen de relâcher la pression.
+C'est souvent là que la crise alimentaire apparaît.
+
+## La crise d'hyperphagie : un mécanisme de régulation, pas un échec
+
+Lorsque vous vivez une crise d'hyperphagie, ce n'est pas la nourriture le problème.
+C'est ce qui se passe avant.
+
+Votre corps tente de :
+
+- Calmer une surcharge émotionnelle
+- Ralentir un système nerveux en alerte
+- Créer une forme d'anesthésie interne
+- Retrouver une sensation de présence
+- Éviter l'effondrement
+
+Pendant quelques minutes, la nourriture devient une digue.
+Elle coupe le trop.
+Elle apaise.
+Elle fait taire le bruit interne.
+
+Ce n'est pas un choix conscient.
+C'est une stratégie de survie.
+
+## Pourquoi vous mangez quand tout déborde
+
+Parce que votre corps cherche à :
+
+- Réguler des émotions trop fortes
+- Compenser un manque de sécurité interne
+- Retrouver un apaisement immédiat
+- Éviter une surcharge émotionnelle
+- Créer un espace où vous pouvez enfin respirer
+
+L'hyperphagie émotionnelle n'est pas un trouble de l'appétit.
+C'est un **trouble de la régulation émotionnelle**.
+
+Votre corps ne vous trahit pas.
+Il vous protège.
+
+## Le lien entre hyperphagie et affirmation de soi
+
+Lorsque vous vivez dans la suradaptation, vous apprenez à mettre vos besoins en arrière‑plan.
+Vous dites "oui" alors que vous pensez "non".
+Vous prenez sur vous.
+Vous absorbez les attentes.
+Vous vous effacez pour maintenir l'harmonie.
+
+Cette difficulté à poser vos limites, à dire ce que vous ressentez, à exprimer vos besoins, touche directement à l'**affirmation de soi**.
+
+Et lorsque vous ne pouvez pas vous affirmer, vos émotions s'accumulent.
+Elles n'ont plus d'espace pour circuler.
+Elles se stockent dans le corps.
+
+La nourriture devient alors un moyen de gérer ce qui n'a pas pu être dit, exprimé, posé.
+
+L'hyperphagie émotionnelle est souvent le symptôme d'un manque d'affirmation de soi…
+pas d'un manque de contrôle.
+
+## Ce qui se joue dans votre corps avant une crise
+
+Avant une crise, on observe souvent :
+
+- Une tension interne diffuse
+- Une fatigue émotionnelle profonde
+- Une sensation de saturation
+- Une difficulté à identifier ce que vous ressentez
+- Une impression d'être "à bout"
+- Une perte de repères corporels
+- Un besoin urgent de calmer quelque chose à l'intérieur
+
+Votre corps vous envoie des signaux, mais vous n'avez plus l'espace pour les entendre.
+Alors il prend les commandes.
+
+## Comment commencer à sortir du cycle hyperphagie – débordement
+
+L'objectif n'est pas de "manger moins".
+L'objectif est de **comprendre ce qui déborde**.
+
+Voici des pistes pour apaiser le système avant qu'il n'explose :
+
+- **Revenir dans votre corps** : respiration lente, ancrage, relâchement de la mâchoire
+- **Identifier les émotions** avant qu'elles ne deviennent trop lourdes
+- **Réduire la suradaptation** : dire non, ralentir, vous écouter
+- **Renforcer l'affirmation de soi** : exprimer vos besoins, même timidement
+- **Créer des micro‑pauses** dans la journée
+- **Reconstruire la sécurité interne** : routines, stabilité, douceur
+- **Comprendre vos mécanismes** : la connaissance apaise le système nerveux
+
+Ce travail ne se fait pas par la force.
+Il se fait par la rééducation du système nerveux.
+
+## Vous n'êtes pas "trop" : vous êtes épuisée
+
+Si vous mangez quand tout déborde, ce n'est pas un problème de nourriture.
+C'est un problème de charge émotionnelle, de suradaptation, de tension interne, de manque d'affirmation de soi.
+
+Votre corps ne cherche pas à vous nuire.
+Il cherche à vous protéger.
+
+Et il est possible d'apprendre à l'apaiser autrement.
+Avec douceur.
+Avec compréhension.
+Avec des outils adaptés.
+    `,
+    date: "22 juin 2026",
+    category: "TCA",
+    categorySlug: "tca",
+    tags: ["hyperphagie émotionnelle", "régulation émotionnelle", "affirmation de soi", "suradaptation", "hypervigilance", "crises alimentaires", "système nerveux"],
+  },
+
+  // ========== ARTICLE 2 — Juin 2026 ==========
+  {
+    slug: "hyperphagie-quand-les-oui-trop-souvent-donnes-pesent-dans-le-corps",
+    title: "Hyperphagie émotionnelle : quand les \"oui\" que vous donnez trop souvent finissent par peser dans votre corps",
+    excerpt:
+      "Vous dites \"oui\" alors qu'une partie de vous sait très bien que ce serait un \"non\". À l'intérieur, quelque chose se serre. Votre corps garde une trace. Et un jour, tout déborde — pas dans vos mots, dans votre rapport à la nourriture.",
+    image: "/image/blog/article2.jpg",
+    content: `
+# Hyperphagie émotionnelle : quand les "oui" que vous donnez trop souvent finissent par peser dans votre corps
+
+Il y a ces moments où vous dites "oui" alors qu'une partie de vous sait très bien que ce serait un "non". Vous le faites pour éviter un malaise, pour ne pas décevoir, pour garder la paix autour de vous. Sur le moment, ça paraît plus simple.
+
+Mais à l'intérieur, quelque chose se serre. Votre corps garde une trace.
+
+Un "oui" de plus. Un sourire forcé. Un "ça va" qui cache la fatigue. Une concession pour ne pas déranger. Une adaptation de plus pour que tout tienne.
+
+Rien ne se voit à l'extérieur. À l'intérieur, ça s'accumule.
+
+Et un jour, tout déborde. Pas dans vos mots. Dans votre rapport à la nourriture.
+
+## Quand les émotions n'ont plus de place, le corps cherche une autre sortie
+
+Une émotion qui ne peut pas être exprimée ne disparaît pas. Elle reste là, en attente. Elle pousse doucement, puis plus fort.
+
+Comme un enfant derrière une porte fermée. Il frappe. Il insiste. Il cherche une ouverture.
+
+Votre corps fonctionne de la même manière.
+
+Quand les émotions n'ont plus d'espace, elles passent par le corps. Et parfois, par une crise d'hyperphagie.
+
+Ce n'est pas un manque de volonté. C'est un trop‑plein qui cherche un chemin.
+
+## La suradaptation : ce réflexe qui vous éloigne de vous-même
+
+Beaucoup de femmes qui vivent de l'hyperphagie émotionnelle ont appris très tôt à s'adapter. À être faciles. À être discrètes. À ne pas déranger. À porter beaucoup, souvent trop.
+
+Elles s'ajustent en permanence. Elles encaissent. Elles prennent sur elles. Elles disent "oui" pour éviter les vagues.
+
+À force, elles ne savent plus vraiment ce qu'elles ressentent. Leurs limites deviennent floues. Leur corps, lui, continue de sentir ce qui ne se dit plus.
+
+Et quand il n'y a plus de place pour tout ce qui s'accumule, la nourriture devient un refuge. Un moyen de relâcher la pression. Un endroit où déposer ce qui n'a pas pu être exprimé.
+
+## Les crises alimentaires : un message, pas un échec
+
+Pendant des années en psychiatrie et en libéral, j'ai vu des femmes arriver en pensant qu'elles avaient un problème avec la nourriture. Elles parlaient de perte de contrôle, de honte, de culpabilité.
+
+Mais derrière la nourriture, il y avait autre chose.
+
+Des émotions avalées. Des limites jamais posées. Des besoins mis de côté. Des "non" étouffés. Des attentes portées seules. Des années de suradaptation.
+
+La crise n'était pas un caprice. **C'était un message.**
+
+## Quand votre voix se tait, votre corps parle à votre place
+
+Chaque fois que vous vous retenez de dire ce que vous ressentez, une tension se crée. Elle ne disparaît pas. Elle se stocke.
+
+Votre corps finit par chercher une issue. La nourriture devient alors un moyen de :
+
+- Calmer l'agitation intérieure
+- Apaiser les émotions trop fortes
+- Retrouver une sensation de présence
+- Ralentir ce qui va trop vite
+- Relâcher ce que vous portez depuis longtemps
+
+La crise n'est pas un manque de courage. C'est un appel.
+
+## L'affirmation de soi : une compétence qui change tout
+
+On ne vous a pas appris à vous affirmer. On vous a appris à être gentille. À être arrangeante. À ne pas faire de vagues.
+
+Dire "non" peut sembler risqué. Dire "j'ai besoin de…" peut sembler trop. Dire "je ne veux pas" peut sembler égoïste.
+
+Mais l'affirmation de soi n'est pas un trait de caractère. **C'est une compétence.** Ça s'apprend. Ça se pratique. Ça se muscle.
+
+Et plus vous apprenez à vous affirmer, moins votre corps a besoin de s'exprimer à travers une crise.
+
+## La guérison commence dans votre voix, pas dans votre assiette
+
+On croit souvent que pour sortir de l'hyperphagie émotionnelle, il faut "mieux manger" ou "se contrôler". Mais la nourriture n'est pas le cœur du problème.
+
+La guérison commence dans l'endroit où les mots restent coincés. Dans cet espace où vous vous retenez. Dans ces moments où vous vous effacez.
+
+Retrouver votre voix, c'est retrouver votre place.
+Retrouver votre place, c'est alléger votre corps.
+Alléger votre corps, c'est apaiser vos crises.
+
+## En quelques mots
+
+Vous ne luttez pas contre la nourriture. Vous luttez contre tout ce que vous n'avez jamais pu dire.
+
+Votre corps ne vous met pas en échec. Il vous montre ce qui demande à être entendu.
+    `,
+    date: "22 juin 2026",
+    category: "TCA",
+    categorySlug: "tca",
+    tags: ["hyperphagie émotionnelle", "affirmation de soi", "suradaptation", "crises alimentaires", "émotions", "limites", "voix intérieure"],
+  },
 ];
 
 // Fonctions utilitaires pour récupérer les articles
