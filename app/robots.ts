@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/api/"],
+      disallow: ["/api/", "/eclore"],
     },
     sitemap: "https://www.psy-tca-annecy.com/sitemap.xml",
   };

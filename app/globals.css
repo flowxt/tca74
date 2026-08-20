@@ -312,3 +312,177 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--rose-pale);
   border-color: var(--rose-accent);
 }
+
+/* ============================================================
+   ÉCLORE — Identité dédiée (landing autonome)
+   Palette inspirée de l'image de l'œuf éclos : or, lumière, sable, crème.
+   Tout est scopé sous .eclore-scope pour ne jamais impacter le site TCA.
+   ============================================================ */
+.eclore-scope {
+  --or-profond: #A9761C;
+  --or: #C79338;
+  --or-clair: #DFB65E;
+  --or-lumiere: #F0D9A0;
+  --or-voile: #F8ECD2;
+
+  --creme: #FDF9F0;
+  --sable: #F4E9D6;
+  --sable-fonce: #E7D6B8;
+
+  --encre: #3F2E1E;
+  --encre-douce: #665038;
+  --encre-claire: #907757;
+
+  color: var(--encre-douce);
+  background: var(--creme);
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+.eclore-scope h1,
+.eclore-scope h2,
+.eclore-scope h3,
+.eclore-scope h4 {
+  font-family: var(--font-cinzel), Georgia, serif;
+  color: var(--encre);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.eclore-scope ::selection {
+  background: var(--or-lumiere);
+  color: var(--encre);
+}
+
+/* Fonds */
+.eclore-bg-creme {
+  background: var(--creme);
+}
+
+.eclore-bg-sable {
+  background: linear-gradient(180deg, var(--creme) 0%, var(--sable) 50%, var(--creme) 100%);
+}
+
+.eclore-bg-lumiere {
+  background:
+    radial-gradient(ellipse at 25% 30%, rgba(240, 217, 160, 0.55) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 15%, rgba(199, 147, 56, 0.18) 0%, transparent 45%),
+    radial-gradient(ellipse at 60% 90%, rgba(231, 214, 184, 0.5) 0%, transparent 50%),
+    var(--creme);
+}
+
+.eclore-bg-nuit {
+  background: linear-gradient(135deg, #4A3520 0%, #6B4E27 50%, #A9761C 100%);
+}
+
+/* Typographie utilitaire */
+.eclore-kicker {
+  font-family: var(--font-cinzel), Georgia, serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--or-profond);
+}
+
+.eclore-italique {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-style: italic;
+}
+
+.eclore-or-texte {
+  background: linear-gradient(120deg, var(--or-profond) 0%, var(--or-clair) 45%, var(--or) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Boutons */
+.eclore-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1rem 2.25rem;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: linear-gradient(135deg, var(--or) 0%, var(--or-profond) 100%);
+  box-shadow: 0 10px 30px rgba(169, 118, 28, 0.28);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eclore-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(169, 118, 28, 0.38);
+}
+
+.eclore-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1rem 2.25rem;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--or-profond);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1.5px solid var(--sable-fonce);
+  transition: all 0.3s ease;
+}
+
+.eclore-btn-ghost:hover {
+  background: #fff;
+  border-color: var(--or-clair);
+  transform: translateY(-2px);
+}
+
+/* Les libellés longs ne doivent jamais déborder sur petit écran */
+@media (max-width: 640px) {
+  .eclore-btn,
+  .eclore-btn-ghost {
+    padding: 0.9rem 1.4rem;
+    font-size: 0.95rem;
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+/* Cartes */
+.eclore-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(231, 214, 184, 0.9);
+  border-radius: 28px;
+  box-shadow: 0 8px 40px rgba(169, 118, 28, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.eclore-card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 55px rgba(169, 118, 28, 0.16);
+}
+
+/* Halo doré derrière les visuels */
+.eclore-halo {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.eclore-section {
+  padding: 5rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .eclore-section {
+    padding: 7rem 2rem;
+  }
+}
+
+/* Filet décoratif */
+.eclore-filet {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--or-clair), transparent);
+}
