@@ -1,17 +1,17 @@
 import Image from "next/image";
-import EcloreProgramme from "./EcloreProgramme";
+import EcloreLettres from "./EcloreLettres";
 import EcloreFaq from "./EcloreFaq";
+import { CandidaterButton } from "./EcloreCandidature";
 import {
   AVIS_GOOGLE_URL,
-  CANDIDATURE_URL,
   dejaEssaye,
   formules,
-  imaginez,
-  lettres,
-  objectifs,
+  INSCRIPTION_PREMIUM_URL,
   pasPourVous,
+  piliers,
   pourVous,
   prerequis,
+  programme,
   publicCible,
   seances,
   situations,
@@ -22,65 +22,80 @@ export default function EclorePage() {
   return (
     <>
       {/* ============ HERO ============ */}
-      <section id="top" className="relative pt-28 pb-16 md:pt-32 md:pb-20 eclore-bg-lumiere overflow-hidden">
-        <div
-          className="eclore-halo top-0 left-1/4 w-[28rem] h-[28rem]"
-          style={{ background: "rgba(240, 217, 160, 0.55)" }}
-        />
-        <div
-          className="eclore-halo bottom-0 right-0 w-80 h-80"
-          style={{ background: "rgba(199, 147, 56, 0.2)" }}
+      {/* La photo seule en entête, pleine largeur et non recadrée, puis le texte dessous */}
+      <section id="top" className="relative pt-20 md:pt-24 eclore-bg-lumiere">
+        <Image
+          src="/eclore/eclore.png"
+          alt="L'expérience ÉCLORE — un œuf qui s'ouvre sur une lumière dorée, posé sur du coton"
+          width={1799}
+          height={874}
+          priority
+          sizes="100vw"
+          className="w-full h-auto"
         />
 
-        <div className="relative max-w-4xl mx-auto px-6 text-center">
+        <div className="max-w-3xl mx-auto px-6 py-14 md:py-20 text-center">
           <span
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs font-semibold mb-8 tracking-wider uppercase"
+            className="inline-flex items-start gap-2 px-5 py-2.5 rounded-2xl text-xs font-semibold mb-7 text-left"
             style={{
-              background: "rgba(255, 255, 255, 0.75)",
+              background: "rgba(255, 255, 255, 0.85)",
               border: "1px solid var(--sable-fonce)",
               color: "var(--or-profond)",
+              boxShadow: "0 4px 18px rgba(169, 118, 28, 0.12)",
             }}
           >
-            <span className="w-1.5 h-1.5 rounded-full" style={{ background: "var(--or)" }} />
-            Pour les femmes qui se sont mises de côté trop longtemps
+            <span className="w-1.5 h-1.5 rounded-full shrink-0 mt-1.5" style={{ background: "var(--or)" }} />
+            Pour les femmes sensibles qui ont pris l&apos;habitude de penser aux
+            autres avant elles-mêmes
           </span>
 
           <h1 className="mb-6">
-            <span className="block eclore-kicker mb-4">L&apos;expérience ÉCLORE</span>
-            <span className="block text-3xl md:text-5xl lg:text-6xl leading-tight">
-              Revenez à vous.
+            <span
+              className="block mb-4 text-sm md:text-base"
+              style={{
+                fontFamily: "var(--font-cinzel)",
+                letterSpacing: "0.28em",
+                textTransform: "uppercase",
+                color: "var(--or-profond)",
+              }}
+            >
+              L&apos;expérience ÉCLORE
+            </span>
+            <span className="block text-3xl md:text-4xl lg:text-5xl leading-[1.2]">
+              Écoutez-vous.
               <br />
-              <span className="eclore-or-texte">En 3 mois, un cadre pour vous retrouver.</span>
+              Choisissez-vous.
+              <br />
+              <span className="eclore-or-texte">Osez vivre à votre façon.</span>
             </span>
           </h1>
 
           <p
-            className="text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-5"
+            className="text-lg md:text-xl leading-relaxed mb-5 max-w-2xl mx-auto"
             style={{ color: "var(--encre-douce)" }}
           >
-            Nommer ce que vous vivez. Reconnaître vos besoins. Oser votre place.
-            Un parcours d&apos;exploration intérieure — pas une promesse magique,
-            un accompagnement réel.
+            Un parcours d&apos;exploration intérieure unique qui crée les conditions
+            pour vous écouter, vous choisir et enfin éclore.
           </p>
 
           <p className="eclore-italique text-base md:text-lg mb-8" style={{ color: "var(--encre-claire)" }}>
             Essentiel 100 € · Premium 700 € avec 5 séances individuelles
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
-            <a href={CANDIDATURE_URL} target="_blank" rel="noopener noreferrer" className="eclore-btn">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <CandidaterButton className="eclore-btn">
               Commencer par un échange de 30 min
-            </a>
+            </CandidaterButton>
             <a href="#formules" className="eclore-btn-ghost">
               Voir ce que vous recevez
             </a>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-3xl mx-auto mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { chiffre: "17 ans", label: "en santé mentale" },
               { chiffre: "3 mois", label: "d'accompagnement" },
-              { chiffre: "8", label: "expériences guidées" },
+              { chiffre: "100 %", label: "en ligne" },
               { chiffre: "62", label: "avis Google 5★" },
             ].map((item) => (
               <div key={item.label} className="text-center">
@@ -95,30 +110,6 @@ export default function EclorePage() {
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className="relative max-w-3xl mx-auto">
-            <div
-              className="eclore-halo inset-0 w-full h-full"
-              style={{ background: "rgba(223, 182, 94, 0.45)" }}
-            />
-            <div
-              className="relative rounded-[2rem] overflow-hidden"
-              style={{
-                boxShadow: "0 30px 80px rgba(169, 118, 28, 0.25)",
-                border: "1px solid rgba(255,255,255,0.6)",
-              }}
-            >
-              <Image
-                src="/eclore/eclore.png"
-                alt="L'expérience ÉCLORE — un œuf qui s'ouvre sur une lumière dorée"
-                width={1799}
-                height={874}
-                priority
-                sizes="(max-width: 768px) 100vw, 768px"
-                className="w-full h-auto"
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -179,56 +170,37 @@ export default function EclorePage() {
       {/* ============ TRANSFORMATION (avant le contenu) ============ */}
       <section id="transformation" className="eclore-section eclore-bg-sable">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-14">
             <p className="eclore-kicker mb-4">Ce que ça change</p>
-            <h2 className="text-3xl md:text-4xl mb-5">
+            <h2 className="text-3xl md:text-4xl">
               Imaginez, dans <span className="eclore-or-texte">trois mois</span>
             </h2>
-            <p className="max-w-2xl mx-auto text-lg" style={{ color: "var(--encre-douce)" }}>
-              Pas une nouvelle vous du jour au lendemain. Une relation plus claire,
-              plus douce, plus vraie avec vous-même.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
-            {imaginez.map((item) => (
-              <div key={item.titre} className="eclore-card eclore-card-hover p-7">
-                <div
-                  className="w-9 h-9 rounded-full mb-5 flex items-center justify-center"
-                  style={{
-                    background: "linear-gradient(135deg, var(--or-lumiere) 0%, var(--or-clair) 100%)",
-                  }}
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+            {piliers.map((pilier) => (
+              <div key={pilier.titre} className="eclore-card eclore-card-hover p-8 text-center">
+                <span
+                  className="eclore-oeuf inline-flex w-14 h-[4.5rem] items-center justify-center mb-6"
+                  aria-hidden
                 >
-                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <h3 className="text-lg mb-3 leading-snug">{item.titre}</h3>
-                <p className="text-base leading-relaxed" style={{ color: "var(--encre-douce)" }}>
-                  {item.texte}
+                  <span
+                    className="text-2xl text-white"
+                    style={{
+                      fontFamily: "var(--font-cinzel)",
+                      textShadow: "0 2px 6px rgba(122, 84, 20, 0.45)",
+                    }}
+                  >
+                    {pilier.num}
+                  </span>
+                </span>
+                <h3 className="text-xl md:text-2xl mb-4 uppercase tracking-wide">{pilier.titre}</h3>
+                <p className="text-base md:text-lg leading-relaxed" style={{ color: "var(--encre-douce)" }}>
+                  {pilier.texte}
                 </p>
               </div>
             ))}
           </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {objectifs.map((objectif) => (
-              <div key={objectif.titre} className="eclore-card p-5">
-                <h3 className="text-base mb-2 leading-snug">{objectif.titre}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: "var(--encre-douce)" }}>
-                  {objectif.texte}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <p
-            className="text-center text-sm md:text-base mt-10 max-w-2xl mx-auto"
-            style={{ color: "var(--encre-claire)" }}
-          >
-            Ce ne sont pas des promesses, mais des directions de travail. Ce que vous en ferez
-            vous appartient — et c&apos;est justement ce qui rend le chemin le vôtre.
-          </p>
         </div>
       </section>
 
@@ -236,7 +208,6 @@ export default function EclorePage() {
       <section id="approche" className="eclore-section eclore-bg-creme">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
-            <p className="eclore-kicker mb-4">Ce qui n&apos;a pas suffi</p>
             <h2 className="text-3xl md:text-4xl">
               Vous avez peut-être <span className="eclore-or-texte">déjà essayé</span>
             </h2>
@@ -270,15 +241,6 @@ export default function EclorePage() {
               </div>
             ))}
           </div>
-
-          <p
-            className="eclore-italique text-center text-xl md:text-2xl mt-14 max-w-2xl mx-auto leading-relaxed"
-            style={{ color: "var(--or-profond)" }}
-          >
-            ÉCLORE n&apos;ajoute pas encore plus de contenu à absorber seule.
-            Il vous donne un cadre, une communauté, et — si vous le choisissez —
-            quelqu&apos;un à qui déposer ce qui remonte.
-          </p>
         </div>
       </section>
 
@@ -326,29 +288,7 @@ export default function EclorePage() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {lettres.map((item, i) => (
-              <div key={i} className="eclore-card eclore-card-hover p-7 flex flex-col">
-                <div className="flex items-center gap-4 mb-4">
-                  <span
-                    className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl shrink-0"
-                    style={{
-                      background: "linear-gradient(135deg, var(--or-lumiere) 0%, var(--or-clair) 100%)",
-                      color: "#fff",
-                      fontFamily: "var(--font-cinzel)",
-                      boxShadow: "0 6px 18px rgba(199, 147, 56, 0.25)",
-                    }}
-                  >
-                    {item.lettre}
-                  </span>
-                  <h3 className="text-lg leading-snug">{item.titre}</h3>
-                </div>
-                <p className="text-base leading-relaxed" style={{ color: "var(--encre-douce)" }}>
-                  {item.texte}
-                </p>
-              </div>
-            ))}
-          </div>
+          <EcloreLettres />
         </div>
       </section>
 
@@ -510,22 +450,23 @@ export default function EclorePage() {
       <section className="eclore-section eclore-bg-creme">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-6">
-            <p className="eclore-kicker mb-4">La confiance</p>
+            <p className="eclore-kicker mb-4">Elles m&apos;ont fait confiance</p>
             <h2 className="text-3xl md:text-4xl mb-5">
-              Elles m&apos;ont <span className="eclore-or-texte">fait confiance</span>
+              Ce que disent les femmes que{" "}
+              <span className="eclore-or-texte">j&apos;ai accompagnées</span>
             </h2>
           </div>
 
-          {/* Cadre honnête : ces avis concernent la thérapie, pas ÉCLORE */}
+          {/* Cadre honnête : ces avis concernent la thérapie, pas encore ÉCLORE */}
           <div
             className="max-w-2xl mx-auto p-5 rounded-2xl mb-12 text-center"
             style={{ background: "var(--or-voile)", border: "1px solid var(--or-lumiere)" }}
           >
-            <p className="text-sm leading-relaxed" style={{ color: "var(--encre-douce)" }}>
-              <strong style={{ color: "var(--encre)" }}>En toute transparence :</strong> ÉCLORE
-              est un projet récent, je n&apos;ai donc pas encore de témoignages sur cette
-              expérience. Les avis ci-dessous concernent mon accompagnement en tant que
-              thérapeute — ils vous permettront de savoir qui je suis et comment j&apos;écoute.
+            <p className="text-base leading-relaxed" style={{ color: "var(--encre-douce)" }}>
+              ÉCLORE est une nouvelle expérience. Les témoignages que vous allez découvrir ne
+              concernent donc pas encore ÉCLORE, mais mon travail d&apos;accompagnement en tant
+              que thérapeute. Ils vous donnent un aperçu de ma manière d&apos;accompagner,
+              d&apos;écouter et d&apos;être à vos côtés.
             </p>
           </div>
 
@@ -749,14 +690,22 @@ export default function EclorePage() {
                     </ul>
                   </div>
 
-                  <a
-                    href={formule.lien}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`w-full text-center ${formule.miseEnAvant ? "eclore-btn" : "eclore-btn-ghost"}`}
-                  >
-                    {formule.cta}
-                  </a>
+                  {formule.id === "premium" ? (
+                    <CandidaterButton
+                      className={`w-full text-center ${formule.miseEnAvant ? "eclore-btn" : "eclore-btn-ghost"}`}
+                    >
+                      {formule.cta}
+                    </CandidaterButton>
+                  ) : (
+                    <a
+                      href={formule.lien ?? "#"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`w-full text-center ${formule.miseEnAvant ? "eclore-btn" : "eclore-btn-ghost"}`}
+                    >
+                      {formule.cta}
+                    </a>
+                  )}
 
                   {formule.lienSecondaire && (
                     <a
@@ -848,7 +797,42 @@ export default function EclorePage() {
             </p>
           </div>
 
-          <EcloreProgramme />
+          <div className="grid sm:grid-cols-2 gap-4 mb-12">
+            {programme.map((module, i) => (
+              <div
+                key={module.titre}
+                className="flex items-start gap-4 p-5 rounded-2xl"
+                style={{ background: "rgba(255,255,255,0.75)", border: "1px solid var(--sable-fonce)" }}
+              >
+                <span
+                  className="w-9 h-9 rounded-full flex items-center justify-center text-sm shrink-0"
+                  style={{
+                    background: "var(--or-voile)",
+                    color: "var(--or-profond)",
+                    fontFamily: "var(--font-cinzel)",
+                  }}
+                >
+                  {i === 0 ? "★" : i}
+                </span>
+                <h3 className="text-base leading-snug pt-1.5">{module.titre}</h3>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <p className="text-base mb-6 max-w-xl mx-auto" style={{ color: "var(--encre-claire)" }}>
+              Le détail de chaque expérience, module par module, est présenté sur la page
+              d&apos;inscription.
+            </p>
+            <a
+              href={INSCRIPTION_PREMIUM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="eclore-btn-ghost"
+            >
+              Voir le programme détaillé
+            </a>
+          </div>
         </div>
       </section>
 
@@ -868,7 +852,7 @@ export default function EclorePage() {
             </h2>
             <p className="text-lg max-w-2xl mx-auto" style={{ color: "rgba(255,255,255,0.75)" }}>
               Une expérience pensée pour les femmes qui souhaitent devenir actrices de leur
-              propre cheminement. Autant vous le dire clairement.
+              propre cheminement.
             </p>
           </div>
 
@@ -1150,14 +1134,14 @@ export default function EclorePage() {
           </div>
 
           <div className="text-center">
-            <a href={CANDIDATURE_URL} target="_blank" rel="noopener noreferrer" className="eclore-btn text-lg">
-              Remplir le questionnaire de candidature
+            <CandidaterButton className="eclore-btn text-lg">
+              Déposer ma candidature
               <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
-            </a>
+            </CandidaterButton>
             <p className="mt-5 text-sm max-w-md mx-auto" style={{ color: "var(--encre-claire)" }}>
-              Aucun engagement à ce stade. Le questionnaire prend quelques minutes, et
+              Aucun engagement à ce stade. Le formulaire prend quelques minutes, et
               c&apos;est vous qui décidez ensuite.
             </p>
           </div>
@@ -1172,15 +1156,15 @@ export default function EclorePage() {
             className="eclore-italique text-2xl md:text-3xl leading-relaxed mb-8"
             style={{ color: "var(--encre)" }}
           >
-            « ÉCLORE est une invitation à vous rencontrer autrement, avec un cadre, des outils
-            et un accompagnement personnalisé pour avancer sur votre propre chemin. »
+            « ÉCLORE, c&apos;est un espace pour vous arrêter, vous écouter profondément
+            et enfin faire de la place à ce qui compte pour vous. »
           </p>
           <p className="eclore-kicker mb-10">Laura Baud</p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={CANDIDATURE_URL} target="_blank" rel="noopener noreferrer" className="eclore-btn">
+            <CandidaterButton className="eclore-btn">
               Candidater à ÉCLORE
-            </a>
+            </CandidaterButton>
             <a href="#formules" className="eclore-btn-ghost">
               Revoir les formules
             </a>

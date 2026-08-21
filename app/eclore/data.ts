@@ -1,7 +1,9 @@
-export const CANDIDATURE_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLScftuuF2pQdXa_HkjFsPDJx9lXzxU84hN6xgo_8jOSBubbCJQ/viewform?usp=header";
-
 export const AVIS_GOOGLE_URL = "https://share.google/ZCoLwYu54tInjXVWv";
+
+// Contact WhatsApp (même numéro que le site TCA), avec un message pré-rempli ÉCLORE
+export const WHATSAPP_URL = `https://wa.me/33767317266?text=${encodeURIComponent(
+  "Bonjour Laura, j'ai une question au sujet de l'expérience ÉCLORE."
+)}`;
 
 // Pages d'inscription Teachizy
 export const INSCRIPTION_ESSENTIEL_URL =
@@ -68,6 +70,28 @@ export const dejaEssaye = [
     titre: "Des changements tentés en solitaire",
     texte:
       "Avec beaucoup de volonté, et souvent beaucoup de pression envers vous-même. Puis le sentiment de revenir aux mêmes schémas.",
+  },
+];
+
+// Les 3 piliers mis en avant dans « Imaginez dans 3 mois »
+export const piliers = [
+  {
+    num: "1",
+    titre: "Vous écouter",
+    texte:
+      "Comprendre vos émotions, reconnaître vos besoins, écouter votre intuition et poser vos limites.",
+  },
+  {
+    num: "2",
+    titre: "Vous choisir",
+    texte:
+      "Faire confiance à vos ressentis, dépasser vos freins et oser prendre votre place.",
+  },
+  {
+    num: "3",
+    titre: "Éclore",
+    texte:
+      "Libérer votre créativité, affirmer qui vous êtes et faire des choix qui vous ressemblent.",
   },
 ];
 
@@ -267,8 +291,8 @@ export const formules = [
     ],
     exclus: [],
     cta: "Candidater à ÉCLORE Premium",
-    // L'accès se fait sur candidature : le formulaire reste l'entrée principale.
-    lien: CANDIDATURE_URL,
+    // L'accès se fait sur candidature via la modale (formulaire → email Resend).
+    lien: null,
     lienSecondaire: INSCRIPTION_PREMIUM_URL,
     miseEnAvant: true,
   },

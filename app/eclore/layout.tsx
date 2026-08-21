@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cinzel } from "next/font/google";
 import EcloreNav from "./EcloreNav";
 import EcloreFooter from "./EcloreFooter";
+import { EcloreCandidatureModal } from "./EcloreCandidature";
 
 const cinzel = Cinzel({
   variable: "--font-cinzel",
@@ -71,6 +72,7 @@ export default function EcloreLayout({
       <EcloreNav />
       <main>{children}</main>
       <EcloreFooter />
+      <EcloreCandidatureModal />
     </div>
   );
 }

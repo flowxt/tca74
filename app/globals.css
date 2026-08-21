@@ -336,6 +336,29 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--encre-douce);
   background: var(--creme);
   font-family: var(--font-cormorant), Georgia, serif;
+  position: relative;
+}
+
+/* Texture coton en fond de toute la landing.
+   Calque fixe plutôt que background-attachment: fixed, non fiable sur iOS. */
+.eclore-scope::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("/eclore/coton.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Le contenu passe au-dessus de la texture ; la nav garde son position: fixed */
+.eclore-scope > main,
+.eclore-scope > footer {
+  position: relative;
+  z-index: 1;
 }
 
 .eclore-scope h1,
@@ -353,21 +376,26 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--encre);
 }
 
-/* Fonds */
+/* Fonds — semi-transparents pour laisser voir la texture coton */
 .eclore-bg-creme {
-  background: var(--creme);
+  background: rgba(253, 249, 240, 0.55);
 }
 
 .eclore-bg-sable {
-  background: linear-gradient(180deg, var(--creme) 0%, var(--sable) 50%, var(--creme) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(253, 249, 240, 0.38) 0%,
+    rgba(244, 233, 214, 0.62) 50%,
+    rgba(253, 249, 240, 0.38) 100%
+  );
 }
 
 .eclore-bg-lumiere {
   background:
-    radial-gradient(ellipse at 25% 30%, rgba(240, 217, 160, 0.55) 0%, transparent 55%),
-    radial-gradient(ellipse at 80% 15%, rgba(199, 147, 56, 0.18) 0%, transparent 45%),
-    radial-gradient(ellipse at 60% 90%, rgba(231, 214, 184, 0.5) 0%, transparent 50%),
-    var(--creme);
+    radial-gradient(ellipse at 25% 30%, rgba(240, 217, 160, 0.4) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 15%, rgba(199, 147, 56, 0.13) 0%, transparent 45%),
+    radial-gradient(ellipse at 60% 90%, rgba(231, 214, 184, 0.35) 0%, transparent 50%),
+    rgba(253, 249, 240, 0.3);
 }
 
 .eclore-bg-nuit {
@@ -485,4 +513,96 @@ h1, h2, h3, h4, h5, h6 {
 .eclore-filet {
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--or-clair), transparent);
+}
+
+/* ---------- Formulaire de candidature ---------- */
+.eclore-scope .eclore-form-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--or-profond);
+  margin-bottom: 0.4rem;
+}
+
+.eclore-scope .eclore-form-input {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border-radius: 0.85rem;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--sable-fonce);
+  color: var(--encre);
+  font-size: 1rem;
+  font-family: var(--font-cormorant), Georgia, serif;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.eclore-scope .eclore-form-input::placeholder {
+  color: var(--encre-claire);
+  opacity: 0.8;
+}
+
+.eclore-scope .eclore-form-input:focus {
+  outline: none;
+  border-color: var(--or);
+  box-shadow: 0 0 0 3px rgba(223, 182, 94, 0.25);
+}
+
+.eclore-scope textarea.eclore-form-input {
+  resize: vertical;
+  min-height: 5rem;
+}
+
+/* ---------- Œufs animés de l'acronyme ÉCLORE ---------- */
+.eclore-oeuf {
+  border-radius: 50% 50% 50% 50% / 62% 62% 38% 38%;
+  background:
+    radial-gradient(circle at 34% 28%, rgba(255, 255, 255, 0.95) 0%, transparent 45%),
+    linear-gradient(160deg, var(--or-lumiere) 0%, var(--or-clair) 55%, var(--or) 100%);
+  box-shadow:
+    0 10px 28px rgba(169, 118, 28, 0.28),
+    inset 0 -6px 14px rgba(169, 118, 28, 0.2);
+}
+
+@keyframes ecloreEclot {
+  0% {
+    opacity: 0;
+    transform: translateY(16px) scale(0.7) rotate(-6deg);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.06) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes ecloreFlotte {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+.eclore-oeuf-cache {
+  opacity: 0;
+}
+
+.eclore-oeuf-eclot {
+  animation:
+    ecloreEclot 0.75s cubic-bezier(0.34, 1.4, 0.64, 1) both,
+    ecloreFlotte 4.5s ease-in-out 0.75s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eclore-oeuf-cache,
+  .eclore-oeuf-eclot {
+    opacity: 1;
+    animation: none;
+  }
 }
