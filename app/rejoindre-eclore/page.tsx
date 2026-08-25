@@ -87,7 +87,7 @@ export default function EclorePage() {
               Commencer par un échange de 30 min
             </a>
             <a href="#formules" className="eclore-btn-ghost">
-              Voir ce que vous recevez
+              Choisir ma formule
             </a>
           </div>
 

@@ -27,18 +27,18 @@ export default function EcloreLettres() {
 
   return (
     <div ref={ref}>
-      {/* Le mot ÉCLORE, chaque lettre dans son œuf */}
-      <div className="flex flex-wrap justify-center gap-3 sm:gap-5 md:gap-7 mb-14">
+      {/* Le mot ÉCLORE, chaque lettre dans son œuf — sur une seule ligne, même sur mobile */}
+      <div className="flex flex-nowrap justify-center gap-1.5 sm:gap-5 md:gap-7 mb-14">
         {lettres.map((item, i) => (
           <div
             key={i}
-            className={`eclore-oeuf flex items-center justify-center w-14 h-[4.5rem] sm:w-16 sm:h-20 md:w-20 md:h-26 ${
+            className={`eclore-oeuf shrink-0 flex items-center justify-center w-10 h-13 sm:w-16 sm:h-20 md:w-20 md:h-26 ${
               visible ? "eclore-oeuf-eclot" : "eclore-oeuf-cache"
             }`}
             style={{ animationDelay: visible ? `${i * 130}ms, ${i * 130 + 750}ms` : undefined }}
           >
             <span
-              className="text-2xl sm:text-3xl md:text-4xl text-white select-none"
+              className="text-lg sm:text-3xl md:text-4xl text-white select-none"
               style={{
                 fontFamily: "var(--font-cinzel)",
                 textShadow: "0 2px 6px rgba(122, 84, 20, 0.45)",
