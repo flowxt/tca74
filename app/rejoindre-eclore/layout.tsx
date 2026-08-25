@@ -53,8 +53,8 @@ export const metadata: Metadata = {
     images: ["/eclore/eclore.png"],
   },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
   alternates: {
     canonical: "https://www.psy-tca-annecy.com/rejoindre-eclore",
