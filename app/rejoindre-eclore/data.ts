@@ -1,3 +1,7 @@
+// Formulaire de candidature Google Form (la prise de rendez-vous Koalendar y est intégrée)
+export const CANDIDATURE_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLScftuuF2pQdXa_HkjFsPDJx9lXzxU84hN6xgo_8jOSBubbCJQ/viewform?usp=header";
+
 export const AVIS_GOOGLE_URL = "https://share.google/ZCoLwYu54tInjXVWv";
 
 // Contact WhatsApp (même numéro que le site TCA), avec un message pré-rempli ÉCLORE
@@ -46,7 +50,7 @@ export const situations = [
   {
     titre: "Vous ressentez beaucoup, sans savoir le nommer",
     texte:
-      "Trop de pensées, trop d'émotions, trop de doutes. Sur le papier, tout va. À l'intérieur, c'est confus, dense, parfois lourd — et les mots manquent pour le dire.",
+      "Trop de pensées, trop d'émotions, trop de doutes. Sur le papier, tout va. À l'intérieur, c'est confus, dense, parfois lourd — et les mots manquent pour le dire. Ou bien vous ne ressentez plus rien. Non pas parce que vous êtes vide, mais parce que sentir trop fort vous effraie. Alors vous vous coupez, vous vous détachez, vous vous protégez. C'est une façon de tenir debout quand l'intensité devient menaçante. Deux manières différentes de vivre la même chose : un monde intérieur qui déborde.",
   },
   {
     titre: "Vous voulez vous retrouver, sans savoir par où commencer",
@@ -291,8 +295,8 @@ export const formules = [
     ],
     exclus: [],
     cta: "Candidater à ÉCLORE Premium",
-    // L'accès se fait sur candidature via la modale (formulaire → email Resend).
-    lien: null,
+    // L'accès se fait sur candidature via le Google Form (Koalendar intégré).
+    lien: CANDIDATURE_URL,
     lienSecondaire: INSCRIPTION_PREMIUM_URL,
     miseEnAvant: true,
   },

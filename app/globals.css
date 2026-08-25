@@ -319,7 +319,7 @@ h1, h2, h3, h4, h5, h6 {
    Tout est scopé sous .eclore-scope pour ne jamais impacter le site TCA.
    ============================================================ */
 .eclore-scope {
-  --or-profond: #A9761C;
+  --or-profond: #946313;
   --or: #C79338;
   --or-clair: #DFB65E;
   --or-lumiere: #F0D9A0;
@@ -417,11 +417,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .eclore-or-texte {
-  background: linear-gradient(120deg, var(--or-profond) 0%, var(--or-clair) 45%, var(--or) 100%);
+  /* Dégradé volontairement foncé pour rester lisible sur le fond coton clair */
+  background: linear-gradient(120deg, #8a5f13 0%, #b07e22 50%, #96681a 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent;
+  color: #96681a;
+  /* Donne du relief et détache le texte du fond */
+  filter: drop-shadow(0 1px 1.5px rgba(74, 50, 10, 0.28));
 }
 
 /* Boutons */
@@ -513,44 +516,6 @@ h1, h2, h3, h4, h5, h6 {
 .eclore-filet {
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--or-clair), transparent);
-}
-
-/* ---------- Formulaire de candidature ---------- */
-.eclore-scope .eclore-form-label {
-  display: block;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--or-profond);
-  margin-bottom: 0.4rem;
-}
-
-.eclore-scope .eclore-form-input {
-  width: 100%;
-  padding: 0.7rem 0.9rem;
-  border-radius: 0.85rem;
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid var(--sable-fonce);
-  color: var(--encre);
-  font-size: 1rem;
-  font-family: var(--font-cormorant), Georgia, serif;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.eclore-scope .eclore-form-input::placeholder {
-  color: var(--encre-claire);
-  opacity: 0.8;
-}
-
-.eclore-scope .eclore-form-input:focus {
-  outline: none;
-  border-color: var(--or);
-  box-shadow: 0 0 0 3px rgba(223, 182, 94, 0.25);
-}
-
-.eclore-scope textarea.eclore-form-input {
-  resize: vertical;
-  min-height: 5rem;
 }
 
 /* ---------- Œufs animés de l'acronyme ÉCLORE ---------- */

@@ -1,6 +1,10 @@
 import Link from "next/link";
-import { CandidaterButton } from "./EcloreCandidature";
-import { AVIS_GOOGLE_URL, INSCRIPTION_ESSENTIEL_URL, WHATSAPP_URL } from "./data";
+import {
+  AVIS_GOOGLE_URL,
+  CANDIDATURE_URL,
+  INSCRIPTION_ESSENTIEL_URL,
+  WHATSAPP_URL,
+} from "./data";
 
 export default function EcloreFooter() {
   return (
@@ -131,12 +135,15 @@ export default function EcloreFooter() {
             <Link href="/confidentialite" className="text-xs" style={{ color: "var(--encre-claire)" }}>
               Confidentialité
             </Link>
-            <CandidaterButton
+            <a
+              href={CANDIDATURE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-xs font-semibold"
               style={{ color: "var(--or-profond)" }}
             >
               Candidater
-            </CandidaterButton>
+            </a>
           </div>
         </div>
 

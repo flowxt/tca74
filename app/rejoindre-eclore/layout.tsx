@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Cinzel } from "next/font/google";
 import EcloreNav from "./EcloreNav";
 import EcloreFooter from "./EcloreFooter";
-import { EcloreCandidatureModal } from "./EcloreCandidature";
 
 const cinzel = Cinzel({
   variable: "--font-cinzel",
@@ -32,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "https://www.psy-tca-annecy.com/eclore",
+    url: "https://www.psy-tca-annecy.com/rejoindre-eclore",
     siteName: "L'expérience ÉCLORE",
     title: "L'expérience ÉCLORE — Un espace pour vous rencontrer autrement",
     description:
@@ -58,7 +57,7 @@ export const metadata: Metadata = {
     follow: false,
   },
   alternates: {
-    canonical: "https://www.psy-tca-annecy.com/eclore",
+    canonical: "https://www.psy-tca-annecy.com/rejoindre-eclore",
   },
 };
 
@@ -72,7 +71,6 @@ export default function EcloreLayout({
       <EcloreNav />
       <main>{children}</main>
       <EcloreFooter />
-      <EcloreCandidatureModal />
     </div>
   );
 }

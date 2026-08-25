@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { openCandidature } from "./EcloreCandidature";
+import { CANDIDATURE_URL } from "./data";
 
 const links = [
   { href: "#pour-vous", label: "Pour vous" },
@@ -56,13 +56,14 @@ export default function EcloreNav() {
               {link.label}
             </a>
           ))}
-          <button
-            type="button"
-            onClick={openCandidature}
+          <a
+            href={CANDIDATURE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="eclore-btn !py-2.5 !px-6 !text-sm"
           >
             Candidater
-          </button>
+          </a>
         </div>
 
         <button
@@ -101,16 +102,15 @@ export default function EcloreNav() {
               {link.label}
             </a>
           ))}
-          <button
-            type="button"
-            onClick={() => {
-              setIsOpen(false);
-              openCandidature();
-            }}
+          <a
+            href={CANDIDATURE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsOpen(false)}
             className="eclore-btn mt-2 !py-3"
           >
             Candidater
-          </button>
+          </a>
         </div>
       </div>
     </header>

@@ -1,9 +1,9 @@
 import Image from "next/image";
 import EcloreLettres from "./EcloreLettres";
 import EcloreFaq from "./EcloreFaq";
-import { CandidaterButton } from "./EcloreCandidature";
 import {
   AVIS_GOOGLE_URL,
+  CANDIDATURE_URL,
   dejaEssaye,
   formules,
   INSCRIPTION_PREMIUM_URL,
@@ -83,9 +83,9 @@ export default function EclorePage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <CandidaterButton className="eclore-btn">
+            <a href={CANDIDATURE_URL} target="_blank" rel="noopener noreferrer" className="eclore-btn">
               Commencer par un échange de 30 min
-            </CandidaterButton>
+            </a>
             <a href="#formules" className="eclore-btn-ghost">
               Voir ce que vous recevez
             </a>
@@ -180,20 +180,52 @@ export default function EclorePage() {
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {piliers.map((pilier) => (
               <div key={pilier.titre} className="eclore-card eclore-card-hover p-8 text-center">
-                <span
-                  className="eclore-oeuf inline-flex w-14 h-[4.5rem] items-center justify-center mb-6"
-                  aria-hidden
-                >
+                {pilier.num === "3" ? (
+                  // Le pilier « Éclore » : l'œuf qui s'ouvre
+                  <div className="relative inline-flex mb-6">
+                    <div
+                      className="relative w-24 h-24 rounded-full overflow-hidden"
+                      style={{
+                        boxShadow: "0 12px 30px rgba(169, 118, 28, 0.28)",
+                        border: "1px solid var(--or-lumiere)",
+                      }}
+                    >
+                      <Image
+                        src="/eclore/oeuf-eclos.jpeg"
+                        alt=""
+                        fill
+                        sizes="96px"
+                        className="object-cover"
+                      />
+                    </div>
+                    <span
+                      className="absolute -bottom-1 -right-1 w-8 h-8 rounded-full flex items-center justify-center text-sm text-white"
+                      style={{
+                        background: "linear-gradient(135deg, var(--or) 0%, var(--or-profond) 100%)",
+                        fontFamily: "var(--font-cinzel)",
+                        boxShadow: "0 4px 12px rgba(169, 118, 28, 0.4)",
+                      }}
+                      aria-hidden
+                    >
+                      {pilier.num}
+                    </span>
+                  </div>
+                ) : (
                   <span
-                    className="text-2xl text-white"
-                    style={{
-                      fontFamily: "var(--font-cinzel)",
-                      textShadow: "0 2px 6px rgba(122, 84, 20, 0.45)",
-                    }}
+                    className="eclore-oeuf inline-flex w-14 h-[4.5rem] items-center justify-center mb-6"
+                    aria-hidden
                   >
-                    {pilier.num}
+                    <span
+                      className="text-2xl text-white"
+                      style={{
+                        fontFamily: "var(--font-cinzel)",
+                        textShadow: "0 2px 6px rgba(122, 84, 20, 0.45)",
+                      }}
+                    >
+                      {pilier.num}
+                    </span>
                   </span>
-                </span>
+                )}
                 <h3 className="text-xl md:text-2xl mb-4 uppercase tracking-wide">{pilier.titre}</h3>
                 <p className="text-base md:text-lg leading-relaxed" style={{ color: "var(--encre-douce)" }}>
                   {pilier.texte}
@@ -690,22 +722,14 @@ export default function EclorePage() {
                     </ul>
                   </div>
 
-                  {formule.id === "premium" ? (
-                    <CandidaterButton
-                      className={`w-full text-center ${formule.miseEnAvant ? "eclore-btn" : "eclore-btn-ghost"}`}
-                    >
-                      {formule.cta}
-                    </CandidaterButton>
-                  ) : (
-                    <a
-                      href={formule.lien ?? "#"}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`w-full text-center ${formule.miseEnAvant ? "eclore-btn" : "eclore-btn-ghost"}`}
-                    >
-                      {formule.cta}
-                    </a>
-                  )}
+                  <a
+                    href={formule.lien ?? "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-full text-center ${formule.miseEnAvant ? "eclore-btn" : "eclore-btn-ghost"}`}
+                  >
+                    {formule.cta}
+                  </a>
 
                   {formule.lienSecondaire && (
                     <a
@@ -1134,12 +1158,12 @@ export default function EclorePage() {
           </div>
 
           <div className="text-center">
-            <CandidaterButton className="eclore-btn text-lg">
+            <a href={CANDIDATURE_URL} target="_blank" rel="noopener noreferrer" className="eclore-btn text-lg">
               Déposer ma candidature
               <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
-            </CandidaterButton>
+            </a>
             <p className="mt-5 text-sm max-w-md mx-auto" style={{ color: "var(--encre-claire)" }}>
               Aucun engagement à ce stade. Le formulaire prend quelques minutes, et
               c&apos;est vous qui décidez ensuite.
@@ -1162,9 +1186,9 @@ export default function EclorePage() {
           <p className="eclore-kicker mb-10">Laura Baud</p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CandidaterButton className="eclore-btn">
+            <a href={CANDIDATURE_URL} target="_blank" rel="noopener noreferrer" className="eclore-btn">
               Candidater à ÉCLORE
-            </CandidaterButton>
+            </a>
             <a href="#formules" className="eclore-btn-ghost">
               Revoir les formules
             </a>
