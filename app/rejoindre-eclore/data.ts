@@ -66,9 +66,9 @@ export const dejaEssaye = [
       "Des livres qui font du bien sur le moment, puis le quotidien reprend le dessus. Sans cadre ni mise en pratique, l'élan se dissipe.",
   },
   {
-    titre: "Des contenus en ligne, seule face à l'écran",
+    titre: "Faire comme si ce n'était pas grave",
     texte:
-      "Beaucoup d'informations, peu de mise en mouvement. Sans espace pour déposer ce qui remonte, on finit par décrocher.",
+      "Vous avez tenté d'étouffer ce que vous ressentiez, en vous disant que « ce n'est pas si grave ». Vous avez continué, tenu bon, fait semblant que tout allait bien… même quand ça tirait à l'intérieur.",
   },
   {
     titre: "Des changements tentés en solitaire",

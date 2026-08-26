@@ -12,6 +12,7 @@ const footerLinks = {
     { href: "/faq", label: "Questions fréquentes" },
     { href: "/actualites", label: "Actualités & À venir" },
     { href: "/questionnaire", label: "Quiz : Suis-je au bon endroit ?" },
+    { href: "/rejoindre-eclore", label: "L'expérience ÉCLORE" },
     { href: "https://l-baud.systeme.io/cadeau", label: "Outils gratuits", external: true },
   ],
   legal: [
