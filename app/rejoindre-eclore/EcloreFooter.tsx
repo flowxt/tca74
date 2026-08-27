@@ -142,7 +142,7 @@ export default function EcloreFooter() {
               className="text-xs font-semibold"
               style={{ color: "var(--or-profond)" }}
             >
-              Candidater
+              Première rencontre
             </a>
           </div>
         </div>

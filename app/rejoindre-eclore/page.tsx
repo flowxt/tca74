@@ -756,8 +756,8 @@ export default function EclorePage() {
                     style={{ color: "var(--encre-claire)" }}
                   >
                     {formule.miseEnAvant
-                      ? "Accès sur candidature. Les 5 séances sont à utiliser pendant les 3 mois."
-                      : "Accès immédiat, sans candidature."}
+                      ? "Accès après une première rencontre. Les 5 séances sont à utiliser pendant les 3 mois."
+                      : "Accès immédiat, sans rencontre préalable."}
                   </p>
                 </div>
               </div>
@@ -1062,7 +1062,7 @@ export default function EclorePage() {
             </h2>
             <p className="max-w-2xl mx-auto text-lg" style={{ color: "var(--encre-douce)" }}>
               Afin de préserver la qualité de l&apos;accompagnement, l&apos;accès à ÉCLORE Premium
-              se fait sur candidature.
+              se fait après une première rencontre.
             </p>
           </div>
 
@@ -1072,7 +1072,7 @@ export default function EclorePage() {
                 num: "1",
                 titre: "Le questionnaire",
                 texte:
-                  "Vous commencez par remplir le questionnaire de candidature, pour me partager où vous en êtes.",
+                  "Vous commencez par remplir un court questionnaire, pour me partager où vous en êtes.",
               },
               {
                 num: "2",
@@ -1159,7 +1159,7 @@ export default function EclorePage() {
 
           <div className="text-center">
             <a href={CANDIDATURE_URL} target="_blank" rel="noopener noreferrer" className="eclore-btn text-lg">
-              Déposer ma candidature
+              Déposer ma demande
               <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
@@ -1187,7 +1187,7 @@ export default function EclorePage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={CANDIDATURE_URL} target="_blank" rel="noopener noreferrer" className="eclore-btn">
-              Candidater à ÉCLORE
+              Demander une première rencontre
             </a>
             <a href="#formules" className="eclore-btn-ghost">
               Revoir les formules

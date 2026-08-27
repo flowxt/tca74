@@ -62,7 +62,7 @@ export default function EcloreNav() {
             rel="noopener noreferrer"
             className="eclore-btn !py-2.5 !px-6 !text-sm"
           >
-            Candidater
+            Première rencontre
           </a>
         </div>
 
@@ -109,7 +109,7 @@ export default function EcloreNav() {
             onClick={() => setIsOpen(false)}
             className="eclore-btn mt-2 !py-3"
           >
-            Candidater
+            Première rencontre
           </a>
         </div>
       </div>

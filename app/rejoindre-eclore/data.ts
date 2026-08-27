@@ -161,7 +161,7 @@ export const faq = [
     r: "Ce sont cinq rendez-vous individuels, à utiliser pendant les 3 mois de l'accompagnement. Chaque séance est un espace d'écoute, d'exploration et de réflexion, adapté à votre histoire et à vos besoins du moment.",
   },
   {
-    q: "Pourquoi faut-il candidater pour la formule Premium ?",
+    q: "Pourquoi une première rencontre avant la formule Premium ?",
     r: "Pour préserver la qualité de l'accompagnement. Le questionnaire, puis l'échange de 30 minutes, nous permettent de vérifier ensemble si ÉCLORE Premium correspond réellement à vos besoins et à votre démarche.",
   },
   {
@@ -294,8 +294,8 @@ export const formules = [
       "Un suivi personnalisé, adapté à votre histoire",
     ],
     exclus: [],
-    cta: "Candidater à ÉCLORE Premium",
-    // L'accès se fait sur candidature via le Google Form (Koalendar intégré).
+    cta: "Demander une première rencontre",
+    // L'accès se fait après une première rencontre, via le Google Form (Koalendar intégré).
     lien: CANDIDATURE_URL,
     lienSecondaire: INSCRIPTION_PREMIUM_URL,
     miseEnAvant: true,
