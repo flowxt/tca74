@@ -8,7 +8,6 @@ import {
   formules,
   INSCRIPTION_PREMIUM_URL,
   pasPourVous,
-  piliers,
   pourVous,
   prerequis,
   programme,
@@ -48,6 +47,25 @@ export default function EclorePage() {
             Pour les femmes sensibles qui ont pris l&apos;habitude de penser aux
             autres avant elles-mêmes
           </span>
+
+          {/* Vidéo de présentation */}
+          <div
+            className="mx-auto max-w-2xl aspect-video rounded-[1.5rem] overflow-hidden mb-12"
+            style={{
+              boxShadow: "0 20px 60px rgba(169, 118, 28, 0.22)",
+              border: "1px solid var(--or-lumiere)",
+            }}
+          >
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/5hiObdDXTlc?si=g2-s1SNul2OHMQwq"
+              title="Présentation de l'expérience ÉCLORE"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          </div>
 
           <h1 className="mb-6">
             <span
@@ -167,77 +185,8 @@ export default function EclorePage() {
         </div>
       </section>
 
-      {/* ============ TRANSFORMATION (avant le contenu) ============ */}
-      <section id="transformation" className="eclore-section eclore-bg-sable">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
-            <p className="eclore-kicker mb-4">Ce que ça change</p>
-            <h2 className="text-3xl md:text-4xl">
-              Imaginez, dans <span className="eclore-or-texte">trois mois</span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-            {piliers.map((pilier) => (
-              <div key={pilier.titre} className="eclore-card eclore-card-hover p-8 text-center">
-                {pilier.num === "3" ? (
-                  // Le pilier « Éclore » : l'œuf qui s'ouvre
-                  <div className="relative inline-flex mb-6">
-                    <div
-                      className="relative w-24 h-24 rounded-full overflow-hidden"
-                      style={{
-                        boxShadow: "0 12px 30px rgba(169, 118, 28, 0.28)",
-                        border: "1px solid var(--or-lumiere)",
-                      }}
-                    >
-                      <Image
-                        src="/eclore/oeuf-eclos.jpeg"
-                        alt=""
-                        fill
-                        sizes="96px"
-                        className="object-cover"
-                      />
-                    </div>
-                    <span
-                      className="absolute -bottom-1 -right-1 w-8 h-8 rounded-full flex items-center justify-center text-sm text-white"
-                      style={{
-                        background: "linear-gradient(135deg, var(--or) 0%, var(--or-profond) 100%)",
-                        fontFamily: "var(--font-cinzel)",
-                        boxShadow: "0 4px 12px rgba(169, 118, 28, 0.4)",
-                      }}
-                      aria-hidden
-                    >
-                      {pilier.num}
-                    </span>
-                  </div>
-                ) : (
-                  <span
-                    className="eclore-oeuf inline-flex w-14 h-[4.5rem] items-center justify-center mb-6"
-                    aria-hidden
-                  >
-                    <span
-                      className="text-2xl text-white"
-                      style={{
-                        fontFamily: "var(--font-cinzel)",
-                        textShadow: "0 2px 6px rgba(122, 84, 20, 0.45)",
-                      }}
-                    >
-                      {pilier.num}
-                    </span>
-                  </span>
-                )}
-                <h3 className="text-xl md:text-2xl mb-4 uppercase tracking-wide">{pilier.titre}</h3>
-                <p className="text-base md:text-lg leading-relaxed" style={{ color: "var(--encre-douce)" }}>
-                  {pilier.texte}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ============ VOUS AVEZ DÉJÀ ESSAYÉ ============ */}
-      <section id="approche" className="eclore-section eclore-bg-creme">
+      <section id="approche" className="eclore-section eclore-bg-sable">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl">
@@ -324,88 +273,8 @@ export default function EclorePage() {
         </div>
       </section>
 
-      {/* ============ UNE EXPÉRIENCE DE 3 MOIS — cadre honnête ============ */}
-      <section className="eclore-section eclore-bg-creme">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14">
-            <p className="eclore-kicker mb-4">Pourquoi c&apos;est différent</p>
-            <h2 className="text-3xl md:text-4xl">Une expérience de 3 mois</h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6 mb-10">
-            <div
-              className="p-8 rounded-[1.75rem]"
-              style={{ background: "var(--or-voile)", border: "1px solid var(--or-lumiere)" }}
-            >
-              <h3 className="text-xl mb-5">Ce qu&apos;ÉCLORE est</h3>
-              <ul className="space-y-3">
-                {[
-                  "Une expérience de développement personnel",
-                  "Une invitation à mieux vous connaître",
-                  "Un espace pour explorer votre monde intérieur",
-                  "Un chemin vers une relation plus authentique avec vous-même",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <svg
-                      className="w-5 h-5 shrink-0 mt-0.5"
-                      style={{ color: "var(--or-profond)" }}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span style={{ color: "var(--encre-douce)" }}>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div
-              className="p-8 rounded-[1.75rem]"
-              style={{ background: "#fff", border: "1px solid var(--sable-fonce)" }}
-            >
-              <h3 className="text-xl mb-5">Ce qu&apos;ÉCLORE n&apos;est pas</h3>
-              <ul className="space-y-3">
-                {[
-                  "Un programme de guérison",
-                  "Une promesse de transformation magique",
-                  "Un substitut à un suivi médical ou psychologique",
-                  "Une méthode où l'on ferait le chemin à votre place",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <svg
-                      className="w-5 h-5 shrink-0 mt-0.5"
-                      style={{ color: "var(--encre-claire)" }}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                    <span style={{ color: "var(--encre-claire)" }}>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <p
-            className="text-center text-lg leading-relaxed max-w-3xl mx-auto"
-            style={{ color: "var(--encre-douce)" }}
-          >
-            Les ressources et les séances sont des supports pour vous guider, mais votre
-            implication personnelle reste essentielle.{" "}
-            <strong style={{ color: "var(--encre)" }}>
-              Le changement naît de ce que vous choisissez d&apos;expérimenter, d&apos;observer
-              et d&apos;intégrer dans votre quotidien.
-            </strong>
-          </p>
-        </div>
-      </section>
-
       {/* ============ QUI SUIS-JE ============ */}
-      <section id="laura" className="eclore-section eclore-bg-sable">
+      <section id="laura" className="eclore-section eclore-bg-creme">
         <div className="max-w-5xl mx-auto">
           <div className="grid lg:grid-cols-5 gap-12 items-center">
             <div className="lg:col-span-2">

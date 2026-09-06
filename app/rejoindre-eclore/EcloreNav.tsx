@@ -5,7 +5,6 @@ import { CANDIDATURE_URL } from "./data";
 
 const links = [
   { href: "#pour-vous", label: "Pour vous" },
-  { href: "#transformation", label: "La transformation" },
   { href: "#approche", label: "L'approche" },
   { href: "#laura", label: "Laura" },
   { href: "#formules", label: "Les formules" },
