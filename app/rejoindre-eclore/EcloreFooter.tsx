@@ -48,7 +48,7 @@ export default function EcloreFooter() {
           </a>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-10 mb-10">
+        <div className="grid md:grid-cols-2 gap-10 mb-10">
           <div>
             <p
               className="text-xl tracking-[0.3em] mb-2"
@@ -103,23 +103,6 @@ export default function EcloreFooter() {
             </ul>
           </div>
 
-          <div>
-            <p className="eclore-kicker mb-4">Mon accompagnement TCA</p>
-            <p className="text-sm mb-4 leading-relaxed" style={{ color: "var(--encre-douce)" }}>
-              ÉCLORE est un projet distinct de mon activité de thérapeute spécialisée
-              en comportements alimentaires.
-            </p>
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 text-sm font-medium"
-              style={{ color: "var(--or-profond)" }}
-            >
-              Découvrir mon site TCA
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
         </div>
 
         <div className="eclore-filet mb-8" />
