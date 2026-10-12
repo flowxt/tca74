@@ -16,7 +16,6 @@ type FormStatus = "idle" | "submitting" | "success" | "error";
 
 const subjectOptions = [
   "Consultation individuelle",
-  "Groupe de paroles TCA",
   "Programme en ligne",
   "Autre demande",
 ];

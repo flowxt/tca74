@@ -4,7 +4,7 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact | Prendre rendez-vous",
   description:
-    "Contactez-moi pour prendre rendez-vous ou pour toute question concernant les groupes de paroles TCA, l'accompagnement haute sensibilité ou les consultations individuelles.",
+    "Contactez-moi pour prendre rendez-vous ou pour toute question concernant l'accompagnement haute sensibilité ou les consultations individuelles.",
   keywords: [
     "contact",
     "rendez-vous",
@@ -50,21 +50,9 @@ const contactInfo = [
 const services = [
   {
     title: "Séance Standard",
-    price: "95€",
+    price: "75€",
     duration: "1h",
     desc: "Tarif unique, simple et stable.",
-  },
-  {
-    title: "Séance Tarif réduit",
-    price: "75€",
-    duration: "1 à 2 places maximum",
-    desc: "Réservée aux femmes engagées traversant une situation financière particulière. Attribution selon disponibilité, pas de justificatif demandé.",
-  },
-  {
-    title: "Groupe de paroles TCA",
-    price: "110€ / 200€",
-    duration: "Cycle 4 ou 8 séances",
-    desc: "Tous les 15 jours, 6 participantes maximum",
   },
 ];
 

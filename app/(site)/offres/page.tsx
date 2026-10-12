@@ -4,13 +4,12 @@ import OfferCards from "./OfferCards";
 export const metadata: Metadata = {
   title: "Tarifs & accompagnement | Laura Baud",
   description:
-    "Mes tarifs : séance standard à 95€ (1h) et séance à tarif réduit à 75€ — réservée aux femmes engagées traversant une situation financière particulière. Consultations en cabinet ou en visio.",
+    "Mon tarif : séance standard à 75€ (1h), un tarif unique, simple et stable. Consultations en cabinet ou en visio.",
   keywords: [
     "tarifs thérapie",
     "consultation TCA",
     "prix séance",
     "thérapie hyperphagie",
-    "tarif réduit",
     "suivi personnalisé",
   ],
 };
@@ -63,8 +62,7 @@ export default function OffresPage() {
             className="text-xl leading-relaxed max-w-2xl mx-auto"
             style={{ color: "var(--text-medium)" }}
           >
-            Un tarif unique, simple et stable, ainsi qu'un tarif réduit pensé pour
-            les femmes engagées traversant une situation financière particulière.
+            Un tarif unique, simple et stable.
           </p>
         </div>
       </section>

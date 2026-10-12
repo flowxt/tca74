@@ -21,7 +21,7 @@ const offers: Offer[] = [
     id: "standard",
     name: "Séance Standard",
     tagline: "Tarif unique, simple et stable",
-    price: 95,
+    price: 75,
     duration: "1h",
     description:
       "La séance de référence pour avancer pas à pas sur vos comportements alimentaires, émotionnels et relationnels, à votre rythme et selon vos besoins.",
@@ -37,32 +37,11 @@ const offers: Offer[] = [
     badgeBg: "rgba(168, 181, 160, 0.15)",
     pillBg: "rgba(168, 181, 160, 0.25)",
   },
-  {
-    id: "reduit",
-    name: "Séance Tarif réduit",
-    tagline: "Réservée aux femmes engagées traversant une situation financière particulière",
-    price: 75,
-    duration: "1 à 2 places maximum",
-    description:
-      "Une place préservée pour permettre à chacune d'accéder à un accompagnement de qualité, quelle que soit sa situation financière.",
-    features: [
-      "Séance d'1h en cabinet ou en visio",
-      "Attribution selon disponibilité",
-      "Pas de justificatif demandé",
-      "Engagement et régularité attendus",
-    ],
-    note: "1 à 2 places maximum — me contacter pour vérifier la disponibilité.",
-    highlight: false,
-    gradient: "linear-gradient(135deg, var(--accent-lavande) 0%, var(--brun-doux) 100%)",
-    accentColor: "var(--accent-lavande)",
-    badgeBg: "rgba(197, 184, 200, 0.15)",
-    pillBg: "rgba(197, 184, 200, 0.25)",
-  },
 ];
 
 export default function OfferCards() {
   return (
-    <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+    <div className="grid gap-8 max-w-xl mx-auto">
       {offers.map((offer) => (
         <div
           key={offer.id}

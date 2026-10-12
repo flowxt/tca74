@@ -10,7 +10,6 @@ const mainNavItems = [
 ];
 
 const servicesItems = [
-  { href: "/groupes-paroles-tca", label: "Groupes TCA", desc: "Psycho-éducation & paroles" },
   { href: "/formation", label: "Programmes", desc: "En ligne & autonomie" },
   { href: "/offres", label: "Mes offres", desc: "Tarifs & formules" },
 ];

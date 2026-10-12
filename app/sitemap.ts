@@ -31,12 +31,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/groupes-paroles-tca`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
       url: `${baseUrl}/questionnaire`,
       lastModified: new Date(),
       changeFrequency: "monthly",

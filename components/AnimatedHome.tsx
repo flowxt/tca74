@@ -562,7 +562,7 @@ export default function AnimatedHome() {
           </motion.div>
 
           <motion.div 
-            className="grid md:grid-cols-3 gap-6"
+            className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
@@ -607,46 +607,7 @@ export default function AnimatedHome() {
               </Link>
             </motion.div>
 
-            {/* Card 2 - Groupes TCA */}
-            <motion.div variants={staggerItem}>
-              <Link href="/groupes-paroles-tca" className="card group relative overflow-hidden block h-full">
-                <div
-                  className="absolute top-0 right-0 w-24 h-24 rounded-bl-full opacity-20 transition-transform group-hover:scale-150"
-                  style={{ background: "var(--accent-lavande)" }}
-                />
-                <div
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110"
-                  style={{ background: "var(--accent-lavande)", opacity: 0.5 }}
-                >
-                  <svg className="w-7 h-7" style={{ color: "var(--brun)" }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                <div
-                  className="inline-block px-3 py-1 rounded-full text-xs font-medium mb-3"
-                  style={{ background: "var(--accent-lavande)", color: "var(--brun)" }}
-                >
-                  👭 Chemin en groupe
-                </div>
-                <h3
-                  className="text-xl font-semibold mb-3"
-                  style={{ fontFamily: "var(--font-playfair)", color: "var(--text-dark)" }}
-                >
-                  Groupes de Paroles TCA
-                </h3>
-                <p className="mb-4" style={{ color: "var(--text-medium)" }}>
-                  Petits groupes (6 participantes max) pour partager, se sentir épaulée et progresser ensemble.
-                </p>
-                <div className="flex items-center gap-2 text-sm font-medium" style={{ color: "var(--brun-doux)" }}>
-                  <span>En savoir plus</span>
-                  <svg className="w-4 h-4 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </div>
-              </Link>
-            </motion.div>
-
-            {/* Card 3 - Consultation Individuelle */}
+            {/* Card 2 - Consultation Individuelle */}
             <motion.div variants={staggerItem}>
               <Link href="/offres" className="card group relative overflow-hidden block h-full">
                 <div

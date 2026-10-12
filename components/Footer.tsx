@@ -2,7 +2,6 @@ import Link from "next/link";
 
 const footerLinks = {
   services: [
-    { href: "/groupes-paroles-tca", label: "Groupes de Paroles TCA" },
     { href: "/formation", label: "Programmes en ligne" },
     { href: "/offres", label: "Mes offres & tarifs" },
     { href: "/contact", label: "Consultation individuelle" },

@@ -100,12 +100,6 @@ Je suis là pour vous accompagner avec douceur, sans jugement. 💛`,
 • Facture disponible dans l'**espace patient sécurisé**`,
       },
       {
-        question: "Comment fonctionnent les groupes de parole ?",
-        answer: `• Les groupes de parole ont des **modalités de paiement et d'organisation différentes** des suivis individuels
-• Les participants sont informés en détail des conditions lors de leur inscription
-• Actuellement, je propose des **groupes TCA** (troubles du comportement alimentaire)`,
-      },
-      {
         question: "Le suivi en ligne est-il accessible partout ?",
         answer: `**Oui**, il suffit d'une connexion internet stable et d'un espace calme. Vous pouvez consulter **où que vous soyez** : depuis Annecy, la Haute-Savoie, Genève, Lausanne, ou partout ailleurs.`,
       },
@@ -176,11 +170,6 @@ Si nécessaire, je peux vous orienter vers un professionnel adapté (psychologue
         question: "Comment sont gérés les retards ?",
         answer: `• En cas de **retard de la participante**, la séance se termine à l'heure prévue initialement
 • Si le retard est **de mon fait**, la séance est prolongée afin de garantir la durée prévue`,
-      },
-      {
-        question: "Quelles sont les conditions pour les groupes ?",
-        answer: `• L'inscription au cycle est un **engagement ferme** : aucun remboursement n'est possible
-• Seule exception : en cas de **problème de santé grave** ou de **changement majeur de planning professionnel**, sur présentation d'un justificatif médical ou professionnel`,
       },
     ],
   },

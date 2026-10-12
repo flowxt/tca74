@@ -19,18 +19,10 @@ const actualites = [
   {
     date: "Mai 2026",
     type: "Nouveau",
-    title: "Nouveaux tarifs — Séance Standard 95€ & Tarif réduit 75€",
-    description: "La séance standard passe à 95€ (1h), un tarif unique, simple et stable. Un tarif réduit à 75€ est également proposé (1 à 2 places maximum), réservé aux femmes engagées traversant une situation financière particulière — attribution selon disponibilité, sans justificatif demandé.",
+    title: "Nouveau tarif — Séance Standard 75€",
+    description: "La séance standard est à 75€ (1h), un tarif unique, simple et stable.",
     link: "/offres",
     linkText: "Voir les tarifs",
-  },
-  {
-    date: "Décembre 2025",
-    type: "À venir",
-    title: "Nouveau cycle de groupe TCA",
-    description: "Un nouveau groupe de psycho-éducation & paroles démarre dès que 5 participantes seront inscrites. Inscrivez-vous sur la liste d'attente !",
-    link: "/groupes-paroles-tca",
-    linkText: "En savoir plus",
   },
   {
     date: "Décembre 2025",

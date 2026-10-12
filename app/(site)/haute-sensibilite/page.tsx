@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Haute Sensibilité | Accompagnement Hypersensibles & HPI",
   description:
-    "Accompagnement individuel et groupes de paroles pour personnes hautement sensibles, hypersensibles et HPI. Un espace bienveillant pour apprivoiser votre sensibilité. Consultations en ligne.",
+    "Accompagnement individuel pour personnes hautement sensibles, hypersensibles et HPI. Un espace bienveillant pour apprivoiser votre sensibilité. Consultations en ligne.",
   keywords: [
     "haute sensibilité",
     "hypersensible",
@@ -12,7 +12,6 @@ export const metadata: Metadata = {
     "haut potentiel",
     "accompagnement",
     "thérapie",
-    "groupe de paroles",
     "émotions",
     "sensibilité",
     "Annecy",
@@ -28,22 +27,6 @@ const signs = [
   "Vous vous sentez souvent différente, incomprise, ou en décalage",
   "Vous avez du mal à poser des limites ou à dire non sans culpabilité",
   "Vous recherchez des relations sincères, profondes, et un espace où être pleinement vous",
-];
-
-const groupThemes = [
-  { num: 1, title: "Ce qui me submerge" },
-  { num: 2, title: "Accueillir mes émotions" },
-  { num: 3, title: "Connaître mes ressources" },
-  { num: 4, title: "Identifier mes besoins" },
-  { num: 5, title: "Porter un masque / Trouver sa place" },
-  { num: 6, title: "Dire non et poser des limites" },
-];
-
-const groupBenefits = [
-  "Un lieu pour rompre l'isolement et déposer ce qui vous submerge",
-  "Une communauté de femmes qui ressentent les mêmes difficultés",
-  "Un espace bienveillant, animé avec douceur et présence",
-  "Des outils distillés au fil des séances pour soutenir l'expression",
 ];
 
 const individualBenefits = [
@@ -85,8 +68,8 @@ export default function HauteSensibilitePage() {
             <a href="https://ibookthedate.fr/therapeute/74000-annecy/laura-baud" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Prendre rendez-vous
             </a>
-            <Link href="#groupe" className="btn-secondary">
-              Découvrir le groupe
+            <Link href="/offres" className="btn-secondary">
+              Voir les tarifs
             </Link>
           </div>
         </div>
@@ -157,126 +140,6 @@ export default function HauteSensibilitePage() {
         </div>
       </section>
 
-      {/* Groupe de paroles */}
-      <section id="groupe" className="section-padding bg-gradient-soft">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <span
-              className="text-sm font-medium tracking-widest uppercase mb-4 block"
-              style={{ color: "var(--accent-lavande)" }}
-            >
-              Espace collectif
-            </span>
-            <h2
-              className="text-3xl md:text-4xl font-medium mb-4"
-              style={{ fontFamily: "var(--font-playfair)" }}
-            >
-              Groupe de paroles Haute Sensibilité
-            </h2>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: "var(--text-medium)" }}>
-              Un espace collectif pour vous déposer, respirer, et vous reconnecter à votre sensibilité.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Infos pratiques */}
-            <div className="card">
-              <h3
-                className="text-xl font-semibold mb-6"
-                style={{ fontFamily: "var(--font-playfair)", color: "var(--brun-fonce)" }}
-              >
-                Informations pratiques
-              </h3>
-              
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                {[
-                  { label: "Format", value: "En ligne (caméra activée)" },
-                  { label: "Participantes", value: "6 maximum" },
-                  { label: "Durée", value: "1h30 par séance" },
-                  { label: "Fréquence", value: "2 séances par mois" },
-                  { label: "Horaire", value: "19h à 20h30" },
-                  { label: "Tarif", value: "30€ par séance" },
-                ].map((info, i) => (
-                  <div key={i} className="p-3 rounded-xl" style={{ background: "var(--rose-pale)" }}>
-                    <div className="text-xs uppercase tracking-wider mb-1" style={{ color: "var(--text-light)" }}>
-                      {info.label}
-                    </div>
-                    <div className="font-medium" style={{ color: "var(--brun)" }}>
-                      {info.value}
-                    </div>
-                  </div>
-                ))}
-              </div>
-              
-              <div className="p-4 rounded-xl" style={{ background: "rgba(197, 184, 200, 0.2)" }}>
-                <p className="text-sm" style={{ color: "var(--text-medium)" }}>
-                  <strong>Paiement :</strong> Virement bancaire ou plateforme Stripe sécurisée<br />
-                  <strong>Report :</strong> Possible si prévenue au moins 48h à l'avance
-                </p>
-              </div>
-            </div>
-            
-            {/* Thèmes abordés */}
-            <div className="card">
-              <h3
-                className="text-xl font-semibold mb-6"
-                style={{ fontFamily: "var(--font-playfair)", color: "var(--brun-fonce)" }}
-              >
-                Fil conducteur des séances
-              </h3>
-              <p className="mb-6 text-sm" style={{ color: "var(--text-light)" }}>
-                Chaque rencontre propose un fil conducteur doux, sans obligation de s'y conformer :
-              </p>
-              
-              <div className="space-y-3">
-                {groupThemes.map((theme) => (
-                  <div
-                    key={theme.num}
-                    className="flex items-center gap-4 p-3 rounded-xl transition-all hover:translate-x-2"
-                    style={{ background: "var(--rose-pale)" }}
-                  >
-                    <div
-                      className="w-10 h-10 rounded-full flex items-center justify-center font-semibold"
-                      style={{ background: "var(--accent-lavande)", color: "white" }}
-                    >
-                      {theme.num}
-                    </div>
-                    <span className="font-medium" style={{ color: "var(--text-dark)" }}>
-                      {theme.title}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Bénéfices groupe */}
-          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {groupBenefits.map((benefit, i) => (
-              <div key={i} className="card text-center">
-                <div
-                  className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"
-                  style={{ background: "rgba(197, 184, 200, 0.3)" }}
-                >
-                  <svg
-                    className="w-6 h-6"
-                    style={{ color: "var(--brun)" }}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
-                </div>
-                <p className="text-sm" style={{ color: "var(--text-medium)" }}>
-                  {benefit}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Accompagnement individuel */}
       <section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -312,7 +175,7 @@ export default function HauteSensibilitePage() {
                       <div className="text-xs" style={{ color: "var(--text-light)" }}>Durée</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-semibold" style={{ color: "var(--brun-doux)" }}>95€</div>
+                      <div className="text-2xl font-semibold" style={{ color: "var(--brun-doux)" }}>75€</div>
                       <div className="text-xs" style={{ color: "var(--text-light)" }}>Tarif</div>
                     </div>
                     <div>
@@ -380,8 +243,8 @@ export default function HauteSensibilitePage() {
             <Link href="/contact" className="btn-primary">
               Me contacter
             </Link>
-            <Link href="/groupes-paroles-tca" className="btn-secondary">
-              Groupe TCA
+            <Link href="/offres" className="btn-secondary">
+              Voir les tarifs
             </Link>
           </div>
         </div>

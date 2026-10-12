@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Laura Baud - Thérapeute TCA",
   },
   description:
-    "Laura Baud, thérapeute spécialisée TCA : boulimie, hyperphagie, crises alimentaires. Gestion des émotions, affirmation de soi, gestion des limites. Consultations en ligne et groupes de paroles. Annecy, Genève, Lausanne.",
+    "Laura Baud, thérapeute spécialisée TCA : boulimie, hyperphagie, crises alimentaires. Gestion des émotions, affirmation de soi, gestion des limites. Consultations en cabinet et en ligne. Annecy, Genève, Lausanne.",
   keywords: [
     "Laura Baud",
     "TCA",
@@ -43,7 +43,6 @@ export const metadata: Metadata = {
     "Suisse",
     "haute sensibilité",
     "hypersensible",
-    "groupe de paroles",
     "accompagnement en ligne",
   ],
   authors: [{ name: "Laura Baud" }],
