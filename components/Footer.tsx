@@ -3,7 +3,7 @@ import Link from "next/link";
 const footerLinks = {
   services: [
     { href: "/formation", label: "Programmes en ligne" },
-    { href: "/offres", label: "Mes offres & tarifs" },
+    { href: "/offres", label: "Tarifs" },
     { href: "/contact", label: "Consultation individuelle" },
   ],
   ressources: [

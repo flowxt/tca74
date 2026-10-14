@@ -11,7 +11,7 @@ const mainNavItems = [
 
 const servicesItems = [
   { href: "/formation", label: "Programmes", desc: "En ligne & autonomie" },
-  { href: "/offres", label: "Mes offres", desc: "Tarifs & formules" },
+  { href: "/offres", label: "Tarifs", desc: "Séance standard à 75€" },
 ];
 
 const ressourcesItems = [
