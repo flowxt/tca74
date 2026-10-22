@@ -102,7 +102,7 @@ export default function AnimatedHome() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Laura Baud — Annecy • Genève • Lausanne
+            Annecy • Genève • Lausanne
           </motion.div>
           
           {/* Titre principal - Grande typographie */}
@@ -113,9 +113,12 @@ export default function AnimatedHome() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            Accompagnement centré sur les émotions
+            Laura Baud
             <br />
-            <span style={{ color: "var(--brun-doux)" }}>et l'affirmation de soi</span>
+            Troubles du comportement alimentaire
+            <span className="block mt-3 text-lg md:text-2xl lg:text-3xl" style={{ color: "var(--brun-doux)" }}>
+              Compulsions / Crises / Hyperphagie boulimique
+            </span>
           </motion.h1>
           
           {/* Sous-titre - spécialité */}

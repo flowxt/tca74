@@ -98,9 +98,9 @@ export default function IntroLoader() {
             animationFillMode: "both",
           }}
         >
-          Accompagnement centré sur les émotions
+          Troubles du comportement alimentaire
           <br />
-          et l&apos;affirmation de soi — Spécialisée en hyperphagie émotionnelle (TCA)
+          Compulsions / Crises / Hyperphagie boulimique
         </p>
 
         {/* Ligne décorative animée */}
