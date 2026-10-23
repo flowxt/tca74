@@ -81,7 +81,7 @@ export default function Navigation() {
               className="block text-xs leading-tight max-w-[280px] md:max-w-[340px]"
               style={{ color: "var(--text-light)" }}
             >
-              Accompagnement centré sur les émotions et l'affirmation de soi — TCA
+              Thérapeute spécialisée en troubles du comportement alimentaire (TCA)
             </span>
           </div>
         </Link>

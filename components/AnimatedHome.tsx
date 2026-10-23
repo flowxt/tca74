@@ -107,30 +107,23 @@ export default function AnimatedHome() {
           
           {/* Titre principal - Grande typographie */}
           <motion.h1
-            className="relative text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium mb-6 leading-tight"
+            className="relative text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium mb-6 leading-tight max-w-5xl mx-auto"
             style={{ fontFamily: "var(--font-playfair)", color: "var(--text-dark)" }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            Laura Baud
-            <br />
-            Troubles du comportement alimentaire
+            <span
+              className="block mb-2 text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
+              style={{ fontFamily: "var(--font-script), cursive", color: "var(--brun)" }}
+            >
+              Laura Baud
+            </span>
+            Thérapeute spécialisée en troubles du comportement alimentaire (TCA)
             <span className="block mt-3 text-lg md:text-2xl lg:text-3xl" style={{ color: "var(--brun-doux)" }}>
               Compulsions / Crises / Hyperphagie boulimique
             </span>
           </motion.h1>
-          
-          {/* Sous-titre - spécialité */}
-          <motion.p
-            className="text-lg md:text-xl font-medium mb-6 max-w-3xl mx-auto"
-            style={{ color: "var(--brun)" }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-          >
-            Spécialisée en comportements alimentaires émotionnels (TCA, compulsions, hyperphagie).
-          </motion.p>
           
           {/* Phrase d'accroche */}
           <motion.p
