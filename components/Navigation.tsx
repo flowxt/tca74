@@ -7,11 +7,7 @@ import Image from "next/image";
 const mainNavItems = [
   { href: "/", label: "Accueil" },
   { href: "/questionnaire", label: "Quiz" },
-];
-
-const servicesItems = [
-  { href: "/formation", label: "Programmes", desc: "En ligne & autonomie" },
-  { href: "/offres", label: "Tarifs", desc: "Séance standard à 75€" },
+  { href: "/formation", label: "Programmes" },
 ];
 
 const ressourcesItems = [
@@ -99,47 +95,6 @@ export default function Navigation() {
             </Link>
           ))}
 
-          {/* Services Dropdown */}
-          <div className="relative">
-            <button
-              onClick={() => toggleDropdown("services")}
-              className="nav-link px-3 py-2 text-sm font-medium flex items-center gap-1"
-            >
-              Accompagnement
-              <svg
-                className={`w-3.5 h-3.5 transition-transform ${activeDropdown === "services" ? "rotate-180" : ""}`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            
-            {activeDropdown === "services" && (
-              <div
-                className="absolute top-full left-0 mt-2 w-64 rounded-2xl shadow-xl overflow-hidden animate-fade-in"
-                style={{ background: "var(--bg-white)", border: "1px solid var(--rose-pale)" }}
-              >
-                {servicesItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setActiveDropdown(null)}
-                    className="block px-4 py-3 transition-colors hover:bg-[var(--rose-pale)]"
-                  >
-                    <span className="block text-sm font-medium" style={{ color: "var(--text-dark)" }}>
-                      {item.label}
-                    </span>
-                    <span className="block text-xs" style={{ color: "var(--text-light)" }}>
-                      {item.desc}
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-
           {/* Ressources Dropdown */}
           <div className="relative">
             <button
@@ -187,6 +142,18 @@ export default function Navigation() {
             className="nav-link px-3 py-2 text-sm font-medium"
           >
             Contact
+          </Link>
+
+          <Link
+            href="/offres"
+            className="ml-2 px-4 py-2 rounded-full text-sm font-semibold transition-colors hover:bg-[var(--rose-medium)]"
+            style={{
+              color: "var(--brun-fonce)",
+              background: "var(--rose-pale)",
+              border: "1.5px solid var(--brun-doux)",
+            }}
+          >
+            Tarifs
           </Link>
 
           {/* CTA Button */}
@@ -254,26 +221,14 @@ export default function Navigation() {
             </Link>
           ))}
           
-          {/* Services section */}
-          <div className="py-2">
-            <span
-              className="text-xs font-medium tracking-wider uppercase mb-2 block"
-              style={{ color: "var(--rose-accent)" }}
-            >
-              Accompagnement
-            </span>
-            {servicesItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block py-2 pl-3 transition-colors"
-                style={{ color: "var(--text-medium)" }}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
+          <Link
+            href="/offres"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="text-base font-semibold py-2 transition-colors"
+            style={{ color: "var(--brun-fonce)" }}
+          >
+            Tarifs
+          </Link>
 
           {/* Ressources section */}
           <div className="py-2">

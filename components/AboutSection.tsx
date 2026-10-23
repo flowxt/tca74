@@ -3,39 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 
-const sixQuestions = [
-  {
-    question: "Ma citation préférée",
-    answer: "« Il vaut mieux prendre le bon chemin en boitant que le mauvais d'un pas ferme. »",
-    color: "var(--accent-lavande)",
-  },
-  {
-    question: "Le personnage inspirant qui me ressemble",
-    answer: "Maryam Gadery – auto-entrepreneuse, femme hautement sensible.",
-    color: "var(--peche)",
-  },
-  {
-    question: "Ma façon de me ressourcer",
-    answer: "Me balader avec mon chien, écouter des podcasts inspirants, savourer le silence ou la pluie sous un plaid.",
-    color: "var(--accent-sage)",
-  },
-  {
-    question: "Le pays qui m'a le plus marqué",
-    answer: "L'Indonésie – pour la chaleur et l'authenticité de ses habitants.",
-    color: "var(--rose-accent)",
-  },
-  {
-    question: "Mon livre préféré",
-    answer: "Le monde en stop – une ode au voyage, à la découverte et à l'ouverture aux autres.",
-    color: "var(--brun-doux)",
-  },
-  {
-    question: "Ma nourriture préférée",
-    answer: "La cuisine thaïe – pour ses saveurs épicées, parfumées et pleines de vitalité.",
-    color: "var(--nude)",
-  },
-];
-
 const values = [
   { title: "Transparence", desc: "Je vous dis ce que je fais, pourquoi je le fais." },
   { title: "Liberté", desc: "Vous avez le droit de choisir, de refuser, d'explorer à votre manière." },
@@ -174,47 +141,6 @@ export default function AboutSection() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
-            </div>
-          </div>
-
-          {/* 6 Questions Section */}
-          <div className="mt-20">
-            <div className="text-center mb-10">
-              <h3
-                className="text-2xl md:text-3xl font-medium mb-3"
-                style={{ fontFamily: "var(--font-playfair)" }}
-              >
-                Découvrez-moi en 6 questions
-              </h3>
-              <p style={{ color: "var(--text-medium)" }}>
-                Un petit aperçu de qui je suis, au-delà du cabinet
-              </p>
-            </div>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {sixQuestions.map((item, i) => (
-                <div
-                  key={i}
-                  className="group p-5 rounded-2xl transition-all duration-300 hover:scale-[1.02] cursor-default"
-                  style={{ 
-                    background: "var(--bg-white)", 
-                    borderLeft: `4px solid ${item.color}`,
-                    boxShadow: "0 4px 15px rgba(154, 123, 111, 0.08)",
-                  }}
-                >
-                  <div>
-                    <div
-                      className="text-sm font-semibold mb-2"
-                      style={{ color: item.color }}
-                    >
-                      {item.question}
-                    </div>
-                    <div style={{ color: "var(--text-dark)" }}>
-                      {item.answer}
-                    </div>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>
