@@ -4,7 +4,7 @@ import OfferCards from "./OfferCards";
 export const metadata: Metadata = {
   title: "Tarifs & accompagnement | Laura Baud",
   description:
-    "Mon tarif : séance standard à 75€ (1h), un tarif unique, simple et stable. Consultations en cabinet ou en visio.",
+    "Mon tarif : séance standard à 70€ (1h), un tarif unique, simple et stable. Consultations en cabinet ou en visio.",
   keywords: [
     "tarifs thérapie",
     "consultation TCA",

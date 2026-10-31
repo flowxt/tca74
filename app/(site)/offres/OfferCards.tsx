@@ -21,7 +21,7 @@ const offers: Offer[] = [
     id: "standard",
     name: "Séance Standard",
     tagline: "Tarif unique, simple et stable",
-    price: 75,
+    price: 70,
     duration: "1h",
     description:
       "La séance de référence pour avancer pas à pas sur vos comportements alimentaires, émotionnels et relationnels, à votre rythme et selon vos besoins.",

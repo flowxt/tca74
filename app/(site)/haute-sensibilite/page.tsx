@@ -175,7 +175,7 @@ export default function HauteSensibilitePage() {
                       <div className="text-xs" style={{ color: "var(--text-light)" }}>Durée</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-semibold" style={{ color: "var(--brun-doux)" }}>75€</div>
+                      <div className="text-2xl font-semibold" style={{ color: "var(--brun-doux)" }}>70€</div>
                       <div className="text-xs" style={{ color: "var(--text-light)" }}>Tarif</div>
                     </div>
                     <div>

@@ -19,8 +19,8 @@ const actualites = [
   {
     date: "Mai 2026",
     type: "Nouveau",
-    title: "Nouveau tarif — Séance Standard 75€",
-    description: "La séance standard est à 75€ (1h), un tarif unique, simple et stable.",
+    title: "Nouveau tarif — Séance Standard 70€",
+    description: "La séance standard est à 70€ (1h), un tarif unique, simple et stable.",
     link: "/offres",
     linkText: "Voir les tarifs",
   },

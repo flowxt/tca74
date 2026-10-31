@@ -50,7 +50,7 @@ const contactInfo = [
 const services = [
   {
     title: "Séance Standard",
-    price: "75€",
+    price: "70€",
     duration: "1h",
     desc: "Tarif unique, simple et stable.",
   },
