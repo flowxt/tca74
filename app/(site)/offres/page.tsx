@@ -98,7 +98,7 @@ export default function OffresPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://ibookthedate.fr/therapeute/74000-annecy/laura-baud"
+              href="https://www.ibookthedate.fr/therapeute/74000-annecy/laura-baud/type-rdv"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105"

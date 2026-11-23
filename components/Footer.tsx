@@ -185,7 +185,7 @@ export default function Footer() {
                 Consultations en ligne uniquement
               </p>
               <a
-                href="https://ibookthedate.fr/therapeute/74000-annecy/laura-baud"
+                href="https://www.ibookthedate.fr/therapeute/74000-annecy/laura-baud/type-rdv"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary inline-block text-sm"

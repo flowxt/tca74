@@ -169,7 +169,7 @@ export default function FormationPage() {
             un suivi individuel adapté à votre situation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://ibookthedate.fr/therapeute/74000-annecy/laura-baud" target="_blank" rel="noopener noreferrer" className="btn-primary">
+            <a href="https://www.ibookthedate.fr/therapeute/74000-annecy/laura-baud/type-rdv" target="_blank" rel="noopener noreferrer" className="btn-primary">
               Prendre rendez-vous
             </a>
             <Link href="/offres" className="btn-secondary">

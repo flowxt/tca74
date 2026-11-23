@@ -189,7 +189,7 @@ export default function OfferCards() {
             </div>
 
             <a
-              href="https://ibookthedate.fr/therapeute/74000-annecy/laura-baud"
+              href="https://www.ibookthedate.fr/therapeute/74000-annecy/laura-baud/type-rdv"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full text-center py-4 px-6 rounded-full font-bold text-base md:text-lg transition-all duration-300 hover:scale-[1.02]"
